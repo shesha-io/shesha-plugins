@@ -1,0 +1,8 @@
+{
+    "name": "shesha-form-configurator-plugin",
+    "description": "A plugin that enables Claude to create and configure Shesha framework forms with proper structure, components, and configuration",
+    "version": "1.0.0",
+    "author": {
+        "name": "Shesha"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "shesha-form-creator-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for automated Shesha form creation",
+  "main": "create-crud-forms-parallel.js",
+  "scripts": {
+    "create-crud": "node create-crud-forms-parallel.js",
+    "install-browser": "npx playwright install chromium"
+  },
+  "keywords": [
+    "shesha",
+    "forms",
+    "crud",
+    "automation",
+    "playwright"
+  ],
+  "author": "aibooking",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.41.0"
+  }
+}

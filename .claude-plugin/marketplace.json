@@ -8,7 +8,13 @@
             "name": "greeting",
             "source": "./plugins/greeting",
             "description": "A simple hello world plugin demonstrating Claude Code skill creation"
+        },
+        {
+            "name": "shesha-form-configurator-plugin",
+            "source": "./plugins/shesha-form-configurator-plugin",
+            "description": "A plugin that enables Claude to create and configure Shesha framework forms with proper structure, components, and configuration."
         }
+ 
     ]
 }
  
