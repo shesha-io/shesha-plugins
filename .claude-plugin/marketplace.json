@@ -1,0 +1,14 @@
+{
+    "name": "shesha-plugins",
+    "owner": {
+        "name": "Shesha"
+    },
+    "plugins": [
+        {
+            "name": "git-commits",
+            "source": "./plugins/git-commits",
+            "description": "A plugin to get the git commits for a given repository."
+        }
+    ]
+}
+ 
