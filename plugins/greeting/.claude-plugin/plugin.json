@@ -1,5 +1,5 @@
 {
-    "name": "git-commits",
+    "name": "greeting",
     "description": "A simple hello world plugin demonstrating Claude Code skill creation",
     "version": "1.0.0",
     "author": {

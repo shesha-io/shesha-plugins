@@ -5,8 +5,8 @@
     },
     "plugins": [
         {
-            "name": "git-commits",
-            "source": "./plugins/git-commits",
+            "name": "greeting",
+            "source": "./plugins/greeting",
             "description": "A simple hello world plugin demonstrating Claude Code skill creation"
         }
     ]
