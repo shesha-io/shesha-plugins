@@ -1,0 +1,1560 @@
+{
+  "_meta": {
+    "version": 2,
+    "generated": "2026-03-10T06:26:18.991Z",
+    "componentCount": 113
+  },
+  "base": {
+    "props": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "block",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "components",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "defaultValue",
+      "description",
+      "desktop",
+      "dimensions",
+      "editMode",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "injectedDefaultValue",
+      "injectedTableRow",
+      "inputStyles",
+      "isDynamic",
+      "jsSetting",
+      "label",
+      "labelAlign",
+      "layout",
+      "listType",
+      "menuItemShadow",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "noLabelAutoMargin",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onFocusCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "queryParams",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "settingsValidationErrors",
+      "shadow",
+      "size",
+      "style",
+      "stylingBox",
+      "subscribedEventNames",
+      "tablet",
+      "tooltip",
+      "type",
+      "validate",
+      "version",
+      "width",
+      "wrapperStyle"
+    ],
+    "types": {
+      "hideLabel": "boolean",
+      "hidden": "boolean",
+      "readOnly": "boolean",
+      "isDynamic": "boolean",
+      "jsSetting": "boolean",
+      "autoWidth": "boolean",
+      "autoHeight": "boolean",
+      "hideScrollBar": "boolean",
+      "enableStyleOnReadonly": "boolean",
+      "noLabelAutoMargin": "boolean",
+      "block": "boolean",
+      "hideBorder": "boolean",
+      "id": "string",
+      "type": "string",
+      "parentId": "string",
+      "componentName": "string",
+      "propertyName": "string",
+      "context": "string",
+      "initialContext": "string",
+      "label": "string",
+      "labelAlign": "string",
+      "customVisibility": "string",
+      "onBlurCustom": "string",
+      "onChangeCustom": "string",
+      "onClickCustom": "string",
+      "onFocusCustom": "string",
+      "onSelectCustom": "string",
+      "customEnabled": "string",
+      "style": "string",
+      "stylingBox": "string",
+      "wrapperStyle": "string",
+      "className": "string",
+      "editMode": "string",
+      "size": "string",
+      "noDataText": "string",
+      "noDataIcon": "string",
+      "noDataSecondaryText": "string",
+      "listType": "string",
+      "version": "number",
+      "validate": "object",
+      "border": "object",
+      "background": "object",
+      "font": "object",
+      "shadow": "object",
+      "menuItemShadow": "object",
+      "dimensions": "object",
+      "inputStyles": "object",
+      "allStyles": "object",
+      "permissions": "array",
+      "_formFields": "array",
+      "subscribedEventNames": "array"
+    }
+  },
+  "_formSettings": {
+    "props": [
+      "access",
+      "colon",
+      "dataLoaderType",
+      "dataLoadersSettings",
+      "dataSubmitterType",
+      "dataSubmittersSettings",
+      "deleteUrl",
+      "excludeFormFieldsInPayload",
+      "fieldsToFetch",
+      "getUrl",
+      "initialValues",
+      "isSettingsForm",
+      "labelCol",
+      "layout",
+      "modelType",
+      "onAfterDataLoad",
+      "onBeforeDataLoad",
+      "onBeforeSubmit",
+      "onDataLoaded",
+      "onInitialized",
+      "onPrepareSubmitData",
+      "onSubmitFailed",
+      "onSubmitSuccess",
+      "onUpdate",
+      "onValuesUpdate",
+      "permissions",
+      "postUrl",
+      "preparedValues",
+      "putUrl",
+      "size",
+      "version",
+      "wrapperCol"
+    ],
+    "types": {
+      "layout": "string",
+      "colon": "boolean",
+      "labelCol": "object",
+      "wrapperCol": "object",
+      "size": "string",
+      "isSettingsForm": "boolean",
+      "permissions": "array",
+      "version": "number",
+      "fieldsToFetch": "array",
+      "excludeFormFieldsInPayload": "string",
+      "postUrl": "string",
+      "putUrl": "string",
+      "deleteUrl": "string",
+      "getUrl": "string",
+      "initialValues": "array",
+      "preparedValues": "string",
+      "onInitialized": "string",
+      "onDataLoaded": "string",
+      "onUpdate": "string",
+      "dataLoaderType": "string",
+      "dataLoadersSettings": "object",
+      "dataSubmitterType": "string",
+      "dataSubmittersSettings": "object",
+      "onBeforeDataLoad": "string",
+      "onAfterDataLoad": "string",
+      "onValuesUpdate": "string",
+      "onPrepareSubmitData": "string",
+      "onBeforeSubmit": "string",
+      "onSubmitSuccess": "string",
+      "onSubmitFailed": "string"
+    }
+  },
+  "address": {
+    "props": [
+      "countryRestriction",
+      "customStyle",
+      "debounce",
+      "googleMapsApiKey",
+      "latPriority",
+      "lngPriority",
+      "minCharactersSearch",
+      "openCageApiKey",
+      "prefix",
+      "radiusPriority",
+      "showPriorityBounds"
+    ],
+    "types": {
+      "minCharactersSearch": "number",
+      "showPriorityBounds": "boolean"
+    }
+  },
+  "alert": {
+    "props": [
+      "alertType",
+      "banner",
+      "closable",
+      "customStyle",
+      "icon",
+      "marquee",
+      "showIcon",
+      "text",
+      "description"
+    ],
+    "types": {
+      "marquee": "boolean",
+      "showIcon": "boolean",
+      "text": "string",
+      "description": "string"
+    }
+  },
+  "attachmentsEditor": {
+    "props": [
+      "allowAdd",
+      "allowDelete",
+      "allowedFileTypes",
+      "allowReplace",
+      "allowViewHistory",
+      "container",
+      "containerCustomStylePanel",
+      "containerDimensionsPanel",
+      "containerStylingBoxPanel",
+      "customActions",
+      "customActionsPanel",
+      "customContent",
+      "customStyle",
+      "downloadedFileStyles",
+      "downloadedIcon",
+      "downloadZip",
+      "extraFormId",
+      "extraFormSelectionMode",
+      "extraFormType",
+      "filesCategory",
+      "filesLayout",
+      "gap",
+      "hideFileName",
+      "isDragger",
+      "onDownload",
+      "ownerId",
+      "ownerName",
+      "ownerType",
+      "styleDownloadedFiles"
+    ],
+    "types": {
+      "allowAdd": "boolean",
+      "allowReplace": "boolean",
+      "container": "object",
+      "downloadedFileStyles": "string",
+      "downloadZip": "boolean",
+      "onDownload": "string",
+      "ownerId": "string",
+      "ownerName": "string",
+      "ownerType": "string"
+    }
+  },
+  "autocomplete": {
+    "props": [
+      "allowFreeText",
+      "customStyle",
+      "dataSourceType",
+      "dataSourceUrl",
+      "disableSearch",
+      "displayPropName",
+      "displayValueFunc",
+      "entityType",
+      "fields",
+      "filter",
+      "filterKeysFunc",
+      "grouping",
+      "keyPropName",
+      "keyValueFunc",
+      "mode",
+      "outcomeValueFunc",
+      "quickviewDisplayPropertyName",
+      "quickviewEnabled",
+      "quickviewFormPath",
+      "quickviewGetEntityUrl",
+      "quickviewWidth",
+      "sorting",
+      "valueFormat"
+    ],
+    "types": {
+      "dataSourceUrl": "string",
+      "disableSearch": "boolean",
+      "displayValueFunc": "string"
+    }
+  },
+  "autocompleteTagGroup": {
+    "props": [],
+    "types": {}
+  },
+  "barChart": {
+    "props": [],
+    "types": {}
+  },
+  "button": {
+    "props": [
+      "actionConfiguration",
+      "buttonType",
+      "customStyle",
+      "icon",
+      "iconPosition"
+    ],
+    "types": {
+      "actionConfiguration": "object",
+      "icon": "string"
+    }
+  },
+  "buttonGroup": {
+    "props": [
+      "customStyle",
+      "gap",
+      "isInline",
+      "items"
+    ],
+    "types": {}
+  },
+  "buttons": {
+    "props": [
+      "separator1"
+    ],
+    "types": {}
+  },
+  "calendar": {
+    "props": [
+      "displayPeriod",
+      "dummyEventColor",
+      "externalEndDate",
+      "externalStartDate",
+      "items",
+      "maxDate",
+      "minDate",
+      "momentLocale",
+      "name",
+      "onSlotClick",
+      "onViewChange"
+    ],
+    "types": {
+      "dummyEventColor": "string",
+      "externalStartDate": "string",
+      "minDate": "string",
+      "momentLocale": "string",
+      "name": "string",
+      "onSlotClick": "object",
+      "onViewChange": "object"
+    }
+  },
+  "card": {
+    "props": [
+      "customStyle",
+      "hideHeading",
+      "hideWhenEmpty"
+    ],
+    "types": {
+      "hideWhenEmpty": "boolean"
+    }
+  },
+  "checkbox": {
+    "props": [
+      "customStyle"
+    ],
+    "types": {}
+  },
+  "checkboxGroup": {
+    "props": [
+      "customStyle",
+      "dataSourceType",
+      "dataSourceUrl",
+      "direction",
+      "items",
+      "mode",
+      "reducerFunc",
+      "referenceListId"
+    ],
+    "types": {}
+  },
+  "chevron": {
+    "props": [
+      "activeColor",
+      "colorSource",
+      "items",
+      "referenceList",
+      "showIcons"
+    ],
+    "types": {
+      "referenceList": "string",
+      "showIcons": "boolean"
+    }
+  },
+  "childTable": {
+    "props": [],
+    "types": {}
+  },
+  "codeEditor": {
+    "props": [],
+    "types": {}
+  },
+  "collapsiblePanel": {
+    "props": [
+      "accentStyle",
+      "collapsedByDefault",
+      "collapsible",
+      "customStyle",
+      "expandIconPosition",
+      "ghost",
+      "hasCustomHeader",
+      "header",
+      "headerStyles",
+      "hideCollapseContent",
+      "hideWhenEmpty",
+      "isSimpleDesign"
+    ],
+    "types": {
+      "headerStyles": "string"
+    }
+  },
+  "colorPicker": {
+    "props": [
+      "allowClear",
+      "customStyles",
+      "disabledAlpha",
+      "marginPadding",
+      "showText",
+      "title"
+    ],
+    "types": {
+      "allowClear": "boolean",
+      "disabledAlpha": "boolean",
+      "title": "string"
+    }
+  },
+  "columns": {
+    "props": [
+      "columns",
+      "gutterX",
+      "gutterY"
+    ],
+    "types": {
+      "gutterX": "number"
+    }
+  },
+  "columnsEditorComponent": {
+    "props": [],
+    "types": {}
+  },
+  "component-selector": {
+    "props": [
+      "componentType",
+      "noSelectionItemText",
+      "noSelectionItemValue",
+      "sectionVisibility"
+    ],
+    "types": {
+      "noSelectionItemText": "string",
+      "noSelectionItemValue": "string"
+    }
+  },
+  "configurableActionConfigurator": {
+    "props": [
+      "separatorVisibility"
+    ],
+    "types": {}
+  },
+  "configurableItemAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "container": {
+    "props": [
+      "alignItems",
+      "alignSelf",
+      "customStyle",
+      "display",
+      "flexDirection",
+      "flexWrap",
+      "gap",
+      "gridColumnsCount",
+      "justifyContent",
+      "justifyItems",
+      "justifySelf",
+      "noDefaultStyling",
+      "position",
+      "showAdvanced"
+    ],
+    "types": {
+      "noDefaultStyling": "boolean"
+    }
+  },
+  "contextPropertyAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "dataContext": {
+    "props": [],
+    "types": {}
+  },
+  "dataContextSelector": {
+    "props": [],
+    "types": {}
+  },
+  "datalist": {
+    "props": [
+      "canAddInline",
+      "canDeleteInline",
+      "canEditInline",
+      "cardHeight",
+      "cardMaxWidth",
+      "cardMinWidth",
+      "collapseByDefault",
+      "collapsible",
+      "container",
+      "containerCustomStylePanel",
+      "containerDimensionsPanel",
+      "containerStylingBoxPanel",
+      "createFormId",
+      "createFormType",
+      "customCreateUrl",
+      "customDeleteUrl",
+      "customListItemWidth",
+      "customStyle",
+      "customUpdateUrl",
+      "datalistEmptyState",
+      "dblClickActionConfiguration",
+      "formId",
+      "formIdExpression",
+      "formSelectionMode",
+      "formType",
+      "gap",
+      "groupStyle",
+      "inlineEditMode",
+      "inlineSaveMode",
+      "listItemWidth",
+      "modalWidth",
+      "onListItemClick",
+      "onListItemHover",
+      "onListItemSave",
+      "onListItemSaveSuccessAction",
+      "onListItemSelect",
+      "onNewListItemInitialize",
+      "onRowDeleteSuccessAction",
+      "onRowSave",
+      "onSelectionChange",
+      "orientation",
+      "selectionMode",
+      "showBorder",
+      "showEditIcons"
+    ],
+    "types": {
+      "cardHeight": "string",
+      "cardMinWidth": "string",
+      "collapsible": "boolean",
+      "container": "object",
+      "customCreateUrl": "string",
+      "customDeleteUrl": "string",
+      "dblClickActionConfiguration": "object",
+      "gap": "number",
+      "groupStyle": "string",
+      "onListItemClick": "object",
+      "onListItemHover": "object",
+      "onListItemSave": "string",
+      "onListItemSaveSuccessAction": "object",
+      "onRowDeleteSuccessAction": "object",
+      "onRowSave": "string",
+      "showBorder": "boolean"
+    }
+  },
+  "dataSortingEditor": {
+    "props": [],
+    "types": {}
+  },
+  "dataSource": {
+    "props": [],
+    "types": {}
+  },
+  "datatable": {
+    "props": [],
+    "types": {}
+  },
+  "datatable_template": {
+    "props": [],
+    "types": {}
+  },
+  "datatable.filter": {
+    "props": [
+      "buttonType",
+      "customStyle",
+      "icon"
+    ],
+    "types": {
+      "icon": "string"
+    }
+  },
+  "datatable.pager": {
+    "props": [
+      "customStyle",
+      "showSizeChanger",
+      "showTotalItems"
+    ],
+    "types": {}
+  },
+  "datatable.quickSearch": {
+    "props": [
+      "separatorDisplay"
+    ],
+    "types": {}
+  },
+  "datatable.selectColumnsButton": {
+    "props": [],
+    "types": {}
+  },
+  "datatableContext": {
+    "props": [
+      "allowReordering",
+      "customReorderEndpoint",
+      "dataFetchingMode",
+      "defaultPageSize",
+      "disableRefresh",
+      "endpoint",
+      "entityType",
+      "grouping",
+      "onAfterRowReorder",
+      "onBeforeRowReorder",
+      "permanentFilter",
+      "sortMode",
+      "sourceType",
+      "standardSorting",
+      "strictSortBy",
+      "strictSortOrder"
+    ],
+    "types": {}
+  },
+  "dateField": {
+    "props": [
+      "customStyle",
+      "dateFormat",
+      "defaultToMidnight",
+      "disabledDateFunc",
+      "disabledDateMode",
+      "disabledDateTemplate",
+      "disabledTimeFunc",
+      "disabledTimeMode",
+      "disabledTimeTemplate",
+      "monthFormat",
+      "picker",
+      "quarterFormat",
+      "range",
+      "resolveToUTC",
+      "showNow",
+      "showTime",
+      "timeFormat",
+      "weekFormat",
+      "yearFormat"
+    ],
+    "types": {
+      "range": "boolean"
+    }
+  },
+  "divider": {
+    "props": [],
+    "types": {}
+  },
+  "drawer": {
+    "props": [
+      "action",
+      "cancelButtonCollapsiblePanel",
+      "cancelButtonCustomEnabled",
+      "cancelText",
+      "containerComponents",
+      "customStyle",
+      "footerpnlShadowStyle",
+      "footerStyles",
+      "headerStyles",
+      "okButtonCollapsiblePanel",
+      "okButtonCustomEnabled",
+      "okText",
+      "onCancelAction",
+      "onOkAction",
+      "placement",
+      "showFooter",
+      "showHeader"
+    ],
+    "types": {
+      "cancelText": "string",
+      "footerStyles": "string",
+      "headerStyles": "string",
+      "okText": "string",
+      "onCancelAction": "object",
+      "onOkAction": "object"
+    }
+  },
+  "dropdown": {
+    "props": [
+      "customStyle",
+      "dataSourceType",
+      "defaultTagStyle",
+      "disabledValues",
+      "disableItemValue",
+      "displayStyle",
+      "filter",
+      "ignoredValues",
+      "incomeCustomJs",
+      "labelCustomJs",
+      "mode",
+      "outcomeCustomJs",
+      "referenceListId",
+      "showIcon",
+      "showItemName",
+      "solidColor",
+      "tag",
+      "tagBackgroundStyle",
+      "tagBorderStyle",
+      "tagCustomStyle",
+      "tagDimensionStyle",
+      "tagFontStyle",
+      "tagShadowStyle",
+      "valueFormat",
+      "values"
+    ],
+    "types": {
+      "filter": "object",
+      "ignoredValues": "string",
+      "incomeCustomJs": "string",
+      "labelCustomJs": "string",
+      "solidColor": "boolean",
+      "tag": "string"
+    }
+  },
+  "dynamicItemsConfigurator": {
+    "props": [
+      "separatorVisibility"
+    ],
+    "types": {}
+  },
+  "dynamicView": {
+    "props": [],
+    "types": {}
+  },
+  "editableTagGroup": {
+    "props": [],
+    "types": {}
+  },
+  "editModeSelector": {
+    "props": [],
+    "types": {}
+  },
+  "endpointsAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "entityPicker": {
+    "props": [
+      "allowNewRecord",
+      "buttons",
+      "customStyle",
+      "displayEntityKey",
+      "entityType",
+      "filters",
+      "footerButtons",
+      "incomeCustomJs",
+      "items",
+      "modalFormId",
+      "modalSettings",
+      "modalTitle",
+      "modalWidth",
+      "mode",
+      "outcomeCustomJs",
+      "submitHttpVerb",
+      "valueFormat"
+    ],
+    "types": {
+      "allowNewRecord": "boolean",
+      "filters": "object",
+      "modalTitle": "string"
+    }
+  },
+  "entityReference": {
+    "props": [
+      "additionalProperties",
+      "buttons",
+      "customStyle",
+      "displayProperty",
+      "displayType",
+      "entityReferenceType",
+      "entityType",
+      "footerButtons",
+      "formIdentifier",
+      "formSelectionMode",
+      "formType",
+      "getEntityUrl",
+      "handleFail",
+      "handleSuccess",
+      "iconName",
+      "labelCol",
+      "modalTitle",
+      "modalWidth",
+      "onFail",
+      "onSuccess",
+      "quickviewWidth",
+      "submitHttpVerb",
+      "textTitle",
+      "wrapperCol"
+    ],
+    "types": {
+      "entityType": "string",
+      "iconName": "string",
+      "onFail": "object",
+      "onSuccess": "object"
+    }
+  },
+  "entityTypeAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "fileUpload": {
+    "props": [
+      "allowDelete",
+      "allowedFileTypes",
+      "allowReplace",
+      "allowUpload",
+      "customStyle",
+      "hideFileName",
+      "isDragger",
+      "ownerId",
+      "ownerType",
+      "useSync"
+    ],
+    "types": {
+      "allowReplace": "boolean",
+      "ownerId": "string",
+      "useSync": "boolean"
+    }
+  },
+  "formAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "headerAppControl": {
+    "props": [],
+    "types": {}
+  },
+  "htmlRender": {
+    "props": [
+      "customStyle",
+      "renderer"
+    ],
+    "types": {
+      "renderer": "string"
+    }
+  },
+  "iconPicker": {
+    "props": [
+      "customStyle"
+    ],
+    "types": {}
+  },
+  "image": {
+    "props": [
+      "allowedFileTypes",
+      "allowPreview",
+      "alt",
+      "base64",
+      "customStyle",
+      "dataSource",
+      "filter",
+      "filterIntensity",
+      "objectFit",
+      "objectPosition",
+      "opacity",
+      "pnlsize-position-",
+      "storedFileId",
+      "url"
+    ],
+    "types": {
+      "dataSource": "string",
+      "opacity": "number",
+      "url": "string"
+    }
+  },
+  "imagePicker": {
+    "props": [
+      "allowDelete",
+      "allowedFileTypes",
+      "allowReplace",
+      "allowUpload",
+      "isDragger",
+      "ownerId",
+      "ownerType",
+      "pnl",
+      "useSync"
+    ],
+    "types": {
+      "allowDelete": "boolean",
+      "allowedFileTypes": "array",
+      "allowReplace": "boolean",
+      "allowUpload": "boolean",
+      "isDragger": "boolean",
+      "ownerId": "string",
+      "ownerType": "string",
+      "useSync": "boolean"
+    }
+  },
+  "kanban": {
+    "props": [
+      "allowDelete",
+      "allowEdit",
+      "allowNewRecord",
+      "borderContainer",
+      "borderRadiusContainer",
+      "collapsible",
+      "columncustomStyle",
+      "columnStyle",
+      "columnStyles",
+      "createFormId",
+      "customStyle",
+      "editFormId",
+      "gap",
+      "groupingProperty",
+      "headerStyles",
+      "items",
+      "kanbanReadonly",
+      "modalFormId",
+      "pnlcolumnStyles",
+      "referenceList",
+      "showIcons"
+    ],
+    "types": {
+      "allowDelete": "boolean",
+      "allowEdit": "boolean",
+      "allowNewRecord": "boolean",
+      "collapsible": "boolean",
+      "columnStyle": "string",
+      "columnStyles": "string",
+      "gap": "number",
+      "headerStyles": "string",
+      "modalFormId": "string",
+      "referenceList": "string"
+    }
+  },
+  "KeyInformationBar": {
+    "props": [
+      "alignItems",
+      "columns",
+      "customStyle",
+      "divider",
+      "dividerColor",
+      "dividerHeight",
+      "dividerMargin",
+      "dividerThickness",
+      "dividerWidth",
+      "gap",
+      "orientation"
+    ],
+    "types": {}
+  },
+  "labelConfigurator": {
+    "props": [],
+    "types": {}
+  },
+  "labelValueEditor": {
+    "props": [],
+    "types": {}
+  },
+  "lineChart": {
+    "props": [],
+    "types": {}
+  },
+  "link": {
+    "props": [
+      "alignItems",
+      "content",
+      "customStyle",
+      "direction",
+      "hasChildren",
+      "href",
+      "justifyContent",
+      "justifyItems",
+      "target"
+    ],
+    "types": {
+      "hasChildren": "boolean",
+      "href": "string"
+    }
+  },
+  "list": {
+    "props": [],
+    "types": {}
+  },
+  "logViewer": {
+    "props": [],
+    "types": {}
+  },
+  "mainMenuEditor": {
+    "props": [],
+    "types": {}
+  },
+  "markdown": {
+    "props": [
+      "content",
+      "customStyle"
+    ],
+    "types": {}
+  },
+  "menuList": {
+    "props": [
+      "gap",
+      "hoverItemBackground",
+      "hoverItemColor",
+      "itemBackground",
+      "itemColor",
+      "selectedItemBackground",
+      "selectedItemColor",
+      "styleOnHover",
+      "styleOnSelected",
+      "styleOnSubMenu"
+    ],
+    "types": {
+      "styleOnHover": "string",
+      "styleOnSelected": "string",
+      "styleOnSubMenu": "string"
+    }
+  },
+  "metadataEditor": {
+    "props": [],
+    "types": {}
+  },
+  "notes": {
+    "props": [
+      "allowDelete",
+      "allowEdit",
+      "autoSize",
+      "category",
+      "maxLength",
+      "minLength",
+      "onCreateAction",
+      "onDeleteAction",
+      "onUpdateAction",
+      "ownerId",
+      "ownerType",
+      "savePlacement",
+      "showCharCount"
+    ],
+    "types": {
+      "allowEdit": "boolean",
+      "autoSize": "boolean",
+      "minLength": "number",
+      "onCreateAction": "string",
+      "onDeleteAction": "string",
+      "onUpdateAction": "string",
+      "ownerId": "string",
+      "ownerType": "string",
+      "showCharCount": "boolean"
+    }
+  },
+  "notificationAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "numberField": {
+    "props": [
+      "customStyle",
+      "highPrecision",
+      "prefix",
+      "prefixIcon",
+      "stepNumeric",
+      "stepString",
+      "suffix",
+      "suffixIcon"
+    ],
+    "types": {
+      "highPrecision": "boolean",
+      "prefix": "string",
+      "suffix": "string"
+    }
+  },
+  "paragraph": {
+    "props": [],
+    "types": {}
+  },
+  "passwordCombo": {
+    "props": [
+      "confirmDescription",
+      "confirmLabel",
+      "confirmPlaceholder",
+      "customStyle",
+      "message",
+      "minLength",
+      "repeatPropertyName"
+    ],
+    "types": {
+      "confirmDescription": "string",
+      "confirmPlaceholder": "string",
+      "message": "string",
+      "minLength": "number"
+    }
+  },
+  "permissionAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "permissionedObjectsTree": {
+    "props": [],
+    "types": {}
+  },
+  "permissionsTree": {
+    "props": [],
+    "types": {}
+  },
+  "permissionTagGroup": {
+    "props": [],
+    "types": {}
+  },
+  "pieChart": {
+    "props": [],
+    "types": {}
+  },
+  "polarAreaChart": {
+    "props": [],
+    "types": {}
+  },
+  "processMonitor": {
+    "props": [],
+    "types": {}
+  },
+  "profileDropdown": {
+    "props": [
+      "items",
+      "popOverContentStyle",
+      "popOverFormId",
+      "popOverStyle",
+      "popOverTitle",
+      "showUserInfo",
+      "subText",
+      "subTextColor",
+      "subTextFontSize",
+      "subTextStyle"
+    ],
+    "types": {
+      "popOverContentStyle": "string",
+      "subText": "string",
+      "subTextStyle": "string"
+    }
+  },
+  "progress": {
+    "props": [
+      "customStyle",
+      "gapDegree",
+      "gapPosition",
+      "lineStrokeColor",
+      "percent",
+      "progressStyle",
+      "progressType",
+      "showInfo",
+      "status",
+      "steps",
+      "strokeColor",
+      "strokeLinecap",
+      "strokeWidth",
+      "trailColor",
+      "typeSpecificSettings"
+    ],
+    "types": {
+      "showInfo": "boolean",
+      "steps": "number"
+    }
+  },
+  "propertyAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "propertyRouter": {
+    "props": [
+      "propertyRouteName"
+    ],
+    "types": {
+      "propertyRouteName": "string"
+    }
+  },
+  "queryBuilder": {
+    "props": [],
+    "types": {}
+  },
+  "radio": {
+    "props": [
+      "customStyle",
+      "dataSourceType",
+      "dataSourceUrl",
+      "direction",
+      "items",
+      "reducerFunc",
+      "referenceListId"
+    ],
+    "types": {}
+  },
+  "rate": {
+    "props": [
+      "count",
+      "customStyle",
+      "icon"
+    ],
+    "types": {
+      "count": "number"
+    }
+  },
+  "referenceListAutocomplete": {
+    "props": [],
+    "types": {}
+  },
+  "refListStatus": {
+    "props": [
+      "customStyle",
+      "referenceListId",
+      "showIcon",
+      "showReflistName",
+      "solidBackground"
+    ],
+    "types": {
+      "referenceListId": "string",
+      "showIcon": "boolean",
+      "solidBackground": "boolean"
+    }
+  },
+  "richTextEditor": {
+    "props": [
+      "advancedPanel",
+      "allowResizeX",
+      "allowResizeY",
+      "askBeforePasteFromWord",
+      "askBeforePasteHTML",
+      "autofocus",
+      "direction",
+      "disablePlugins",
+      "displayPanel",
+      "enter",
+      "iframe",
+      "insertImageAsBase64URI",
+      "optionsPanel",
+      "preset",
+      "saveHeightInStorage",
+      "saveModeInStorage",
+      "showCharsCounter",
+      "showWordsCounter",
+      "theme",
+      "toolbar",
+      "toolbarButtonSize",
+      "toolbarPanel"
+    ],
+    "types": {}
+  },
+  "scheduledJobExecutionLog": {
+    "props": [],
+    "types": {}
+  },
+  "section": {
+    "props": [],
+    "types": {}
+  },
+  "sectionSeparator": {
+    "props": [
+      "containerStyle",
+      "containerStylingBox",
+      "customStyle",
+      "inline",
+      "lineFont",
+      "lineHeight",
+      "lineStyle",
+      "lineType",
+      "lineWidth",
+      "orientation",
+      "titleStyle"
+    ],
+    "types": {
+      "containerStyle": "string",
+      "containerStylingBox": "object",
+      "titleStyle": "string"
+    }
+  },
+  "sizableColumns": {
+    "props": [
+      "columns"
+    ],
+    "types": {}
+  },
+  "slider": {
+    "props": [
+      "customStyle",
+      "max",
+      "min"
+    ],
+    "types": {
+      "min": "number"
+    }
+  },
+  "space": {
+    "props": [],
+    "types": {}
+  },
+  "statistic": {
+    "props": [
+      "precision",
+      "prefix",
+      "prefixIcon",
+      "suffix",
+      "suffixIcon",
+      "title",
+      "titleFont",
+      "titleStyle",
+      "value",
+      "valueFont",
+      "valueStyle"
+    ],
+    "types": {
+      "prefix": "string",
+      "suffix": "string",
+      "title": "string",
+      "titleStyle": "string",
+      "value": "number",
+      "valueStyle": "string"
+    }
+  },
+  "statusTag": {
+    "props": [
+      "mappings",
+      "override",
+      "value",
+      "valueSource"
+    ],
+    "types": {
+      "mappings": "string",
+      "override": "string"
+    }
+  },
+  "styleBox": {
+    "props": [],
+    "types": {}
+  },
+  "subForm": {
+    "props": [
+      "apiMode",
+      "dataSource",
+      "entityType",
+      "formId",
+      "formSelectionMode",
+      "formType",
+      "getUrl",
+      "labelCol",
+      "onCreated",
+      "onUpdated",
+      "postUrl",
+      "properties",
+      "putUrl",
+      "uniqueStateId",
+      "wrapperCol"
+    ],
+    "types": {
+      "entityType": "string",
+      "formId": "string",
+      "onCreated": "string",
+      "onUpdated": "string",
+      "properties": "string",
+      "uniqueStateId": "string"
+    }
+  },
+  "switch": {
+    "props": [
+      "customStyle"
+    ],
+    "types": {}
+  },
+  "tableViewSelector": {
+    "props": [
+      "commonSettings",
+      "filters",
+      "showIcon"
+    ],
+    "types": {
+      "showIcon": "boolean"
+    }
+  },
+  "tabs": {
+    "props": [
+      "card",
+      "cardStyle",
+      "customStyle",
+      "defaultActiveKey",
+      "tabCardFontStyle",
+      "tabLineColor",
+      "tabPosition",
+      "tabs",
+      "tabType"
+    ],
+    "types": {
+      "card": "string",
+      "tabLineColor": "string"
+    }
+  },
+  "text": {
+    "props": [
+      "code",
+      "content",
+      "contentDisplay",
+      "contentType",
+      "copyable",
+      "dataType",
+      "dateFormat",
+      "delete",
+      "ellipsis",
+      "italic",
+      "keyboard",
+      "level",
+      "mark",
+      "numberFormat",
+      "textType",
+      "underline"
+    ],
+    "types": {
+      "delete": "boolean",
+      "ellipsis": "boolean",
+      "italic": "boolean",
+      "keyboard": "boolean"
+    }
+  },
+  "textArea": {
+    "props": [
+      "allowClear",
+      "autoSize",
+      "passEmptyStringByDefault",
+      "showCount",
+      "spellCheck"
+    ],
+    "types": {
+      "autoSize": "boolean",
+      "passEmptyStringByDefault": "boolean",
+      "showCount": "boolean"
+    }
+  },
+  "textField": {
+    "props": [
+      "customStyle",
+      "prefix",
+      "prefixIcon",
+      "regExp",
+      "spellCheck",
+      "suffix",
+      "suffixIcon",
+      "textType"
+    ],
+    "types": {
+      "prefix": "string",
+      "regExp": "string",
+      "spellCheck": "boolean",
+      "suffix": "string"
+    }
+  },
+  "themeEditor": {
+    "props": [],
+    "types": {}
+  },
+  "threeStateSwitch": {
+    "props": [],
+    "types": {}
+  },
+  "timePicker": {
+    "props": [
+      "allowClear",
+      "autoFocus",
+      "customStyle",
+      "format",
+      "hideDisabledOptions",
+      "hourStep",
+      "inputReadOnly",
+      "minuteStep",
+      "range",
+      "secondStep",
+      "showNow",
+      "use12Hours"
+    ],
+    "types": {
+      "allowClear": "boolean",
+      "autoFocus": "boolean",
+      "hourStep": "number",
+      "inputReadOnly": "boolean",
+      "range": "boolean",
+      "secondStep": "number"
+    }
+  },
+  "title": {
+    "props": [],
+    "types": {}
+  },
+  "toolbar": {
+    "props": [],
+    "types": {}
+  },
+  "validationErrors": {
+    "props": [],
+    "types": {}
+  },
+  "wizard": {
+    "props": [
+      "additionalStyles",
+      "buttonsLayout",
+      "customStyle",
+      "defaultActiveStep",
+      "direction",
+      "labelPlacement",
+      "steps",
+      "stepWidth",
+      "wizardType"
+    ],
+    "types": {}
+  }
+}

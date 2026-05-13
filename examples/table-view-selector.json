@@ -1,0 +1,113 @@
+{
+    "components": [
+        {
+            "id": "kj1SmE6eSh1tupMBn3QCm5-gqhqWF7",
+            "type": "dataContext",
+            "propertyName": "dataContext1",
+            "componentName": "dataContext1",
+            "label": "Data Context1",
+            "labelAlign": "right",
+            "parentId": "root",
+            "hidden": false,
+            "isDynamic": false,
+            "sourceType": "Entity",
+            "entityType": {
+                "name": "Person",
+                "module": "Shesha"
+            },
+            "dataFetchingMode": "paging",
+            "defaultPageSize": 10,
+            "sortMode": "standard",
+            "strictSortOrder": "asc",
+            "allowReordering": "no",
+            "container": {},
+            "components": [
+                {
+                    "id": "cV5bcBmzuaLpeIT0YdJmTvbNX0RJ29",
+                    "type": "tableViewSelector",
+                    "propertyName": "tableViewSelector1",
+                    "componentName": "tableViewSelector1",
+                    "label": "Table View Selector1",
+                    "labelAlign": "right",
+                    "parentId": "kj1SmE6eSh1tupMBn3QCm5-gqhqWF7",
+                    "hidden": false,
+                    "isDynamic": false,
+                    "filters": [
+                        {
+                            "id": "default-all-records",
+                            "name": "Default",
+                            "tooltip": "Shows all records without any filtering",
+                            "sortOrder": 0
+                        },
+                        {
+                            "id": "9LV-fSMNJUFWqy6XeRWaSLtkwzi1D9",
+                            "sortOrder": 1,
+                            "name": "Same Address",
+                            "expression": {
+                                "and": [
+                                    {
+                                        "==": [
+                                            {
+                                                "var": "address"
+                                            },
+                                            {
+                                                "evaluate": [
+                                                    {
+                                                        "expression": "{{data.address}}",
+                                                        "required": true,
+                                                        "type": "mustache"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1CDxYtj088IKA95jdoESDICc29K825",
+                            "sortOrder": 2,
+                            "name": "Females Only",
+                            "expression": {
+                                "and": [
+                                    {
+                                        "==": [
+                                            {
+                                                "var": "gender"
+                                            },
+                                            2
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "persistSelectedFilters": true,
+                    "version": 2,
+                    "title": "Title",
+                    "container": {}
+                }
+            ]
+        }
+    ],
+    "formSettings": {
+        "layout": "horizontal",
+        "colon": true,
+        "labelCol": {
+            "span": 8
+        },
+        "wrapperCol": {
+            "span": 16
+        },
+        "dataLoaderType": "none",
+        "dataSubmitterType": "none",
+        "access": 4,
+        "version": 8,
+        "permissions": null,
+        "dataLoadersSettings": {
+            "gql": {},
+            "custom": {}
+        },
+        "onAfterDataLoad": null
+    }
+}
