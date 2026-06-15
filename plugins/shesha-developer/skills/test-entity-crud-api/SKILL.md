@@ -61,7 +61,7 @@ The `Run-EndpointTests.ps1` script handles the full server lifecycle automatical
      "profiles": {
        "Project": {
          "commandName": "Project",
-         "launchBrowser": false,
+         "launchBrowser": true,
          "applicationUrl": "http://localhost:21021"
        }
      }

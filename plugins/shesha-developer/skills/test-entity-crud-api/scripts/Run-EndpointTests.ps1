@@ -32,14 +32,31 @@ if ($Port -eq 0) {
         Where-Object { $_.FullName -match "Web\.Host" } | Select-Object -First 1
     if ($launchSettings) {
         $json = Get-Content $launchSettings.FullName | ConvertFrom-Json
-        # Look for "Project" profile first, then fall back to first profile
-        $projectProfile = $null
-        if ($json.profiles.PSObject.Properties["Project"]) {
-            $projectProfile = $json.profiles.Project
-        } else {
-            $profiles = $json.profiles.PSObject.Properties | Select-Object -First 1
-            if ($profiles) { $projectProfile = $profiles.Value }
+
+        # Ensure a "Project" profile exists - required for dotnet run
+        if (-not $json.profiles.PSObject.Properties["Project"]) {
+            Write-Host "  No 'Project' launch profile found - creating one..." -ForegroundColor Yellow
+
+            # Derive port from iisSettings if available, otherwise default
+            $defaultPort = 21021
+            if ($json.iisSettings -and $json.iisSettings.iisExpress -and $json.iisSettings.iisExpress.applicationUrl) {
+                if ($json.iisSettings.iisExpress.applicationUrl -match ":(\d+)") {
+                    $defaultPort = [int]$Matches[1]
+                }
+            }
+
+            $projectProfile = [PSCustomObject]@{
+                commandName    = "Project"
+                launchBrowser  = $false
+                applicationUrl = "http://localhost:$defaultPort"
+            }
+            $json.profiles | Add-Member -NotePropertyName "Project" -NotePropertyValue $projectProfile
+            $json | ConvertTo-Json -Depth 10 | Set-Content $launchSettings.FullName -Encoding UTF8
+            Write-Host "  Created 'Project' profile (port $defaultPort) in $($launchSettings.FullName)" -ForegroundColor Green
         }
+
+        # Read port from Project profile
+        $projectProfile = $json.profiles.Project
         if ($projectProfile -and $projectProfile.applicationUrl) {
             $url = $projectProfile.applicationUrl -split ";" | Select-Object -First 1
             if ($url -match ":(\d+)") {
@@ -56,6 +73,7 @@ $ServerProcess = $null
 $script:SolutionFile = $null
 $script:WebHostProject = $null
 $script:DomainPath = $null
+$script:DomainPaths = @()
 $script:ProjectName = "Shesha Project"
 
 # ============================================================================
@@ -102,29 +120,37 @@ function Find-ProjectFiles {
     }
     $script:WebHostProject = $webHostProjects[0].FullName
 
-    # Find Domain folder - look for *.Domain project with a Domain subfolder
+    # Find ALL Domain folders - look for *.Domain project with a Domain subfolder
+    $script:DomainPaths = @()
     $domainProjects = Get-ChildItem -Path $BackendDir -Filter "*.Domain.csproj" -Recurse -ErrorAction SilentlyContinue
     foreach ($proj in $domainProjects) {
         $domainFolder = Join-Path $proj.DirectoryName "Domain"
         if (Test-Path $domainFolder) {
-            $script:DomainPath = $domainFolder
-            break
+            $script:DomainPaths += $domainFolder
         }
     }
 
-    if (-not $script:DomainPath) {
+    # Set DomainPath to first found for backwards compat
+    if ($script:DomainPaths.Count -gt 0) {
+        $script:DomainPath = $script:DomainPaths[0]
+    }
+
+    if ($script:DomainPaths.Count -eq 0) {
         # Fallback: look for any folder named "Domain" under src
         $srcPath = Join-Path $BackendDir "src"
         if (Test-Path $srcPath) {
             $domainFolders = Get-ChildItem -Path $srcPath -Directory -Recurse -Filter "Domain" -ErrorAction SilentlyContinue |
                 Where-Object { $_.Parent.Name -match '\.Domain$' }
-            if ($domainFolders.Count -gt 0) {
-                $script:DomainPath = $domainFolders[0].FullName
+            foreach ($df in $domainFolders) {
+                $script:DomainPaths += $df.FullName
+            }
+            if ($script:DomainPaths.Count -gt 0) {
+                $script:DomainPath = $script:DomainPaths[0]
             }
         }
     }
 
-    if (-not $script:DomainPath) {
+    if ($script:DomainPaths.Count -eq 0) {
         Write-Host "  WARNING: No Domain folder found. Entity scanning will be skipped." -ForegroundColor Yellow
     }
 
@@ -231,21 +257,30 @@ function Find-DomainEntities {
 
     $entities = @()
 
-    if (-not $script:DomainPath -or -not (Test-Path $script:DomainPath)) {
+    $pathsToScan = if ($script:DomainPaths.Count -gt 0) { $script:DomainPaths } elseif ($script:DomainPath) { @($script:DomainPath) } else { @() }
+
+    if ($pathsToScan.Count -eq 0) {
         Write-Host "  WARNING: Domain path not found" -ForegroundColor Yellow
         return $entities
     }
 
-    Write-Host "  Domain path: $($script:DomainPath)" -ForegroundColor Gray
+    foreach ($domainPath in $pathsToScan) {
+        Write-Host "  Domain path: $domainPath" -ForegroundColor Gray
+    }
 
-    # Find all .cs files in the Domain folder
-    $csFiles = Get-ChildItem -Path $script:DomainPath -Filter "*.cs" -Recurse
+    # Find all .cs files across all Domain folders
+    $csFiles = @()
+    foreach ($domainPath in $pathsToScan) {
+        if (Test-Path $domainPath) {
+            $csFiles += Get-ChildItem -Path $domainPath -Filter "*.cs" -Recurse
+        }
+    }
 
     foreach ($file in $csFiles) {
         $content = Get-Content $file.FullName -Raw
 
-        # Skip enum/reference list files
-        if ($content -match '\[ReferenceList\(' -or $content -match 'public enum ') {
+        # Skip pure enum/reference list definition files (not entity files that use reference lists)
+        if ($content -match 'public enum ') {
             continue
         }
 
@@ -383,52 +418,68 @@ if ($UpdateEntities) {
     }
 }
 
-# Step 1: Check if server is running
+# Step 1: Check if server is running and handle startup
 Write-Host "  Checking server status..." -ForegroundColor Yellow
 $serverWasRunning = Test-ServerRunning
 
-if ($serverWasRunning) {
-    Write-Status "Server status:" "RUNNING" "Green"
-}
-else {
-    Write-Status "Server status:" "NOT RUNNING" "Red"
-
-    if ($StartServer) {
-        Write-Host ""
-
-        # Build the solution first
-        if (-not (Build-Backend)) {
-            Write-Host "  ERROR: Build failed, cannot start server" -ForegroundColor Red
-            exit 1
+if ($StartServer) {
+    # -StartServer always rebuilds and starts a fresh server
+    if ($serverWasRunning) {
+        Write-Status "Server status:" "RUNNING (stale - will restart with new code)" "Yellow"
+        Write-Host "  Stopping existing server to rebuild with latest changes..." -ForegroundColor Yellow
+        # Find and kill the existing dotnet Web.Host process
+        $existingProcesses = Get-Process -Name "dotnet" -ErrorAction SilentlyContinue |
+            Where-Object { $_.MainModule.FileName -match "dotnet" }
+        foreach ($proc in $existingProcesses) {
+            try {
+                Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+                Write-Host "  Stopped existing dotnet process (PID: $($proc.Id))" -ForegroundColor Yellow
+            } catch { }
         }
+        Start-Sleep -Seconds 2
+    }
+    else {
+        Write-Status "Server status:" "NOT RUNNING" "Red"
+    }
 
-        Write-Host ""
-        $ServerProcess = Start-BackendServer
+    Write-Host ""
 
-        if ($ServerProcess) {
-            if (-not (Wait-ForServer -TimeoutSeconds $StartupTimeoutSeconds)) {
-                Write-Host ""
-                Write-Host "  ERROR: Server failed to start within timeout period" -ForegroundColor Red
-                Stop-BackendServer -Process $ServerProcess
-                exit 1
-            }
-        }
-        else {
-            Write-Host "  ERROR: Failed to start server process" -ForegroundColor Red
+    # Build the solution first
+    if (-not (Build-Backend)) {
+        Write-Host "  ERROR: Build failed, cannot start server" -ForegroundColor Red
+        exit 1
+    }
+
+    Write-Host ""
+    $ServerProcess = Start-BackendServer
+
+    if ($ServerProcess) {
+        if (-not (Wait-ForServer -TimeoutSeconds $StartupTimeoutSeconds)) {
+            Write-Host ""
+            Write-Host "  ERROR: Server failed to start within timeout period" -ForegroundColor Red
+            Stop-BackendServer -Process $ServerProcess
             exit 1
         }
     }
     else {
-        Write-Host ""
-        Write-Host "  The backend server is not running." -ForegroundColor Yellow
-        Write-Host "  Options:" -ForegroundColor Yellow
-        Write-Host "    1. Start the server manually: dotnet run --project $($script:WebHostProject)" -ForegroundColor Gray
-        Write-Host "    2. Run this script with -StartServer flag to auto-start" -ForegroundColor Gray
-        Write-Host ""
-        Write-Host "  Example: .\Run-EndpointTests.ps1 -StartServer" -ForegroundColor Cyan
-        Write-Host ""
+        Write-Host "  ERROR: Failed to start server process" -ForegroundColor Red
         exit 1
     }
+}
+elseif ($serverWasRunning) {
+    Write-Status "Server status:" "RUNNING" "Green"
+}
+else {
+    Write-Status "Server status:" "NOT RUNNING" "Red"
+    Write-Host ""
+    Write-Host "  The backend server is not running." -ForegroundColor Yellow
+    Write-Host "  Options:" -ForegroundColor Yellow
+    Write-Host "    1. Start the server manually: dotnet run --project $($script:WebHostProject)" -ForegroundColor Gray
+    Write-Host "    2. Run this script with -StartServer flag to auto-start" -ForegroundColor Gray
+    Write-Host ""
+    Write-Host "  Example: .\Run-EndpointTests.ps1 -StartServer" -ForegroundColor Cyan
+    Write-Host ""
+    exit 1
 }
 
 # Step 2: Run the endpoint tests
@@ -442,6 +493,7 @@ if (-not (Test-Path $testScript)) {
     exit 1
 }
 
+$testExitCode = 0
 try {
     $testParams = @{
         BaseUrl = $BaseUrl
@@ -458,15 +510,16 @@ catch {
     Write-Host "  ERROR: Test execution failed - $_" -ForegroundColor Red
     $testExitCode = 1
 }
-
-# Step 3: Cleanup if we started the server
-if ($ServerProcess) {
-    Write-Host ""
-    Write-Header "Cleanup"
-    Stop-BackendServer -Process $ServerProcess
+finally {
+    # Always clean up the server we started, even on crash/abort
+    if ($ServerProcess) {
+        Write-Host ""
+        Write-Header "Cleanup"
+        Stop-BackendServer -Process $ServerProcess
+    }
 }
 
-# Step 4: Final summary
+# Step 3: Final summary
 Write-Host ""
 if ($testExitCode -eq 0) {
     Write-Host "  All tests passed!" -ForegroundColor Green
