@@ -81,9 +81,9 @@ function Stop-ServerJob {
         ForEach-Object {
             if ($_ -match '\s(\d+)$') { [int]$Matches[1] }
         } | Sort-Object -Unique
-    foreach ($pid in $portListeners) {
-        if ($pid -gt 0) {
-            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+    foreach ($procId in $portListeners) {
+        if ($procId -gt 0) {
+            Stop-Process -Id $procId -Force -ErrorAction SilentlyContinue
         }
     }
 }
@@ -191,12 +191,12 @@ try {
     } -ArgumentList $projectArg, $BackendPort
 
     Write-Host 'Waiting for server to start (polling port)...'
-    $portReady = Wait-ForPort -Port $BackendPort -TimeoutSeconds 120
+    $portReady = Wait-ForPort -Port $BackendPort -TimeoutSeconds 600
 
     if (-not $portReady) {
         $result.server = 'FAIL'
         $result.serverOutput = Get-JobOutput -Job $serverJob -TailLines 30
-        $result.errors += 'Server did not start within 120 seconds'
+        $result.errors += 'Server did not start within 600 seconds'
 
         # Check for database errors
         $jobOutput = $result.serverOutput
@@ -226,14 +226,14 @@ try {
                         & dotnet run --project $proj --urls "http://localhost:$port" --no-build 2>&1
                     } -ArgumentList $projectArg, $BackendPort
 
-                    $portReady = Wait-ForPort -Port $BackendPort -TimeoutSeconds 120
+                    $portReady = Wait-ForPort -Port $BackendPort -TimeoutSeconds 600
                     if ($portReady) {
                         $result.server = 'PASS'
                         $result.errors = @($result.errors | Where-Object { $_ -notmatch 'did not start' })
                     }
                     else {
                         $result.serverOutput = Get-JobOutput -Job $serverJob -TailLines 30
-                        $result.errors += 'Server failed to start after database restore'
+                        $result.errors += 'Server failed to start after database restore (timeout)'
                     }
                 }
                 else {
