@@ -26,7 +26,8 @@ Scaffold and manage custom configuration items for a Shesha/.NET/ABP/NHibernate 
 | 5 | Exporter | Domain | [reference/distribution.md](reference/distribution.md) §2 |
 | 6 | Importer | Domain | [reference/distribution.md](reference/distribution.md) §3 |
 | 7 | Module Registration | Application | [reference/registration.md](reference/registration.md) |
-| 8 | Admin Forms | (UI) | [reference/admin-forms.md](reference/admin-forms.md) |
+| 8 | Admin Forms — standalone screen | (UI) | [reference/admin-forms.md](reference/admin-forms.md) |
+| 8b | Admin Forms — Configuration Studio | (UI) | [reference/configuration-studio.md](reference/configuration-studio.md) |
 
 ## Folder Structure
 
@@ -122,8 +123,22 @@ Determine the type of change, then follow the appropriate path:
 - [ ] Step 5: Create distribution DTO, exporter, and importer (artifacts 4-6)
 - [ ] Step 6: Register manager, exporter, and importer in Application module (artifact 7)
 - [ ] Step 7: Verify NHibernate mappings (see Verification section below)
-- [ ] Step 8: Create admin forms via Shesha MCP or notify user (artifact 8)
+- [ ] Step 8: Ask the user how this item should be managed (see below), then scaffold artifact 8 or 8b — not both
 ```
+
+**Before scaffolding admin UI, ask the user:**
+
+> "How should `{ConfigName}` be managed — a standalone admin screen with its own table/create/edit
+> forms (artifact 8), or surfaced in Configuration Studio's own **New** menu and document editor,
+> the same way Reference Lists and Roles are (artifact 8b)?"
+
+- **Standalone screen** → [reference/admin-forms.md](reference/admin-forms.md). Works with
+  `ConfigurationItemBase` as scaffolded by this skill's default template.
+- **Configuration Studio** → [reference/configuration-studio.md](reference/configuration-studio.md).
+  Requires the entity to extend `ConfigurationItem` (not `ConfigurationItemBase`) — if it was
+  scaffolded per this skill's default template, it needs the base class changed first. Also
+  requires at least one genuine `NotNullable()` own column (see that reference file §1) — do not
+  skip this even if the entity otherwise has no custom properties yet.
 
 ### Update Existing Config Item Workflow
 
@@ -153,6 +168,12 @@ GET /api/services/app/Entities/GetAll?entityType=Shesha.Domain.ConfigurationItem
 Expected: `{"success": true, "result": {"totalCount": N, ...}}` where N > 0
 
 If either endpoint returns `success: false` with a SQL error mentioning "Invalid column name", the migration column names don't match NHibernate's expected naming convention. The most common cause is FK columns missing the `{Prefix}_` prefix in `[JoinedProperty]` tables.
+
+If both endpoints return `success: true` but a freshly-created item never shows up in a later query
+against it (e.g. via a dropdown/lookup endpoint, or `Get`), the entity likely has no genuine
+`NotNullable()` column of its own — see [reference/configuration-studio.md](reference/configuration-studio.md)
+§1 for why NHibernate silently skips the joined-table insert in that case. This applies whether or
+not Configuration Studio is involved.
 
 ### Key Rules
 
