@@ -1,7 +1,7 @@
 ---
 name: test-entity-crud-api
 description: Test all domain entity CRUD GET endpoints and optionally auto-fix failures
-argument-hint: "[--no-fix] [--update-entities] [--start-server]"
+argument-hint: "[--no-fix] [--update-entities] [--start-server] [--modules \"A,B\"] [--entities \"X,Y\"]"
 allowed-tools:
   - Bash(powershell *)
   - Bash(dotnet *)
@@ -25,8 +25,12 @@ The skill auto-detects project files based on standard Shesha conventions:
 ## Arguments
 
 - `--no-fix` - Disable auto-fix (default: auto-fix is enabled)
-- `--update-entities` - Scan domain folder for new entities before testing
+- `--update-entities` - Scan domain folders for new entities before testing
 - `--start-server` - Build the solution and auto-start the backend server if not running
+- `--modules "A,B"` - Comma-separated module names to test (substring match, case-insensitive, against the owning `*.Domain` project name / namespace). Empty = all modules.
+- `--entities "X,Y"` - Comma-separated entity class names to test (exact match, case-insensitive). Empty = all entities.
+
+`--modules` and `--entities` combine as an **intersection** (entities that are in one of the named modules AND named in the entity list). Passing either filter implies an entity scan, so the tested list always reflects the current domain model. In large multi-module solutions, use these to test only the modules you changed instead of the entire entity surface.
 
 ## Instructions
 
@@ -49,6 +53,7 @@ powershell -ExecutionPolicy Bypass -File "<skill-base-dir>/scripts/Run-EndpointT
 Replace `<skill-base-dir>` with this skill's base directory and `<repo-root>` with the project's repository root (the working directory).
 
 Add `-StartServer` if `--start-server` was passed.
+Add `-Modules "A,B"` if `--modules` was passed, and `-Entities "X,Y"` if `--entities` was passed (forward the user's comma-separated values verbatim).
 
 **In sandboxed/ephemeral environments** where the backend runs in a separate process or pod (not
 reachable at `localhost`), set the `SHESHA_BACKEND_URL` environment variable before running this
@@ -133,4 +138,7 @@ Summarize:
 /test-entity-crud-api --start-server            # Build, start server, and run tests with auto-fix
 /test-entity-crud-api --update-entities         # Scan for new entities, then test with auto-fix
 /test-entity-crud-api --no-fix --start-server   # Build, start server, run tests, no auto-fix
+/test-entity-crud-api --modules "ProjectOps"    # Test only entities in modules matching "ProjectOps"
+/test-entity-crud-api --entities "TimesheetLine,Timesheet"   # Test only these entity classes
+/test-entity-crud-api --modules "Projectmanagement" --start-server   # Scope to one module and auto-start
 ```

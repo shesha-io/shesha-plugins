@@ -17,7 +17,7 @@ param(
     [int]$Port = 3000
 )
 
-$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Continue'
 
 # --- Helper: Wait-ForPort ---
 function Wait-ForPort {
@@ -55,9 +55,9 @@ function Stop-DevServer {
         ForEach-Object {
             if ($_ -match '\s(\d+)$') { [int]$Matches[1] }
         } | Sort-Object -Unique
-    foreach ($pid in $portListeners) {
-        if ($pid -gt 0) {
-            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+    foreach ($procId in $portListeners) {
+        if ($procId -gt 0) {
+            Stop-Process -Id $procId -Force -ErrorAction SilentlyContinue
         }
     }
 }
