@@ -104,6 +104,89 @@ VALUES ({version}, GETUTCDATE(), 'M{version} (skipped locally: {reason})');
 - Always write the reason into `Description`. An unexplained row is indistinguishable from a real one later.
 - Raise a ticket. A skipped migration is a database that no longer matches its own history.
 
+## §6a. Renamed framework tables — the migration-number test
+
+The Configuration Items rewrite renames tables, and each one renames at a **specific migration
+number**. So the test is per table, not per repo:
+
+| Table family | Renamed at | Becomes |
+|---|---|---|
+| configuration items / reference lists / form configurations | `20250623120399` | `frwk.*`, snake_case |
+| stored files | `20251024104999` | `frwk.stored_files` |
+
+An app migration numbered **after** the threshold must use the new name; one numbered before it must
+keep the old name, because on a fresh database it runs while the old name still exists.
+
+Sweep every repo after the bump:
+
+```bash
+grep -rl "Frwk_ConfigurationItems\|Frwk_ReferenceLists\|Frwk_StoredFiles" --include=M2*.cs .
+```
+
+then compare each hit's number against the threshold for the table it names.
+
+**Why it hides.** On a database that already applied those migrations they are recorded and never
+re-run, so an existing environment starts perfectly while a fresh database — or one restored from an
+older backup — dies on first boot. **A migration added since the last deployment fails first**,
+having been applied nowhere. One host app was found carrying nine such migrations, all latent.
+
+### Writing the fix
+
+`AddForeignKeyColumn` **cannot name a schema.** Add the column plainly, then create the constraint
+against whichever table the database actually has, resolving the primary-key spelling too rather
+than assuming it:
+
+```csharp
+Alter.Table(TableName).AddColumn("ImportedFileId").AsGuid().Nullable();
+
+if (Schema.Schema("frwk").Table("stored_files").Exists())
+{
+    var pk = Schema.Schema("frwk").Table("stored_files").Column("id").Exists() ? "id" : "Id";
+    Create.ForeignKey($"FK_{TableName}_ImportedFileId_frwk_stored_files")
+        .FromTable(TableName).ForeignColumn("ImportedFileId")
+        .ToTable("stored_files").InSchema("frwk").PrimaryColumn(pk);
+}
+else if (Schema.Table("Frwk_StoredFiles").Exists()) { /* pre-rewrite database */ }
+```
+
+Amend the offending migration in place rather than adding a replacement, so hosts that already
+applied it do not re-run it.
+
+**If merged migrations must not be edited** (a common team rule), use a *superseding* migration
+instead: number it just before the broken one, do the 0.46 equivalent, then insert the broken one's
+version into `VersionInfo`. The runner reloads `VersionInfo` after every migration, so the original
+is skipped. Guard every statement on `VersionInfo` at execution time so a database that already
+applied the original (on 0.43) is untouched. For an `AddForeignKeyColumn` against a dropped table,
+a *prerequisite* migration that adds the column first is enough — the original's own column guard
+then skips it.
+
+## §6b. Duplicate migration versions
+
+`DuplicateMigrationException` at start-up means an app migration shares its number with one the new
+module packages ship (ServiceManagement and Enterprise both reuse round numbers such as
+`yyyyMMdd100000`). Renumber the **app's** copy — never the package's — and avoid round numbers for
+new migrations. A renumbered migration runs again on databases that applied the old number, so it
+must be idempotent.
+
+## §6c. Framework data defects that need an app-side repair migration
+
+These are not schema errors: the framework migrations *succeed* and leave bad data, or stop on data
+an app is likely to have. Number each repair just before or after the framework migration named.
+
+| Symptom | Cause | Repair |
+|---|---|---|
+| `entity_config_id` cannot be NULL (`M20250912170999`) | orphaned `entity_properties` with no config revision | delete properties whose `entity_config_id` is NULL, just before it |
+| `String or binary data would be truncated` copying stored files (`M20251023114499`) | `file_type` is `nvarchar(50)`; the xlsx MIME type is 65 chars | store the extension (`.xlsx`/`.xlsm`) — in the data before the copy **and** in code that saves files |
+| Most notification templates missing after `M20260121101699` drops `Core_NotificationTemplates` | `M20250908141499` joined on the item's revision, copying only templates that were themselves items | back the table up just before the drop, restore templates onto the type's latest revision |
+| Old main menu / theme come back; settings edits do not stick | `15-copy-setting_values.sql` compares `UserId = prev.UserId`, never true for NULL, so **every historical value** of app-wide settings is copied and one is read at random | keep the newest row per `(setting_configuration_id, application_id, user_id)` — `ROW_NUMBER() OVER (PARTITION BY …)` treats NULLs as equal |
+| A module's settings copy silently skipped (e.g. AzureAD → `Shesha.MicrosoftAuthentication`) | module rows are created by the bootstrapper **after** migrations; the copy needs the row | `this.Shesha().ModuleEnsureExists("<module>")` in a migration numbered just before the copy |
+| `TransientObjectException … ShaRole` at start-up | an app package re-adds a role that is **soft-deleted**; the importer ignores deleted items, treats it as new, and queries its permissions before saving it | un-delete the role (item **and** its revisions) in a migration — migrations run before package seeding |
+| Every form of a configuration-only module "not found" (often one created from a starter template) | the bootstrapper **soft-deletes every module with no code module behind it** (configuration-only modules from 0.43) and resolves forms only through the code module hierarchy | declare a `SheshaModule` with that module name (and add it to `DependsOn`) |
+
+Companion packages can ship migrations still written against the 0.43 tables (ServiceManagement
+2.5 betas, including the case-type conversion that `Invalid column name 'SM_OrderIndex'` reveals).
+Stand in for them with a superseding migration (§6a) and raise it with the package owner.
+
 ## §7. Escalating upstream
 
 These are framework defects, not application bugs. When reporting:

@@ -39,6 +39,44 @@ Success = `~/.nuget/plugins/netcore/CredentialProvider.Microsoft` exists and res
 - Diagnose feeds before diagnosing packages. `NU1101` almost never means what it says.
 - A project that "works" may only be resolving from the global cache. Check `.nupkg.metadata` → `source` to see where a cached package really came from, and test a clean restore before trusting it.
 
+## §1a. `npm view <pkg> version` lies
+
+It returns the `latest` dist-tag, not the highest published version. A package can have newer
+builds sitting behind a stale tag, so a module looks abandoned when a usable version exists. Always:
+
+```bash
+npm view <pkg> versions --json
+```
+
+This has already caused one wrong conclusion — a companion package was declared unfixable on the
+strength of a `latest` that was two minor versions behind what was published.
+
+## §1b. Never reach for `--legacy-peer-deps`
+
+It does not resolve a peer conflict, it suppresses the report of one, and the duplicate or
+wrong-major package still lands in `node_modules`. Check `.npmrc` for a `legacy-peer-deps=true`
+before concluding an install is clean.
+
+**A framework package can ship peers that contradict each other.** `@shesha-io/enterprise 8.0.0`
+peer-requires `react ^19.x` while pinning `react-leaflet ^4.2.1`, which is React 18 only. Nothing
+the app declares resolves that — only an override on the inner package does
+(`"react-leaflet": "^5.0.0"`). Still present in the final release, not just the betas.
+
+**Duplicate-UI-library overrides are a trade-off, not a fix.** A transitive consumer still peering
+on the previous antd major makes npm install a second copy — two `ConfigProvider` contexts and two
+emotion caches, so tokens set by one are invisible to components resolved from the other. Forcing
+the consumer onto the app's major fixes the visible bug but pushes it outside its declared range.
+Acceptable *if* the reason is written in the manifest and the real fix is pursued upstream.
+
+**But never invent an override.** Before adding one, confirm the two consumers actually share the
+dependency. A real miss: an override forced `@rc-component/trigger` to 3.10.1 "so antd and rc-picker
+would share it". `rc-picker` declares `^2.0.0`, and antd does not depend on `rc-picker` at all — so
+there was never a copy to share. Out-of-range and pointless, and both versions installed anyway.
+**Two copies is the correct outcome when two consumers need different majors.**
+
+Verify the result by each `package.json`'s `name` field, not by path — a scoped package such as
+`@react-awesome-query-builder/antd` sits in a directory ending in `antd` and double-counts.
+
 ## §2. Version drift — pin exactly
 
 The Shesha feeds carry higher parallel lines that no longer track development:
@@ -113,3 +151,19 @@ find bin -name '*.dll' -exec sh -c 'grep -qa "IEntityConfigurationStore" "$1" &&
 **NuGetAudit** on net10.0 audits transitive packages by default — expect ~470 warnings from ~16 distinct advisories. `NuGetAuditMode=direct` reduces it to what you control (~20).
 
 `AutoMapper 14.0.0` (high severity, GHSA-rvv3-g6hj-g44x) is **not fixable downstream**: `Abp.AutoMapper` pins it, `AutoMapper.Collection 11.0.0` constrains to `[14.0.0, 15.0.0)`, `14.0.0` is the only 14.x, and the fix is `15.1.1`. Escalate upstream; do not force it.
+
+---
+
+## §6. `NU1605` downgrades after the framework bump
+
+0.46 pulls newer transitives than 0.43 did, so an app pinning one of them directly now *downgrades*
+it, and most repos treat that as an error:
+
+| Package | Bump the app's direct pin to |
+|---|---|
+| `System.IdentityModel.Tokens.Jwt` | `8.16.0` (pulled via `Microsoft.AspNetCore.Authentication.JwtBearer 10.0.5`) |
+| `System.ValueTuple` | `4.6.2` (pulled via `Shesha.FluentMigrator 0.46.0`) |
+
+Read the error's dependency chain rather than guessing the floor — it names the package that
+demands the higher version. Derive floors from a project already proven on 0.46, and bump only
+packages the project already referenced.
