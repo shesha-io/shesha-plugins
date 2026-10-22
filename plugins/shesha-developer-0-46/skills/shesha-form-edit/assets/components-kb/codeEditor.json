@@ -1,0 +1,260 @@
+{
+  "type": "codeEditor",
+  "name": "Code Editor",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "CodeSandboxOutlined",
+  "version": 4,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "label": "Code Editor",
+      "mode": "dialog"
+    },
+    "raw": "(model) => {\n    const textAreaModel: ICodeEditorComponentProps = {\n      ...model,\n      label: 'Code Editor',\n      mode: 'dialog',\n    };\n\n    return textAreaModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ICodeEditorComponentProps",
+    "interfaceFile": "designer-components/codeEditor/interfaces.ts",
+    "ownProps": [
+      "mode",
+      "environment",
+      "language",
+      "availableConstantsExpression",
+      "availableConstants",
+      "resultTypeExpression"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IExecutableCodeEditor"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstants",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "environment",
+      "exposedVariables",
+      "fileName",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "language",
+      "layout",
+      "mobile",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "resultTypeExpression",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "templateSettings",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapInTemplate",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "codeEditor/settingsForm.json",
+    "mechanism": "json-markup",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "propertyName",
+      "label": "Property name",
+      "editorType": "contextPropertyAutocomplete",
+      "group": "Display"
+    },
+    {
+      "path": "label",
+      "label": "Label",
+      "editorType": "textField",
+      "group": "Display"
+    },
+    {
+      "path": "labelAlign",
+      "label": "Label align",
+      "editorType": "dropdown",
+      "group": "Display"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField",
+      "group": "Display"
+    },
+    {
+      "path": "description",
+      "label": "Description",
+      "editorType": "textArea",
+      "group": "Display"
+    },
+    {
+      "path": "mode",
+      "label": "Mode",
+      "editorType": "dropdown",
+      "defaultValue": "",
+      "group": "Display"
+    },
+    {
+      "path": "hidden",
+      "label": "Hidden",
+      "editorType": "checkbox",
+      "group": "Display"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Hide Label",
+      "editorType": "checkbox",
+      "group": "Display"
+    },
+    {
+      "path": "editMode",
+      "label": "Edit mode",
+      "editorType": "editModeSelector",
+      "group": "Display"
+    },
+    {
+      "path": "language",
+      "label": "Language",
+      "editorType": "dropdown",
+      "defaultValue": ""
+    },
+    {
+      "path": "wrapInTemplate",
+      "label": "Use function wrapper",
+      "editorType": "checkbox",
+      "group": "JavaScript/TypeScript",
+      "description": "If true, a code will be wrapped in a standard function wrapper template"
+    },
+    {
+      "path": "environment",
+      "label": "Environment",
+      "editorType": "dropdown",
+      "defaultValue": "",
+      "group": "JavaScript/TypeScript"
+    },
+    {
+      "path": "templateSettings.useAsyncDeclaration",
+      "label": "Async declaration",
+      "editorType": "checkbox",
+      "group": "JavaScript/TypeScript"
+    },
+    {
+      "path": "templateSettings.functionName",
+      "label": "Function name",
+      "editorType": "textField",
+      "group": "JavaScript/TypeScript"
+    },
+    {
+      "path": "availableConstantsExpression",
+      "label": "Available constants",
+      "editorType": "codeEditor",
+      "group": "JavaScript/TypeScript"
+    },
+    {
+      "path": "resultTypeExpression",
+      "label": "Result type",
+      "editorType": "codeEditor",
+      "group": "JavaScript/TypeScript"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "checkbox",
+      "group": "Validation"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissionAutocomplete",
+      "group": "Security"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "codeEditor/index.tsx",
+    "codeEditor/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    }
+  ]
+}

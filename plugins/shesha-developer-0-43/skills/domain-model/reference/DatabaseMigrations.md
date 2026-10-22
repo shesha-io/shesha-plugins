@@ -77,10 +77,10 @@ Before creating any migration, you MUST check the module's configured table pref
 2. Look for: `[assembly: TablePrefix("PREFIX_")]`
 3. **Use this exact prefix** for all new tables and columns on inherited entities
 
-Example: If AssemblyInfo.cs contains `[assembly: TablePrefix("LB_")]`, then:
-- ✅ Correct: `Create.Table("LB_ElectronicApprovals")`
-- ❌ Wrong: `Create.Table("Crm_ElectronicApprovals")`
-- ❌ Wrong: `Create.Table("ElectronicApprovals")`
+Example: If AssemblyInfo.cs contains `[assembly: TablePrefix("MOD_")]`, then:
+- ✅ Correct: `Create.Table("MOD_Orders")`
+- ❌ Wrong: `Create.Table("Crm_Orders")`
+- ❌ Wrong: `Create.Table("Orders")`
 
 **Entity to Table:**
 - New entity → Table name = [ModuleDBPrefix]_[PluralizedEntityName]
@@ -97,16 +97,16 @@ Example: If AssemblyInfo.cs contains `[assembly: TablePrefix("LB_")]`, then:
 
 **IMPORTANT: FK columns on inherited/joined tables:**
 When adding FK columns to an inherited entity's table (via `Alter.Table`) or to a `[JoinedProperty]` table (used by `ConfigurationItemBase` subclasses), the FK column name MUST include the module prefix. NHibernate expects ALL custom columns on these tables to use the prefix.
-- ✅ Correct: `.AddForeignKeyColumn("LB_RelatedEntityId", "Target_Table")`
+- ✅ Correct: `.AddForeignKeyColumn("MOD_RelatedEntityId", "Target_Table")`
 - ❌ Wrong: `.AddForeignKeyColumn("RelatedEntityId", "Target_Table")`
 
 **Module DB Prefix:**
-All tables/columns for a module must use its prefix (e.g., LB_, Core_, Frwk_)
+All tables/columns for a module must use its prefix (e.g., MOD_, Core_, Frwk_)
 The prefix is defined in AssemblyInfo.cs with [assembly: TablePrefix("PREFIX_")]
 
 **Common Prefixes:**
 - `Core_` - Shesha.Core framework tables (Person, Organisation, Account, OtpAuditItem)
-- `LB_` - LandBank.Crm module tables (example)
+- `MOD_` - an example application module's tables
 - `MyApp_` - Your custom module tables
 
 **Practical Workflow for Finding the Correct Prefix:**
@@ -122,22 +122,22 @@ The prefix is defined in AssemblyInfo.cs with [assembly: TablePrefix("PREFIX_")]
 // File: src/MyCompany.MyApp.Domain/Properties/AssemblyInfo.cs
 using Shesha.Domain.Attributes;
 
-[assembly: TablePrefix("LB_")]  // ← This is the prefix to use!
+[assembly: TablePrefix("MOD_")]  // ← This is the prefix to use!
 ```
 
 **Step 2: Use the prefix in migrations**
 ```csharp
-// ✅ CORRECT - Uses LB_ prefix from AssemblyInfo.cs
-Create.Table("LB_ElectronicApprovals")
+// ✅ CORRECT - Uses MOD_ prefix from AssemblyInfo.cs
+Create.Table("MOD_Orders")
     .WithIdAsGuid()
     .WithFullAuditColumns();
 
 // ❌ WRONG - Using wrong prefix
-Create.Table("Crm_ElectronicApprovals")  // Don't guess!
+Create.Table("Crm_Orders")  // Don't guess!
     .WithIdAsGuid();
 
 // ❌ WRONG - Missing prefix entirely
-Create.Table("ElectronicApprovals")  // Prefix is required!
+Create.Table("Orders")  // Prefix is required!
     .WithIdAsGuid();
 ```
 
@@ -391,7 +391,7 @@ LEFT JOIN [dbo].[Core_Accounts] c
    - Scalar values → no suffix (e.g., `CustomerName`)
 4. **Do NOT include `TenantId`** — Not all Shesha tables have a `TenantId` column. Including it when the source table lacks it causes `Invalid column name 'TenantId'` errors that **prevent the application from starting**. Only include columns that actually exist on the source tables.
 5. **Include audit columns from the primary table only** — Include `CreationTime`, `CreatorUserId`, `LastModificationTime`, `LastModifierUserId`, `IsDeleted`, `DeletionTime`, `DeleterUserId` from the primary (base) table.
-6. **View naming convention** — Use `[ModuleDBPrefix]_vw_[PluralizedEntityName]` (e.g., `LB_vw_OrdersWithCustomerInfo`).
+6. **View naming convention** — Use `[ModuleDBPrefix]_vw_[PluralizedEntityName]` (e.g., `MOD_vw_OrdersWithCustomerInfo`).
 
 ## Custom SQL Queries
 

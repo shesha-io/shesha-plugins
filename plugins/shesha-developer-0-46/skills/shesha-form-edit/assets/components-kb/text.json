@@ -1,0 +1,316 @@
+{
+  "type": "text",
+  "name": "Text",
+  "isInput": false,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "LineHeightOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "copyable": false,
+      "delete": false,
+      "italic": false,
+      "underline": false,
+      "level": 0,
+      "content": "Your text here..."
+    },
+    "raw": "(model) => ({\n    ...model,\n    copyable: false,\n    delete: false,\n    italic: false,\n    underline: false,\n    level: 0,\n    content: 'Your text here...',\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "ITextComponentProps",
+    "interfaceFile": "designer-components/text/models.ts",
+    "ownProps": [
+      "content",
+      "contentType",
+      "color",
+      "backgroundColor",
+      "level",
+      "fontSize",
+      "padding",
+      "italic",
+      "copyable",
+      "delete",
+      "underline",
+      "value",
+      "textAlign",
+      "styles"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "border",
+      "color",
+      "componentName",
+      "content",
+      "contentType",
+      "context",
+      "copyable",
+      "customEnabled",
+      "customVisibility",
+      "delete",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontSize",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "italic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "level",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "padding",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "styles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "textAlign",
+      "type",
+      "underline",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "text/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Controls text thickness (light, normal, bold, etc.)"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "content",
+      "label": "Content",
+      "editorType": "textArea"
+    },
+    {
+      "path": "italic",
+      "label": "Italic",
+      "editorType": "switch"
+    },
+    {
+      "path": "underline",
+      "label": "Underline",
+      "editorType": "switch"
+    },
+    {
+      "path": "delete",
+      "label": "Strikethrough",
+      "editorType": "switch"
+    },
+    {
+      "path": "copyable",
+      "label": "Copyable",
+      "editorType": "switch"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Font"
+    },
+    {
+      "path": "font.align",
+      "label": "Align",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "level",
+      "label": "Size",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Font"
+    },
+    {
+      "path": "contentType",
+      "label": "Type",
+      "editorType": "dropdown",
+      "options": [
+        "",
+        "primary",
+        "secondary",
+        "success",
+        "warning",
+        "info",
+        "danger",
+        "custom"
+      ],
+      "group": "Font"
+    },
+    {
+      "path": "font.color",
+      "label": "Custom Color",
+      "editorType": "colorPicker",
+      "group": "Font"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "content"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "text/index.tsx",
+    "text/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultStyles(prev)): font/color/background/border/dimensions/stylingBox into style blocks; defaults font Segoe UI 400 14px #000, width fit-content, margins/paddings 0, border none (text/utils.ts:"
+    },
+    {
+      "toVersion": 5,
+      "category": "curated",
+      "what": "font size: FONT_SIZES[prev.fontSize] rem -> px using a HARD-CODED 14px root (remToPx). text-sm 14->12.25px, text-base 16->14px, text-lg 18->15.75px, text-xl 20->17.5px. text-2xl and text-6xl have a stray \";\" in the table"
+    },
+    {
+      "toVersion": 6,
+      "category": "curated",
+      "what": "desktop.level set from textType===\"title\" && Number.isInteger(level) else 0 (non-title text always paragraph)"
+    },
+    {
+      "toVersion": 7,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "Mustache rewrite: contentDisplay===\"name\" -> \"{{data.<propertyName>}}\"; otherwise every \"{{\" -> \"{{data.\" (and \"{{{\" kept). Content that already says {{data.x}} becomes {{data.data.x}}; {{contexts.x}} becomes {{data.cont"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "type": "chevron",
+  "name": "Chevron",
+  "isInput": true,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FolderOpenOutlined",
+  "version": 2,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IChevronProps",
+    "interfaceFile": "components/chevron/models.ts",
+    "ownProps": [
+      "items",
+      "description",
+      "image",
+      "imageStyle",
+      "imageSize",
+      "referenceList",
+      "width",
+      "height",
+      "font"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IChevronStyleProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "activeColor",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "colorSource",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "height",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "image",
+      "imageSize",
+      "imageStyle",
+      "initialContext",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "referenceList",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showIcons",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "chevron/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "stylingBoxJson"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The reference list whose items are rendered as steps. Changes to its items are picked up automatically"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "referenceList",
+      "label": "Reference List",
+      "editorType": "referenceListAutocomplete",
+      "description": "The reference list whose items are rendered as steps. Changes to its items are picked up automatically",
+      "group": "Data"
+    },
+    {
+      "path": "items",
+      "label": "Items",
+      "editorType": "RefListItemSelectorSettingsModal",
+      "group": "Data"
+    },
+    {
+      "path": "width",
+      "label": "Width",
+      "editorType": "dimensionField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "height",
+      "label": "Height",
+      "editorType": "dimensionField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "colorSource",
+      "label": "Color Source",
+      "editorType": "dropdown",
+      "options": [
+        "primary",
+        "custom",
+        "reflist"
+      ],
+      "group": "Color Settings"
+    },
+    {
+      "path": "activeColor",
+      "label": "Active Color",
+      "editorType": "colorPicker",
+      "group": "Color Settings"
+    },
+    {
+      "path": "showIcons",
+      "label": "Show Icons",
+      "editorType": "switch",
+      "group": "Color Settings"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "chevron/chevron.tsx",
+    "../components/chevron/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 1,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 2,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

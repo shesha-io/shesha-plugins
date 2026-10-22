@@ -1,0 +1,38 @@
+{
+ "rule": "tagnull",
+ "cases": [
+  {
+   "name": "status tag without a value hidden",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tag",
+      "type": "refListStatus",
+      "componentName": "tag",
+      "parentId": "root",
+      "propertyName": "order.status",
+      "hidden": false
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "/*reconciler:046-tag-null*/\nreturn data?.order?.status != null;"
+    ],
+    [
+     "components/0/hidden",
+     "@absent"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/0/visible",
+    "components/0/hidden"
+   ]
+  }
+ ]
+}

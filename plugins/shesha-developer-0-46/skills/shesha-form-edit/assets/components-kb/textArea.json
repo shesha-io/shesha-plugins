@@ -1,0 +1,331 @@
+{
+  "type": "textArea",
+  "name": "Text Area",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "FontColorsOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "label": "Text Area",
+      "autoSize": false,
+      "showCount": false,
+      "allowClear": false
+    },
+    "raw": "(model) => {\n    const textAreaModel: ITextAreaComponentProps = {\n      ...model,\n      label: 'Text Area',\n      autoSize: false,\n      showCount: false,\n      allowClear: false,\n    };\n\n    return textAreaModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITextAreaComponentProps",
+    "interfaceFile": "designer-components/textArea/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "showCount",
+      "autoSize",
+      "allowClear",
+      "initialValue",
+      "passEmptyStringByDefault",
+      "spellCheck",
+      "desktop"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowClear",
+      "autoHeight",
+      "autoSize",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "initialValue",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "passEmptyStringByDefault",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showCount",
+      "size",
+      "spellCheck",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "textArea/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "autoSize",
+      "label": "Auto Size",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowClear",
+      "label": "Allow Clear",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "showCount",
+      "label": "Show Chars Count",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "spellCheck",
+      "label": "Spell Check",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.minLength",
+      "label": "Min Length",
+      "editorType": "numberField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.maxLength",
+      "label": "Max Length",
+      "editorType": "numberField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validation",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "textArea/textArea.tsx",
+    "textArea/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

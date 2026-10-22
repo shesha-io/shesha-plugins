@@ -1,0 +1,432 @@
+{
+  "type": "dropdown",
+  "name": "Dropdown",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "DownSquareOutlined",
+  "version": 15,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IDropdownComponentProps",
+    "interfaceFile": "designer-components/dropdown/model.ts",
+    "ownProps": [],
+    "extends": [
+      "IDropdownProps",
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowClear",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "bindingFormat",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dataSourceType",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableItemValue",
+      "disabled",
+      "disabledValues",
+      "displayStyle",
+      "editMode",
+      "editModePermissions",
+      "enableMultiSelect",
+      "enableStyleOnReadonly",
+      "events",
+      "fallbackDescription",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "ignoredValues",
+      "incomeCustomJs",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "labelCustomJs",
+      "layout",
+      "mobile",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "outcomeCustomJs",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "popupClassName",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "readOnlyPlaceholder",
+      "referenceListId",
+      "referenceListName",
+      "referenceListNamespace",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "selectRef",
+      "shadow",
+      "showIcon",
+      "showItemName",
+      "size",
+      "style",
+      "styleCss",
+      "styleValue",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "tag",
+      "tagStyle",
+      "tagVariant",
+      "type",
+      "validate",
+      "validationDependencies",
+      "value",
+      "valueFormat",
+      "values",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dropdown/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Specifies whether binding should be to the selected item value or the selected item label (e.g. if you want to save this selected item text to a string property)."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "bindingFormat",
+      "label": "Binding Format",
+      "editorType": "dropdown",
+      "description": "Specifies whether binding should be to the selected item value or the selected item label (e.g. if you want to save this selected item text to a string property)."
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "readOnlyPlaceholder",
+      "label": "Read-only Placeholder",
+      "editorType": "textField",
+      "description": "Text that gets displayed when empty and in read-only mode."
+    },
+    {
+      "path": "displayStyle",
+      "label": "Style",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "showItemName",
+      "label": "Show Item Name",
+      "editorType": "switch",
+      "description": "When checked the DisplayName/RefList Name will be shown."
+    },
+    {
+      "path": "showIcon",
+      "label": "Show Icon",
+      "editorType": "switch",
+      "description": "When checked the icon will display on the left side of the DisplayName"
+    },
+    {
+      "path": "enableMultiSelect",
+      "label": "Enable Multi-Select",
+      "editorType": "switch"
+    },
+    {
+      "path": "dataSourceType",
+      "label": "Data source",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "values",
+      "label": "Values",
+      "editorType": "customLabelValueEditor"
+    },
+    {
+      "path": "referenceListId",
+      "label": "Reference List",
+      "editorType": "referenceListAutocomplete",
+      "required": true
+    },
+    {
+      "path": "filter",
+      "label": "Filter",
+      "editorType": "queryBuilder",
+      "group": "Advanced"
+    },
+    {
+      "path": "disableItemValue",
+      "label": "Disable Item Value",
+      "editorType": "switch",
+      "description": "Disable reference list from selection",
+      "group": "Advanced"
+    },
+    {
+      "path": "disabledValues",
+      "label": "Disabled values",
+      "editorType": "textArea",
+      "description": "Pass an array of positive integers to disable specific values. For example: [1, 2, 3].",
+      "group": "Advanced"
+    },
+    {
+      "path": "ignoredValues",
+      "label": "Hidden values",
+      "editorType": "textArea",
+      "description": "Pass an array of positive integers to hide specific values. For example: [1, 2, 3].",
+      "group": "Advanced"
+    },
+    {
+      "path": "incomeCustomJs",
+      "label": "Key Value (legacy)",
+      "editorType": "codeEditor",
+      "description": "Return key from the value. Legacy setting, retained for forms saved with the removed Custom value format.",
+      "group": "Advanced"
+    },
+    {
+      "path": "outcomeCustomJs",
+      "label": "Custom Value (legacy)",
+      "editorType": "codeEditor",
+      "description": "Return value that will be stored as field value. Legacy setting, retained for forms saved with the removed Custom value format.",
+      "group": "Advanced"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validation",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "tagVariant",
+      "label": "Variant",
+      "editorType": "dropdown",
+      "description": "How each tag is filled when the option carries its own colour. Solid fills the tag, Outlined draws a coloured border, Filled applies a soft tint.",
+      "group": "Tag Style"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dropdown/index.tsx",
+    "dropdown/model.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 4,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 5,
+      "category": "other",
+      "what": "(not auto-labelled) 5, (prev, context) => ({ ...prev, valueFormat: prev.valueFormat ?? (context.isNew === true ? 'simple' : getBooleanPropertyOrUndefined(prev, \"useRawValue\") === true ? 'simple' : 'listItem'), editMode: "
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 8,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 9,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 10,
+      "category": "STYLE_BLOCKS",
+      "what": "seeds tag style set (tag), showItemName/showIcon true, tag variant defaults"
+    },
+    {
+      "toVersion": 13,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    },
+    {
+      "toVersion": 14,
+      "category": "curated",
+      "what": "mode -> enableMultiSelect; valueFormat simple/listItem -> bindingFormat \"itemValue\" (custom left without bindingFormat); solidColor folded into tagVariant"
+    },
+    {
+      "toVersion": 15,
+      "category": "curated",
+      "what": "clears seeded default tag colours (background/border/font) so tags follow the new defaults"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "type": "datatable.filter",
+  "name": "Table Filter",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FilterOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": "common",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": {
+    "defaults": {
+      "label": ""
+    },
+    "raw": "(model): IAdvancedFilterButtonComponentProps => ({ ...model, label: '' })"
+  },
+  "settingsProps": {
+    "interfaceName": "IAdvancedFilterButtonComponentProps",
+    "interfaceFile": "designer-components/dataTable/advancedFilterButton/types.ts",
+    "ownProps": [],
+    "extends": [
+      "IButtonComponentProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "actionConfiguration",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "block",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderStyle",
+      "borderWidth",
+      "buttonType",
+      "childItems",
+      "color",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "danger",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "dividerColor",
+      "dividerWidth",
+      "downIcon",
+      "dynamicItem",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontSize",
+      "fontWeight",
+      "ghost",
+      "height",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "icon",
+      "iconPosition",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "itemSubType",
+      "itemType",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "name",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "sortOrder",
+      "style",
+      "styleCss",
+      "styles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "tooltip",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dataTable/advancedFilterButton/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "label",
+      "label": "Caption",
+      "editorType": "textField"
+    },
+    {
+      "path": "buttonType",
+      "label": "Style",
+      "editorType": "dropdown",
+      "required": true
+    },
+    {
+      "path": "icon",
+      "label": "Icon",
+      "editorType": "iconPicker"
+    },
+    {
+      "path": "iconPosition",
+      "label": "Icon Position",
+      "editorType": "radio",
+      "options": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "path": "tooltip",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "childItems"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dataTable/advancedFilterButton/advancedFilterButtonComponent.tsx",
+    "dataTable/advancedFilterButton/types.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "curated",
+      "what": "buttonType ?? \"link\" copied into device blocks"
+    },
+    {
+      "toVersion": 7,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

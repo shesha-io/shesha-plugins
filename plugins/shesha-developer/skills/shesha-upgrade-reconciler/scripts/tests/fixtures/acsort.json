@@ -1,0 +1,62 @@
+{
+ "rule": "acsort",
+ "cases": [
+  {
+   "name": "entity autocomplete gets the 0.43 default sort",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ac1",
+      "type": "autocomplete",
+      "componentName": "ac1",
+      "parentId": "root",
+      "dataSourceType": "entitiesList",
+      "displayPropName": "name"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/sorting",
+     [
+      {
+       "id": "1f5fe7a4de554572303a46-s046",
+       "propertyName": "name",
+       "sorting": "asc",
+       "itemType": "item"
+      }
+     ]
+    ]
+   ],
+   "node": false,
+   "retire": false
+  },
+  {
+   "name": "a stored sorting is kept",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ac1",
+      "type": "autocomplete",
+      "componentName": "ac1",
+      "parentId": "root",
+      "dataSourceType": "entitiesList",
+      "displayPropName": "name",
+      "sorting": [
+       {
+        "propertyName": "id"
+       }
+      ]
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

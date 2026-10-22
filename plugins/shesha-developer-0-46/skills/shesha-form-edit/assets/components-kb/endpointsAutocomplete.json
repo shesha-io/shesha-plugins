@@ -1,0 +1,277 @@
+{
+  "type": "endpointsAutocomplete",
+  "name": "API Endpoints Autocomplete",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "ApiOutlined",
+  "version": 3,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IEndpointsAutocompleteComponentProps",
+    "interfaceFile": "designer-components/endpointsAutocomplete/interfaces.ts",
+    "ownProps": [
+      "httpVerb",
+      "availableHttpVerbs",
+      "mode"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "availableHttpVerbs",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "httpVerb",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "endpointsAutocomplete/settingsForm.json",
+    "mechanism": "json-markup",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "hideBorder",
+    "style",
+    "size"
+  ],
+  "settingsFields": [
+    {
+      "path": "propertyName",
+      "label": "Property name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "label",
+      "label": "Label",
+      "editorType": "textField"
+    },
+    {
+      "path": "textType",
+      "label": "Type",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "labelAlign",
+      "label": "Label align",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Description",
+      "editorType": "textArea"
+    },
+    {
+      "path": "prefix",
+      "label": "Prefix",
+      "editorType": "textField"
+    },
+    {
+      "path": "suffix",
+      "label": "Suffix",
+      "editorType": "textField"
+    },
+    {
+      "path": "hidden",
+      "label": "Hidden",
+      "editorType": "checkbox"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Hide Label",
+      "editorType": "checkbox"
+    },
+    {
+      "path": "editMode",
+      "label": "Edit mode",
+      "editorType": "editModeSelector"
+    },
+    {
+      "path": "hideBorder",
+      "label": "Hide border",
+      "editorType": "checkbox",
+      "shared": true
+    },
+    {
+      "path": "mode",
+      "label": "Mode",
+      "editorType": "radio"
+    },
+    {
+      "path": "httpVerb",
+      "label": "HTTP Verb",
+      "editorType": "textField",
+      "description": "Is used to filter the autocomplete by http verb"
+    },
+    {
+      "path": "availableHttpVerbs",
+      "label": "Http Verbs",
+      "editorType": "labelValueEditor"
+    },
+    {
+      "path": "onChangeCustom",
+      "label": "On Change",
+      "editorType": "codeEditor",
+      "description": "Enter custom event handler on changing of event."
+    },
+    {
+      "path": "onFocusCustom",
+      "label": "On Focus",
+      "editorType": "codeEditor",
+      "description": "Enter custom event handler on focus of event."
+    },
+    {
+      "path": "onBlurCustom",
+      "label": "On Blur",
+      "editorType": "codeEditor",
+      "description": "Enter custom event handler on blur of event."
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "checkbox"
+    },
+    {
+      "path": "validate.minLength",
+      "label": "Min Length",
+      "editorType": "numberField"
+    },
+    {
+      "path": "validate.maxLength",
+      "label": "Max Length",
+      "editorType": "numberField"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Validator",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "shared": true
+    },
+    {
+      "path": "size",
+      "label": "Size",
+      "editorType": "dropdown",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissionAutocomplete",
+      "group": "Security"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "endpointsAutocomplete/endpointsAutocomplete.tsx",
+    "endpointsAutocomplete/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+ "rule": "rowgap",
+ "cases": [
+  {
+   "name": "horizontal container without a gap",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "row",
+      "type": "container",
+      "componentName": "row",
+      "parentId": "root",
+      "direction": "horizontal",
+      "desktop": {}
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/desktop/gap",
+     "8px"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  },
+  {
+   "name": "the gap option is honoured",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "row",
+      "type": "container",
+      "componentName": "row",
+      "parentId": "root",
+      "direction": "horizontal"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/gap",
+     "12px"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "rowGap": "12px"
+   }
+  }
+ ]
+}

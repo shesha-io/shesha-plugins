@@ -1,0 +1,627 @@
+{
+  "type": "datalist",
+  "name": "DataList",
+  "isInput": true,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "UnorderedListOutlined",
+  "version": 12,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({ ...model, visible: model.visible ?? true })"
+  },
+  "settingsProps": {
+    "interfaceName": "IDataListComponentProps",
+    "interfaceFile": "designer-components/dataList/model.tsx",
+    "ownProps": [],
+    "extends": [
+      "IDataListBaseProps",
+      "IDataListInlineEditableProps",
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "canAddInline",
+      "canDeleteInline",
+      "canEditInline",
+      "cardHeight",
+      "cardMaxWidth",
+      "cardMinWidth",
+      "cardSpacing",
+      "collapseByDefault",
+      "collapsible",
+      "componentName",
+      "container",
+      "context",
+      "createFormId",
+      "createFormType",
+      "customCreateUrl",
+      "customDeleteUrl",
+      "customEnabled",
+      "customListItemWidth",
+      "customUpdateUrl",
+      "customVisibility",
+      "customWidth",
+      "dataSource",
+      "dblClickActionConfiguration",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "font",
+      "formId",
+      "formIdExpression",
+      "formSelectionMode",
+      "formType",
+      "gap",
+      "groupStyle",
+      "grouping",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "inlineEditMode",
+      "inlineSaveMode",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "listItemWidth",
+      "mobile",
+      "modalWidth",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onListItemClick",
+      "onListItemHover",
+      "onListItemSave",
+      "onListItemSaveSuccessAction",
+      "onListItemSelect",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onNewListItemInitialize",
+      "onRowDeleteSuccessAction",
+      "onSelectCustom",
+      "onSelectionChange",
+      "orientation",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "selectionMode",
+      "shadow",
+      "showBorder",
+      "showEditIcons",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "widthUnits",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dataList/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Enter code to get form identifier. You must return { name: string; module?: string; version?: number; } object. The global variable data is provided, and allows you to access the data of any form component, by using its API key."
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "formSelectionMode",
+      "label": "Form Selection Mode",
+      "editorType": "dropdown",
+      "options": [
+        "name",
+        "view",
+        "expression"
+      ]
+    },
+    {
+      "path": "formType",
+      "label": "Form Type",
+      "editorType": "formTypeAutocomplete"
+    },
+    {
+      "path": "formId",
+      "label": "Form",
+      "editorType": "formAutocomplete",
+      "required": true
+    },
+    {
+      "path": "formIdExpression",
+      "label": "Form Identifier Expression",
+      "editorType": "codeEditor",
+      "description": "Enter code to get form identifier. You must return { name: string; module?: string; version?: number; } object. The global variable data is provided, and allows you to access the data of any form component, by using its API key."
+    },
+    {
+      "path": "selectionMode",
+      "label": "Selection Mode",
+      "editorType": "dropdown",
+      "options": [
+        "none",
+        "single",
+        "multiple"
+      ]
+    },
+    {
+      "path": "canAddInline",
+      "label": "Can Add Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit"
+      ]
+    },
+    {
+      "path": "createFormId",
+      "label": "Form",
+      "editorType": "formAutocomplete",
+      "required": true
+    },
+    {
+      "path": "createFormType",
+      "label": "Form Type",
+      "editorType": "formTypeAutocomplete"
+    },
+    {
+      "path": "customCreateUrl",
+      "label": "Custom Create URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "onNewListItemInitialize",
+      "label": "New List Item Init",
+      "editorType": "codeEditor",
+      "description": "Custom code to initialize new list items with default values or setup logic"
+    },
+    {
+      "path": "modalWidth",
+      "label": "Dialog Width",
+      "editorType": "customDropdown",
+      "options": [
+        "40%",
+        "60%",
+        "80%"
+      ]
+    },
+    {
+      "path": "canEditInline",
+      "label": "Can Edit Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit"
+      ]
+    },
+    {
+      "path": "showEditIcons",
+      "label": "Show Edit Icon",
+      "editorType": "switch"
+    },
+    {
+      "path": "inlineEditMode",
+      "label": "Edit Mode",
+      "editorType": "dropdown",
+      "options": [
+        "all-at-once",
+        "one-by-one"
+      ]
+    },
+    {
+      "path": "inlineSaveMode",
+      "label": "Save Mode",
+      "editorType": "dropdown",
+      "options": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "path": "customUpdateUrl",
+      "label": "Custom Update URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "canDeleteInline",
+      "label": "Can Delete Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit"
+      ]
+    },
+    {
+      "path": "customDeleteUrl",
+      "label": "Custom Delete URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "onListItemSave",
+      "label": "On List Item Save",
+      "editorType": "codeEditor",
+      "description": "Custom business logic executed when saving list items (validation, calculations, etc.)"
+    },
+    {
+      "path": "dblClickActionConfiguration",
+      "label": "On Double-Click",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when a list item is double-clicked"
+    },
+    {
+      "path": "onListItemSaveSuccessAction",
+      "label": "On List Item Save Success",
+      "editorType": "configurableActionConfigurator",
+      "description": "Custom Action configuration executed when saving list items (validation, calculations, etc.)"
+    },
+    {
+      "path": "onRowDeleteSuccessAction",
+      "label": "On List Item Delete Success",
+      "editorType": "configurableActionConfigurator",
+      "description": "Custom business logic to be executed after successful deletion of a list item."
+    },
+    {
+      "path": "onListItemClick",
+      "label": "On List Item Click",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when a list item is clicked"
+    },
+    {
+      "path": "onListItemHover",
+      "label": "On List Item Hover",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when hovering over a list item"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "orientation",
+      "label": "Orientation",
+      "editorType": "dropdown",
+      "options": [
+        "vertical",
+        "horizontal",
+        "wrap"
+      ],
+      "group": "Container Styles"
+    },
+    {
+      "path": "gap",
+      "label": "Gap",
+      "editorType": "numberField",
+      "description": "The gap between the datalist cards.",
+      "group": "Container Styles"
+    },
+    {
+      "path": "container.dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "container.stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding"
+    },
+    {
+      "path": "container.style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "collapsible",
+      "label": "Collapsible",
+      "editorType": "switch",
+      "group": "Group Styles"
+    },
+    {
+      "path": "collapseByDefault",
+      "label": "Collapsible By Default",
+      "editorType": "switch",
+      "group": "Group Styles"
+    },
+    {
+      "path": "groupStyle",
+      "label": "Header Style",
+      "editorType": "codeEditor",
+      "description": "Selected form values",
+      "group": "Group Styles"
+    },
+    {
+      "path": "noDataIcon",
+      "label": "Icon",
+      "editorType": "iconPicker",
+      "group": "Empty State"
+    },
+    {
+      "path": "noDataText",
+      "label": "Primary Text",
+      "editorType": "textField",
+      "group": "Empty State"
+    },
+    {
+      "path": "noDataSecondaryText",
+      "label": "Secondary Text",
+      "editorType": "textField",
+      "group": "Empty State"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dataList/dataListComponent.tsx",
+    "dataList/model.tsx"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 8,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 9,
+      "category": "curated",
+      "what": "cardSpacing/cardMinWidth/cardMaxWidth/customWidth/cardHeight -> desktop.gap and desktop.dimensions"
+    },
+    {
+      "toVersion": 10,
+      "category": "curated",
+      "what": "cardSpacing -> numeric gap; desktop.dimensions min/max/width/height default \"auto\""
+    },
+    {
+      "toVersion": 12,
+      "category": "VISIBLE_PERMS",
+      "what": "hidden -> visible (inverted) and permissions -> visiblePermissions"
+    }
+  ]
+}

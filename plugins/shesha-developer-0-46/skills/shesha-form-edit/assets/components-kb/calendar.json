@@ -1,0 +1,273 @@
+{
+  "type": "calendar",
+  "name": "Calendar",
+  "isInput": true,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FolderOpenOutlined",
+  "version": 1,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "ICalendarProps",
+    "interfaceFile": "designer-components/calendar/interfaces.ts",
+    "ownProps": [
+      "styles",
+      "items",
+      "startDate",
+      "externalStartDate",
+      "endDate",
+      "externalEndDate",
+      "minDate",
+      "maxDate",
+      "displayPeriod",
+      "onSlotClick",
+      "onViewChange",
+      "dummyEventColor",
+      "momentLocale"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "displayPeriod",
+      "dummyEventColor",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "endDate",
+      "externalEndDate",
+      "externalStartDate",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "maxDate",
+      "minDate",
+      "mobile",
+      "momentLocale",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "onSlotClick",
+      "onViewChange",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "startDate",
+      "style",
+      "styleCss",
+      "styles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "calendar/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Min Date"
+    },
+    {
+      "path": "name",
+      "label": "Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "displayPeriod",
+      "label": "Default Display Period",
+      "editorType": "dropdown",
+      "options": [
+        "month",
+        "week",
+        "work_week",
+        "day",
+        "agenda"
+      ]
+    },
+    {
+      "path": "minDate",
+      "label": "Min Date",
+      "editorType": "date",
+      "description": "Min Date"
+    },
+    {
+      "path": "maxDate",
+      "label": "Max Date",
+      "editorType": "date",
+      "description": "Max Date"
+    },
+    {
+      "path": "externalStartDate",
+      "label": "External Start Date",
+      "editorType": "codeEditor",
+      "description": "Use javascript to set the start date to reflect on the calendar"
+    },
+    {
+      "path": "externalEndDate",
+      "label": "External End Date",
+      "editorType": "codeEditor",
+      "description": "Use javascript to set the end date to reflect on the calendar"
+    },
+    {
+      "path": "items",
+      "label": "Layer Selector Settings Modal",
+      "editorType": "layerSelectorSettingsModal"
+    },
+    {
+      "path": "momentLocale",
+      "label": "Moment Locale",
+      "editorType": "textField",
+      "description": "Sets the locale of the calendar using moment.js locales (e.g. en, en-gb, fr, de, etc.)"
+    },
+    {
+      "path": "onSlotClick",
+      "label": "On Slot Click",
+      "editorType": "configurableActionConfigurator"
+    },
+    {
+      "path": "onViewChange",
+      "label": "On View Change",
+      "editorType": "configurableActionConfigurator"
+    },
+    {
+      "path": "dummyEventColor",
+      "label": "Selected Date Color",
+      "editorType": "colorPicker"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions",
+      "description": "Enter a list of permissions that should be associated with this component"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "calendar/index.tsx",
+    "calendar/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

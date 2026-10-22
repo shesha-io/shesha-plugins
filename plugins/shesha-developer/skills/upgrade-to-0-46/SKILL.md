@@ -56,6 +56,7 @@ dotnet restore && python -c "import json;d=json.load(open('obj/project.assets.js
 3. **Backend compiles** — expect a cascade: each fixed project reveals the next one's errors.
 4. **Run the app against a real database.** This is where the upgrade is actually tested.
 5. **Frontend last** — it is independent and rarely blocks the backend.
+6. **Reconcile the forms** — once the backend starts cleanly against an upgraded database, run `shesha-upgrade-reconciler` to make the application's forms look and behave as they did before the upgrade.
 
 ## Do not trust these signals
 

@@ -1,0 +1,2080 @@
+{
+  "_meta": {
+    "version": 4,
+    "group": "data-entry"
+  },
+  "button": {
+    "props": [
+      {
+        "name": "actionConfiguration",
+        "type": "action-config",
+        "required": false,
+        "JsReturnType": "action-config",
+        "desc": "The action to execute when the button is clicked."
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "block"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "buttonType",
+        "required": false,
+        "desc": "Visual style of the button."
+      },
+      {
+        "name": "childItems"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "danger"
+      },
+      {
+        "name": "dividerColor"
+      },
+      {
+        "name": "dividerWidth"
+      },
+      {
+        "name": "downIcon"
+      },
+      {
+        "name": "dynamicItem"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "ghost"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name displayed on the button."
+      },
+      {
+        "name": "iconPosition",
+        "required": false,
+        "desc": "Whether the icon appears before ('start') or after ('end') the label."
+      },
+      {
+        "name": "itemSubType"
+      },
+      {
+        "name": "itemType"
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "sortOrder"
+      },
+      {
+        "name": "styles"
+      },
+      {
+        "name": "tooltip",
+        "type": "string",
+        "inferred": true,
+        "desc": "Tooltip"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "buttonGroup": {
+    "props": [
+      {
+        "name": "buttonGroupStyle",
+        "desc": "Style"
+      },
+      {
+        "name": "gap",
+        "type": "string",
+        "options": [
+          "small",
+          "medium",
+          "middle",
+          "large"
+        ],
+        "desc": "Spacing between buttons.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "isInline",
+        "type": "boolean",
+        "desc": "Render buttons inline rather than as a block.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "items",
+        "required": false,
+        "arrayItemType": "button-group-item",
+        "desc": "The buttons and groups in this button group."
+      },
+      {
+        "name": "noStyles"
+      },
+      {
+        "name": "spaceSize"
+      },
+      {
+        "name": "styles"
+      }
+    ]
+  },
+  "buttons": {
+    "props": [
+      {
+        "name": "buttonText"
+      },
+      {
+        "name": "buttonTextReadOnly"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "title"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "checkbox": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "checkboxGroup": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dataSourceType",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "values",
+          "referenceList",
+          "url"
+        ],
+        "desc": "Where checkbox options come from: 'referenceList' or 'values'."
+      },
+      {
+        "name": "dataSourceUrl",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "API URL to fetch options from (used when dataSourceType is 'url')."
+      },
+      {
+        "name": "direction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "horizontal",
+          "vertical"
+        ],
+        "desc": "Layout direction of the checkboxes."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "label-value-item",
+        "desc": "Static list of options when dataSourceType is \"values\"."
+      },
+      {
+        "name": "reducerFunc",
+        "type": "script",
+        "desc": "Receives the raw items list; return a transformed array of { label, value } items.",
+        "required": false,
+        "JsReturnType": "array",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "referenceListId",
+        "type": "reference-list-id",
+        "required": false,
+        "JsReturnType": "reference-list-id",
+        "desc": "Reference list to populate options from when dataSourceType is \"referenceList\"."
+      },
+      {
+        "name": "referenceListName"
+      },
+      {
+        "name": "referenceListNamespace"
+      },
+      {
+        "name": "styleJson"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "mode"
+    ]
+  },
+  "dateField": {
+    "props": [
+      {
+        "name": "additionalStyles",
+        "source": "components-kb"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "bindingFormat",
+        "desc": "Format the selected value is stored in."
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dateFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js date format string (e.g. \"DD/MM/YYYY\")."
+      },
+      {
+        "name": "dateRestriction",
+        "desc": "Date Restriction"
+      },
+      {
+        "name": "defaultToMidnight",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Set the default time to midnight (00:00:00) when no time is selected."
+      },
+      {
+        "name": "disabledDateFunc",
+        "type": "script",
+        "desc": "Receives current (moment); return true to disable that date.",
+        "required": false,
+        "JsReturnType": "boolean",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "disabledDateMode",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "none",
+          "functionTemplate",
+          "customFunction"
+        ],
+        "desc": "none: no restriction; functionTemplate: use disabledDateTemplate body; customFunction: use disabledDateFunc."
+      },
+      {
+        "name": "disabledDateTemplate",
+        "type": "script",
+        "required": false,
+        "JsReturnType": "boolean",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ],
+        "desc": "JS function body (not a full function declaration) evaluated to disable specific dates. Return true to disable. Example: \"return current && current < moment().endOf(\"day\");\""
+      },
+      {
+        "name": "disabledTimeFunc",
+        "type": "script",
+        "desc": "Return { disabledHours, disabledMinutes, disabledSeconds } functions.",
+        "required": false,
+        "JsReturnType": "object",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "disabledTimeMode",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "none",
+          "timeFunctionTemplate",
+          "customFunction"
+        ],
+        "desc": "none: no restriction; timeFunctionTemplate: use disabledTimeTemplate preset; customFunction: use disabledTimeFunc."
+      },
+      {
+        "name": "disabledTimeTemplate",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "disabledPastTime",
+          "disableFutureTime"
+        ],
+        "desc": "Preset template: disabledPastTime disables times before now; disableFutureTime disables times after now."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder",
+        "source": "components-kb"
+      },
+      {
+        "name": "minuteStep",
+        "desc": "Granularity of the minute column in the time picker."
+      },
+      {
+        "name": "monthFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js month format string (e.g. \"MM/YYYY\")."
+      },
+      {
+        "name": "onBlur"
+      },
+      {
+        "name": "onChange",
+        "source": "components-kb"
+      },
+      {
+        "name": "onClick"
+      },
+      {
+        "name": "onFocus"
+      },
+      {
+        "name": "onKeyDown"
+      },
+      {
+        "name": "onKeyUp"
+      },
+      {
+        "name": "onMouseEnter"
+      },
+      {
+        "name": "onMouseLeave"
+      },
+      {
+        "name": "onMouseMove"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "quarterFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js quarter format string (e.g. \"YYYY-[Q]Q\")."
+      },
+      {
+        "name": "range",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Enable range selection (stores a start and end date)."
+      },
+      {
+        "name": "resolveToUTC",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Convert the selected date to UTC before storing."
+      },
+      {
+        "name": "selectionType",
+        "desc": "What the user picks, and at what precision."
+      },
+      {
+        "name": "timeFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js time format string (e.g. \"HH:mm:ss\")."
+      },
+      {
+        "name": "toPropertyName",
+        "type": "string",
+        "inferred": true,
+        "desc": "Property the end of the range binds to. Only used when Range is enabled."
+      },
+      {
+        "name": "value",
+        "source": "components-kb"
+      },
+      {
+        "name": "weekFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js week format string (e.g. \"YYYY-[W]WW\")."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "yearFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js year format string (e.g. \"YYYY\")."
+      }
+    ],
+    "legacy": [
+      "disablePastDates",
+      "picker",
+      "showNow",
+      "showTime",
+      "showToday"
+    ]
+  },
+  "dropdown": {
+    "props": [
+      {
+        "name": "allowClear"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "bindingFormat",
+        "desc": "Specifies whether binding should be to the selected item value or the selected item label (e.g. if you want to save this selected item text "
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dataSourceType",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "values",
+          "referenceList",
+          "url"
+        ],
+        "desc": "Where dropdown options come from: 'referenceList' or 'values'."
+      },
+      {
+        "name": "disableItemValue",
+        "required": false,
+        "desc": "Script returning an array of values to disable dynamically."
+      },
+      {
+        "name": "disabledValues",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "desc": "Array of option values that are disabled (greyed out)."
+      },
+      {
+        "name": "displayStyle",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "How selected options are rendered: 'tags' or 'text'."
+      },
+      {
+        "name": "enableMultiSelect",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Enable Multi-Select"
+      },
+      {
+        "name": "events"
+      },
+      {
+        "name": "fallbackDescription"
+      },
+      {
+        "name": "filter",
+        "type": "object",
+        "required": false,
+        "JsReturnType": "object",
+        "desc": "JSON Logic expression filtering which reference list items are shown."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "ignoredValues",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Array of option values excluded from the dropdown."
+      },
+      {
+        "name": "incomeCustomJs",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Script transforming the stored value before it is displayed."
+      },
+      {
+        "name": "labelCustomJs",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Script returning a custom display label for the current value."
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "single",
+          "multiple",
+          "tags"
+        ],
+        "desc": "Single-select or multi-select mode."
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "outcomeCustomJs",
+        "type": "script",
+        "desc": "Transform the selected value before it is stored on the form.",
+        "required": false,
+        "JsReturnType": "any",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "popupClassName"
+      },
+      {
+        "name": "readOnlyPlaceholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Text that gets displayed when empty and in read-only mode."
+      },
+      {
+        "name": "referenceListId",
+        "type": "reference-list-id",
+        "required": false,
+        "JsReturnType": "reference-list-id",
+        "desc": "Reference list to populate options from when dataSourceType is \"referenceList\"."
+      },
+      {
+        "name": "referenceListName"
+      },
+      {
+        "name": "referenceListNamespace"
+      },
+      {
+        "name": "selectRef"
+      },
+      {
+        "name": "showIcon",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the option icon alongside the label."
+      },
+      {
+        "name": "showItemName",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the option's internal name rather than its label."
+      },
+      {
+        "name": "styleValue"
+      },
+      {
+        "name": "tag",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Style configuration applied to selected value tags."
+      },
+      {
+        "name": "tagStyle"
+      },
+      {
+        "name": "tagVariant",
+        "desc": "How each tag is filled when the option carries its own colour. Solid fills the tag, Outlined draws a coloured border, Filled applies a soft "
+      },
+      {
+        "name": "value"
+      },
+      {
+        "name": "valueFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "simple",
+          "referenceListItem",
+          "custom"
+        ],
+        "desc": "Shape of the stored value when an option is selected."
+      },
+      {
+        "name": "values",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "label-value-item",
+        "desc": "Static list of options when dataSourceType is \"values\"."
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "solidColor"
+    ]
+  },
+  "editModeSelector": {
+    "props": []
+  },
+  "labelConfigurator": {
+    "props": [
+      {
+        "name": "alignPropName"
+      },
+      {
+        "name": "hideLabelPropName"
+      },
+      {
+        "name": "labelAlignOptions"
+      },
+      {
+        "name": "labelPropName"
+      },
+      {
+        "name": "placeholder"
+      }
+    ]
+  },
+  "numberField": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "customFormat"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder",
+        "source": "components-kb"
+      },
+      {
+        "name": "highPrecision",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Use high-precision decimal arithmetic for the field value."
+      },
+      {
+        "name": "numDecimalPlaces"
+      },
+      {
+        "name": "numberFormat",
+        "desc": "Format"
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Text or symbol displayed before the number input."
+      },
+      {
+        "name": "prefixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"SearchOutlined\")."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Text or symbol displayed after the number input."
+      },
+      {
+        "name": "suffixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"SearchOutlined\")."
+      },
+      {
+        "name": "thousandsSeparator"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "max",
+      "min",
+      "stepNumeric",
+      "stepString"
+    ]
+  },
+  "passwordCombo": {
+    "props": [
+      {
+        "name": "confirmDescription",
+        "type": "string",
+        "inferred": true,
+        "desc": "Tooltip: Confirmation"
+      },
+      {
+        "name": "confirmLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Label: Confirmation"
+      },
+      {
+        "name": "confirmPlaceholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder: Confirmation"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "inferred": true,
+        "desc": "Message"
+      },
+      {
+        "name": "minLength",
+        "type": "number",
+        "inferred": true,
+        "desc": "Min Length"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "repeatPropertyName",
+        "type": "string",
+        "inferred": true,
+        "desc": "The name of the property that will be used to repeat the password"
+      }
+    ]
+  },
+  "phoneNumberInput": {
+    "props": [
+      {
+        "name": "allowClear",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Allow Clear"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "country"
+      },
+      {
+        "name": "defaultCountry",
+        "type": "string",
+        "inferred": true,
+        "desc": "ISO country code (e.g., za, us, gb)"
+      },
+      {
+        "name": "disableDropdown",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Prevent users from changing the country via dropdown"
+      },
+      {
+        "name": "disableParentheses",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Remove parentheses from phone number input mask"
+      },
+      {
+        "name": "distinct",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Display only distinct country codes in the dropdown"
+      },
+      {
+        "name": "enableArrow",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Display arrow icons in the phone input"
+      },
+      {
+        "name": "excludeCountries",
+        "type": "string",
+        "inferred": true,
+        "desc": "Comma-separated country codes to exclude from list (e.g., us,ca)"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "initialValue"
+      },
+      {
+        "name": "onlyCountries",
+        "type": "string",
+        "inferred": true,
+        "desc": "Comma-separated country codes to include (e.g., za,us,gb). If set, only these will be shown"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "preferredCountries",
+        "type": "string",
+        "inferred": true,
+        "desc": "Comma-separated country codes to show at top (e.g., za,us,gb)"
+      },
+      {
+        "name": "stripCountryCode",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "When using International format, return the national format instead (e.g., +27123456789 becomes 0123456789 for ZA). The national format vari"
+      },
+      {
+        "name": "valueFormat",
+        "desc": "Format for the returned phone number value"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "radio": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dataSourceType",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "values",
+          "referenceList",
+          "url"
+        ],
+        "desc": "Where radio options come from: 'referenceList' or 'values'."
+      },
+      {
+        "name": "dataSourceUrl",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "API URL to fetch options from (used when dataSourceType is 'url')."
+      },
+      {
+        "name": "direction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "horizontal",
+          "vertical"
+        ],
+        "desc": "Layout direction of the radio buttons."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "label-value-item",
+        "desc": "Static list of options when dataSourceType is \"values\"."
+      },
+      {
+        "name": "radio"
+      },
+      {
+        "name": "reducerFunc",
+        "type": "script",
+        "desc": "Receives the raw items list; return a transformed array of { label, value } items.",
+        "required": false,
+        "JsReturnType": "array",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "referenceListId",
+        "type": "reference-list-id",
+        "required": false,
+        "JsReturnType": "reference-list-id",
+        "desc": "Reference list to populate options from when dataSourceType is \"referenceList\"."
+      },
+      {
+        "name": "referenceListName"
+      },
+      {
+        "name": "referenceListNamespace"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "rate": {
+    "props": [
+      {
+        "name": "allowClear",
+        "source": "components-kb"
+      },
+      {
+        "name": "allowHalf",
+        "source": "components-kb"
+      },
+      {
+        "name": "className",
+        "source": "components-kb"
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Number of stars to display. Must be a positive integer."
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"SearchOutlined\")."
+      },
+      {
+        "name": "onChange",
+        "source": "components-kb"
+      },
+      {
+        "name": "tooltips",
+        "source": "components-kb"
+      },
+      {
+        "name": "value",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "slider": {
+    "props": [
+      {
+        "name": "max",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Maximum value of the slider."
+      },
+      {
+        "name": "min",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Minimum value of the slider."
+      }
+    ]
+  },
+  "switch": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "handleStyles"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "value",
+        "source": "components-kb"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "defaultChecked"
+    ]
+  },
+  "textArea": {
+    "props": [
+      {
+        "name": "allowClear",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a clear button to reset the textarea."
+      },
+      {
+        "name": "autoSize",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Grow the textarea height automatically to fit its content."
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "initialValue",
+        "source": "components-kb"
+      },
+      {
+        "name": "passEmptyStringByDefault",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Submit an empty string rather than null when the field is blank."
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "showCount",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the character count below the textarea."
+      },
+      {
+        "name": "spellCheck",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Enable browser spell-checking in this field."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "textField": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "enableFormatting",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Displays a separator between groups of characters as the user types, e.g. groups \"3,4\" with separator \"-\" displays 1234567 as 123-4567. Disp"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "formatGroups",
+        "type": "string",
+        "inferred": true,
+        "desc": "Comma-separated lengths of each group, e.g. 3,4"
+      },
+      {
+        "name": "formatSeparator",
+        "type": "string",
+        "inferred": true,
+        "desc": "Character(s) displayed between groups, e.g. -. Visual only, not included in the stored value."
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "initialValue",
+        "source": "components-kb"
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Static text or icon shown before the input."
+      },
+      {
+        "name": "prefixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"SearchOutlined\")."
+      },
+      {
+        "name": "regExp",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "A valid regular expression string used to validate the field value (e.g. \"^[a-z]+$\")."
+      },
+      {
+        "name": "spellCheck",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Enable browser spell-checking in this field."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Static text or icon shown after the input."
+      },
+      {
+        "name": "suffixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"SearchOutlined\")."
+      },
+      {
+        "name": "textType",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "text",
+          "password",
+          "email",
+          "url",
+          "search",
+          "tel"
+        ],
+        "desc": "Input type: 'text', 'password', 'email', 'url', etc."
+      },
+      {
+        "name": "useStandardPasswordValidation",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "When enabled, the password validation follows the rules defined in the corresponding authentication configuration. When disabled, no global "
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "threeStateSwitch": {
+    "props": []
+  },
+  "timePicker": {
+    "props": [
+      {
+        "name": "allowClear",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a clear button to reset the time field."
+      },
+      {
+        "name": "autoFocus",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Automatically focus the time picker on mount."
+      },
+      {
+        "name": "format",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Moment.js time format string (e.g. \"HH:mm\", \"HH:mm:ss\", \"hh:mm a\")."
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "hideDisabledOptions",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Hide (instead of grey out) time options restricted by disabledTimeTemplate."
+      },
+      {
+        "name": "hourStep",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Interval between hour options. Must be a positive integer that divides 24 evenly (e.g. 1, 2, 3, 4, 6, 8, 12)."
+      },
+      {
+        "name": "inputReadOnly",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Prevent manual keyboard input; force selection from the picker."
+      },
+      {
+        "name": "minuteStep",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Interval between minute options. Must be a positive integer that divides 60 evenly (e.g. 1, 5, 10, 15, 30)."
+      },
+      {
+        "name": "onBlur"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "onFocus"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "range",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Enable range selection (stores a start and end time)."
+      },
+      {
+        "name": "secondStep",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Interval between second options. Must be a positive integer that divides 60 evenly (e.g. 1, 5, 10, 15, 30)."
+      },
+      {
+        "name": "showNow",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a 'Now' shortcut to select the current time."
+      },
+      {
+        "name": "use12Hours",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Display the time in 12-hour format with AM/PM."
+      },
+      {
+        "name": "value"
+      }
+    ]
+  }
+}

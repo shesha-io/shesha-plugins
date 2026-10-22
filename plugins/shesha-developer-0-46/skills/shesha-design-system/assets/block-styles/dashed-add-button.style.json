@@ -1,0 +1,44 @@
+{
+  "$overlay": "dashed-add-button",
+  "_note": "The dashed box is the structural treatment and lives on the dashedAddWrap container: borderType:'custom' with all four sides 1.5px dashed (per-side border channel renders), a 6px radius, full width and centred content with comfortable vertical padding so it reads as a list-footer 'add' affordance. The hairline is the neutral #E8EAF0 (structural). COLOUR IS OUT OF SCOPE: the button TEXT/icon is brand — but a 'link' button takes its colour from the app-theme primary (buttonGroup colour is app-theme, never per-button), so it is carried as a $role placeholder on the item in the skeleton, NOT a hex here. Do NOT add an orange/green hex to this overlay.",
+  "targets": {
+    "dashedAddWrap": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "flexWrap": "nowrap",
+        "gap": "0px",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "none"
+        },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "custom",
+          "border": {
+            "all": { "width": "1px", "style": "none", "color": "#E8EAF0" },
+            "top": { "width": "1.5px", "style": "dashed", "color": "#E8EAF0" },
+            "bottom": { "width": "1.5px", "style": "dashed", "color": "#E8EAF0" },
+            "left": { "width": "1.5px", "style": "dashed", "color": "#E8EAF0" },
+            "right": { "width": "1.5px", "style": "dashed", "color": "#E8EAF0" }
+          },
+          "radius": { "all": 6 }
+        },
+        "background": {
+          "type": "color",
+          "color": "#ffffff"
+        },
+        "stylingBox": "{\"paddingTop\":\"8\",\"paddingBottom\":\"8\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\",\"marginTop\":\"8\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    }
+  }
+}

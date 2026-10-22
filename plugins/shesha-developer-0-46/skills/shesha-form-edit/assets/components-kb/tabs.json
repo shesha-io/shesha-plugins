@@ -1,0 +1,258 @@
+{
+  "type": "tabs",
+  "name": "Tabs",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FolderOutlined",
+  "version": 11,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": [
+    "tabs"
+  ],
+  "hasGetContainers": true,
+  "defaultStylesFrom": "() => ({ ...defaultStyles, card: { ...defaultCardStyles } })",
+  "initModel": {
+    "defaults": {
+      "propertyName": "custom Name",
+      "tabPosition": "top"
+    },
+    "raw": "(model) => {\n    const id = nanoid();\n    const tabsModel: ITabsComponentProps = {\n      ...model,\n      propertyName: 'custom Name',\n      tabPosition: \"top\",\n      tabs: [{ id: id, name: 'Tab 1', key: id, title: 'Tab 1', visible: true, editMode: 'inherited', components: [] }],\n    };\n    return tabsModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITabsComponentProps",
+    "interfaceFile": "designer-components/tabs/models.ts",
+    "ownProps": [
+      "tabs",
+      "size",
+      "defaultActiveKey",
+      "tabType",
+      "tabLineColor",
+      "ghost",
+      "customVisibility",
+      "tabPosition",
+      "desktop",
+      "mobile",
+      "tablet"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IStyleValue",
+      "ICardProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "card",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "defaultActiveKey",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "ghost",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tabLineColor",
+      "tabPosition",
+      "tabType",
+      "tablet",
+      "tabs",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "tabs/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "This will set the position for all buttons"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "defaultActiveKey",
+      "label": "Default Active Tab",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "tabType",
+      "label": "Tab Type",
+      "editorType": "dropdown",
+      "options": [
+        "line",
+        "card"
+      ]
+    },
+    {
+      "path": "tabs",
+      "label": "Tabs",
+      "editorType": "itemListConfiguratorModal"
+    },
+    {
+      "path": "tabPosition",
+      "label": "Position",
+      "editorType": "dropdown",
+      "description": "This will set the position for all buttons",
+      "options": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ]
+    },
+    {
+      "path": "tabLineColor",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Line Color"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "card.style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Card Styles"
+    },
+    {
+      "path": "card.activeStyle",
+      "label": "Active Card Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Card Styles"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": [
+      "tabs"
+    ],
+    "detectedSlotKeys": [
+      "tabs"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "tabs/index.tsx",
+    "tabs/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 1,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, tabs defaultStyles) + overflow:true + card = defaultCardStyles with font.color #000000: tabs get white background (#FFFFFF), 1px #f0f0f0 border on all sides, radius 8 (top corners squared by posit"
+    },
+    {
+      "toVersion": 11,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "Per tab: selectMode \"readOnly\" -> editMode \"disabled\", hidden -> visible (default true), permissions -> visiblePermissions; component: hidden->visible, stylingBox -> stylingBoxJson. NOTE no step re-creates the per-tab-pa"
+    }
+  ]
+}

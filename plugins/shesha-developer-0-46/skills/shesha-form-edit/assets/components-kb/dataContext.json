@@ -1,0 +1,297 @@
+{
+  "type": "dataContext",
+  "name": "Data Context",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "DatabaseOutlined",
+  "version": 5,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => {\n                                                                   \n    const isNewComponent = !model.sourceType && isEntityTypeIdEmpty(model.entityType);\n\n    const initialModel = isNewComponent ? {\n      ...model,\n      sourceType: 'Entity' as const,\n      entityType: 'Shesha.Core.DummyTable',\n      dataFetchingMode: 'paging' as const,\n      defaultPageSize: 10,\n      sortMode: 'standard' as const,\n      strictSortOrder: 'asc' as const,\n      allowReordering: 'no' as const,\n      visible: model.visible ?? true,\n    } : model;\n\n    return initialModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITableContextComponentProps",
+    "interfaceFile": "designer-components/dataTable/tableContext/models.ts",
+    "ownProps": [
+      "sourceType",
+      "entityType",
+      "endpoint",
+      "customReorderEndpoint",
+      "components",
+      "dataFetchingMode",
+      "defaultPageSize",
+      "grouping",
+      "sortMode",
+      "strictSortBy",
+      "strictSortOrder",
+      "standardSorting",
+      "allowReordering",
+      "permanentFilter",
+      "disableRefresh",
+      "onBeforeRowReorder",
+      "onAfterRowReorder"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowReordering",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "components",
+      "context",
+      "customEnabled",
+      "customReorderEndpoint",
+      "customVisibility",
+      "dataFetchingMode",
+      "defaultPageSize",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableRefresh",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "endpoint",
+      "entityType",
+      "font",
+      "grouping",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onAfterRowReorder",
+      "onBeforeRowReorder",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permanentFilter",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "sortMode",
+      "sourceType",
+      "standardSorting",
+      "strictSortBy",
+      "strictSortOrder",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dataTable/tableContext/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Return 'true' if dataContext is not ready to refresh data (filter data is not ready, etc...)"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "disableRefresh",
+      "label": "Disable Refresh Data",
+      "editorType": "codeEditor",
+      "description": "Return 'true' if dataContext is not ready to refresh data (filter data is not ready, etc...)"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "sourceType",
+      "label": "Data Source Type",
+      "editorType": "dropdown",
+      "options": [
+        "Url",
+        "Entity",
+        "Form"
+      ],
+      "required": true
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "description": "The entity type you want to use."
+    },
+    {
+      "path": "endpoint",
+      "label": "Custom Endpoint",
+      "editorType": "endpointsAutocomplete",
+      "description": "The endpoint to use to fetch data."
+    },
+    {
+      "path": "dataFetchingMode",
+      "label": "Data Fetching Mode",
+      "editorType": "dropdown",
+      "options": [
+        "paging",
+        "fetchAll"
+      ],
+      "required": true
+    },
+    {
+      "path": "defaultPageSize",
+      "label": "Default Page Size",
+      "editorType": "dropdown",
+      "required": true
+    },
+    {
+      "path": "permanentFilter",
+      "label": "Permanent Filter",
+      "editorType": "queryBuilder"
+    },
+    {
+      "path": "sortMode",
+      "label": "Sort Mode",
+      "editorType": "dropdown",
+      "options": [
+        "standard",
+        "strict"
+      ],
+      "required": true
+    },
+    {
+      "path": "strictSortBy",
+      "label": "Order By",
+      "editorType": "propertyAutocomplete",
+      "description": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+    },
+    {
+      "path": "strictSortOrder",
+      "label": "Sort Order",
+      "editorType": "dropdown",
+      "options": [
+        "asc",
+        "desc"
+      ]
+    },
+    {
+      "path": "standardSorting",
+      "label": "Sort By",
+      "editorType": "dataSortingEditor"
+    },
+    {
+      "path": "grouping",
+      "label": "Grouping",
+      "editorType": "dataSortingEditor"
+    },
+    {
+      "path": "allowReordering",
+      "label": "Allow Reordering",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit"
+      ],
+      "required": true
+    },
+    {
+      "path": "customReorderEndpoint",
+      "label": "Custom Reorder Endpoint",
+      "editorType": "endpointsAutocomplete",
+      "description": "The endpoint to use to reorder data (if not provided, the default endpoint will be used)."
+    },
+    {
+      "path": "onBeforeRowReorder",
+      "label": "On Before Row Reorder",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute before row reorder. Can be used for validation and cancellation."
+    },
+    {
+      "path": "onAfterRowReorder",
+      "label": "On After Row Reorder",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute after row reorder. Receives the API response data."
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "components"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "dataTable/tableContext/tableContextComponent.tsx",
+    "dataTable/tableContext/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 5,
+      "category": "VISIBLE_PERMS",
+      "what": "hidden -> visible (inverted) and permissions -> visiblePermissions"
+    }
+  ]
+}

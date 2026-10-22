@@ -1,0 +1,38 @@
+{
+ "rule": "subfetch",
+ "cases": [
+  {
+   "name": "api subForm fetches the fields its host shows",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "sf",
+      "type": "subForm",
+      "componentName": "sf",
+      "parentId": "root",
+      "propertyName": "order",
+      "dataSource": "api",
+      "properties": "id\nname"
+     },
+     {
+      "id": "st",
+      "type": "textField",
+      "componentName": "st",
+      "parentId": "root",
+      "propertyName": "order.status"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/properties",
+     "id\nname\nstatus"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

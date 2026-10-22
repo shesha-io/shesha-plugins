@@ -1,0 +1,531 @@
+{
+  "type": "kanban",
+  "name": "Kanban",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FormOutlined",
+  "version": 8,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "hideLabel": true
+    },
+    "raw": "(model) => ({\n    ...model,\n    hideLabel: true,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IKanbanProps",
+    "interfaceFile": "components/kanban/model.ts",
+    "ownProps": [
+      "items",
+      "referenceList",
+      "fontColor",
+      "showIcons",
+      "fontSize",
+      "entityType",
+      "allowNewRecord",
+      "collapsible",
+      "gap",
+      "headerStyles",
+      "columnStyle",
+      "groupingProperty",
+      "modalFormId",
+      "createFormId",
+      "actionConfiguration",
+      "kanbanReadonly",
+      "componentName",
+      "editFormId",
+      "allowEdit",
+      "allowDelete",
+      "columnStyles"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "actionConfiguration",
+      "allStyles",
+      "allowDelete",
+      "allowEdit",
+      "allowNewRecord",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "collapsible",
+      "columnStyle",
+      "columnStyles",
+      "componentName",
+      "context",
+      "createFormId",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editFormId",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "font",
+      "fontColor",
+      "fontSize",
+      "gap",
+      "groupingProperty",
+      "headerStyles",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "kanbanReadonly",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "modalFormId",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "referenceList",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showIcons",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "kanban/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The reference list whose items are rendered as columns. Changes to its items are picked up automatically"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "modalFormId",
+      "label": "Render Form",
+      "editorType": "formAutocomplete",
+      "required": true
+    },
+    {
+      "path": "groupingProperty",
+      "label": "Grouping Property",
+      "editorType": "propertyAutocomplete",
+      "required": true
+    },
+    {
+      "path": "collapsible",
+      "label": "Collapsible",
+      "editorType": "switch"
+    },
+    {
+      "path": "kanbanReadonly",
+      "label": "Readonly",
+      "editorType": "switch"
+    },
+    {
+      "path": "allowDelete",
+      "label": "Allow Delete",
+      "editorType": "switch"
+    },
+    {
+      "path": "showIcons",
+      "label": "Show Icons",
+      "editorType": "switch"
+    },
+    {
+      "path": "allowNewRecord",
+      "label": "Allow New Record",
+      "editorType": "switch"
+    },
+    {
+      "path": "createFormId",
+      "label": "Create Form",
+      "editorType": "formAutocomplete",
+      "required": true
+    },
+    {
+      "path": "allowEdit",
+      "label": "Allow Edit",
+      "editorType": "switch"
+    },
+    {
+      "path": "editFormId",
+      "label": "Edit Form",
+      "editorType": "formAutocomplete",
+      "required": true
+    },
+    {
+      "path": "referenceList",
+      "label": "Reference List",
+      "editorType": "referenceListAutocomplete",
+      "description": "The reference list whose items are rendered as columns. Changes to its items are picked up automatically"
+    },
+    {
+      "path": "items",
+      "label": "Items",
+      "editorType": "RefListItemSelectorSettingsModal"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Font"
+    },
+    {
+      "path": "font.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Font"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "gap",
+      "label": "Gap",
+      "editorType": "numberField",
+      "description": "The gap between the columns",
+      "group": "Column Styles"
+    },
+    {
+      "path": "columnStyles.dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "columnStyles.background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "columnStyles.shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "columnStyles.shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "columnStyles.shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "columnStyles.shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "columnStyles.shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "columnStyles.border.hideBorder",
+      "label": "Border",
+      "editorType": "button",
+      "group": "Border"
+    },
+    {
+      "path": "columnStyles.stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin and Padding"
+    },
+    {
+      "path": "columnStyle",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions",
+      "description": "Enter a list of permissions that should be associated with this component"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "kanban/index.tsx",
+    "../components/kanban/model.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 8,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles + default columnStyles"
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "type": "entityReference",
+  "name": "Entity Reference",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "LinkExternalOutlined",
+  "version": 13,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IEntityReferenceControlProps",
+    "interfaceFile": "designer-components/entityReference/interfaces.ts",
+    "ownProps": [
+      "icon"
+    ],
+    "extends": [
+      "IEntityReferenceProps",
+      "IConfigurableFormComponent",
+      "IStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "additionalProperties",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "buttons",
+      "className",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "displayProperty",
+      "displayType",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityReferenceType",
+      "entityType",
+      "font",
+      "footerButtons",
+      "formIdentifier",
+      "formSelectionMode",
+      "formType",
+      "getEntityUrl",
+      "handleFail",
+      "handleSuccess",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "icon",
+      "iconName",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "modalClassName",
+      "modalTitle",
+      "modalWidth",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFail",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "onSuccess",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "popupClassName",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "quickviewWidth",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showModalFooter",
+      "size",
+      "skipFetchData",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "submitHttpVerb",
+      "subscribedEventNames",
+      "tablet",
+      "textTitle",
+      "type",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "entityReference/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The entity type you want to reference."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "description": "The entity type you want to reference.",
+      "group": "Entity"
+    },
+    {
+      "path": "getEntityUrl",
+      "label": "Get Entity URL",
+      "editorType": "endpointsAutocomplete",
+      "group": "Entity"
+    },
+    {
+      "path": "displayType",
+      "label": "Display Type",
+      "editorType": "dropdown",
+      "options": [
+        "displayProperty",
+        "icon",
+        "textTitle"
+      ],
+      "group": "Display"
+    },
+    {
+      "path": "iconName",
+      "label": "Icon",
+      "editorType": "iconPicker",
+      "group": "Display"
+    },
+    {
+      "path": "textTitle",
+      "label": "Text Title",
+      "editorType": "textField",
+      "group": "Display"
+    },
+    {
+      "path": "displayProperty",
+      "label": "Display Property",
+      "editorType": "propertyAutocomplete",
+      "group": "Display"
+    },
+    {
+      "path": "entityReferenceType",
+      "label": "Entity Reference Type",
+      "editorType": "dropdown",
+      "options": [
+        "Quickview",
+        "NavigateLink",
+        "Dialog"
+      ],
+      "group": "Behaviour"
+    },
+    {
+      "path": "formSelectionMode",
+      "label": "Form Selection Mode",
+      "editorType": "dropdown",
+      "options": [
+        "name",
+        "dynamic"
+      ],
+      "group": "Behaviour"
+    },
+    {
+      "path": "formType",
+      "label": "Form Type",
+      "editorType": "formTypeAutocomplete",
+      "group": "Behaviour"
+    },
+    {
+      "path": "formIdentifier",
+      "label": "Form Identifier",
+      "editorType": "formAutocomplete",
+      "group": "Behaviour"
+    },
+    {
+      "path": "quickviewWidth",
+      "label": "Quickview Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit.",
+      "group": "Quickview Settings"
+    },
+    {
+      "path": "modalTitle",
+      "label": "Modal Title",
+      "editorType": "textField",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "footerButtons",
+      "label": "Footer Buttons",
+      "editorType": "dropdown",
+      "options": [
+        "default",
+        "custom",
+        "none"
+      ],
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "buttons",
+      "label": "Configure Modal Buttons",
+      "editorType": "buttonGroupConfigurator",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "submitHttpVerb",
+      "label": "Submit HTTP Verb",
+      "editorType": "dropdown",
+      "options": [
+        "POST",
+        "PUT"
+      ],
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "additionalProperties",
+      "label": "Additional Properties",
+      "editorType": "labelValueEditor",
+      "description": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. ",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "modalWidth",
+      "label": "Dialog Width",
+      "editorType": "customDropdown",
+      "options": [
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "handleSuccess",
+      "label": "Handle Success",
+      "editorType": "switch",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "onSuccess",
+      "label": "On Success",
+      "editorType": "configurableActionConfigurator",
+      "group": "On Success Handler"
+    },
+    {
+      "path": "handleFail",
+      "label": "Handle Fail",
+      "editorType": "switch",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "onFail",
+      "label": "On Fail",
+      "editorType": "configurableActionConfigurator",
+      "group": "On Fail Handler"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "entityReference/entityReference.tsx",
+    "entityReference/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => { return { ...prev, formSelectionMode: 'name', entityReferenceType: 'Quickview', quickviewWidth: 600, displayProperty: '', handleFail: false, handleSuccess: false, style: prev.style, styl"
+    },
+    {
+      "toVersion": 4,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles with component defaults"
+    },
+    {
+      "toVersion": 9,
+      "category": "curated",
+      "what": "style (JS) mirrored into desktop/tablet/mobile style"
+    },
+    {
+      "toVersion": 10,
+      "category": "curated",
+      "what": "modalWidth \"custom\" -> \"80%\"; quickviewWidth normalised to px"
+    },
+    {
+      "toVersion": 12,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles again (existing components)"
+    },
+    {
+      "toVersion": 13,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

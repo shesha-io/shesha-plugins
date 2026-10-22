@@ -1,0 +1,918 @@
+{
+  "type": "datatable",
+  "name": "Data Table",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "TableOutlined",
+  "version": 31,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model: ITableComponentProps) => {\n    const defaults = defaultStyles();\n    const tableDefaults = getTableDefaults();\n    const tableSettingsDefaults = getTableSettingsDefaults();\n\n    const defaultRowDimensions = {\n      height: 'auto',\n      minHeight: 'auto',\n      maxHeight: 'auto',\n    };\n\n    return {\n      rowDimensions: defaultRowDimensions,\n      ...defaults,\n      ...tableDefaults,\n      ...tableSettingsDefaults,\n      ...model,\n      items: [],\n                                                                        \n      mobile: {\n        ...model.mobile,\n        rowDimensions: model.mobile?.rowDimensions ?? defaultRowDimensions,\n      },\n      tablet: {\n        ...model.tablet,\n        rowDimensions: model.tablet?.rowDimensions ?? defaultRowDimensions,\n      },\n      desktop: {\n        ...model.desktop,\n        rowDimensions: model.desktop?.rowDimensions ?? defaultRowDimensions,\n      },\n    };\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITableComponentProps",
+    "interfaceFile": "designer-components/dataTable/table/models.ts",
+    "ownProps": [],
+    "extends": [
+      "ITableComponentBaseProps",
+      "LegacyITableComponentBaseProps",
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "actionIconColor",
+      "actionIconSize",
+      "alignItems",
+      "alignSelf",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "border",
+      "borderRadius",
+      "boxShadow",
+      "canAddInline",
+      "canAddInlineExpression",
+      "canDeleteInline",
+      "canDeleteInlineExpression",
+      "canEditInline",
+      "canEditInlineExpression",
+      "cellBackgroundColor",
+      "cellBorder",
+      "cellBorderColor",
+      "cellBorders",
+      "cellPadding",
+      "cellTextColor",
+      "componentName",
+      "containerStyle",
+      "context",
+      "crud",
+      "customCreateUrl",
+      "customDeleteUrl",
+      "customEnabled",
+      "customUpdateUrl",
+      "customVisibility",
+      "dblClickActionConfiguration",
+      "description",
+      "desktop",
+      "dimensions",
+      "direction",
+      "disabled",
+      "display",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "flexDirection",
+      "flexWrap",
+      "flexibleHeight",
+      "font",
+      "footerBackgroundColor",
+      "footerBorder",
+      "footerTextColor",
+      "freezeHeaders",
+      "gap",
+      "gridColumnsCount",
+      "gridColumnsWidth",
+      "gridRowsCount",
+      "gridRowsHeight",
+      "headerBackgroundColor",
+      "headerBorder",
+      "headerFont",
+      "headerFontFamily",
+      "headerFontSize",
+      "headerFontWeight",
+      "headerShadow",
+      "headerTextColor",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "hoverHighlight",
+      "id",
+      "initialContext",
+      "inlineEditMode",
+      "inlineSaveMode",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "justifyContent",
+      "justifyItems",
+      "justifySelf",
+      "label",
+      "labelAlign",
+      "layout",
+      "maxHeight",
+      "minHeight",
+      "mobile",
+      "newRowCapturePosition",
+      "newRowInsertPosition",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "noDefaultStyling",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDblClick",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onNewRowInitialize",
+      "onRowClick",
+      "onRowDeleteSuccessAction",
+      "onRowDoubleClick",
+      "onRowHover",
+      "onRowSave",
+      "onRowSaveSuccessAction",
+      "onRowSelect",
+      "onSelectCustom",
+      "onSelectionChange",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "responsiveMode",
+      "rowAlternateBackgroundColor",
+      "rowBackgroundColor",
+      "rowBorder",
+      "rowBorderStyle",
+      "rowDimensions",
+      "rowDividers",
+      "rowHeight",
+      "rowHoverBackgroundColor",
+      "rowPadding",
+      "rowPaddingBottom",
+      "rowPaddingLeft",
+      "rowPaddingRight",
+      "rowPaddingTop",
+      "rowSelectedBackgroundColor",
+      "rowShadow",
+      "rowStylingBox",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "selectionMode",
+      "shadow",
+      "showExpandedView",
+      "size",
+      "sortableIndicatorColor",
+      "striped",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tableSettings",
+      "tableStyle",
+      "tablet",
+      "textJustify",
+      "type",
+      "useMultiselect",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dataTable/table/tableSettings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Limited to default display components"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "items",
+      "label": "Customize Columns",
+      "editorType": "columnsConfig"
+    },
+    {
+      "path": "showExpandedView",
+      "label": "Show Expanded View",
+      "editorType": "switch",
+      "description": "Limited to default display components"
+    },
+    {
+      "path": "freezeHeaders",
+      "label": "Freeze Headers",
+      "editorType": "switch"
+    },
+    {
+      "path": "selectionMode",
+      "label": "Selection Mode",
+      "editorType": "dropdown",
+      "description": "Controls how rows can be selected in the table",
+      "options": [
+        "none",
+        "single",
+        "multiple"
+      ]
+    },
+    {
+      "path": "canEditInline",
+      "label": "Can Edit Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ]
+    },
+    {
+      "path": "canEditInlineExpression",
+      "label": "Can Edit Inline Expression",
+      "editorType": "codeEditor",
+      "description": "Return true to enable inline editing and false to disable."
+    },
+    {
+      "path": "inlineEditMode",
+      "label": "Row Edit Mode",
+      "editorType": "dropdown",
+      "options": [
+        "one-by-one",
+        "all-at-once"
+      ]
+    },
+    {
+      "path": "inlineSaveMode",
+      "label": "Save Mode",
+      "editorType": "dropdown",
+      "options": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "path": "customUpdateUrl",
+      "label": "Custom Update URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "canAddInline",
+      "label": "Can Add Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ]
+    },
+    {
+      "path": "canAddInlineExpression",
+      "label": "Can Add Inline Expression",
+      "editorType": "codeEditor",
+      "description": "Return true to enable inline creation of new rows and false to disable."
+    },
+    {
+      "path": "newRowCapturePosition",
+      "label": "New Row Capture Position",
+      "editorType": "dropdown",
+      "options": [
+        "top",
+        "bottom"
+      ]
+    },
+    {
+      "path": "newRowInsertPosition",
+      "label": "New Row Insert Position",
+      "editorType": "dropdown",
+      "options": [
+        "top",
+        "bottom"
+      ]
+    },
+    {
+      "path": "customCreateUrl",
+      "label": "Custom Create URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "onNewRowInitialize",
+      "label": "New Row Init",
+      "editorType": "codeEditor",
+      "description": "Allows configurators to specify logic to initialise the object bound to a new row."
+    },
+    {
+      "path": "onRowSave",
+      "label": "On Row Save",
+      "editorType": "codeEditor",
+      "description": "Custom business logic to be executed on saving of new/updated row (e.g. custom validation / calculations). This handler should return an object or a Promise<object>."
+    },
+    {
+      "path": "canDeleteInline",
+      "label": "Can Delete Inline",
+      "editorType": "dropdown",
+      "options": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ]
+    },
+    {
+      "path": "canDeleteInlineExpression",
+      "label": "Can Delete Inline Expression",
+      "editorType": "codeEditor",
+      "description": "Return true to enable inline deletion and false to disable."
+    },
+    {
+      "path": "customDeleteUrl",
+      "label": "Custom Delete URL",
+      "editorType": "endpointsAutocomplete"
+    },
+    {
+      "path": "onRowClick",
+      "label": "On Row Click",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when a row is clicked"
+    },
+    {
+      "path": "onRowDoubleClick",
+      "label": "On Row Double-Click",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when a row is double-clicked"
+    },
+    {
+      "path": "onRowHover",
+      "label": "On Row Hover",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when hovering over a row"
+    },
+    {
+      "path": "onRowSelect",
+      "label": "On Row Select",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when a row is selected"
+    },
+    {
+      "path": "onSelectionChange",
+      "label": "On Selection Change",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when the selection changes"
+    },
+    {
+      "path": "onRowSaveSuccessAction",
+      "label": "On Row Save Success",
+      "editorType": "configurableActionConfigurator",
+      "description": "Custom business logic to be executed after successfull saving of new/updated row."
+    },
+    {
+      "path": "onRowDeleteSuccessAction",
+      "label": "On Row Delete Success",
+      "editorType": "configurableActionConfigurator",
+      "description": "Custom business logic to be executed after successfull deletion of a row."
+    },
+    {
+      "path": "headerFont.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Header Styles"
+    },
+    {
+      "path": "headerFont.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "description": "Font size in pixels. Default: 14px",
+      "group": "Header Styles"
+    },
+    {
+      "path": "headerFont.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.). Default: 500 (medium)",
+      "group": "Header Styles"
+    },
+    {
+      "path": "headerFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Header Styles"
+    },
+    {
+      "path": "headerFont.align",
+      "label": "Align",
+      "editorType": "dropdown",
+      "group": "Header Styles"
+    },
+    {
+      "path": "headerBackgroundColor",
+      "label": "Background Color",
+      "editorType": "colorPicker",
+      "description": "Background color for table headers. Default: #fafafa",
+      "group": "Header Styles"
+    },
+    {
+      "path": "rowPaddingTop",
+      "label": "Top",
+      "editorType": "textField",
+      "description": "Top padding for table rows (e.g., 8px, 1rem, 0.5em)",
+      "group": "Cell Padding"
+    },
+    {
+      "path": "rowPaddingRight",
+      "label": "Right",
+      "editorType": "textField",
+      "description": "Right padding for table rows (e.g., 12px, 1rem, 0.5em)",
+      "group": "Cell Padding"
+    },
+    {
+      "path": "rowPaddingBottom",
+      "label": "Bottom",
+      "editorType": "textField",
+      "description": "Bottom padding for table rows (e.g., 8px, 1rem, 0.5em)",
+      "group": "Cell Padding"
+    },
+    {
+      "path": "rowPaddingLeft",
+      "label": "Left",
+      "editorType": "textField",
+      "description": "Left padding for table rows (e.g., 12px, 1rem, 0.5em)",
+      "group": "Cell Padding"
+    },
+    {
+      "path": "actionIconSize",
+      "label": "Icon Size",
+      "editorType": "textField",
+      "description": "Size of action column icons (e.g., 16px, 1.2em). Inherits from table font size if not specified.",
+      "group": "Action Column Icons"
+    },
+    {
+      "path": "actionIconColor",
+      "label": "Icon Color",
+      "editorType": "colorPicker",
+      "description": "Color of action column icons",
+      "group": "Action Column Icons"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "description": "Font size in pixels. Default: 14px",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.). Default: 400 (normal)",
+      "group": "Font"
+    },
+    {
+      "path": "font.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "description": "Font color. Default: black (#000000)",
+      "group": "Font"
+    },
+    {
+      "path": "font.align",
+      "label": "Align",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). Default: 100%",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "description": "Minimum width. Default: 0px",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "description": "Maximum width. Default: none",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). Default: auto",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "description": "Minimum height. Default: auto",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "description": "Maximum height. Default: auto",
+      "group": "Dimensions"
+    },
+    {
+      "path": "rowDimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "Row height. You can use any unit (%, px, em, etc). px by default if without unit. Default: auto",
+      "group": "Row Dimensions"
+    },
+    {
+      "path": "rowDimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "description": "Minimum row height. Rows will not be smaller than this value. Default: auto",
+      "group": "Row Dimensions"
+    },
+    {
+      "path": "rowDimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "description": "Maximum row height. Rows will not be taller than this value. Default: auto",
+      "group": "Row Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "description": "Background color. Default: white (#fff)",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Horizontal shadow offset. Default: 0px",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Vertical shadow offset. Default: 2px",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Shadow blur radius. Default: 8px",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Shadow spread radius. Default: 0px",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "description": "Shadow color. Default: rgba(0, 0, 0, 0.1)",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "striped",
+      "label": "Striped Rows",
+      "editorType": "switch",
+      "description": "Enable alternating row colors. Default: enabled",
+      "group": "Table Specific"
+    },
+    {
+      "path": "hoverHighlight",
+      "label": "Hover Highlight",
+      "editorType": "switch",
+      "description": "Highlight rows on hover. Default: enabled",
+      "group": "Table Specific"
+    },
+    {
+      "path": "rowBackgroundColor",
+      "label": "Row Background",
+      "editorType": "colorPicker",
+      "description": "Default background color for table rows",
+      "group": "Table Specific"
+    },
+    {
+      "path": "rowAlternateBackgroundColor",
+      "label": "Alternate Background",
+      "editorType": "colorPicker",
+      "description": "Background color for alternate rows (when striped is enabled). Default: #f5f5f5",
+      "group": "Table Specific"
+    },
+    {
+      "path": "rowHoverBackgroundColor",
+      "label": "Hover Background",
+      "editorType": "colorPicker",
+      "description": "Background color when hovering over rows",
+      "group": "Table Specific"
+    },
+    {
+      "path": "rowSelectedBackgroundColor",
+      "label": "Selected Background",
+      "editorType": "colorPicker",
+      "description": "Background color for selected rows",
+      "group": "Table Specific"
+    },
+    {
+      "path": "sortableIndicatorColor",
+      "label": "Sort Indicator Color",
+      "editorType": "colorPicker",
+      "description": "Color for sortable column indicators",
+      "group": "Table Specific"
+    },
+    {
+      "path": "cellBorderColor",
+      "label": "Cell Border Color",
+      "editorType": "colorPicker",
+      "description": "Border color for table cells",
+      "group": "Cell Styling"
+    },
+    {
+      "path": "cellBorders",
+      "label": "Show Cell Borders",
+      "editorType": "switch",
+      "description": "Show borders around cells",
+      "group": "Cell Styling"
+    },
+    {
+      "path": "rowDividers",
+      "label": "Row Dividers",
+      "editorType": "switch",
+      "description": "Show horizontal dividing lines between rows",
+      "group": "Cell Styling"
+    },
+    {
+      "path": "containerStyle",
+      "label": "Container Style",
+      "editorType": "codeEditor",
+      "description": "Custom CSS styles for the table container/wrapper",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "tableStyle",
+      "label": "Table Style",
+      "editorType": "codeEditor",
+      "description": "Custom CSS styles for the table element",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "noDataIcon",
+      "label": "Icon",
+      "editorType": "iconPicker",
+      "group": "Empty State"
+    },
+    {
+      "path": "noDataText",
+      "label": "Primary Text",
+      "editorType": "textField",
+      "group": "Empty State"
+    },
+    {
+      "path": "noDataSecondaryText",
+      "label": "Secondary Text",
+      "editorType": "textField",
+      "group": "Empty State"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "components"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dataTable/table/tableComponent.tsx",
+    "dataTable/table/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => { const items = 'items' in prev && isDefined(prev.items) && Array.isArray(prev.items) ? prev.items as IConfigurableColumnsProps[] : []; const prevTyped = prev as ITableComponentProps; ret"
+    },
+    {
+      "toVersion": 4,
+      "category": "other",
+      "what": "(not auto-labelled) 4, (prev) => ({ ...prev, onRowSaveSuccessAction: 'onRowSaveSuccess' in prev && typeof (prev.onRowSaveSuccess) === 'string' ? { _type: undefined, actionOwner: SheshaActionOwners.Common, actionName: 'Ex"
+    },
+    {
+      "toVersion": 12,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultStyles()): table style props -> desktop/tablet/mobile blocks"
+    },
+    {
+      "toVersion": 13,
+      "category": "curated",
+      "what": "useMultiselect boolean -> selectionMode (\"multiple\" if true else \"single\"); useMultiselect removed (migrate-v13.ts)"
+    },
+    {
+      "toVersion": 14,
+      "category": "curated",
+      "what": "striped forced to TRUE (overrides a stored false)"
+    },
+    {
+      "toVersion": 15,
+      "category": "curated",
+      "what": "striped ?? true"
+    },
+    {
+      "toVersion": 16,
+      "category": "curated",
+      "what": "adds rowHeight 40px, rowPadding 8px 12px, rowBorder 1px solid #f0f0f0, headerFontSize 14px, headerFontWeight 600 when missing (migrate-v16.ts)"
+    },
+    {
+      "toVersion": 17,
+      "category": "curated",
+      "what": "same defaults again inline (rowHeight 40px, rowPadding, rowBorder, headerFontSize 14px, headerFontWeight 600)"
+    },
+    {
+      "toVersion": 18,
+      "category": "curated",
+      "what": "selectionMode: useMultiselect false -> \"none\" when selectionMode still undefined (migrate-v18.ts; skipped when v13 already set selectionMode)"
+    },
+    {
+      "toVersion": 19,
+      "category": "curated",
+      "what": "cellPadding string -> rowStylingBox.padding"
+    },
+    {
+      "toVersion": 20,
+      "category": "curated",
+      "what": "hoverHighlight ?? true"
+    },
+    {
+      "toVersion": 21,
+      "category": "curated",
+      "what": "rowDimensions default height/minHeight/maxHeight auto"
+    },
+    {
+      "toVersion": 22,
+      "category": "curated",
+      "what": "rowAlternateBackgroundColor #f5f5f5, headerFontWeight 500, headerBackgroundColor #fafafa (zebra rows + grey header)"
+    },
+    {
+      "toVersion": 23,
+      "category": "curated",
+      "what": "striped ?? true mirrored into desktop/tablet/mobile"
+    },
+    {
+      "toVersion": 24,
+      "category": "curated",
+      "what": "rowStylingBox.padding -> rowPaddingTop/Right/Bottom/Left"
+    },
+    {
+      "toVersion": 25,
+      "category": "curated",
+      "what": "fills desktop/tablet/mobile font/dimensions/background/shadow defaults; headerFont Segoe UI 14/500; rowPadding 8px 12px; FORCES hoverHighlight = true (migrate-v25.ts)"
+    },
+    {
+      "toVersion": 26,
+      "category": "curated",
+      "what": "cellTextColor -> desktop.font.color; cellBackgroundColor -> rowBackgroundColor (migrate-v26.ts)"
+    },
+    {
+      "toVersion": 27,
+      "category": "curated",
+      "what": "hoverHighlight forced to true on all device blocks"
+    },
+    {
+      "toVersion": 28,
+      "category": "curated",
+      "what": "rowHeight / rowDimensions.height \"40px\" -> \"auto\" (rows stop being fixed 40px)"
+    },
+    {
+      "toVersion": 29,
+      "category": "curated",
+      "what": "actionIconSize ?? 14px"
+    },
+    {
+      "toVersion": 30,
+      "category": "VISIBLE_PERMS",
+      "what": "hidden -> visible, permissions -> visiblePermissions"
+    },
+    {
+      "toVersion": 31,
+      "category": "curated",
+      "what": "visible ?? true"
+    }
+  ]
+}

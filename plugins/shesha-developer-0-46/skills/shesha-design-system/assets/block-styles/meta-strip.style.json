@@ -1,0 +1,50 @@
+{
+  "$overlay": "meta-strip",
+  "notes": "Neutral structural overlay for the KIB/meta strip. Micro-label = uppercase 11/600 ink-soft (#9BA3B8 is a genuine neutral grey). Value = 13.5/400 body ink ($role placeholder — body ink colour comes from the live theme). Optional bottom hairline #F0F2F5. font lives on the text child (font on a container is a no-op).",
+  "targets": {
+    "metaStrip": {
+      "desktop": {
+        "border": {
+          "border": {
+            "bottom": { "width": "1px", "style": "solid", "color": "#F0F2F5" }
+          },
+          "borderType": "custom"
+        },
+        "background": {},
+        "shadow": {}
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaLabel_1": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 11, "weight": "600", "color": "#9BA3B8", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaValue_1": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 13.5, "weight": "400", "color": "$role:bodyInk", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaLabel_2": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 11, "weight": "600", "color": "#9BA3B8", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaValue_2": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 13.5, "weight": "400", "color": "$role:bodyInk", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaLabel_3": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 11, "weight": "600", "color": "#9BA3B8", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    },
+    "metaValue_3": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 13.5, "weight": "400", "color": "$role:bodyInk", "align": "left" } },
+      "tablet": {},
+      "mobile": {}
+    }
+  }
+}

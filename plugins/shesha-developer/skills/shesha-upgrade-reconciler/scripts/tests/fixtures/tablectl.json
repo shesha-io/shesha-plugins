@@ -1,0 +1,43 @@
+{
+ "rule": "tablectl",
+ "cases": [
+  {
+   "name": "vertical table header stacked",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "hdr",
+      "type": "container",
+      "componentName": "hdr",
+      "parentId": "root",
+      "className": "sha-index-table-control",
+      "direction": "vertical",
+      "desktop": {}
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/desktop/display",
+     "flex"
+    ],
+    [
+     "components/0/desktop/flexDirection",
+     "column"
+    ],
+    [
+     "components/0/desktop/direction",
+     "vertical"
+    ],
+    [
+     "components/0/desktop/alignItems",
+     "stretch"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

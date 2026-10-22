@@ -1,0 +1,370 @@
+{
+  "type": "address",
+  "name": "Address",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "HomeOutlined",
+  "version": 6,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IAddressCompomentProps",
+    "interfaceFile": "designer-components/address/models.ts",
+    "ownProps": [
+      "onSelectCustom",
+      "onFocusCustom",
+      "onBlurCustom",
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles",
+      "IAddressCompomentBaseProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "countryRestriction",
+      "customEnabled",
+      "customVisibility",
+      "debounce",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "googleMapsApiKey",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "latPriority",
+      "layout",
+      "lngPriority",
+      "minCharactersSearch",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "openCageApiKey",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "prefix",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "radiusPriority",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showPriorityBounds",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "address/formSettings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The minimum characters required before an api call can be made."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "minCharactersSearch",
+      "label": "Min Characters Before Search",
+      "editorType": "numberField",
+      "description": "The minimum characters required before an api call can be made.",
+      "group": "Search"
+    },
+    {
+      "path": "debounce",
+      "label": "Debounce (MS)",
+      "editorType": "numberField",
+      "description": "Debouncing prevents extra activations/inputs from triggering too often. This is the time in milliseconds the call will be delayed by.",
+      "group": "Search"
+    },
+    {
+      "path": "countryRestriction",
+      "label": "Country Restriction",
+      "editorType": "dropdown",
+      "description": "A filter which is based on the country/countries, multiple countries can be selected.",
+      "group": "Search"
+    },
+    {
+      "path": "prefix",
+      "label": "Prefix (Area Restriction)",
+      "editorType": "textField",
+      "description": "A simple prefix which is appended in the search but not the input search field, often used to create a biased search in address.",
+      "group": "Search"
+    },
+    {
+      "path": "googleMapsApiKey",
+      "label": "Google Maps Key",
+      "editorType": "Password",
+      "description": "API key for authorization. Google Maps key which is required to make successful calls to Google services.",
+      "group": "API Keys"
+    },
+    {
+      "path": "openCageApiKey",
+      "label": "OpenCage Key",
+      "editorType": "Password",
+      "description": "API key for authorization. Go to (https://opencagedata.com/api) to learn about OpenCage. OpenCage key which is required to make successful calls to OpenCage services.",
+      "group": "API Keys"
+    },
+    {
+      "path": "showPriorityBounds",
+      "label": "Priority Bounds (Advanced)",
+      "editorType": "switch",
+      "description": "Advanced search options, not required if a search priority is not needed. Note this will be discarded unless all values are provided.",
+      "group": "Priority Bounds"
+    },
+    {
+      "path": "latPriority",
+      "label": "Latitude (Priority Bound)",
+      "editorType": "numberField",
+      "description": "Latitude value which the search will be prioritized from.",
+      "required": true,
+      "group": "Priority Bounds"
+    },
+    {
+      "path": "lngPriority",
+      "label": "Longitude (Priority Bound)",
+      "editorType": "numberField",
+      "description": "Longitude value which the search will be prioritized from.",
+      "required": true,
+      "group": "Priority Bounds"
+    },
+    {
+      "path": "radiusPriority",
+      "label": "Radius (Priority Bound)",
+      "editorType": "numberField",
+      "description": "The radius in which the latitude and longitude will be priorities from.",
+      "required": true,
+      "group": "Priority Bounds"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validator",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onSelectCustom",
+      "label": "On Select",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "address/index.tsx",
+    "address/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

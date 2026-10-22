@@ -107,6 +107,10 @@ IocManager
 
 Register in the **Application module's** `PreInitialize()`. Methods are chainable.
 
+## Packages exported by the reconciler
+
+The package semantics `shesha-upgrade-reconciler` relies on when it exports reconciled forms (ascending-name import order, md5 skip, later name wins, subset export with dependencies off, never a hand-built `.shaconfig`) are in its `references/packages-and-export.md`.
+
 ## Workflow
 
 Determine the type of change, then follow the appropriate path:
@@ -181,7 +185,7 @@ not Configuration Studio is involved.
 - **Versioning is the framework's** — `VersionNo`, `VersionStatus`, `ParentVersion`, `Origin` and `IsLast` moved to `ConfigurationItemRevision` in 0.46.0. Never set them, and never call `Normalize()`.
 - **Virtual properties** — every entity property must be `virtual` for NHibernate.
 - **FK to configuration items** — the joined table MUST have a FK from `Id` to `frwk.configuration_items.id` (renamed from `Frwk_ConfigurationItems` in 0.46.0).
-- **FK column prefix** — ALL columns in `[JoinedProperty]` tables MUST use the `{Prefix}_` prefix, including FK columns. NHibernate's convention prefixes every column with the table prefix. Example: table `LB_MyConfigs` → FK column must be `LB_RelatedEntityId`, NOT `RelatedEntityId`.
+- **FK column prefix** — ALL columns in `[JoinedProperty]` tables MUST use the `{Prefix}_` prefix, including FK columns. NHibernate's convention prefixes every column with the table prefix. Example: table `MOD_MyConfigs` → FK column must be `MOD_RelatedEntityId`, NOT `RelatedEntityId`.
 - **ITransientDependency** — exporters and importers must implement `ITransientDependency`.
 - **Item lookup is the base class's job** — do not hand-roll a `Name` + `Module` query in the importer, and do not filter on `IsLast`; it no longer exists.
 - **Cross-config-item references use Name + Module, NOT Guid** — when a config item references another `ConfigurationItem` entity, the distribution DTO MUST use `string {Related}Name` + `string {Related}Module` pairs. The exporter maps from navigation properties (`entity.Related?.Name`, `entity.Related?.Module?.Name`), and the importer resolves back via a `Name + Module` query. GUIDs are environment-specific and make packages non-portable. Only internal lineage fields (`OriginId`, `BaseItem`) use GUIDs. See [reference/distribution.md](reference/distribution.md) §Cross-Config-Item References.

@@ -1,0 +1,475 @@
+{
+  "type": "autocomplete",
+  "name": "Autocomplete",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "FileSearchOutlined",
+  "version": 9,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IAutocompleteComponentProps",
+    "interfaceFile": "designer-components/autocomplete/interfaces.ts",
+    "ownProps": [
+      "entityType",
+      "dataSourceUrl",
+      "dataSourceType",
+      "mode",
+      "keyPropName",
+      "filter",
+      "disableSearch",
+      "placeholder",
+      "minWidth",
+      "maxWidth",
+      "queryParams",
+      "quickviewEnabled",
+      "quickviewFormPath",
+      "quickviewDisplayPropertyName",
+      "quickviewGetEntityUrl",
+      "quickviewWidth",
+      "displayPropName",
+      "fields",
+      "valueFormat",
+      "keyValueFunc",
+      "displayValueFunc",
+      "outcomeValueFunc",
+      "filterKeysFunc",
+      "sorting",
+      "grouping",
+      "allowFreeText"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowFreeText",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dataSourceType",
+      "dataSourceUrl",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableSearch",
+      "disabled",
+      "displayPropName",
+      "displayValueFunc",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "fields",
+      "filter",
+      "filterKeysFunc",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "grouping",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "keyPropName",
+      "keyValueFunc",
+      "label",
+      "labelAlign",
+      "layout",
+      "maxWidth",
+      "minWidth",
+      "mobile",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "outcomeValueFunc",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "queryParams",
+      "quickviewDisplayPropertyName",
+      "quickviewEnabled",
+      "quickviewFormPath",
+      "quickviewGetEntityUrl",
+      "quickviewWidth",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "sorting",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "valueFormat",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "autocomplete/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Name of the property that should be displayed in the autocomplete. Leave empty to use default display property defined on the back-end."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "mode",
+      "label": "Selection Mode",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "disableSearch",
+      "label": "Disable Search",
+      "editorType": "switch"
+    },
+    {
+      "path": "dataSourceType",
+      "label": "Data Source Type",
+      "editorType": "dropdown",
+      "group": "Data"
+    },
+    {
+      "path": "dataSourceUrl",
+      "label": "Data Source URL",
+      "editorType": "endpointsAutocomplete",
+      "group": "Data"
+    },
+    {
+      "path": "queryParams",
+      "label": "Query Param",
+      "editorType": "labelValueEditor",
+      "group": "Data"
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "group": "Data"
+    },
+    {
+      "path": "filter",
+      "label": "Entity Filter",
+      "editorType": "queryBuilder",
+      "group": "Data"
+    },
+    {
+      "path": "displayPropName",
+      "label": "Display Property",
+      "editorType": "propertyAutocomplete",
+      "description": "Name of the property that should be displayed in the autocomplete. Leave empty to use default display property defined on the back-end.",
+      "group": "Data"
+    },
+    {
+      "path": "keyPropName",
+      "label": "Key Property Name",
+      "editorType": "propertyAutocomplete",
+      "description": "Name of the property that will be used as key in the autocomplete. Leave empty to use the default value`s evaluator.",
+      "group": "Data"
+    },
+    {
+      "path": "fields",
+      "label": "Fields to Fetch",
+      "editorType": "propertyAutocomplete",
+      "group": "Data"
+    },
+    {
+      "path": "sorting",
+      "label": "Sort By",
+      "editorType": "dataSortingEditor",
+      "group": "Data"
+    },
+    {
+      "path": "grouping",
+      "label": "Grouping",
+      "editorType": "dataSortingEditor",
+      "group": "Data"
+    },
+    {
+      "path": "valueFormat",
+      "label": "Value Format",
+      "editorType": "dropdown",
+      "group": "Value"
+    },
+    {
+      "path": "outcomeValueFunc",
+      "label": "Value Function",
+      "editorType": "codeEditor",
+      "description": "Return value for item object",
+      "group": "Value"
+    },
+    {
+      "path": "keyValueFunc",
+      "label": "Key Value Function",
+      "editorType": "codeEditor",
+      "description": "Return key from selected value",
+      "group": "Value"
+    },
+    {
+      "path": "displayValueFunc",
+      "label": "Display Value Function",
+      "editorType": "codeEditor",
+      "description": "Return display value for item's object",
+      "group": "Value"
+    },
+    {
+      "path": "filterKeysFunc",
+      "label": "Filter Selected Function",
+      "editorType": "codeEditor",
+      "description": "Return filter object (JsonLogic) for selected value(s). Use this settings to configure non-standard values format",
+      "group": "Value"
+    },
+    {
+      "path": "allowFreeText",
+      "label": "Allow Free Text",
+      "editorType": "switch",
+      "description": "Allow to use free text that is missing on the source",
+      "group": "Value"
+    },
+    {
+      "path": "quickviewEnabled",
+      "label": "Use Quickview",
+      "editorType": "switch",
+      "group": "Quickview"
+    },
+    {
+      "path": "quickviewFormPath",
+      "label": "Form Path",
+      "editorType": "formAutocomplete",
+      "group": "Quickview"
+    },
+    {
+      "path": "quickviewGetEntityUrl",
+      "label": "Get Entity URL",
+      "editorType": "endpointsAutocomplete",
+      "group": "Quickview"
+    },
+    {
+      "path": "quickviewDisplayPropertyName",
+      "label": "Display Property",
+      "editorType": "propertyAutocomplete",
+      "description": "Name of the property that should be displayed in the quickview. Leave empty to use default display property defined on the back-end.",
+      "group": "Quickview"
+    },
+    {
+      "path": "quickviewWidth",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Quickview"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validation",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "autocomplete/autocomplete.tsx",
+    "autocomplete/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 4,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 6,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 8,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 9,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "mode [\"single\"] array unwrapped to \"single\"; hidden->visible, stylingBox->stylingBoxJson, permissions->visiblePermissions"
+    }
+  ]
+}

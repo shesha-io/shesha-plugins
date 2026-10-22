@@ -1,0 +1,55 @@
+{
+ "rule": "afterload",
+ "cases": [
+  {
+   "name": "after-load handler runs with the loaded record",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root"
+     }
+    ],
+    "formSettings": {
+     "onAfterDataLoad": "const total = data.order.total;\nconsole.log(total);"
+    }
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "formSettings/onAfterDataLoad",
+     "/*reconciler:046-afterload-data*/\n// 0.46 passes only the initial values (the id) as `data` to onAfterDataLoad; the loaded record is\n// form.data (0.43 passed the loaded record). When `data` holds nothing but the id and form.data holds more,\n// run the handler with `data` = the loaded record; otherwise it runs unchanged (H44).\nconst __d046 = (typeof form !== \"undefined\" && form && form.data && typeof form.data === \"object\"\n    && Object.keys(data || {}).filter(k => k !== \"id\").length === 0\n    && Object.keys(form.data).filter(k => k !== \"id\").length > 0) ? form.data : data;\nreturn (async (data) => {\nconst total = data.order.total;\nconsole.log(total);\n})(__d046);"
+    ]
+   ],
+   "node": true,
+   "retire": true,
+   "touched": [
+    "formSettings/onAfterDataLoad"
+   ]
+  },
+  {
+   "name": "a handler that writes into data is reported, not wrapped",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root"
+     }
+    ],
+    "formSettings": {
+     "onAfterDataLoad": "data.order = {};\nreturn data.order;"
+    }
+   },
+   "changes": 0,
+   "expect": [],
+   "node": true,
+   "retire": false
+  }
+ ]
+}

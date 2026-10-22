@@ -1,0 +1,216 @@
+{
+  "type": "htmlRender",
+  "name": "HTML Render",
+  "isInput": false,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "HighlightOutlined",
+  "version": 2,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({\n    ...model,\n    contentType: model.contentType ?? 'jsx',\n    sanitize: model.sanitize ?? true,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IHtmlComponentProps",
+    "interfaceFile": "designer-components/htmlRender/interfaces.ts",
+    "ownProps": [
+      "contentType",
+      "sanitize",
+      "html",
+      "renderer"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "contentType",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "html",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "renderer",
+      "sanitize",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "htmlRender/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Remove all scripts and styles. Switch off to allow scripts and styles. This will make it possible to create complex, stylized, and interactive components. USE WITH CAUTION!"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "contentType",
+      "label": "Content Type",
+      "editorType": "dropdown",
+      "options": [
+        "html",
+        "jsx"
+      ]
+    },
+    {
+      "path": "sanitize",
+      "label": "Sanitize",
+      "editorType": "switch",
+      "description": "Remove all scripts and styles. Switch off to allow scripts and styles. This will make it possible to create complex, stylized, and interactive components. USE WITH CAUTION!"
+    },
+    {
+      "path": "html",
+      "label": "Pure HTML",
+      "editorType": "codeEditor",
+      "description": "Enter HTML that will render a component. To access the data, you can use the Mustache syntax."
+    },
+    {
+      "path": "renderer",
+      "label": "JS for Render HTML",
+      "editorType": "codeEditor",
+      "description": "Enter custom JSX script that will render a component"
+    },
+    {
+      "path": "style",
+      "label": "Container Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "shared": true
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "htmlRender/index.tsx",
+    "htmlRender/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "VISIBLE_PERMS",
+      "what": "sanitize defaults to true (DOMPurify) and contentType to \"jsx\"; hidden -> visible (hidden is NOT deleted from the object because of the spread order, so hidden:true is kept); permissions -> visiblePermissions"
+    }
+  ]
+}

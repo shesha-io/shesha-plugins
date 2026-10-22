@@ -1,0 +1,127 @@
+{
+  "$block": "status-pill",
+  "$scope": "fragment",
+  "$styleOverlay": "status-pill",
+  "$slots": {},
+  "$bindings": [
+    {
+      "path": "subtree.propertyName",
+      "fill": "the status reference-list property on the bound entity (e.g. \"status\")"
+    },
+    {
+      "path": "subtree.referenceListId.module",
+      "fill": "the reference list's module (e.g. \"Shesha.RequirementsStudio\")"
+    },
+    {
+      "path": "subtree.referenceListId.name",
+      "fill": "the reference list's name (e.g. \"Shesha.RequirementsStudio.RsStatus\")"
+    }
+  ],
+  "$validatedAgainst": [
+    "refListStatus:pill colours — per-item bg/fg/border from reflist + customStyle pill (v6, proven live)",
+    "container:stylingBox"
+  ],
+  "subtree": {
+    "type": "refListStatus",
+    "version": 6,
+    "componentName": "statusChip",
+    "propertyName": "$binding:statusPropertyName",
+    "label": "Status",
+    "labelAlign": "right",
+    "hideLabel": true,
+    "hidden": false,
+    "isDynamic": false,
+    "referenceListId": {
+      "module": "$binding:referenceListModule",
+      "name": "$binding:referenceListName"
+    },
+    "solidBackground": true,
+    "showReflistName": true,
+    "enableStyleOnReadonly": false,
+    "customStyle": {
+      "_mode": "code",
+      "_code": "return { display: 'inline-flex', alignItems: 'center', lineHeight: '1.8', overflow: 'visible', textTransform: 'uppercase', letterSpacing: '0.04em' };"
+    },
+    "desktop": {
+      "font": {
+        "type": "Segoe UI",
+        "size": 11,
+        "weight": "600",
+        "align": "center"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": 0,
+            "style": "none"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 12
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+    },
+    "tablet": {
+      "font": {
+        "type": "Segoe UI",
+        "size": 11,
+        "weight": "600",
+        "align": "center"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": 0,
+            "style": "none"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 12
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+    },
+    "mobile": {
+      "font": {
+        "type": "Segoe UI",
+        "size": 11,
+        "weight": "600",
+        "align": "center"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": 0,
+            "style": "none"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 12
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+    }
+  }
+}

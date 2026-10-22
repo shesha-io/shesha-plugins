@@ -1,0 +1,458 @@
+{
+  "type": "youtubeVideo",
+  "name": "YouTube Video",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "YoutubeOutlined",
+  "version": 2,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => {\n    const baseModel = {\n      responsive: true,\n      showControls: true,\n      fullscreen: true,\n      disableKeyboard: false,\n      ccLoadPolicy: false,\n      playsinline: true,\n      hideLabel: true, // Hide label by default for video component\n      ...model,\n    };\n\n    return baseModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IYoutubeVideoComponentProps",
+    "interfaceFile": "designer-components/youtubeVideo/interfaces.ts",
+    "ownProps": [
+      "videoId",
+      "title",
+      "description",
+      "titleLevel",
+      "autoplay",
+      "startTime",
+      "endTime",
+      "loop",
+      "width",
+      "height",
+      "responsive",
+      "dimensions",
+      "showControls",
+      "mute",
+      "fullscreen",
+      "disableKeyboard",
+      "ccLoadPolicy",
+      "ccLangPref",
+      "playsinline",
+      "isRequired",
+      "watchCompletionRequired",
+      "onPlay",
+      "onPause",
+      "onEnd",
+      "onReady",
+      "customThumbnail",
+      "thumbnailSource",
+      "thumbnailUrl",
+      "thumbnailBase64",
+      "thumbnailStoredFileId",
+      "privacyMode"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "autoplay",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "ccLangPref",
+      "ccLoadPolicy",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customThumbnail",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableKeyboard",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "endTime",
+      "font",
+      "fullscreen",
+      "height",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "isRequired",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "loop",
+      "mobile",
+      "mute",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onEnd",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onPause",
+      "onPlay",
+      "onReady",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "playsinline",
+      "primaryBgColor",
+      "primaryTextColor",
+      "privacyMode",
+      "propertyName",
+      "readOnly",
+      "responsive",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showControls",
+      "size",
+      "startTime",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "thumbnailBase64",
+      "thumbnailSource",
+      "thumbnailStoredFileId",
+      "thumbnailUrl",
+      "title",
+      "titleLevel",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "videoId",
+      "visible",
+      "visiblePermissions",
+      "watchCompletionRequired",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "youtubeVideo/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "YouTube video ID (e.g., dQw4w9WgXcQ)"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "videoId",
+      "label": "Video ID",
+      "editorType": "textField",
+      "description": "YouTube video ID (e.g., dQw4w9WgXcQ)",
+      "required": true
+    },
+    {
+      "path": "title",
+      "label": "Title",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Description",
+      "editorType": "textArea"
+    },
+    {
+      "path": "titleLevel",
+      "label": "Title Level",
+      "editorType": "dropdown",
+      "description": "Heading level for the title (h1-h5)",
+      "group": "Typography Options"
+    },
+    {
+      "path": "responsive",
+      "label": "Responsive (16:9)",
+      "editorType": "switch",
+      "description": "A 16:9 aspect ratio mode. Width from Appearance tab will auto-convert to % (e.g., 500px → 500%) height is ignored."
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "autoplay",
+      "label": "Autoplay",
+      "editorType": "switch",
+      "description": "Automatically start playing the video when the page loads"
+    },
+    {
+      "path": "mute",
+      "label": "Mute",
+      "editorType": "switch",
+      "description": "Start video with audio muted"
+    },
+    {
+      "path": "loop",
+      "label": "Loop",
+      "editorType": "switch",
+      "description": "Replay video continuously from the beginning when it ends"
+    },
+    {
+      "path": "showControls",
+      "label": "Show Controls",
+      "editorType": "switch",
+      "description": "Display video player controls (play, pause, volume, etc.)"
+    },
+    {
+      "path": "startTime",
+      "label": "Start Time (seconds)",
+      "editorType": "numberField",
+      "description": "Time in seconds where the video should start playing"
+    },
+    {
+      "path": "endTime",
+      "label": "End Time (seconds)",
+      "editorType": "numberField",
+      "description": "Time in seconds where the video should stop playing"
+    },
+    {
+      "path": "fullscreen",
+      "label": "Show Fullscreen Button",
+      "editorType": "switch",
+      "description": "Display the fullscreen button in player controls"
+    },
+    {
+      "path": "disableKeyboard",
+      "label": "Disable Keyboard Controls",
+      "editorType": "switch",
+      "description": "Prevent keyboard shortcuts from controlling the player"
+    },
+    {
+      "path": "ccLoadPolicy",
+      "label": "Auto-Show Captions",
+      "editorType": "switch",
+      "description": "Automatically display closed captions by default"
+    },
+    {
+      "path": "ccLangPref",
+      "label": "Caption Language",
+      "editorType": "textField",
+      "description": "ISO 639-1 language code for captions (e.g., en, es, fr)"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "border.hideBorder",
+      "label": "Border",
+      "editorType": "button",
+      "group": "Border"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "onPlay",
+      "label": "On Play",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when the video starts playing"
+    },
+    {
+      "path": "onPause",
+      "label": "On Pause",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when the video is paused"
+    },
+    {
+      "path": "onEnd",
+      "label": "On End",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when the video finishes playing"
+    },
+    {
+      "path": "onReady",
+      "label": "On Ready",
+      "editorType": "configurableActionConfigurator",
+      "description": "Action to execute when the video player is ready"
+    },
+    {
+      "path": "privacyMode",
+      "label": "Privacy Mode",
+      "editorType": "switch",
+      "description": "Use youtube-nocookie.com"
+    },
+    {
+      "path": "playsinline",
+      "label": "Play Inline (iOS)",
+      "editorType": "switch",
+      "description": "Enable inline playback on iOS devices (instead of fullscreen)"
+    },
+    {
+      "path": "thumbnailSource",
+      "label": "Thumbnail Source Type",
+      "editorType": "radio",
+      "options": [
+        "url",
+        "base64",
+        "storedFile"
+      ]
+    },
+    {
+      "path": "thumbnailUrl",
+      "label": "Thumbnail URL",
+      "editorType": "textField"
+    },
+    {
+      "path": "thumbnailBase64",
+      "label": "Upload Thumbnail",
+      "editorType": "imageUploader"
+    },
+    {
+      "path": "thumbnailStoredFileId",
+      "label": "Stored File ID",
+      "editorType": "textField"
+    },
+    {
+      "path": "watchCompletionRequired",
+      "label": "Require Watch Completion",
+      "editorType": "switch",
+      "description": "When enabled, the form cannot be submitted until the user watches the entire video. The completion state is stored in the form data."
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "youtubeVideo/index.tsx",
+    "youtubeVideo/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": []
+}

@@ -1,0 +1,82 @@
+{
+ "rule": "textsize",
+ "cases": [
+  {
+   "name": "font and padding presets rewritten at the 16px root",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "txt",
+      "type": "text",
+      "componentName": "txt",
+      "parentId": "root",
+      "fontSize": "text-xl",
+      "padding": "padding-base",
+      "desktop": {
+       "font": {
+        "size": 17.5
+       }
+      }
+     }
+    ]
+   },
+   "changes": 2,
+   "expect": [
+    [
+     "components/0/desktop/font/size",
+     20
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingTop",
+     "16"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingRight",
+     "16"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingBottom",
+     "16"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingLeft",
+     "16"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/_type",
+     "styleBox"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/0/desktop"
+   ]
+  },
+  {
+   "name": "an author-chosen font size is kept",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "txt",
+      "type": "text",
+      "componentName": "txt",
+      "parentId": "root",
+      "fontSize": "text-xl",
+      "desktop": {
+       "font": {
+        "size": 30
+       }
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

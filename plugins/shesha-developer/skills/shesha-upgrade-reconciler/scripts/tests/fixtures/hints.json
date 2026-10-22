@@ -1,0 +1,53 @@
+{
+ "rule": "hints",
+ "cases": [
+  {
+   "name": "columns block takes the visibility of its only text",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "cols",
+      "type": "columns",
+      "componentName": "cols",
+      "parentId": "root",
+      "visible": true,
+      "columns": [
+       {
+        "id": "col1",
+        "components": [
+         {
+          "id": "hint",
+          "type": "text",
+          "componentName": "hint",
+          "parentId": "col1",
+          "visible": {
+           "_mode": "code",
+           "_code": "return !!data?.order;"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "return !!data?.order;"
+    ],
+    [
+     "components/0/visible/_mode",
+     "code"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/0/visible"
+   ]
+  }
+ ]
+}

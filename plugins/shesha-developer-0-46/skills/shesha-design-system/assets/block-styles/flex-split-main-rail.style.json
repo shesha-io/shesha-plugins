@@ -1,0 +1,176 @@
+{
+  "$overlay": "flex-split-main-rail",
+  "$notes": [
+    "Structural-neutral only: geometry channels (display/flexDirection/gap/dimensions/stylingBox). No surfaces, hairlines, shadow or colour — those live on the cards placed inside the slots.",
+    "0.46: Main fills via width '100%' + minWidth:0 beside the fixed 332px rail (exact px: wrapper becomes fit-content, rail min-width stops it shrinking). The 0.45 form was 'calc(100% - 348px)' (rail 332 + gap 16); on 0.46 a calc width is applied to BOTH the sha-component wrapper and the container inside it (stylingUtils.ts), so it can narrow the column twice. Re-introduce calc only if the probe shows main ~= row - 348 and doubleShrinkSuspect false. NOT yet measured on a running 0.46 app.",
+    "Rail is fixed 332px (min=max=332) and is itself a flex column (gap 16) so stacked rail cards space evenly.",
+    "Tablet + mobile collapse BOTH children to width:'100%' (min 0, max 100%) so the rail stacks under the main."
+  ],
+  "targets": {
+    "bodySplit": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "flex-start",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{\"marginBottom\":\"0\"}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "100%",
+          "maxWidth": "100%"
+        }
+      },
+      "tablet": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "stretch",
+        "justifyContent": "flex-start",
+        "flexWrap": "wrap",
+        "gap": "16",
+        "stylingBox": "{\"marginBottom\":\"0\"}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      },
+      "mobile": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "stretch",
+        "justifyContent": "flex-start",
+        "flexWrap": "wrap",
+        "gap": "16",
+        "stylingBox": "{\"marginBottom\":\"0\"}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      }
+    },
+    "splitMain": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      },
+      "tablet": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      },
+      "mobile": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      }
+    },
+    "splitRail": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "332px",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "332px",
+          "maxWidth": "332px"
+        }
+      },
+      "tablet": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      },
+      "mobile": {
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "stylingBox": "{}",
+        "dimensions": {
+          "width": "100%",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+ "rule": "tabs",
+ "cases": [
+  {
+   "name": "tabs surface defaults reset",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tb",
+      "type": "tabs",
+      "componentName": "tb",
+      "parentId": "root",
+      "version": 11,
+      "desktop": {
+       "card": {
+        "background": {
+         "type": "color",
+         "color": "rgba(0,0,0,0.02)"
+        }
+       },
+       "font": {
+        "color": "",
+        "weight": "500"
+       },
+       "border": {
+        "hideBorder": false,
+        "border": {
+         "all": {
+          "width": "1px",
+          "color": "#f0f0f0",
+          "style": "solid"
+         }
+        }
+       },
+       "stylingBoxJson": {
+        "_type": "styleBox",
+        "paddingTop": "16",
+        "paddingRight": "16",
+        "paddingBottom": "16",
+        "paddingLeft": "16"
+       }
+      }
+     }
+    ]
+   },
+   "changes": 5,
+   "expect": [
+    [
+     "components/0/desktop/card/background/color",
+     "transparent"
+    ],
+    [
+     "components/0/desktop/font/color",
+     "var(--primary-color)"
+    ],
+    [
+     "components/0/desktop/font/weight",
+     "400"
+    ],
+    [
+     "components/0/desktop/border/hideBorder",
+     true
+    ],
+    [
+     "components/0/desktop/border/border/all/width",
+     "0px"
+    ],
+    [
+     "components/0/desktop/border/border/top/style",
+     "none"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingTop",
+     "0"
+    ],
+    [
+     "components/0/desktop/stylingBoxJson/paddingLeft",
+     "0"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/0/desktop"
+   ]
+  }
+ ]
+}

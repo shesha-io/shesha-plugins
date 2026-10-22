@@ -1,0 +1,380 @@
+{
+  "type": "entityPicker",
+  "name": "Entity Picker",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "EllipsisOutlined",
+  "version": 16,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IEntityPickerComponentProps",
+    "interfaceFile": "designer-components/entityPicker/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "items",
+      "hideBorder",
+      "valueFormat",
+      "incomeCustomJs",
+      "outcomeCustomJs",
+      "mode",
+      "entityType",
+      "filters",
+      "title",
+      "displayEntityKey",
+      "allowNewRecord",
+      "modalFormId",
+      "modalTitle",
+      "showModalFooter",
+      "modalWidth",
+      "customWidth",
+      "widthUnits",
+      "addNewModalWidth",
+      "addNewCustomWidth",
+      "addNewWidthUnits",
+      "buttons",
+      "footerButtons",
+      "dividerWidth",
+      "dividerStyle",
+      "dividerColor",
+      "readOnlyPlaceholder"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "addNewCustomWidth",
+      "addNewModalWidth",
+      "addNewWidthUnits",
+      "allStyles",
+      "allowNewRecord",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "buttons",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "customWidth",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "displayEntityKey",
+      "dividerColor",
+      "dividerStyle",
+      "dividerWidth",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "filters",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "footerButtons",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "incomeCustomJs",
+      "initialContext",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "modalFormId",
+      "modalTitle",
+      "modalWidth",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "outcomeCustomJs",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "readOnlyPlaceholder",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showModalFooter",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "title",
+      "type",
+      "validate",
+      "validationDependencies",
+      "valueFormat",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "widthUnits",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "entityPicker/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Text that gets displayed when empty and in read-only mode."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "readOnlyPlaceholder",
+      "label": "Read-only Placeholder",
+      "editorType": "textField",
+      "description": "Text that gets displayed when empty and in read-only mode."
+    },
+    {
+      "path": "mode",
+      "label": "Selection Type",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "required": true
+    },
+    {
+      "path": "displayEntityKey",
+      "label": "Display Property",
+      "editorType": "propertyAutocomplete",
+      "description": "Name of the property that should be displayed in the field. Leave empty to use the default display property defined on the back-end."
+    },
+    {
+      "path": "filters",
+      "label": "Entity Filter",
+      "editorType": "queryBuilder"
+    },
+    {
+      "path": "valueFormat",
+      "label": "Value Format",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "incomeCustomJs",
+      "label": "ID Value",
+      "editorType": "codeEditor",
+      "description": "Return string value of Id"
+    },
+    {
+      "path": "outcomeCustomJs",
+      "label": "Custom Value",
+      "editorType": "codeEditor",
+      "description": "Return value that will be stored as field value"
+    },
+    {
+      "path": "items",
+      "label": "Columns",
+      "editorType": "columnsConfig"
+    },
+    {
+      "path": "modalWidth",
+      "label": "Dialog Width",
+      "editorType": "customDropdown",
+      "description": "Width of the dialog used to select an entity."
+    },
+    {
+      "path": "allowNewRecord",
+      "label": "Allow New Record",
+      "editorType": "switch"
+    },
+    {
+      "path": "modalTitle",
+      "label": "Title",
+      "editorType": "textField",
+      "required": true,
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "modalFormId",
+      "label": "Modal Form",
+      "editorType": "formAutocomplete",
+      "required": true,
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "footerButtons",
+      "label": "Buttons Type",
+      "editorType": "dropdown",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "buttons",
+      "label": "Configure Modal Buttons",
+      "editorType": "buttonGroupConfigurator",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "addNewModalWidth",
+      "label": "New Record Dialog Width",
+      "editorType": "customDropdown",
+      "description": "Width of the dialog used to create a new record. Independent of the picker `Dialog Width`.",
+      "group": "Dialog Settings"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validation",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "entityPicker/index.tsx",
+    "entityPicker/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 6,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 10,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 13,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 14,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

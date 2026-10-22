@@ -1,0 +1,374 @@
+{
+  "$block": "meta-strip",
+  "$scope": "region",
+  "$styleOverlay": "meta-strip",
+  "$slots": {
+    "cells": "subtree.components",
+    "cell.label.text": "subtree.components[].components[0].content",
+    "cell.value.text": "subtree.components[].components[1].content"
+  },
+  "$bindings": [
+    {
+      "placeholder": "$cell.value.propertyName",
+      "where": "each cell's value text/control propertyName",
+      "note": "bind to the meta field; use contentDisplay:'name'+code content for a bound text, or swap the value child for a refListStatus/progress/control as needed"
+    }
+  ],
+  "$validatedAgainst": [
+    "container:display=flex+flexDirection=row+gap (the strip; flex inert without display:flex)",
+    "container:justifyContent (flex-start, content-width cells)",
+    "container:border.perSide (optional bottom hairline)",
+    "container:stylingBox",
+    "text:fontSize/fontWeight/color/align (micro-label + value via desktop.font)",
+    "text:customStyle code-mode (letterSpacing + textTransform)"
+  ],
+  "subtree": {
+    "type": "container",
+    "version": 7,
+    "componentName": "metaStrip",
+    "propertyName": "metaStrip",
+    "hidden": false,
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "flex-start",
+    "alignItems": "flex-start",
+    "flexWrap": "wrap",
+    "gap": "32",
+    "stylingBox": "{\"paddingTop\":\"0\",\"paddingBottom\":\"14\"}",
+    "components": [
+      {
+        "type": "container",
+        "version": 7,
+        "componentName": "metaCell_1",
+        "propertyName": "metaCell_1",
+        "hidden": false,
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start",
+        "gap": "2",
+        "components": [
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaLabel_1",
+            "propertyName": "metaLabel_1",
+            "hidden": false,
+            "textType": "span",
+            "content": "MODULE",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "fontSize": "text-xs",
+            "fontWeight": "600",
+            "customStyle": {
+              "_mode": "code",
+              "_code": "return { letterSpacing: '0.06em', textTransform: 'uppercase' };"
+            },
+            "stylingBox": "{\"marginBottom\":\"4\"}",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaValue_1",
+            "propertyName": "metaValue_1",
+            "hidden": false,
+            "textType": "span",
+            "content": "—",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "version": 7,
+        "componentName": "metaCell_2",
+        "propertyName": "metaCell_2",
+        "hidden": false,
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start",
+        "gap": "2",
+        "components": [
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaLabel_2",
+            "propertyName": "metaLabel_2",
+            "hidden": false,
+            "textType": "span",
+            "content": "RELEASE",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "fontSize": "text-xs",
+            "fontWeight": "600",
+            "customStyle": {
+              "_mode": "code",
+              "_code": "return { letterSpacing: '0.06em', textTransform: 'uppercase' };"
+            },
+            "stylingBox": "{\"marginBottom\":\"4\"}",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaValue_2",
+            "propertyName": "metaValue_2",
+            "hidden": false,
+            "textType": "span",
+            "content": "—",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "version": 7,
+        "componentName": "metaCell_3",
+        "propertyName": "metaCell_3",
+        "hidden": false,
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start",
+        "gap": "2",
+        "components": [
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaLabel_3",
+            "propertyName": "metaLabel_3",
+            "hidden": false,
+            "textType": "span",
+            "content": "VIEW TYPE",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "fontSize": "text-xs",
+            "fontWeight": "600",
+            "customStyle": {
+              "_mode": "code",
+              "_code": "return { letterSpacing: '0.06em', textTransform: 'uppercase' };"
+            },
+            "stylingBox": "{\"marginBottom\":\"4\"}",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 11,
+                "weight": "600",
+                "color": "#9BA3B8",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "metaValue_3",
+            "propertyName": "metaValue_3",
+            "hidden": false,
+            "textType": "span",
+            "content": "—",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 13.5,
+                "weight": "400",
+                "color": "#181818",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "desktop": {
+      "border": {
+        "border": {
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          }
+        },
+        "borderType": "custom"
+      },
+      "background": {},
+      "shadow": {}
+    },
+    "tablet": {
+      "border": {
+        "border": {
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          }
+        },
+        "borderType": "custom"
+      },
+      "background": {},
+      "shadow": {}
+    },
+    "mobile": {
+      "border": {
+        "border": {
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          }
+        },
+        "borderType": "custom"
+      },
+      "background": {},
+      "shadow": {}
+    }
+  }
+}

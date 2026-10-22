@@ -1,0 +1,78 @@
+{
+ "rule": "editmode",
+ "cases": [
+  {
+   "name": "a script returning edit/readonly is wrapped",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root",
+      "editMode": {
+       "_mode": "code",
+       "_code": "return data?.mode === 'edit' ? 'edit' : 'readonly';"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/editMode/_code",
+     "/*reconciler:046-editmode*/\nconst __em = (() => {\nreturn data?.mode === 'edit' ? 'edit' : 'readonly';\n})();\nif (__em === true || __em === 'edit' || __em === 'Edit') return 'editable';\nif (__em === false || __em === 'readonly' || __em === 'read-only' || __em === 'ReadOnly') return 'readOnly';\nreturn __em;"
+    ]
+   ],
+   "node": false,
+   "retire": true
+  },
+  {
+   "name": "a canonical script is left alone",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root",
+      "editMode": {
+       "_mode": "code",
+       "_code": "return data.ok ? 'editable' : 'readOnly';"
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": true
+  },
+  {
+   "name": "a static read-only button becomes disabled",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "b1",
+      "type": "button",
+      "componentName": "b1",
+      "parentId": "root",
+      "editMode": "readOnly"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/editMode",
+     "disabled"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

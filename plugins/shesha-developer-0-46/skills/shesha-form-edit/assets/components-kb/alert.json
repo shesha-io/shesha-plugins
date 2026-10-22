@@ -1,0 +1,244 @@
+{
+  "type": "alert",
+  "name": "Alert",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "ExclamationCircleOutlined",
+  "version": 3,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": {
+    "defaults": {
+      "alertType": "info"
+    },
+    "raw": "(model) => ({\n    alertType: 'info',\n    ...model,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IAlertComponentProps",
+    "interfaceFile": "designer-components/alert/interfaces.ts",
+    "ownProps": [
+      "text",
+      "description",
+      "showIcon",
+      "alertType",
+      "closable",
+      "icon",
+      "banner",
+      "marquee"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "alertType",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "banner",
+      "border",
+      "closable",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "icon",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "marquee",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showIcon",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "text",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "alert/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "dimensions",
+    "stylingBoxJson",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The message to display in the alert. You can use variables and expressions."
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "closable",
+      "label": "Dismissable",
+      "editorType": "switch"
+    },
+    {
+      "path": "alertType",
+      "label": "Type",
+      "editorType": "dropdown",
+      "options": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    {
+      "path": "text",
+      "label": "Message",
+      "editorType": "textArea",
+      "description": "The message to display in the alert. You can use variables and expressions."
+    },
+    {
+      "path": "description",
+      "label": "Description",
+      "editorType": "textArea",
+      "description": "Additional information about the alert."
+    },
+    {
+      "path": "showIcon",
+      "label": "Show Icon",
+      "editorType": "switch"
+    },
+    {
+      "path": "marquee",
+      "label": "Marquee",
+      "editorType": "switch",
+      "description": "If enabled, the content will scroll horizontally."
+    },
+    {
+      "path": "icon",
+      "label": "Icon",
+      "editorType": "iconPicker"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "alert/index.tsx",
+    "alert/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "VISIBLE_PERMS",
+      "what": "adds desktop.stylingBoxJson padding 8px on all sides for existing alerts; hidden->visible"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sourceDir": "shesha-reactjs/src/designer-components",
+  "sourceBranch": "release-0.46.0",
+  "commit": "b28264efa2e4c7e78cadf1107ae9de7b66093c26",
+  "sourceCommitDate": "2026-09-09T22:13:05+03:00",
+  "generatedAt": "2026-10-02T08:14:17.522Z",
+  "componentCount": 122,
+  "settingsCatalog": {
+    "full": 104,
+    "partial": 2,
+    "none": 16,
+    "withStandardAppearance": 37,
+    "totalFields": 2405,
+    "avgFieldsPerComponent": 19.7
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "type": "markdown",
+  "name": "Markdown",
+  "isInput": false,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "EditOutlined",
+  "version": 3,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({\n    ...model,\n    content: (!isNullOrWhiteSpace(model.content)\n      ? model.content\n      : `\n# Markdown Example\n\n## Basic Text\nThis is a paragraph with **bold text**, *italic text*, and ~~strikethrough text~~.\n\n## Lists\n- Bullet list item 1\n- Bullet list item 2\n\n1. Numbered list item 1\n2. Numbered list item 2\n\n## Links & Images\n[Shesha](https://www.shesha.io)  \n![Shesha Logo](https://raw.githubusercontent.com/shesha-io/shesha-framework/main/shesha-reactjs/public/images/app-logo.png)\n\n## Code\nInline code: \\`print(\"Hello, world!\")\\`\n\nBlock code:\n\\`\\`\\`python\ndef greet(name):\n  return f\"Hello, {name}!\"\n\ngreet(\"world\")\n\\`\\`\\``).trim(),\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IMarkdownProps",
+    "interfaceFile": "designer-components/markdown/interfaces.ts",
+    "ownProps": [
+      "content",
+      "textColor",
+      "remarkPlugins",
+      "style",
+      "fontSize",
+      "fontColor",
+      "backgroundColor",
+      "hideBorder",
+      "borderSize",
+      "borderRadius",
+      "borderColor"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "componentName",
+      "content",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "remarkPlugins",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "textColor",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "markdown/settingsForm.json",
+    "mechanism": "json-markup",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "propertyName",
+      "label": "Property name",
+      "editorType": "contextPropertyAutocomplete",
+      "group": "Display"
+    },
+    {
+      "path": "content",
+      "label": "Content",
+      "editorType": "codeEditor",
+      "group": "Display"
+    },
+    {
+      "path": "hidden",
+      "label": "Hidden",
+      "editorType": "checkbox",
+      "group": "Display"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "group": "Style",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissionAutocomplete",
+      "group": "Security"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "content"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "markdown/index.tsx",
+    "markdown/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 3,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

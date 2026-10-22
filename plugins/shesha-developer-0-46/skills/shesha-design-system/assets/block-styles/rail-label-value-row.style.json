@@ -1,0 +1,98 @@
+{
+  "$overlay": "rail-label-value-row",
+  "_note": "0.46: the calc() widths here are applied to both the wrapper and the container inside it - verify with the layout probe (doubleShrinkSuspect) and switch the fill cell to width 100% + minWidth 0 if it comes out narrow. Structural-neutral only. The row is a fixed 96px label cell + a calc(100% - 106px) value cell (96 + 10px row gap) — the CLEAN fixed-width split idiom (dimensions.width is the lever; per-child customStyle.flex is inert). The bottom hairline #F0F2F5 and the label ink-soft #9BA3B8 are structural neutrals taken verbatim from the live form, so they are literal here. No brand/accent colour belongs in this overlay — the value control takes its own colour from the live theme / reference list. Border uses borderType:'custom' with ONLY the bottom side set (container:border.perSide).",
+  "targets": {
+    "rlvRow": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "flexWrap": "nowrap",
+        "gap": "10px",
+        "dimensions": {
+          "width": "100%",
+          "minWidth": "0px",
+          "maxWidth": "100%",
+          "minHeight": "fit-content"
+        },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "custom",
+          "border": {
+            "all": {},
+            "top": {},
+            "bottom": { "width": "1px", "style": "solid", "color": "#F0F2F5" },
+            "left": {},
+            "right": {}
+          },
+          "radius": { "all": 0 }
+        },
+        "stylingBox": "{\"paddingTop\":\"6\",\"paddingBottom\":\"6\",\"paddingLeft\":\"0\",\"paddingRight\":\"0\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "rlvLabel": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "center",
+        "flexWrap": "nowrap",
+        "gap": "0",
+        "dimensions": {
+          "width": "96px",
+          "minWidth": "96px",
+          "maxWidth": "96px",
+          "minHeight": "fit-content"
+        },
+        "stylingBox": "{}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "rlvLabelText": {
+      "desktop": {
+        "font": {
+          "type": "Inter Variable",
+          "size": 12.5,
+          "weight": "500",
+          "color": "#9BA3B8",
+          "align": "left"
+        },
+        "dimensions": { "width": "100%" },
+        "stylingBox": "{}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "rlvValue": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "stretch",
+        "justifyContent": "center",
+        "flexWrap": "nowrap",
+        "gap": "0",
+        "dimensions": {
+          "width": "calc(100% - 106px)",
+          "minWidth": "0px",
+          "maxWidth": "calc(100% - 106px)",
+          "minHeight": "fit-content"
+        },
+        "stylingBox": "{}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "rlvControl": {
+      "desktop": {
+        "dimensions": { "width": "100%" }
+      },
+      "tablet": { "dimensions": { "width": "100%" } },
+      "mobile": { "dimensions": { "width": "100%" } }
+    }
+  }
+}

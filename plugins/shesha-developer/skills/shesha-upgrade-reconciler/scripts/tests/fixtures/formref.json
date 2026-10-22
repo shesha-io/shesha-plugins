@@ -1,0 +1,66 @@
+{
+ "rule": "formref",
+ "cases": [
+  {
+   "name": "subForm pointed at the mapped replacement",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "sf",
+      "type": "subForm",
+      "componentName": "sf",
+      "parentId": "root",
+      "formId": {
+       "module": "Core",
+       "name": "task-subform"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/formId/module",
+     "Shop"
+    ],
+    [
+     "components/0/formId/name",
+     "task-subform"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "formRefMap": [
+     {
+      "from": "Core/task-subform",
+      "to": "Shop/task-subform"
+     }
+    ]
+   }
+  },
+  {
+   "name": "no map, no change",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "sf",
+      "type": "subForm",
+      "componentName": "sf",
+      "parentId": "root",
+      "formId": {
+       "module": "Core",
+       "name": "task-subform"
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+  "type": "timePicker",
+  "name": "Time Picker",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "ClockCircleOutlined",
+  "version": 5,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "showNow": true,
+      "allowClear": true
+    },
+    "raw": "(model) => {\n    const customModel: ITimePickerComponentProps = {\n      ...model,\n      format: DATE_TIME_FORMAT,\n      showNow: true,\n      allowClear: true,\n    };\n    return customModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITimePickerComponentProps",
+    "interfaceFile": "designer-components/timeField/models.ts",
+    "ownProps": [],
+    "extends": [
+      "ITimePickerProps",
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowClear",
+      "autoFocus",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "format",
+      "hidden",
+      "hideBorder",
+      "hideDisabledOptions",
+      "hideLabel",
+      "hideScrollBar",
+      "hourStep",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "minuteStep",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlur",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocus",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "range",
+      "readOnly",
+      "secondStep",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showNow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "use12Hours",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "timeField/settings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "editMode",
+      "label": "Edit Mode",
+      "editorType": "editModeSelector"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "hourStep",
+      "label": "Hour Step",
+      "editorType": "numberField"
+    },
+    {
+      "path": "minuteStep",
+      "label": "Minute Step",
+      "editorType": "numberField"
+    },
+    {
+      "path": "secondStep",
+      "label": "Second Step",
+      "editorType": "numberField"
+    },
+    {
+      "path": "format",
+      "label": "Time Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "inputReadOnly",
+      "label": "Input Read-Only",
+      "editorType": "switch",
+      "description": "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
+    },
+    {
+      "path": "use12Hours",
+      "label": "Use 12 Hours",
+      "editorType": "switch"
+    },
+    {
+      "path": "allowClear",
+      "label": "Allow Clear",
+      "editorType": "switch"
+    },
+    {
+      "path": "showNow",
+      "label": "Show Now",
+      "editorType": "switch"
+    },
+    {
+      "path": "autoFocus",
+      "label": "Auto Focus",
+      "editorType": "switch"
+    },
+    {
+      "path": "hideDisabledOptions",
+      "label": "Hide Disabled Options",
+      "editorType": "switch",
+      "description": "Whether to hide the options that cannot be selected"
+    },
+    {
+      "path": "range",
+      "label": "Range",
+      "editorType": "switch"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch"
+    },
+    {
+      "path": "onChangeCustom",
+      "label": "On Change",
+      "editorType": "codeEditor",
+      "description": "Enter custom event handler on changing of event. Multiple variables are exposed"
+    },
+    {
+      "path": "onFocusCustom",
+      "label": "On Focus",
+      "editorType": "codeEditor",
+      "description": "Enter custom eventhandler on focus of event."
+    },
+    {
+      "path": "onBlurCustom",
+      "label": "On Blur",
+      "editorType": "codeEditor",
+      "description": "Enter custom eventhandler on blur of event."
+    },
+    {
+      "path": "enableStyleOnReadonly",
+      "label": "Enable Style On Readonly",
+      "editorType": "switch",
+      "description": "Removes all visual styling except typography when the component becomes read-only"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Font"
+    },
+    {
+      "path": "font.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Font"
+    },
+    {
+      "path": "font.align",
+      "label": "Align",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "timeField/index.tsx",
+    "timeField/models.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

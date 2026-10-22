@@ -1,0 +1,306 @@
+{
+  "type": "progress",
+  "name": "Progress",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "LineOutlined",
+  "version": 3,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "hideLabel": true
+    },
+    "raw": "(model) => {\n    return {\n      ...model,\n      hideLabel: true,\n    };\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IProgressProps",
+    "interfaceFile": "designer-components/progress/index.tsx",
+    "ownProps": [
+      "format",
+      "progressType",
+      "success",
+      "strokeColor",
+      "lineStrokeColor",
+      "circleStrokeColor",
+      "stylingBox",
+      "allStyles"
+    ],
+    "extends": [
+      "ProgressProps",
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "circleStrokeColor",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "format",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "lineStrokeColor",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "progressType",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "strokeColor",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "success",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": [
+      "ProgressProps"
+    ]
+  },
+  "settingsForm": {
+    "source": "progress/settings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "width",
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "To set the completion percentage"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "percent",
+      "label": "Percent",
+      "editorType": "numberField",
+      "description": "To set the completion percentage"
+    },
+    {
+      "path": "progressType",
+      "label": "Type",
+      "editorType": "dropdown",
+      "description": "To specify the type of progress bar",
+      "options": [
+        "line",
+        "circle",
+        "dashboard"
+      ]
+    },
+    {
+      "path": "status",
+      "label": "Status",
+      "editorType": "dropdown",
+      "description": "To set the status of the Progress",
+      "options": [
+        "success",
+        "exception",
+        "normal",
+        "active"
+      ]
+    },
+    {
+      "path": "showInfo",
+      "label": "Show Info",
+      "editorType": "switch",
+      "description": "Whether to display the progress info"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "strokeColor",
+      "label": "Stroke Color",
+      "editorType": "colorPicker",
+      "description": "The color of progress bar. This will be overridden by the strokeColor property of 'line' and 'circle' types",
+      "group": "Progress Style"
+    },
+    {
+      "path": "trailColor",
+      "label": "Trail Color",
+      "editorType": "colorPicker",
+      "description": "The color of progress bar background",
+      "group": "Progress Style"
+    },
+    {
+      "path": "strokeLinecap",
+      "label": "Stroke Linecap",
+      "editorType": "dropdown",
+      "description": "To set the style of the progress linecap",
+      "options": [
+        "round",
+        "butt",
+        "square"
+      ],
+      "group": "Progress Style"
+    },
+    {
+      "path": "strokeWidth",
+      "label": "Stroke Width",
+      "editorType": "numberField",
+      "description": "The width of the progress bar, unit: percentage of the canvas width",
+      "group": "Progress Style"
+    },
+    {
+      "path": "width",
+      "label": "Width",
+      "editorType": "numberField",
+      "description": "The canvas width of the circular progress, unit: px",
+      "group": "Progress Style",
+      "shared": true
+    },
+    {
+      "path": "steps",
+      "label": "Steps",
+      "editorType": "numberField",
+      "description": "The total step count",
+      "group": "Type Specific Settings"
+    },
+    {
+      "path": "gapDegree",
+      "label": "Gap Degree",
+      "editorType": "numberField",
+      "description": "The gap degree of half circle, 0 ~ 295",
+      "group": "Type Specific Settings"
+    },
+    {
+      "path": "gapPosition",
+      "label": "Gap Position",
+      "editorType": "dropdown",
+      "description": "The gap position",
+      "options": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "group": "Type Specific Settings"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "progress/index.tsx"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 3,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

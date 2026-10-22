@@ -1,0 +1,60 @@
+{
+ "rule": "tabgap",
+ "cases": [
+  {
+   "name": "top tabs with no top padding get 16px",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tb",
+      "type": "tabs",
+      "componentName": "tb",
+      "parentId": "root",
+      "version": 11,
+      "desktop": {
+       "stylingBoxJson": {
+        "_type": "styleBox",
+        "paddingTop": "0"
+       }
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/desktop/stylingBoxJson/paddingTop",
+     "16"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  },
+  {
+   "name": "an author padding is kept",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tb",
+      "type": "tabs",
+      "componentName": "tb",
+      "parentId": "root",
+      "version": 11,
+      "desktop": {
+       "stylingBoxJson": {
+        "_type": "styleBox",
+        "paddingTop": "24"
+       }
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "rule": "normparent",
+ "cases": [
+  {
+   "name": "a stale parentId names the container that holds the component",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "a",
+      "type": "container",
+      "componentName": "a",
+      "parentId": "root",
+      "components": [
+       {
+        "id": "b",
+        "type": "textField",
+        "componentName": "b",
+        "parentId": "stale-id"
+       }
+      ]
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/components/0/parentId",
+     "a"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

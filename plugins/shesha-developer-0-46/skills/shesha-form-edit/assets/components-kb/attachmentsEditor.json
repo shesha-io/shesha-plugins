@@ -1,0 +1,511 @@
+{
+  "type": "attachmentsEditor",
+  "name": "File list",
+  "isInput": true,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FolderAddOutlined",
+  "version": 22,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IAttachmentsEditorProps",
+    "interfaceFile": "designer-components/attachmentsEditor/interfaces.ts",
+    "ownProps": [
+      "ownerId",
+      "ownerType",
+      "filesCategory",
+      "allowedFileTypes",
+      "ownerName",
+      "allowAdd",
+      "allowDelete",
+      "allowReplace",
+      "allowRename",
+      "allowViewHistory",
+      "customActions",
+      "customContent",
+      "extraFormId",
+      "isDynamic",
+      "isDragger",
+      "maxHeight",
+      "onFileChanged",
+      "onDownload",
+      "onUpload",
+      "onReplace",
+      "onDelete",
+      "downloadZip",
+      "filesLayout",
+      "gap",
+      "listType",
+      "displayStyle",
+      "thumbnailWidth",
+      "thumbnailHeight",
+      "borderRadius",
+      "hideFileName",
+      "dropzoneText",
+      "emptyText",
+      "thumbnailStyle",
+      "container",
+      "downloadedFileStyles",
+      "styleDownloadedFiles",
+      "downloadedIcon"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowAdd",
+      "allowDelete",
+      "allowRename",
+      "allowReplace",
+      "allowViewHistory",
+      "allowedFileTypes",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customActions",
+      "customContent",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "displayStyle",
+      "downloadZip",
+      "downloadedFileStyles",
+      "downloadedIcon",
+      "dropzoneText",
+      "editMode",
+      "editModePermissions",
+      "emptyText",
+      "enableStyleOnReadonly",
+      "extraFormId",
+      "filesCategory",
+      "filesLayout",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "gap",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideFileName",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDragger",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "listType",
+      "maxHeight",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDelete",
+      "onDoubleClickCustom",
+      "onDownload",
+      "onFileChanged",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onReplace",
+      "onSelectCustom",
+      "onUpload",
+      "overflow",
+      "ownerId",
+      "ownerName",
+      "ownerType",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "styleDownloadedFiles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "thumbnailHeight",
+      "thumbnailStyle",
+      "thumbnailWidth",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "attachmentsEditor/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "How each file is presented: as its name, or as a tile at a preset size. Custom Thumbnail takes its size from the Thumbnail Style dimensions."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "displayStyle",
+      "label": "Display Style",
+      "editorType": "dropdown",
+      "description": "How each file is presented: as its name, or as a tile at a preset size. Custom Thumbnail takes its size from the Thumbnail Style dimensions.",
+      "group": "Display"
+    },
+    {
+      "path": "isDragger",
+      "label": "Is Dragger",
+      "editorType": "switch",
+      "description": "Whether the uploader should show a drop area instead of a button.",
+      "group": "Display"
+    },
+    {
+      "path": "hideFileName",
+      "label": "Hide File Name",
+      "editorType": "switch",
+      "group": "Display"
+    },
+    {
+      "path": "dropzoneText",
+      "label": "Dropzone Text",
+      "editorType": "textArea",
+      "description": "Replaces the prompt in the drop area. Left empty, it keeps the stock wording and its hint; set, it stands alone, and its line breaks are shown.",
+      "group": "Display"
+    },
+    {
+      "path": "emptyText",
+      "label": "Empty Text",
+      "editorType": "textArea",
+      "description": "Shown when there are no files and none can be added — a read-only or disabled list. Left empty, such a list renders nothing at all.",
+      "group": "Display"
+    },
+    {
+      "path": "allowAdd",
+      "label": "Allow Add",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowDelete",
+      "label": "Allow Remove",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowReplace",
+      "label": "Allow Replace",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowRename",
+      "label": "Allow Rename",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowViewHistory",
+      "label": "Allow View History",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "downloadZip",
+      "label": "Download Zip",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "ownerName",
+      "label": "Bound Property",
+      "editorType": "propertyAutocomplete",
+      "group": "Data"
+    },
+    {
+      "path": "ownerType",
+      "label": "Parent Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "group": "Data"
+    },
+    {
+      "path": "ownerId",
+      "label": "Parent Record ID",
+      "editorType": "textField",
+      "group": "Data"
+    },
+    {
+      "path": "filesCategory",
+      "label": "File Group",
+      "editorType": "textField",
+      "group": "Data"
+    },
+    {
+      "path": "allowedFileTypes",
+      "label": "Accepted File Types",
+      "editorType": "editableTagGroupProps",
+      "description": "File types that can be accepted. The file type should include the leading dot, for example .png",
+      "group": "Data"
+    },
+    {
+      "path": "customActions",
+      "label": "Custom Actions",
+      "editorType": "buttonGroupConfigurator",
+      "description": "Configure custom actions that appear when hovering over files.",
+      "group": "Custom"
+    },
+    {
+      "path": "customContent",
+      "label": "Show Custom Content",
+      "editorType": "switch",
+      "description": "Enable to show custom content below each file.",
+      "group": "Custom"
+    },
+    {
+      "path": "extraFormId",
+      "label": "Form",
+      "editorType": "formAutocomplete",
+      "group": "Custom"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "filesLayout",
+      "label": "Files Layout",
+      "editorType": "dropdown",
+      "group": "Layout"
+    },
+    {
+      "path": "gap",
+      "label": "Gap",
+      "editorType": "numberField",
+      "group": "Layout"
+    },
+    {
+      "path": "styleDownloadedFiles",
+      "label": "Style Downloaded Files",
+      "editorType": "switch"
+    },
+    {
+      "path": "downloadedIcon",
+      "label": "Downloaded Icon",
+      "editorType": "iconPicker",
+      "group": "Downloaded Files"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "attachmentsEditor/attachmentsEditor.tsx",
+    "attachmentsEditor/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => { return { ...prev, allowAdd: true, allowDelete: true, allowReplace: true, allowRename: true, allowViewHistory: true, customActions: [], isDragger: false, ownerId: '', ownerType: '', owne"
+    },
+    {
+      "toVersion": 3,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 7,
+      "category": "other",
+      "what": "(not auto-labelled) 7, (prev, context) => context.isNew === true ? prev : { ...prev, desktop: { ...defaultStyles(), container: containerDefaultStyles() }, mobile: { ...defaultStyles() }, tablet: { ...defaultStyles() } }"
+    },
+    {
+      "toVersion": 9,
+      "category": "curated",
+      "what": "desktop/tablet/mobile REPLACED by defaultStyles() + container defaults (root stylingBox/style carried into container)"
+    },
+    {
+      "toVersion": 12,
+      "category": "curated",
+      "what": "downloadedFileStyles defaults added to each device block"
+    },
+    {
+      "toVersion": 13,
+      "category": "curated",
+      "what": "root-level legacy style props (v0.43 imports) mapped into device blocks"
+    },
+    {
+      "toVersion": 15,
+      "category": "curated",
+      "what": "filesLayout/gap copied into device blocks (default horizontal / 8)"
+    },
+    {
+      "toVersion": 16,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 17,
+      "category": "curated",
+      "what": "container and thumbnail style sets swapped (fix of v9)"
+    },
+    {
+      "toVersion": 18,
+      "category": "curated",
+      "what": "thumbnailStyle defaults merged into each device block"
+    },
+    {
+      "toVersion": 19,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    },
+    {
+      "toVersion": 20,
+      "category": "curated",
+      "what": "styleDownloadedFiles / downloadedIcon defaults per device"
+    },
+    {
+      "toVersion": 21,
+      "category": "curated",
+      "what": "displayStyle derived from listType and thumbnail dimensions"
+    }
+  ]
+}

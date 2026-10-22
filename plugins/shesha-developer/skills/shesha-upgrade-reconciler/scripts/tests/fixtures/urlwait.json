@@ -1,0 +1,35 @@
+{
+ "rule": "urlwait",
+ "cases": [
+  {
+   "name": "URL context mounts only once its id is loaded",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ctx",
+      "type": "datatableContext",
+      "componentName": "ctx",
+      "parentId": "root",
+      "sourceType": "Url",
+      "endpoint": {
+       "url": "/api/orders/GetLines?orderId={{data.id}}"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "/*reconciler:046-url-wait*/\n// mount (and fetch) only once the record ids are loaded\nreturn !!data?.id;"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/0/visible"
+   ]
+  }
+ ]
+}

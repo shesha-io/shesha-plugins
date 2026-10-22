@@ -1,0 +1,282 @@
+{
+  "type": "container",
+  "name": "Container",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "GroupOutlined",
+  "version": 9,
+  "allowInherit": true,
+  "styleGroup": "common-containers",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IContainerComponentProps",
+    "interfaceFile": "designer-components/container/interfaces.ts",
+    "ownProps": [
+      "backgroundCover",
+      "backgroundRepeat",
+      "className",
+      "wrapperStyle",
+      "components",
+      "backgroundType",
+      "backgroundColor",
+      "backgroundDataSource",
+      "backgroundUrl",
+      "backgroundBase64",
+      "backgroundStoredFileId",
+      "showAdvanced"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "ICommonContainerProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "alignItems",
+      "alignSelf",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "className",
+      "componentName",
+      "components",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "direction",
+      "disabled",
+      "display",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "flexDirection",
+      "flexWrap",
+      "font",
+      "gap",
+      "gridColumnsCount",
+      "gridColumnsWidth",
+      "gridRowsCount",
+      "gridRowsHeight",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "justifyContent",
+      "justifyItems",
+      "justifySelf",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "noDefaultStyling",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showAdvanced",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "textJustify",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "container/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "layout",
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "If checked, the default styles and classes of the container will not be applied."
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "noDefaultStyling",
+      "label": "No Default Styling",
+      "editorType": "switch",
+      "description": "If checked, the default styles and classes of the container will not be applied."
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "className",
+      "label": "Custom CSS Class",
+      "editorType": "textField",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "wrapperStyle",
+      "label": "Wrapper Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "components"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "container/containerComponent.tsx",
+    "container/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => ({ ...prev, direction: getStringEnumOrDefault<ContainerDirection>(prev, \"direction\", CONTAINER_DIRECTIONS, \"vertical\"), justifyContent: getStringEnumOrDefault<JustifyContent>(prev, \"justi"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 6,
+      "category": "other",
+      "what": "(not auto-labelled) 6, (prev, ctx) => { if (ctx.isNew === true) return prev; const flexAndGridStyles: Omit<ICommonContainerPropsV0, 'style'> = { display: prev.display, flexDirection: prev.flexDirection, direction: prev.d"
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultStyles(prev)): root width/height/min*/max*/border*/background*/stylingBox -> desktop/tablet/mobile blocks. Adds component defaults that 0.43 did not apply: dimensions minHeight 32px, width/"
+    },
+    {
+      "toVersion": 8,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible, stylingBox -> stylingBoxJson (margins/paddings now come from stylingBoxJson), permissions -> visiblePermissions"
+    },
+    {
+      "toVersion": 9,
+      "category": "curated",
+      "what": "Copies root display/direction/flexDirection/justify*/align*/gap/overflow/gridColumnsCount/noDefaultStyling into desktop/tablet/mobile where the device value is undefined. This re-runs what 0.46 \"v6\" does for forms that s"
+    }
+  ]
+}

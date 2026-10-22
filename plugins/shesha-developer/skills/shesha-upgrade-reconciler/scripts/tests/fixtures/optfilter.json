@@ -1,0 +1,135 @@
+{
+ "rule": "optfilter",
+ "cases": [
+  {
+   "name": "optional fallback beside a required item dropped",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tbl",
+      "type": "datatable",
+      "componentName": "tbl",
+      "parentId": "root",
+      "permanentFilter": {
+       "and": [
+        {
+         "==": [
+          {
+           "var": "order"
+          },
+          {
+           "evaluate": [
+            {
+             "match": "x",
+             "expression": "{{data.order}}",
+             "required": true
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "==": [
+          {
+           "var": "order"
+          },
+          {
+           "evaluate": [
+            {
+             "match": "x",
+             "expression": "{{data.order}}",
+             "required": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/permanentFilter/and",
+     [
+      {
+       "==": [
+        {
+         "var": "order"
+        },
+        {
+         "evaluate": [
+          {
+           "match": "x",
+           "expression": "{{data.order}}",
+           "required": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    ]
+   ],
+   "node": false,
+   "retire": false
+  },
+  {
+   "name": "an optional item without a required sibling is kept (reported)",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "tbl",
+      "type": "datatable",
+      "componentName": "tbl",
+      "parentId": "root",
+      "permanentFilter": {
+       "and": [
+        {
+         "==": [
+          {
+           "var": "order"
+          },
+          {
+           "evaluate": [
+            {
+             "match": "x",
+             "expression": "{{data.order}}",
+             "required": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "==": [
+          {
+           "var": "customer"
+          },
+          {
+           "evaluate": [
+            {
+             "match": "x",
+             "expression": "{{data.customer}}",
+             "required": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

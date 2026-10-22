@@ -1,0 +1,239 @@
+{
+  "type": "addressInput",
+  "name": "Address Input",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "EnvironmentOutlined",
+  "version": 3,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "defaultZoom": 15,
+      "mapHeight": 400,
+      "enableMapInterface": false
+    },
+    "raw": "(model) => ({\n    ...model,\n    defaultZoom: 15,\n    mapHeight: 400,\n    enableMapInterface: false,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IAddressInputComponentProps",
+    "interfaceFile": "designer-components/addressInput/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "googleMapsApiKey",
+      "enableMapInterface",
+      "latitudePropertyName",
+      "longitudePropertyName",
+      "defaultZoom",
+      "mapHeight",
+      "mapWidth"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "defaultZoom",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableMapInterface",
+      "enableStyleOnReadonly",
+      "font",
+      "googleMapsApiKey",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "latitudePropertyName",
+      "layout",
+      "longitudePropertyName",
+      "mapHeight",
+      "mapWidth",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "addressInput/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Google Maps JavaScript API key. Must have the Places and Maps libraries enabled."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "editMode",
+      "label": "Edit Mode",
+      "editorType": "editModeSelector"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "googleMapsApiKey",
+      "label": "Google Maps API Key",
+      "editorType": "Password",
+      "description": "Google Maps JavaScript API key. Must have the Places and Maps libraries enabled."
+    },
+    {
+      "path": "enableMapInterface",
+      "label": "Enable Map Interface",
+      "editorType": "switch",
+      "description": "Show a map pin button to open an interactive map dialog for picking a location."
+    },
+    {
+      "path": "latitudePropertyName",
+      "label": "Latitude Property",
+      "editorType": "textField",
+      "description": "Dot-notation path where latitude will be written, e.g. \"address.latitude\"."
+    },
+    {
+      "path": "longitudePropertyName",
+      "label": "Longitude Property",
+      "editorType": "textField",
+      "description": "Dot-notation path where longitude will be written, e.g. \"address.longitude\"."
+    },
+    {
+      "path": "defaultZoom",
+      "label": "Default Zoom",
+      "editorType": "numberField",
+      "description": "Initial zoom level of the map (1–20). Defaults to 15."
+    },
+    {
+      "path": "mapHeight",
+      "label": "Map Height (px)",
+      "editorType": "numberField",
+      "description": "Height in pixels of the map inside the dialog. Defaults to 400."
+    },
+    {
+      "path": "mapWidth",
+      "label": "Map Width (px)",
+      "editorType": "numberField",
+      "description": "Width in pixels of the map inside the dialog. Defaults to full width."
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions",
+      "description": "Permissions required to see and interact with this component."
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "addressInput/index.tsx",
+    "addressInput/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    }
+  ]
+}

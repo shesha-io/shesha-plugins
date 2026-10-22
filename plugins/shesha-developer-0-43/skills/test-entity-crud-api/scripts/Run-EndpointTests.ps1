@@ -91,7 +91,7 @@ function Find-ProjectFiles {
     }
     $script:SolutionFile = $solutions[0].FullName
 
-    # Extract project name from solution file (e.g., "LandBank.Crm" from "LandBank.Crm.sln")
+    # Extract project name from solution file (e.g., "MyCompany.Crm" from "MyCompany.Crm.sln")
     $script:ProjectName = [System.IO.Path]::GetFileNameWithoutExtension($solutions[0].Name)
 
     # Find Web.Host project - look for *.Web.Host.csproj

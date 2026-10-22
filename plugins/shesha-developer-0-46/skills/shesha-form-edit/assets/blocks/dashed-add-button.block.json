@@ -1,0 +1,276 @@
+{
+  "$block": "dashed-add-button",
+  "$scope": "fragment",
+  "$styleOverlay": "dashed-add-button",
+  "_note": "The '+ Add X' dashed button that sits at the bottom of a rail-card list. A full-width wrapper container carries the dashed per-side hairline (borderType:'custom', all four sides 1.5px dashed) + centred content; the inner buttonGroup holds a single 'link' button (PlusOutlined + Show Dialog opening the create dialog at modalWidth 60%, formMode edit). The dashed box is structural-neutral and lives on the wrapper; the button text is brand (a $role placeholder) — link buttons take colour from the app theme, so never hardcode a hex. Pattern generalised from the live VDD 'Add Endpoint'/'Add Role' rail buttons.",
+  "$slots": {
+    "button": "subtree.components.0.items.0",
+    "buttonLabel": "subtree.components.0.items.0.label",
+    "buttonGroup": "subtree.components.0"
+  },
+  "$bindings": [
+    {
+      "path": "subtree.components.0.items.0.actionConfiguration.actionArguments.formId.name",
+      "fill": "the create-form name to open in the dialog (e.g. \"view-definition-required-api-add\")"
+    },
+    {
+      "path": "subtree.components.0.items.0.actionConfiguration.actionArguments.formId.module",
+      "fill": "the create-form module (e.g. \"Shesha.RequirementsStudio\")"
+    },
+    {
+      "path": "subtree.components.0.items.0.label",
+      "fill": "the button caption (e.g. \"Add Endpoint\")"
+    },
+    {
+      "path": "subtree.components.0.items.0.actionConfiguration.actionArguments.modalTitle",
+      "fill": "the create-dialog title (usually matches the button label)"
+    },
+    {
+      "path": "subtree.components.0.items.0.actionConfiguration.actionArguments.formArguments",
+      "fill": "JS string seeding the create form's parent FK (e.g. \"return { viewDefinition: { id: data.id, _displayName: data.name, _className: '...' } };\"); omit for a top-level create"
+    },
+    {
+      "path": "subtree.components.0.items.0.actionConfiguration.onSuccess.actionOwner",
+      "fill": "the datalist/datatable component id to refresh after a successful create"
+    }
+  ],
+  "$validatedAgainst": [
+    "container:border.perSide — borderType:'custom' + per-side width/style (the dashed box)",
+    "container:dimensions.width — full-width rail button",
+    "container:stylingBox",
+    "buttonGroup:buttonType colour — primary/link takes app-theme colour, NOT per-button (v15)"
+  ],
+  "subtree": {
+    "type": "container",
+    "version": 7,
+    "componentName": "dashedAddWrap",
+    "propertyName": "dashedAddWrap",
+    "label": "Add wrapper",
+    "hideLabel": true,
+    "hidden": false,
+    "isDynamic": false,
+    "editMode": "inherited",
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "0px",
+    "components": [
+      {
+        "type": "buttonGroup",
+        "version": 15,
+        "componentName": "dashedAddGroup",
+        "propertyName": "dashedAddGroup",
+        "label": "Add",
+        "labelAlign": "right",
+        "hideLabel": true,
+        "hidden": false,
+        "isDynamic": false,
+        "editMode": "editable",
+        "isInline": true,
+        "size": "small",
+        "spaceSize": "small",
+        "gap": "small",
+        "enableStyleOnReadonly": false,
+        "items": [
+          {
+            "id": "dashedAddButtonItem",
+            "itemType": "item",
+            "sortOrder": 0,
+            "itemSubType": "button",
+            "buttonType": "link",
+            "label": "Add",
+            "icon": "PlusOutlined",
+            "iconPosition": "left",
+            "editMode": "editable",
+            "hidden": false,
+            "size": "small",
+            "buttonAction": null,
+            "color": "#003BB2",
+            "actionConfiguration": {
+              "_type": "action-config",
+              "actionName": "Show Dialog",
+              "actionOwner": "shesha.common",
+              "handleFail": false,
+              "handleSuccess": true,
+              "onSuccess": {
+                "_type": "action-config",
+                "actionName": "Refresh table",
+                "actionOwner": "$binding:refreshTargetId",
+                "handleFail": false,
+                "handleSuccess": false
+              },
+              "actionArguments": {
+                "modalTitle": "Add",
+                "footerButtons": "default",
+                "formMode": "edit",
+                "formArguments": "",
+                "modalWidth": "60%",
+                "formId": {
+                  "name": "$binding:createFormName",
+                  "module": "$binding:createFormModule"
+                },
+                "version": 1,
+                "showCloseIcon": true
+              }
+            }
+          }
+        ],
+        "desktop": {},
+        "tablet": {},
+        "mobile": {}
+      }
+    ],
+    "desktop": {
+      "display": "flex",
+      "flexDirection": "row",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "flexWrap": "nowrap",
+      "gap": "0px",
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "none"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "none",
+            "color": "#E8EAF0"
+          },
+          "top": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "bottom": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "left": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "right": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          }
+        },
+        "radius": {
+          "all": 6
+        }
+      },
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "stylingBox": "{\"paddingTop\":\"8\",\"paddingBottom\":\"8\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\",\"marginTop\":\"8\"}"
+    },
+    "tablet": {
+      "display": "flex",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "flexWrap": "nowrap",
+      "gap": "0px",
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "none",
+            "color": "#E8EAF0"
+          },
+          "top": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "bottom": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "left": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "right": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          }
+        },
+        "radius": {
+          "all": 6
+        }
+      },
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "stylingBox": "{\"paddingTop\":\"8\",\"paddingBottom\":\"8\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\",\"marginTop\":\"8\"}"
+    },
+    "mobile": {
+      "display": "flex",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "flexWrap": "nowrap",
+      "gap": "0px",
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "none",
+            "color": "#E8EAF0"
+          },
+          "top": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "bottom": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "left": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          },
+          "right": {
+            "width": "1.5px",
+            "style": "dashed",
+            "color": "#E8EAF0"
+          }
+        },
+        "radius": {
+          "all": 6
+        }
+      },
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "stylingBox": "{\"paddingTop\":\"8\",\"paddingBottom\":\"8\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\",\"marginTop\":\"8\"}"
+    }
+  }
+}

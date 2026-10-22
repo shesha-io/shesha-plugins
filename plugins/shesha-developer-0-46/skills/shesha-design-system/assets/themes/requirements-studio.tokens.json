@@ -1,0 +1,108 @@
+{
+  "$brand": "requirements-studio",
+  "$source": "Example custom brand: a deep-green design-token set (colors_and_type.css) sampled 1:1 from a Claude-designed Requirements Studio prototype. Token names are brand-neutral; no antd tokens are stored here, so nothing in this file is invalid on antd 6 (the antd mapping is derived from `roles` per references/app-theme.md).",
+  "palette": {
+    "brand": {
+      "primary": "#0d685a",
+      "primaryHover": "#0a5547",
+      "primaryActive": "#053a30",
+      "sage": "#629e97",
+      "tint": "#e8f2ef",
+      "tintSoft": "#f3f8f6"
+    },
+    "accent": {
+      "orange": "#f3a127",
+      "orangeDeep": "#e28030",
+      "$use": "logo + restricted UI (channel/CALL-CENTRE pill) only — never a general CTA colour"
+    },
+    "surfaces": {
+      "canvas": "#f0f2f5",
+      "surface": "#ffffff",
+      "surfaceAlt": "#fafafa",
+      "surfaceMuted": "#f7f7f7"
+    },
+    "lines": {
+      "border": "#e5e7eb",
+      "borderStrong": "#d6d6d6",
+      "divider": "#f0f0f0"
+    },
+    "ink": {
+      "primary": "#1f1f1f",
+      "muted": "#4a4a4a",
+      "soft": "#6b7280",
+      "rail": "#97a8a3"
+    },
+    "semantic": {
+      "danger": "#c0392b",
+      "dangerBg": "#fdecea",
+      "warning": "#d97706",
+      "warningBg": "#fef3c7",
+      "info": "#2563eb",
+      "infoBg": "#e8f6ff"
+    }
+  },
+  "type": {
+    "family": "'Inter Variable', \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, system-ui, sans-serif",
+    "familyMono": "ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+    "scale": {
+      "micro": 12,
+      "dense": 13,
+      "body": 14,
+      "cardHeader": 16,
+      "subtitle": 18,
+      "title": 24,
+      "titleLg": 28
+    },
+    "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700 },
+    "lineHeights": { "tight": 1.2, "snug": 1.35, "base": 1.5 }
+  },
+  "spacing": { "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48 },
+  "radius": { "xs": 2, "sm": 4, "md": 6, "lg": 12, "pill": 9999 },
+  "shadow": {
+    "none": "none",
+    "card": "0 1px 4px rgba(0, 0, 0, 0.06)",
+    "overlay": "0 8px 24px rgba(15, 23, 42, 0.08)",
+    "rowHover": "0 1px 2px rgba(15, 23, 42, 0.04)"
+  },
+  "chrome": { "railWidth": 56, "headerHeight": 52, "recordBarHeight": 96 },
+  "statusLifecycle": {
+    "$reflist": "Shesha.RequirementsStudio.RsStatus",
+    "order": ["Draft", "Confirmed", "InBuild", "Delivered", "Rejected", "OnHold"],
+    "badges": {
+      "Draft":     { "bg": "#f0f2f5", "fg": "#4a4a4a", "border": "#d6d6d6" },
+      "Confirmed": { "bg": "#e8f6ff", "fg": "#2563eb", "border": "#2563eb" },
+      "InBuild":   { "bg": "#fdeedd", "fg": "#e28030", "border": "#e28030" },
+      "Delivered": { "bg": "#e8f2ef", "fg": "#0d685a", "border": "#629e97" },
+      "Rejected":  { "bg": "#fdecea", "fg": "#c0392b", "border": "#c0392b" },
+      "OnHold":    { "bg": "#fef3c7", "fg": "#d97706", "border": "#d97706" }
+    }
+  },
+  "roles": {
+    "appPrimary": "palette.brand.primary",
+    "appPrimaryHover": "palette.brand.primaryHover",
+    "pageBg": "palette.surfaces.canvas",
+    "cardBg": "palette.surfaces.surface",
+    "cardHeaderBg": "palette.surfaces.surfaceAlt",
+    "readOnlyFieldBg": "palette.surfaces.surfaceMuted",
+    "inputBorder": "palette.lines.borderStrong",
+    "hairline": "palette.lines.border",
+    "sectionHeading": "palette.brand.primary",
+    "bodyText": "palette.ink.primary",
+    "helperText": "palette.ink.soft",
+    "appPrimaryActive": "palette.brand.primaryActive",
+    "divider": "palette.lines.divider",
+    "bodyInk": "palette.ink.primary",
+    "secondaryText": "palette.ink.muted",
+    "placeholderText": "palette.ink.soft",
+    "mutedText": "palette.ink.soft",
+    "navBg": "palette.brand.primary",
+    "headerBandBg": "palette.brand.primary",
+    "progressAccent": "palette.brand.primary",
+    "addButtonText": "palette.brand.primary",
+    "selectedBg": "palette.brand.tint",
+    "hoverBg": "palette.brand.tintSoft",
+    "baseRadius": "radius.md",
+    "cardRadius": "radius.lg",
+    "$note": "A brand file MUST define every role the default `shesha` brand defines — the block overlays reference roles by name and `bake-overlays.mjs` hard-fails on an unresolvable one. This brand was missing 12 of them (including `bodyInk`, referenced 3x by meta-strip.style.json), so re-baking under it aborted. `navBg` is the one substitution rather than a mirror: this palette has no navy, so nav chrome takes the brand green."
+  }
+}

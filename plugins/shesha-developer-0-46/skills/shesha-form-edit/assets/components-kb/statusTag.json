@@ -1,0 +1,300 @@
+{
+  "type": "statusTag",
+  "name": "Status Tag",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "TagOutlined",
+  "version": 6,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "dataSourceType": "referenceList",
+      "showItemName": true,
+      "showIcon": true,
+      "tagVariant": "solid"
+    },
+    "raw": "(model) => ({\n    ...model,\n                                                                              \n    dataSourceType: 'referenceList',\n                                                                                                     \n    values: defaultValuesSetting(),\n    showItemName: true,\n    showIcon: true,\n    tagVariant: 'solid',\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IStatusTagComponentProps",
+    "interfaceFile": "designer-components/statusTag/model.ts",
+    "ownProps": [
+      "value",
+      "values"
+    ],
+    "extends": [
+      "IDropdownProps",
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowClear",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "bindingFormat",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dataSourceType",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableItemValue",
+      "disabled",
+      "disabledValues",
+      "displayStyle",
+      "editMode",
+      "editModePermissions",
+      "enableMultiSelect",
+      "enableStyleOnReadonly",
+      "events",
+      "fallbackDescription",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "ignoredValues",
+      "incomeCustomJs",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "labelCustomJs",
+      "layout",
+      "mobile",
+      "mode",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "outcomeCustomJs",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "popupClassName",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "readOnlyPlaceholder",
+      "referenceListId",
+      "referenceListName",
+      "referenceListNamespace",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "selectRef",
+      "shadow",
+      "showIcon",
+      "showItemName",
+      "size",
+      "style",
+      "styleCss",
+      "styleValue",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "tag",
+      "tagStyle",
+      "tagVariant",
+      "type",
+      "validate",
+      "validationDependencies",
+      "value",
+      "valueFormat",
+      "values",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "statusTag/settings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Text that gets displayed when the bound property has no value."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "readOnlyPlaceholder",
+      "label": "Placeholder",
+      "editorType": "textField",
+      "description": "Text that gets displayed when the bound property has no value."
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "enableMultiSelect",
+      "label": "Enable Multi-Select",
+      "editorType": "switch"
+    },
+    {
+      "path": "dataSourceType",
+      "label": "Data source",
+      "editorType": "dropdown",
+      "description": "Where the statuses come from. A reference list is the usual source; Values lets you define them inline on the form.",
+      "required": true
+    },
+    {
+      "path": "referenceListId",
+      "label": "Reference List",
+      "editorType": "referenceListAutocomplete",
+      "required": true
+    },
+    {
+      "path": "filter",
+      "label": "Filter",
+      "editorType": "queryBuilder",
+      "group": "Advanced"
+    },
+    {
+      "path": "ignoredValues",
+      "label": "Hidden values",
+      "editorType": "textArea",
+      "description": "Pass an array of positive integers to hide specific values. For example: [1, 2, 3].",
+      "group": "Advanced"
+    },
+    {
+      "path": "values",
+      "label": "Values",
+      "editorType": "customLabelValueEditor"
+    },
+    {
+      "path": "showItemName",
+      "label": "Show Label",
+      "editorType": "switch",
+      "description": "When checked the DisplayName/RefList Name will be shown."
+    },
+    {
+      "path": "showIcon",
+      "label": "Show Icon",
+      "editorType": "switch",
+      "description": "When checked the icon will display on the left side of the DisplayName"
+    },
+    {
+      "path": "tagVariant",
+      "label": "Variant",
+      "editorType": "dropdown",
+      "description": "How each tag is filled when the status carries its own colour. Solid fills the tag, Outlined draws a coloured border, Filled applies a soft tint."
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "statusTag/index.tsx",
+    "statusTag/model.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "curated",
+      "what": "mappings/valueSource model replaced by dataSourceType + values; showItemName/showIcon/tagVariant defaults"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

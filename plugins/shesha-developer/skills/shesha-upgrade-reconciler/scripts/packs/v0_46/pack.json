@@ -1,0 +1,446 @@
+{
+ "id": "0.46",
+ "version": "1.0.0",
+ "target": ">=0.46.0 <0.47.0",
+ "sourceBelow": "0.46.0",
+ "hazards": "shesha-developer-0-46:shesha-form-edit references/render-hazards-046.md",
+ "rules": [
+  {
+   "id": "scripts",
+   "entry": "safechain:apply",
+   "retire": null,
+   "hazard": "H10",
+   "title": "Safe optional chaining in render-time scripts (a throwing visibility expression renders the component)",
+   "kind": "fleet",
+   "syntaxGate": true,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "textvis",
+   "entry": "visstyle:apply",
+   "retire": "visstyle:retire",
+   "hazard": "H19",
+   "title": "Conditional text components ignore hidden/visible: drive display:none through their style",
+   "kind": "fleet",
+   "syntaxGate": true,
+   "marker": "/*reconciler:046-visibility-style*/",
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": []
+  },
+  {
+   "id": "textsize",
+   "entry": "textpresets:apply",
+   "retire": null,
+   "hazard": "H8",
+   "title": "Text size and padding presets restored (0.46 migrates them at a 14px root)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "carriers",
+   "entry": "carriers:apply",
+   "retire": null,
+   "hazard": "H3",
+   "title": "htmlRender CSS carriers mounted and kept under the sanitizer",
+   "kind": "fleet",
+   "syntaxGate": true,
+   "marker": "/*reconciler:046-carrier*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "rlshidden",
+   "entry": "rls2dd:apply",
+   "retire": null,
+   "hazard": "H13",
+   "title": "Hidden refListStatus inside a hosted form replaced by a hidden textField",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "_reconcilerOriginal",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "layout",
+   "entry": "appearance046:apply",
+   "retire": null,
+   "hazard": "H22",
+   "title": "Container min height 0, columns left margin, field margin -3 (layout drift)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "tabs",
+   "entry": "tabsurface:apply",
+   "retire": null,
+   "hazard": "H9",
+   "title": "Tabs surface reset (grey inactive tabs, black active label, bordered body)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "_reconciler046",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "status",
+   "entry": "statusbuttons:apply",
+   "retire": null,
+   "hazard": "H10",
+   "title": "Status buttons hidden without a status, separator gap, lone status-button containers",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-status-button*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "statusLabelPattern"
+   ]
+  },
+  {
+   "id": "hints",
+   "entry": "hints:apply",
+   "retire": null,
+   "hazard": "H22",
+   "title": "A columns block holding one conditional text takes the text visibility",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "labelcol",
+   "entry": "labelcol:apply",
+   "retire": null,
+   "hazard": "H14",
+   "title": "subForm labelCol/wrapperCol 8/16 -> the configured spans",
+   "kind": "opt-in",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": [
+    "subformLabelCol"
+   ]
+  },
+  {
+   "id": "subfetch",
+   "entry": "subfetch:apply",
+   "retire": null,
+   "hazard": "H28",
+   "title": "api subForm properties list includes the fields the host form shows from it",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "rowgap",
+   "entry": "rowgap:apply",
+   "retire": null,
+   "hazard": "H29",
+   "title": "Horizontal containers get a gap where none is stored",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "rowGap"
+   ]
+  },
+  {
+   "id": "tabgap",
+   "entry": "tabsurface:apply_gap",
+   "retire": null,
+   "hazard": "H24",
+   "title": "Gap under the tab bar of top-positioned tabs",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "tablectl",
+   "entry": "tablecontrol:apply",
+   "retire": null,
+   "hazard": null,
+   "title": "Vertical table headers stacked again (title above toolbar)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "tagnull",
+   "entry": "tagnull:apply",
+   "retire": null,
+   "hazard": "H33",
+   "title": "Status tags without a value hidden (no empty grey chip)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-tag-null*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "types",
+   "entry": "entitytypes:apply",
+   "retire": null,
+   "hazard": "H32",
+   "title": "0.43 framework entity type names renamed to their 0.46 names",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "typeMapExtra"
+   ]
+  },
+  {
+   "id": "panels",
+   "entry": "panelheader:apply",
+   "retire": null,
+   "hazard": "H30",
+   "title": "Collapsible panel header padding back to the configured spacing",
+   "kind": "opt-in",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "panelHeaderPadding"
+   ]
+  },
+  {
+   "id": "optfilter",
+   "entry": "optfilter:apply",
+   "retire": null,
+   "hazard": "H34",
+   "title": "Optional filter fallback beside a required item dropped (sent as null on 0.46)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": []
+  },
+  {
+   "id": "editmode",
+   "entry": "editmode:apply",
+   "retire": "editmode:retire",
+   "hazard": "H15",
+   "title": "editMode scripts returning edit/readonly/booleans mapped to 0.46 values",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-editmode*/",
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": []
+  },
+  {
+   "id": "acsort",
+   "entry": "acsort:apply",
+   "retire": null,
+   "hazard": "H38",
+   "title": "Entity autocompletes without a sort get the 0.43 default (display property ascending)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "-s046",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "payload",
+   "entry": "payloadcopy:apply",
+   "retire": null,
+   "hazard": "H39",
+   "title": "Action scripts that delete from data then post ...data use a local copy",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-payload-copy*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "urlwait",
+   "entry": "urlwait:apply",
+   "retire": null,
+   "hazard": "H40",
+   "title": "URL-sourced table contexts mount only once their record ids are loaded",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-url-wait*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "afterload",
+   "entry": "afterload:apply",
+   "retire": "afterload:retire",
+   "hazard": "H44",
+   "title": "onAfterDataLoad runs with data = the loaded record (0.46 passes only the id)",
+   "kind": "fleet",
+   "syntaxGate": true,
+   "marker": "/*reconciler:046-afterload-data*/",
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": []
+  },
+  {
+   "id": "formref",
+   "entry": "formref:apply",
+   "retire": null,
+   "hazard": "H45",
+   "title": "subForms naming a framework form 0.46 dropped point at the configured replacement",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "formRefMap"
+   ]
+  },
+  {
+   "id": "gsrefresh",
+   "entry": "gsrefresh:apply",
+   "retire": null,
+   "hazard": "H41",
+   "title": "Script refresh through globalState.<table> replaced by a chained Refresh table action",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-refresh-chain*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "normparent",
+   "entry": "normparent:apply",
+   "retire": null,
+   "hazard": "H47",
+   "title": "Every parentId names the container that holds the component (stale ids re-nest on a designer save)",
+   "kind": "fleet",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "split_labels",
+   "entry": "labelsplit:apply",
+   "retire": null,
+   "hazard": "H20",
+   "title": "Multi-line labels moved into their own text component",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": "-lbl046",
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": [
+    "labelSplit",
+    "labelSplitFont"
+   ]
+  },
+  {
+   "id": "hide_empty_buttons",
+   "entry": "hide_empty_buttons:apply",
+   "retire": null,
+   "hazard": "H26",
+   "title": "Empty-label buttons inside field columns moved into a hidden row",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": "-emptybuttons046",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  },
+  {
+   "id": "dialogfooter",
+   "entry": "dialogfooter:apply",
+   "retire": "dialogfooter:retire",
+   "hazard": "H35",
+   "title": "Custom dialog footer buttons moved into the dialog form (their scripts are not evaluated in the footer)",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": "_reconcilerFooterButtons046",
+   "fixedIn": "0.46.1",
+   "fixedEvidence": "release-notes",
+   "options": [
+    "footerGuardMessage"
+   ]
+  },
+  {
+   "id": "url_reflist_columns",
+   "entry": "url_reflist_columns:apply",
+   "retire": null,
+   "hazard": "H36",
+   "title": "Reference-list columns on URL-sourced tables bound to a dropdown display",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": "-rl046",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "refListDisplayTemplate"
+   ]
+  },
+  {
+   "id": "readonly_strip",
+   "entry": "readonly_strip:apply",
+   "retire": null,
+   "hazard": "H42",
+   "title": "onPrepareSubmitData strips read-only (calculated) properties the CRUD rejects",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": "/*reconciler:046-readonly-strip*/",
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": [
+    "entityNamespacePatterns"
+   ]
+  },
+  {
+   "id": "urlfilter",
+   "entry": "urlfilter:apply",
+   "retire": null,
+   "hazard": "H43",
+   "title": "Leftover permanent filter that never resolves removed from URL-sourced tables",
+   "kind": "targeted",
+   "syntaxGate": false,
+   "marker": null,
+   "fixedIn": null,
+   "fixedEvidence": null,
+   "options": []
+  }
+ ]
+}

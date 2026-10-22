@@ -1,0 +1,297 @@
+{
+  "type": "refListStatus",
+  "name": "Reference list status",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "FileSearchOutlined",
+  "version": 9,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "hideLabel": true
+    },
+    "raw": "(model) => {\n    const customModel: IRefListStatusComponentProps = {\n      ...model,\n      hideLabel: true,\n    };\n    return customModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IRefListStatusComponentProps",
+    "interfaceFile": "designer-components/refListStatus/interfaces.ts",
+    "ownProps": [
+      "referenceListId",
+      "itemDisplay",
+      "solidBackground"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "itemDisplay",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "referenceListId",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "solidBackground",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "refListStatus/settings.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Whether to show the reference list item name, its icon, or both. At least one of the two is always shown."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "referenceListId",
+      "label": "Reference List",
+      "editorType": "referenceListAutocomplete",
+      "required": true,
+      "group": "Reference List"
+    },
+    {
+      "path": "itemDisplay",
+      "label": "Display",
+      "editorType": "refListDisplaySelector",
+      "description": "Whether to show the reference list item name, its icon, or both. At least one of the two is always shown.",
+      "group": "Reference List"
+    },
+    {
+      "path": "solidBackground",
+      "label": "Show Solid Background",
+      "editorType": "switch",
+      "description": "When checked the component shows a coloured badge, taking its colour from the reference list item, and",
+      "group": "Reference List"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "refListStatus/index.tsx",
+    "refListStatus/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 5,
+      "category": "STYLE_COPY",
+      "what": "copies root size/width/height/border*/font*/backgroundColor/stylingBox into device blocks"
+    },
+    {
+      "toVersion": 6,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles with component defaults"
+    },
+    {
+      "toVersion": 7,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode"
+    },
+    {
+      "toVersion": 8,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden->visible, permissions->visiblePermissions, stylingBox->stylingBoxJson (existing components only)"
+    },
+    {
+      "toVersion": 9,
+      "category": "curated",
+      "what": "showReflistName + showIcon -> itemDisplay (\"name\"|\"icon\"|\"both\"); neither -> \"both\" (a deliberate colour-only badge now shows name+icon) (refListStatus/migrations/migrateItemDisplay.ts:30-35). At render the tag shows a g"
+    }
+  ]
+}

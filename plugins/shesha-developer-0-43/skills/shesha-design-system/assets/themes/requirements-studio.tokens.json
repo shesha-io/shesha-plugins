@@ -1,6 +1,6 @@
 {
   "$brand": "requirements-studio",
-  "$source": "LandBank Desktop Web design tokens (colors_and_type.css), sampled 1:1 from the Claude-designed Requirements Studio app",
+  "$source": "Desktop Web design tokens (colors_and_type.css), sampled 1:1 from a Claude-designed Requirements Studio app",
   "palette": {
     "brand": {
       "primary": "#0d685a",

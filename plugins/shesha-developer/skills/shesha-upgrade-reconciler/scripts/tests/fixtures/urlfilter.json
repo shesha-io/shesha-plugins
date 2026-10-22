@@ -1,0 +1,98 @@
+{
+ "rule": "urlfilter",
+ "cases": [
+  {
+   "name": "a leftover permanent filter that never resolves is removed",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ctx",
+      "type": "datatableContext",
+      "componentName": "ctx",
+      "parentId": "root",
+      "sourceType": "Url",
+      "permanentFilter": {
+       "and": [
+        {
+         "==": [
+          {
+           "var": "customer"
+          },
+          "{{data.customer.id}}"
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "formSettings": {
+     "modelType": "Shop.Domain.Order"
+    }
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/permanentFilter",
+     "@absent"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "metadata": {
+    "Shop.Domain.Order": [
+     {
+      "path": "Id"
+     },
+     {
+      "path": "Name"
+     }
+    ]
+   }
+  },
+  {
+   "name": "a filter on a model property is left alone",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ctx",
+      "type": "datatableContext",
+      "componentName": "ctx",
+      "parentId": "root",
+      "sourceType": "Url",
+      "permanentFilter": {
+       "and": [
+        {
+         "==": [
+          {
+           "var": "name"
+          },
+          "{{data.name}}"
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "formSettings": {
+     "modelType": "Shop.Domain.Order"
+    }
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false,
+   "metadata": {
+    "Shop.Domain.Order": [
+     {
+      "path": "Id"
+     },
+     {
+      "path": "Name"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,165 @@
+{
+  "type": "tableViewSelector",
+  "name": "Table View Selector",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "SelectOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model: ITableViewSelectorComponentProps) => {\n                                                                        \n    const defaultFilters = isNonEmptyArray(model.filters)\n      ? model.filters\n      : [{\n        id: 'default-all-records',\n        name: 'Default',\n        tooltip: 'Shows all records without any filtering',\n        sortOrder: 0,\n        expression: undefined, // No filter expression = show all\n      } satisfies IStoredFilter];\n\n    return {\n      ...model,\n      filters: defaultFilters,\n      persistSelectedFilters: model.persistSelectedFilters ?? true,\n    };\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ITableViewSelectorComponentProps",
+    "interfaceFile": "designer-components/dataTable/tableViewSelector/models.ts",
+    "ownProps": [
+      "filters",
+      "persistSelectedFilters",
+      "showIcon"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "filters",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "persistSelectedFilters",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showIcon",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dataTable/tableViewSelector/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Display the layout icon next to the View label"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "showIcon",
+      "label": "Show Icon",
+      "editorType": "switch",
+      "description": "Display the layout icon next to the View label"
+    },
+    {
+      "path": "filters",
+      "label": "Filters",
+      "editorType": "filtersList",
+      "group": "Filters"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dataTable/tableViewSelector/tableViewSelectorComponent.tsx",
+    "dataTable/tableViewSelector/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 7,
+      "category": "VISIBLE_PERMS",
+      "what": "hidden->visible etc."
+    }
+  ]
+}

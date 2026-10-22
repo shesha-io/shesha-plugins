@@ -1,0 +1,14 @@
+{
+  "name": "shesha-form-edit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/verify-artifact.test.mjs",
+    "check:refs": "node scripts/check-references.mjs",
+    "check:refs:negative": "node tests/check-references.negative.mjs",
+    "setup": "npm install && npx playwright install chromium --with-deps"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}

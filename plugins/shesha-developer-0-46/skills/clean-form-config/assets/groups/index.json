@@ -1,0 +1,594 @@
+{
+  "_meta": {
+    "version": 4,
+    "source": {
+      "release": "release-0.46.0",
+      "commit": "b28264efa2e4c7e78cadf1107ae9de7b66093c26",
+      "kbComponentCount": 122
+    },
+    "baseThreshold": 0.8
+  },
+  "groupFiles": [
+    "base.json",
+    "data-entry.json",
+    "data-display.json",
+    "advanced.json",
+    "entity-references.json",
+    "tables-and-lists.json",
+    "layout.json"
+  ],
+  "components": {
+    "address": "advanced",
+    "addressInput": "advanced",
+    "alert": "data-display",
+    "attachmentsEditor": "entity-references",
+    "autocomplete": "advanced",
+    "autocompleteTagGroup": "entity-references",
+    "barChart": "data-display",
+    "button": "data-entry",
+    "buttonGroup": "data-entry",
+    "buttons": "data-entry",
+    "calendar": "advanced",
+    "card": "layout",
+    "checkbox": "data-entry",
+    "checkboxGroup": "data-entry",
+    "chevron": "advanced",
+    "childTable": "tables-and-lists",
+    "codeEditor": "advanced",
+    "collapsiblePanel": "layout",
+    "colorPicker": "advanced",
+    "columns": "layout",
+    "columnsEditorComponent": "tables-and-lists",
+    "component-selector": "advanced",
+    "configurableActionConfigurator": "advanced",
+    "configurableItemAutocomplete": "entity-references",
+    "container": "layout",
+    "containerChecker": "layout",
+    "contextPropertyAutocomplete": "advanced",
+    "dataContext": "tables-and-lists",
+    "dataContextSelector": "tables-and-lists",
+    "datalist": "tables-and-lists",
+    "dataSortingEditor": "tables-and-lists",
+    "dataSource": "tables-and-lists",
+    "datatable": "tables-and-lists",
+    "datatable_template": "tables-and-lists",
+    "datatable.filter": "tables-and-lists",
+    "datatable.pager": "tables-and-lists",
+    "datatable.quickSearch": "tables-and-lists",
+    "datatable.selectColumnsButton": "tables-and-lists",
+    "datatableContext": "tables-and-lists",
+    "dateField": "data-entry",
+    "divider": "layout",
+    "drawer": "layout",
+    "dropdown": "data-entry",
+    "dynamicItemsConfigurator": "advanced",
+    "dynamicView": "layout",
+    "editableTagGroup": "advanced",
+    "editModeSelector": "data-entry",
+    "endpointsAutocomplete": "entity-references",
+    "entityPicker": "entity-references",
+    "entityReference": "entity-references",
+    "entityTypeAutocomplete": "entity-references",
+    "expressionEditor": "advanced",
+    "fileUpload": "entity-references",
+    "formAutocomplete": "entity-references",
+    "headerAppControl": "advanced",
+    "htmlRender": "advanced",
+    "iconPicker": "advanced",
+    "image": "advanced",
+    "imagePicker": "data-display",
+    "kanban": "advanced",
+    "KeyInformationBar": "layout",
+    "labelConfigurator": "data-entry",
+    "labelValueEditor": "advanced",
+    "lineChart": "data-display",
+    "link": "data-display",
+    "list": "tables-and-lists",
+    "logViewer": "advanced",
+    "mainMenuEditor": "advanced",
+    "markdown": "advanced",
+    "menuList": "layout",
+    "metadataEditor": "advanced",
+    "notes": "entity-references",
+    "notificationAutocomplete": "advanced",
+    "numberField": "data-entry",
+    "paragraph": "data-display",
+    "passwordCombo": "data-entry",
+    "permissionAutocomplete": "entity-references",
+    "permissionedObjectsTree": "entity-references",
+    "permissionsTree": "entity-references",
+    "permissionTagGroup": "entity-references",
+    "phoneNumberInput": "data-entry",
+    "pieChart": "data-display",
+    "polarAreaChart": "data-display",
+    "processMonitor": "advanced",
+    "profileDropdown": "advanced",
+    "progress": "advanced",
+    "propertyAutocomplete": "advanced",
+    "propertyRouter": "layout",
+    "queryBuilder": "advanced",
+    "radio": "data-entry",
+    "rate": "data-entry",
+    "referenceListAutocomplete": "entity-references",
+    "refListStatus": "advanced",
+    "richTextEditor": "advanced",
+    "scheduledJobExecutionLog": "advanced",
+    "searchableTabs": "layout",
+    "section": "layout",
+    "sectionSeparator": "layout",
+    "setting": "layout",
+    "settingsInput": "advanced",
+    "settingsInputRow": "advanced",
+    "sizableColumns": "layout",
+    "slider": "data-entry",
+    "space": "layout",
+    "statistic": "data-display",
+    "statusTag": "advanced",
+    "styleBox": "advanced",
+    "subForm": "layout",
+    "switch": "data-entry",
+    "tableViewSelector": "tables-and-lists",
+    "tabs": "layout",
+    "text": "data-display",
+    "textArea": "data-entry",
+    "textField": "data-entry",
+    "themeEditor": "advanced",
+    "threeStateSwitch": "data-entry",
+    "timePicker": "data-entry",
+    "title": "data-display",
+    "toolbar": "advanced",
+    "validationErrors": "data-display",
+    "wizard": "layout",
+    "youtubeVideo": "data-display"
+  },
+  "meta": {
+    "address": {
+      "version": 6,
+      "perDevice": true
+    },
+    "addressInput": {
+      "version": 3
+    },
+    "alert": {
+      "version": 3,
+      "perDevice": true
+    },
+    "attachmentsEditor": {
+      "version": 22,
+      "perDevice": true
+    },
+    "autocomplete": {
+      "version": 9,
+      "perDevice": true
+    },
+    "autocompleteTagGroup": {
+      "version": 2
+    },
+    "barChart": {
+      "version": 10
+    },
+    "button": {
+      "version": 10,
+      "perDevice": true
+    },
+    "buttonGroup": {
+      "version": 16,
+      "perDevice": true
+    },
+    "buttons": {
+      "version": null
+    },
+    "calendar": {
+      "version": 1
+    },
+    "card": {
+      "version": 5,
+      "perDevice": true,
+      "containers": [
+        "header",
+        "content"
+      ]
+    },
+    "checkbox": {
+      "version": 7,
+      "perDevice": true
+    },
+    "checkboxGroup": {
+      "version": 8,
+      "perDevice": true
+    },
+    "chevron": {
+      "version": 2,
+      "perDevice": true
+    },
+    "childTable": {
+      "version": 6,
+      "hidden": true
+    },
+    "codeEditor": {
+      "version": 4
+    },
+    "collapsiblePanel": {
+      "version": 11,
+      "perDevice": true,
+      "containers": [
+        "header",
+        "content"
+      ]
+    },
+    "colorPicker": {
+      "version": 3
+    },
+    "columns": {
+      "version": 6,
+      "perDevice": true,
+      "containers": [
+        "columns"
+      ]
+    },
+    "columnsEditorComponent": {
+      "version": null
+    },
+    "component-selector": {
+      "version": 2
+    },
+    "configurableActionConfigurator": {
+      "version": 1
+    },
+    "configurableItemAutocomplete": {
+      "version": 0
+    },
+    "container": {
+      "version": 9,
+      "perDevice": true
+    },
+    "containerChecker": {
+      "version": null
+    },
+    "contextPropertyAutocomplete": {
+      "version": 0
+    },
+    "dataContext": {
+      "version": 5
+    },
+    "dataContextSelector": {
+      "version": null
+    },
+    "datalist": {
+      "version": 12
+    },
+    "dataSortingEditor": {
+      "version": 1
+    },
+    "dataSource": {
+      "version": 3
+    },
+    "datatable": {
+      "version": 31
+    },
+    "datatable_template": {
+      "version": null
+    },
+    "datatable.filter": {
+      "version": 7,
+      "perDevice": true
+    },
+    "datatable.pager": {
+      "version": 5,
+      "perDevice": true
+    },
+    "datatable.quickSearch": {
+      "version": 4,
+      "perDevice": true
+    },
+    "datatable.selectColumnsButton": {
+      "version": 2,
+      "hidden": true
+    },
+    "datatableContext": {
+      "version": 8,
+      "deprecated": true,
+      "hidden": true
+    },
+    "dateField": {
+      "version": 9,
+      "perDevice": true
+    },
+    "divider": {
+      "version": 3,
+      "deprecated": true
+    },
+    "drawer": {
+      "version": 4
+    },
+    "dropdown": {
+      "version": 15,
+      "perDevice": true
+    },
+    "dynamicItemsConfigurator": {
+      "version": null
+    },
+    "dynamicView": {
+      "version": null,
+      "deprecated": true
+    },
+    "editableTagGroup": {
+      "version": 3
+    },
+    "editModeSelector": {
+      "version": null
+    },
+    "endpointsAutocomplete": {
+      "version": 3
+    },
+    "entityPicker": {
+      "version": 16,
+      "perDevice": true
+    },
+    "entityReference": {
+      "version": 13,
+      "perDevice": true
+    },
+    "entityTypeAutocomplete": {
+      "version": 0
+    },
+    "expressionEditor": {
+      "version": 2
+    },
+    "fileUpload": {
+      "version": 9,
+      "perDevice": true
+    },
+    "formAutocomplete": {
+      "version": 3,
+      "deprecated": true
+    },
+    "headerAppControl": {
+      "version": null
+    },
+    "htmlRender": {
+      "version": 2
+    },
+    "iconPicker": {
+      "version": 7,
+      "perDevice": true
+    },
+    "image": {
+      "version": 6
+    },
+    "imagePicker": {
+      "version": null
+    },
+    "kanban": {
+      "version": 8
+    },
+    "KeyInformationBar": {
+      "version": 5,
+      "perDevice": true,
+      "containers": [
+        "columns"
+      ]
+    },
+    "labelConfigurator": {
+      "version": null
+    },
+    "labelValueEditor": {
+      "version": 3
+    },
+    "lineChart": {
+      "version": 10
+    },
+    "link": {
+      "version": 6,
+      "perDevice": true
+    },
+    "list": {
+      "version": 3,
+      "deprecated": true
+    },
+    "logViewer": {
+      "version": null
+    },
+    "mainMenuEditor": {
+      "version": null
+    },
+    "markdown": {
+      "version": 3
+    },
+    "menuList": {
+      "version": 1
+    },
+    "metadataEditor": {
+      "version": null
+    },
+    "notes": {
+      "version": 6,
+      "perDevice": true
+    },
+    "notificationAutocomplete": {
+      "version": 0,
+      "deprecated": true
+    },
+    "numberField": {
+      "version": 7,
+      "perDevice": true
+    },
+    "paragraph": {
+      "version": null
+    },
+    "passwordCombo": {
+      "version": 8,
+      "deprecated": true,
+      "hidden": true
+    },
+    "permissionAutocomplete": {
+      "version": 0
+    },
+    "permissionedObjectsTree": {
+      "version": 0
+    },
+    "permissionsTree": {
+      "version": 2
+    },
+    "permissionTagGroup": {
+      "version": null
+    },
+    "phoneNumberInput": {
+      "version": 7,
+      "perDevice": true
+    },
+    "pieChart": {
+      "version": 9
+    },
+    "polarAreaChart": {
+      "version": 9
+    },
+    "processMonitor": {
+      "version": null
+    },
+    "profileDropdown": {
+      "version": 2
+    },
+    "progress": {
+      "version": 3
+    },
+    "propertyAutocomplete": {
+      "version": 2
+    },
+    "propertyRouter": {
+      "version": null
+    },
+    "queryBuilder": {
+      "version": 2
+    },
+    "radio": {
+      "version": 8,
+      "perDevice": true
+    },
+    "rate": {
+      "version": 4
+    },
+    "referenceListAutocomplete": {
+      "version": 3,
+      "deprecated": true
+    },
+    "refListStatus": {
+      "version": 9,
+      "perDevice": true
+    },
+    "richTextEditor": {
+      "version": 6
+    },
+    "scheduledJobExecutionLog": {
+      "version": 2,
+      "deprecated": true
+    },
+    "searchableTabs": {
+      "version": null,
+      "containers": [
+        "tabs"
+      ]
+    },
+    "section": {
+      "version": 0
+    },
+    "sectionSeparator": {
+      "version": 7,
+      "perDevice": true
+    },
+    "setting": {
+      "version": 0
+    },
+    "settingsInput": {
+      "version": null
+    },
+    "settingsInputRow": {
+      "version": null,
+      "containers": [
+        "inputs"
+      ]
+    },
+    "sizableColumns": {
+      "version": 5,
+      "containers": [
+        "columns"
+      ]
+    },
+    "slider": {
+      "version": 1
+    },
+    "space": {
+      "version": 1,
+      "hidden": true
+    },
+    "statistic": {
+      "version": 3
+    },
+    "statusTag": {
+      "version": 6,
+      "perDevice": true
+    },
+    "styleBox": {
+      "version": 2
+    },
+    "subForm": {
+      "version": 5
+    },
+    "switch": {
+      "version": 8,
+      "perDevice": true
+    },
+    "tableViewSelector": {
+      "version": 7
+    },
+    "tabs": {
+      "version": 11,
+      "perDevice": true,
+      "containers": [
+        "tabs"
+      ]
+    },
+    "text": {
+      "version": 7,
+      "perDevice": true
+    },
+    "textArea": {
+      "version": 7,
+      "perDevice": true
+    },
+    "textField": {
+      "version": 8,
+      "perDevice": true
+    },
+    "themeEditor": {
+      "version": null
+    },
+    "threeStateSwitch": {
+      "version": null
+    },
+    "timePicker": {
+      "version": 5
+    },
+    "title": {
+      "version": 0,
+      "deprecated": true
+    },
+    "toolbar": {
+      "version": 4,
+      "hidden": true
+    },
+    "validationErrors": {
+      "version": 1,
+      "perDevice": true
+    },
+    "wizard": {
+      "version": 9,
+      "containers": [
+        "steps"
+      ]
+    },
+    "youtubeVideo": {
+      "version": 2
+    }
+  }
+}

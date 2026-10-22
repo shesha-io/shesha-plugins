@@ -1,0 +1,241 @@
+{
+  "$block": "flex-split-main-rail",
+  "$scope": "region",
+  "$styleOverlay": "flex-split-main-rail",
+  "$slots": {
+    "main": "subtree.components[0].components",
+    "rail": "subtree.components[1].components"
+  },
+  "$bindings": [],
+  "$validatedAgainst": [
+    "container:dimensions.width (% and calc) — the flex-split lever",
+    "container:dimensions.minHeight (fit-content reaches outer div)",
+    "container:stylingBox",
+    "container:font is a no-op (none set on these structural containers)",
+    "container:customStyle.flex is inert (sizing is via dimensions.width only)"
+  ],
+  "$notes": [
+    "Splits are a single 'container' with display:flex + flexDirection:row + gap — NEVER the 'columns' component.",
+    "Main fills via width 'calc(100% - 348px)' (rail 332 + gap 16); rail is a fixed 332px with matching min/maxWidth.",
+    "Tablet/mobile collapse BOTH children to width:'100%' (overlay handles this) so the rail stacks under the main.",
+    "Outer flexWrap is 'nowrap' on desktop; the rail container is itself display:flex flexDirection:column gap:16 to stack its cards.",
+    "$slots.main fills the main column (e.g. primary card + datalist); $slots.rail fills the rail column (e.g. detail/meta cards).",
+    "Generalized from the live vdd-claude bodySplit/container42/detailRail; live form used a messy 75%/25% calc — this block uses the CLEAN fixed idiom."
+  ],
+  "subtree": {
+    "type": "container",
+    "componentName": "bodySplit",
+    "propertyName": "bodySplit",
+    "label": "bodySplit",
+    "hideLabel": true,
+    "version": 7,
+    "hidden": false,
+    "editMode": "inherited",
+    "enableStyleOnReadonly": false,
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "alignItems": "flex-start",
+    "flexWrap": "nowrap",
+    "gap": "16",
+    "components": [
+      {
+        "type": "container",
+        "componentName": "splitMain",
+        "propertyName": "splitMain",
+        "label": "splitMain",
+        "hideLabel": true,
+        "version": 7,
+        "hidden": false,
+        "editMode": "inherited",
+        "enableStyleOnReadonly": false,
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "components": [],
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "calc(100% - 348px)",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "calc(100% - 348px)"
+          }
+        },
+        "tablet": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "100%"
+          }
+        },
+        "mobile": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "100%"
+          }
+        }
+      },
+      {
+        "type": "container",
+        "componentName": "splitRail",
+        "propertyName": "splitRail",
+        "label": "splitRail",
+        "hideLabel": true,
+        "version": 7,
+        "hidden": false,
+        "editMode": "inherited",
+        "enableStyleOnReadonly": false,
+        "display": "flex",
+        "flexDirection": "column",
+        "direction": "vertical",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "components": [],
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "332px",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "332px",
+            "maxWidth": "332px"
+          }
+        },
+        "tablet": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "100%"
+          }
+        },
+        "mobile": {
+          "display": "flex",
+          "flexDirection": "column",
+          "direction": "vertical",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "100%"
+          }
+        }
+      }
+    ],
+    "desktop": {
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "alignItems": "flex-start",
+      "flexWrap": "nowrap",
+      "gap": "16",
+      "stylingBox": "{\"marginBottom\":\"0\"}",
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "100%",
+        "maxWidth": "100%"
+      }
+    },
+    "tablet": {
+      "display": "flex",
+      "flexDirection": "column",
+      "alignItems": "stretch",
+      "justifyContent": "flex-start",
+      "flexWrap": "wrap",
+      "gap": "16",
+      "stylingBox": "{\"marginBottom\":\"0\"}",
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+      }
+    },
+    "mobile": {
+      "display": "flex",
+      "flexDirection": "column",
+      "alignItems": "stretch",
+      "justifyContent": "flex-start",
+      "flexWrap": "wrap",
+      "gap": "16",
+      "stylingBox": "{\"marginBottom\":\"0\"}",
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "components": [
+    {
+      "id": "sc-root-container",
+      "type": "container",
+      "propertyName": "//*DETAILSPANEL*//",
+      "componentName": "container1",
+      "label": "Container1",
+      "labelAlign": "right",
+      "parentId": "root",
+      "hidden": false,
+      "isDynamic": false,
+      "version": 7,
+      "direction": "vertical",
+      "justifyContent": "left",
+      "flexWrap": "wrap",
+      "components": [
+        {
+          "id": "sc-title",
+          "type": "text",
+          "componentName": "//*TITLE*//",
+          "propertyName": "formTitle",
+          "parentId": "sc-root-container",
+          "hidden": false,
+          "label": "Title",
+          "hideLabel": true,
+          "content": "New Person",
+          "contentDisplay": "content",
+          "fontSize": "20px",
+          "fontWeight": "600"
+        },
+        {
+          "id": "sc-validation-errors",
+          "type": "validationErrors",
+          "componentName": "validationErrors",
+          "propertyName": "validationErrors",
+          "parentId": "sc-root-container",
+          "hidden": false,
+          "isDynamic": false,
+          "version": "1",
+          "label": "Validation Errors",
+          "labelAlign": "right"
+        },
+        {
+          "id": "sc-details-panel",
+          "type": "columns",
+          "propertyName": "detailsPanel",
+          "componentName": "detailsPanel",
+          "label": "Details Panel",
+          "parentId": "sc-root-container",
+          "editMode": "editable",
+          "hideLabel": true,
+          "gutterX": 10,
+          "gutterY": 10,
+          "columns": [
+            {
+              "id": "sc-col-left",
+              "flex": 12,
+              "offset": 0,
+              "push": 0,
+              "pull": 0,
+              "components": [
+                {
+                  "id": "sc-firstName",
+                  "type": "textField",
+                  "propertyName": "firstName",
+                  "componentName": "firstName",
+                  "label": "First Name",
+                  "parentId": "sc-col-left",
+                  "editMode": "editable",
+                  "hideLabel": false,
+                  "textType": "text",
+                  "validate": {
+                    "required": true,
+                    "maxLength": 50
+                  }
+                },
+                {
+                  "id": "sc-lastName",
+                  "type": "textField",
+                  "propertyName": "lastName",
+                  "componentName": "lastName",
+                  "label": "Last Name",
+                  "parentId": "sc-col-left",
+                  "editMode": "editable",
+                  "hideLabel": false,
+                  "textType": "text",
+                  "validate": {
+                    "required": true,
+                    "maxLength": 50
+                  }
+                },
+                {
+                  "id": "sc-middleName",
+                  "type": "textField",
+                  "propertyName": "middleName",
+                  "componentName": "middleName",
+                  "label": "Middle Name",
+                  "parentId": "sc-col-left",
+                  "editMode": "editable",
+                  "hideLabel": false,
+                  "textType": "text",
+                  "validate": {
+                    "maxLength": 50
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sc-col-right",
+              "flex": 12,
+              "offset": 0,
+              "push": 0,
+              "pull": 0,
+              "components": [
+                {
+                  "id": "sc-emailAddress",
+                  "type": "textField",
+                  "propertyName": "emailAddress1",
+                  "componentName": "emailAddress1",
+                  "label": "Email",
+                  "parentId": "sc-col-right",
+                  "editMode": "editable",
+                  "hideLabel": false,
+                  "textType": "text",
+                  "validate": {
+                    "maxLength": 100
+                  }
+                },
+                {
+                  "id": "sc-mobileNumber",
+                  "type": "textField",
+                  "propertyName": "mobileNumber1",
+                  "componentName": "mobileNumber1",
+                  "label": "Mobile",
+                  "parentId": "sc-col-right",
+                  "editMode": "editable",
+                  "hideLabel": false,
+                  "textType": "text",
+                  "validate": {
+                    "maxLength": 50
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sc-form-actions",
+          "type": "buttonGroup",
+          "componentName": "formActions",
+          "propertyName": "formActions",
+          "label": "Form Actions",
+          "parentId": "sc-root-container",
+          "hidden": false,
+          "hideLabel": true,
+          "isInline": true,
+          "editMode": "editable",
+          "version": 15,
+          "items": [
+            {
+              "id": "sc-btn-save",
+              "itemType": "item",
+              "itemSubType": "button",
+              "sortOrder": 0,
+              "name": "btnSave",
+              "label": "Save",
+              "buttonType": "primary",
+              "icon": "SaveOutlined",
+              "buttonAction": "submit",
+              "editMode": "inherited",
+              "actionConfiguration": {
+                "_type": "action-config",
+                "actionName": "Submit",
+                "actionOwner": "shesha.form",
+                "handleSuccess": false,
+                "handleFail": false
+              }
+            },
+            {
+              "id": "sc-btn-back",
+              "itemType": "item",
+              "itemSubType": "button",
+              "sortOrder": 1,
+              "name": "btnBack",
+              "label": "Back",
+              "buttonType": "default",
+              "icon": "ArrowLeftOutlined",
+              "buttonAction": "navigate",
+              "editMode": "inherited",
+              "actionConfiguration": {
+                "_type": "action-config",
+                "actionName": "Navigate",
+                "actionOwner": "shesha.common",
+                "actionArguments": {
+                  "navigationType": "url",
+                  "url": "/dynamic/Shesha/persons"
+                },
+                "handleSuccess": false,
+                "handleFail": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "formSettings": {
+    "_formFields": [
+      "modelType",
+      "layout",
+      "size",
+      "colon",
+      "labelCol.span",
+      "wrapperCol.span",
+      "uniqueFormId",
+      "onInitialized",
+      "onDataLoaded",
+      "onUpdate"
+    ],
+    "layout": "horizontal",
+    "colon": true,
+    "labelCol": {
+      "span": 6
+    },
+    "wrapperCol": {
+      "span": 18
+    },
+    "modelType": "Shesha.Domain.Person",
+    "uniqueFormId": "",
+    "access": 3,
+    "permissions": null,
+    "version": 8,
+    "dataLoaderType": "gql",
+    "dataSubmitterType": "gql",
+    "onBeforeDataLoad": "    form.setFieldsValue({...form.formArguments});",
+    "onAfterDataLoad": null,
+    "onPrepareSubmitData": null,
+    "onBeforeSubmit": null,
+    "onSubmitSuccess": null,
+    "onSubmitFailed": null,
+    "dataSubmittersSettings": {
+      "gql": {
+        "endpointType": "default",
+        "dynamicEndpoint": "    return data?.id ? form.defaultApiEndpoints.update : form.defaultApiEndpoints.create"
+      }
+    },
+    "dataLoadersSettings": {
+      "gql": {
+        "endpointType": "default"
+      },
+      "custom": {}
+    }
+  }
+}

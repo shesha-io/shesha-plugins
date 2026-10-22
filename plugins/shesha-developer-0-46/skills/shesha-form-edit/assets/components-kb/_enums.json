@@ -1,0 +1,994 @@
+{
+  "alert": {
+    "alertType": {
+      "values": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "button": {
+    "iconPosition": {
+      "values": [
+        "start",
+        "end"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "buttonGroup": {
+    "buttonGroupStyle": {
+      "values": [
+        "horizontal",
+        "menu"
+      ],
+      "source": "source-parsed"
+    },
+    "gap": {
+      "values": [
+        "small",
+        "middle",
+        "large"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "calendar": {
+    "displayPeriod": {
+      "values": [
+        "month",
+        "week",
+        "work_week",
+        "day",
+        "agenda"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "barChart": {
+    "dataMode": {
+      "values": [
+        "url",
+        "entityType"
+      ],
+      "source": "source-parsed"
+    },
+    "simpleOrPivot": {
+      "values": [
+        "simple",
+        "pivot"
+      ],
+      "source": "source-parsed"
+    },
+    "timeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "groupingTimeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "legendPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    },
+    "orderDirection": {
+      "values": [
+        "asc",
+        "desc"
+      ],
+      "source": "source-parsed"
+    },
+    "aggregationMethod": {
+      "values": [
+        "sum",
+        "count",
+        "average",
+        "min",
+        "max"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "lineChart": {
+    "dataMode": {
+      "values": [
+        "url",
+        "entityType"
+      ],
+      "source": "source-parsed"
+    },
+    "simpleOrPivot": {
+      "values": [
+        "simple",
+        "pivot"
+      ],
+      "source": "source-parsed"
+    },
+    "timeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "groupingTimeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "legendPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    },
+    "orderDirection": {
+      "values": [
+        "asc",
+        "desc"
+      ],
+      "source": "source-parsed"
+    },
+    "aggregationMethod": {
+      "values": [
+        "sum",
+        "count",
+        "average",
+        "min",
+        "max"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "pieChart": {
+    "dataMode": {
+      "values": [
+        "url",
+        "entityType"
+      ],
+      "source": "source-parsed"
+    },
+    "simpleOrPivot": {
+      "values": [
+        "simple",
+        "pivot"
+      ],
+      "source": "source-parsed"
+    },
+    "timeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "groupingTimeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "legendPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    },
+    "orderDirection": {
+      "values": [
+        "asc",
+        "desc"
+      ],
+      "source": "source-parsed"
+    },
+    "aggregationMethod": {
+      "values": [
+        "sum",
+        "count",
+        "average",
+        "min",
+        "max"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "polarAreaChart": {
+    "dataMode": {
+      "values": [
+        "url",
+        "entityType"
+      ],
+      "source": "source-parsed"
+    },
+    "simpleOrPivot": {
+      "values": [
+        "simple",
+        "pivot"
+      ],
+      "source": "source-parsed"
+    },
+    "timeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "groupingTimeSeriesFormat": {
+      "values": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "source": "source-parsed"
+    },
+    "legendPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    },
+    "orderDirection": {
+      "values": [
+        "asc",
+        "desc"
+      ],
+      "source": "source-parsed"
+    },
+    "aggregationMethod": {
+      "values": [
+        "sum",
+        "count",
+        "average",
+        "min",
+        "max"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "checkboxGroup": {
+    "direction": {
+      "values": [
+        "horizontal",
+        "vertical"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "chevron": {
+    "colorSource": {
+      "values": [
+        "primary",
+        "custom",
+        "reflist"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "collapsiblePanel": {
+    "expandIconPosition": {
+      "values": [
+        "hide",
+        "start",
+        "end"
+      ],
+      "source": "source-parsed"
+    },
+    "collapsible": {
+      "values": [
+        "header",
+        "icon",
+        "disabled"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "colorPicker": {
+    "size": {
+      "values": [
+        "small",
+        "middle",
+        "large"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "datalist": {
+    "formSelectionMode": {
+      "values": [
+        "name",
+        "view",
+        "expression"
+      ],
+      "source": "source-parsed"
+    },
+    "selectionMode": {
+      "values": [
+        "none",
+        "single",
+        "multiple"
+      ],
+      "source": "source-parsed"
+    },
+    "canAddInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit"
+      ],
+      "source": "source-parsed"
+    },
+    "modalWidth": {
+      "values": [
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "source": "source-parsed"
+    },
+    "canEditInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit"
+      ],
+      "source": "source-parsed"
+    },
+    "inlineEditMode": {
+      "values": [
+        "all-at-once",
+        "one-by-one"
+      ],
+      "source": "source-parsed"
+    },
+    "inlineSaveMode": {
+      "values": [
+        "auto",
+        "manual"
+      ],
+      "source": "source-parsed"
+    },
+    "canDeleteInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit"
+      ],
+      "source": "source-parsed"
+    },
+    "orientation": {
+      "values": [
+        "vertical",
+        "horizontal",
+        "wrap"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "datatable.filter": {
+    "iconPosition": {
+      "values": [
+        "start",
+        "end"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "datatable": {
+    "selectionMode": {
+      "values": [
+        "none",
+        "single",
+        "multiple"
+      ],
+      "source": "source-parsed"
+    },
+    "canEditInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ],
+      "source": "source-parsed"
+    },
+    "inlineEditMode": {
+      "values": [
+        "one-by-one",
+        "all-at-once"
+      ],
+      "source": "source-parsed"
+    },
+    "inlineSaveMode": {
+      "values": [
+        "auto",
+        "manual"
+      ],
+      "source": "source-parsed"
+    },
+    "canAddInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ],
+      "source": "source-parsed"
+    },
+    "newRowCapturePosition": {
+      "values": [
+        "top",
+        "bottom"
+      ],
+      "source": "source-parsed"
+    },
+    "newRowInsertPosition": {
+      "values": [
+        "top",
+        "bottom"
+      ],
+      "source": "source-parsed"
+    },
+    "canDeleteInline": {
+      "values": [
+        "yes",
+        "no",
+        "inherit",
+        "js"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "dataContext": {
+    "sourceType": {
+      "values": [
+        "Url",
+        "Entity",
+        "Form"
+      ],
+      "source": "source-parsed"
+    },
+    "dataFetchingMode": {
+      "values": [
+        "paging",
+        "fetchAll"
+      ],
+      "source": "source-parsed"
+    },
+    "sortMode": {
+      "values": [
+        "standard",
+        "strict"
+      ],
+      "source": "source-parsed"
+    },
+    "strictSortOrder": {
+      "values": [
+        "asc",
+        "desc"
+      ],
+      "source": "source-parsed"
+    },
+    "allowReordering": {
+      "values": [
+        "yes",
+        "no",
+        "inherit"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "drawer": {
+    "placement": {
+      "values": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "source": "source-parsed"
+    },
+    "headerStyles.background.type": {
+      "values": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "source": "source-parsed"
+    },
+    "footerStyles.background.type": {
+      "values": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "entityReference": {
+    "displayType": {
+      "values": [
+        "displayProperty",
+        "icon",
+        "textTitle"
+      ],
+      "source": "source-parsed"
+    },
+    "entityReferenceType": {
+      "values": [
+        "Quickview",
+        "NavigateLink",
+        "Dialog"
+      ],
+      "source": "source-parsed"
+    },
+    "formSelectionMode": {
+      "values": [
+        "name",
+        "dynamic"
+      ],
+      "source": "source-parsed"
+    },
+    "footerButtons": {
+      "values": [
+        "default",
+        "custom",
+        "none"
+      ],
+      "source": "source-parsed"
+    },
+    "submitHttpVerb": {
+      "values": [
+        "POST",
+        "PUT"
+      ],
+      "source": "source-parsed"
+    },
+    "modalWidth": {
+      "values": [
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "menuList": {
+    "menuOverflow": {
+      "values": [
+        "dropdown",
+        "menu",
+        "scroll"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "htmlRender": {
+    "contentType": {
+      "values": [
+        "html",
+        "jsx"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "image": {
+    "dataSource": {
+      "values": [
+        "storedFile",
+        "url",
+        "base64"
+      ],
+      "source": "source-parsed"
+    },
+    "objectFit": {
+      "values": [
+        "cover",
+        "contain",
+        "fill"
+      ],
+      "source": "source-parsed"
+    },
+    "filter": {
+      "values": [
+        "none",
+        "grayscale",
+        "sepia",
+        "blur",
+        "brightness",
+        "contrast",
+        "hue-rotate",
+        "invert",
+        "saturate"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "KeyInformationBar": {
+    "orientation": {
+      "values": [
+        "horizontal",
+        "vertical"
+      ],
+      "source": "source-parsed"
+    },
+    "alignItems": {
+      "values": [
+        "flex-start",
+        "flex-end",
+        "center"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "link": {
+    "target": {
+      "values": [
+        "_blank",
+        "_parent",
+        "_self",
+        "_top"
+      ],
+      "source": "source-parsed"
+    },
+    "direction": {
+      "values": [
+        "horizontal",
+        "vertical"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "notes": {
+    "savePlacement": {
+      "values": [
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "progress": {
+    "progressType": {
+      "values": [
+        "line",
+        "circle",
+        "dashboard"
+      ],
+      "source": "source-parsed"
+    },
+    "status": {
+      "values": [
+        "success",
+        "exception",
+        "normal",
+        "active"
+      ],
+      "source": "source-parsed"
+    },
+    "strokeLinecap": {
+      "values": [
+        "round",
+        "butt",
+        "square"
+      ],
+      "source": "source-parsed"
+    },
+    "gapPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "richTextEditor": {
+    "toolbarButtonSize": {
+      "values": [
+        "tiny",
+        "xsmall",
+        "middle",
+        "large"
+      ],
+      "source": "source-parsed"
+    },
+    "disablePlugins": {
+      "values": [
+        "add-new-line",
+        "about",
+        "focus",
+        "class-span",
+        "backspace",
+        "bold",
+        "wrap-nodes",
+        "clean-html",
+        "copy-format",
+        "clipboard",
+        "paste",
+        "paste-storage",
+        "drag-and-drop",
+        "drag-and-drop-element",
+        "paste-from-word",
+        "color",
+        "enter",
+        "key-arrow-outside",
+        "error-messages",
+        "font",
+        "format-block",
+        "fullsize",
+        "hotkeys",
+        "iframe",
+        "indent",
+        "hr",
+        "inline-popup",
+        "justify",
+        "line-height",
+        "limit",
+        "link",
+        "mobile",
+        "ordered-list",
+        "powered-by-jodit",
+        "placeholder",
+        "redo-undo",
+        "resizer",
+        "search",
+        "select",
+        "size",
+        "resize-handler",
+        "source",
+        "stat",
+        "sticky",
+        "spellcheck",
+        "symbols",
+        "tooltip",
+        "tab",
+        "xpath",
+        "image-properties",
+        "image-processor",
+        "image",
+        "media",
+        "video",
+        "file",
+        "resize-cells",
+        "select-cells",
+        "table-keyboard-navigation",
+        "table",
+        "preview",
+        "print"
+      ],
+      "source": "source-parsed"
+    },
+    "preset": {
+      "values": [
+        "null",
+        "inline"
+      ],
+      "source": "source-parsed"
+    },
+    "direction": {
+      "values": [
+        "",
+        "rtl",
+        "ltr"
+      ],
+      "source": "source-parsed"
+    },
+    "enter": {
+      "values": [
+        "BR",
+        "P",
+        "DIV"
+      ],
+      "source": "source-parsed"
+    },
+    "theme": {
+      "values": [
+        "default",
+        "dark"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "sectionSeparator": {
+    "orientation": {
+      "values": [
+        "horizontal",
+        "vertical"
+      ],
+      "source": "source-parsed"
+    },
+    "lineType": {
+      "values": [
+        "solid",
+        "dashed",
+        "dotted"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "sizableColumns": {
+    "background.type": {
+      "values": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "statistic": {
+    "background.type": {
+      "values": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "subForm": {
+    "formSelectionMode": {
+      "values": [
+        "name",
+        "dynamic"
+      ],
+      "source": "source-parsed"
+    },
+    "dataSource": {
+      "values": [
+        "form",
+        "api"
+      ],
+      "source": "source-parsed"
+    },
+    "apiMode": {
+      "values": [
+        "entityName",
+        "url"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "tabs": {
+    "tabType": {
+      "values": [
+        "line",
+        "card"
+      ],
+      "source": "source-parsed"
+    },
+    "tabPosition": {
+      "values": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "text": {
+    "contentType": {
+      "values": [
+        "",
+        "primary",
+        "secondary",
+        "success",
+        "warning",
+        "info",
+        "danger",
+        "custom"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "wizard": {
+    "wizardType": {
+      "values": [
+        "default",
+        "navigation"
+      ],
+      "source": "source-parsed"
+    },
+    "direction": {
+      "values": [
+        "vertical",
+        "horizontal"
+      ],
+      "source": "source-parsed"
+    },
+    "labelPlacement": {
+      "values": [
+        "vertical",
+        "horizontal"
+      ],
+      "source": "source-parsed"
+    },
+    "buttonsLayout": {
+      "values": [
+        "left",
+        "right",
+        "spaceBetween"
+      ],
+      "source": "source-parsed"
+    }
+  },
+  "youtubeVideo": {
+    "thumbnailSource": {
+      "values": [
+        "url",
+        "base64",
+        "storedFile"
+      ],
+      "source": "source-parsed"
+    }
+  }
+}

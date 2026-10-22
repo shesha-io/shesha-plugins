@@ -1,0 +1,201 @@
+{
+  "type": "searchableTabs",
+  "name": "SearchableTabs",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FolderOutlined",
+  "version": null,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": [
+    "tabs"
+  ],
+  "hasGetContainers": true,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "propertyName": "custom Name"
+    },
+    "raw": "(model) => {\n    const tabsModel: IPropertiesTabsComponentProps = {\n      ...model,\n      propertyName: 'custom Name',\n      tabs: [{ id: nanoid(), label: 'Tab 1', title: 'Tab 1', key: 'tab1', components: [] }],\n    };\n    return tabsModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IPropertiesTabsComponentProps",
+    "interfaceFile": "designer-components/propertiesTabs/models.ts",
+    "ownProps": [
+      "tabs",
+      "size",
+      "tabType",
+      "hidden",
+      "customVisibility",
+      "position"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "position",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tabType",
+      "tablet",
+      "tabs",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "propertiesTabs/settings.tsx",
+    "mechanism": "react-factory",
+    "parseQuality": "partial"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "size",
+    "style",
+    "stylingBox"
+  ],
+  "settingsFields": [
+    {
+      "path": "componentName",
+      "label": "Component name",
+      "group": "Display"
+    },
+    {
+      "path": "defaultActiveKey",
+      "label": "Default Active Key",
+      "group": "Display"
+    },
+    {
+      "path": "tabType",
+      "label": "Tab Type",
+      "group": "Display"
+    },
+    {
+      "path": "size",
+      "label": "Size",
+      "group": "Display",
+      "description": "This will set the size for all buttons",
+      "shared": true
+    },
+    {
+      "path": "position",
+      "label": "Position",
+      "group": "Display",
+      "description": "This will set the size for all buttons"
+    },
+    {
+      "path": "hidden",
+      "label": "Hidden",
+      "group": "Display"
+    },
+    {
+      "path": "tabs",
+      "group": "Configure Tab Panes"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "group": "Style",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "shared": true
+    },
+    {
+      "path": "stylingBox",
+      "group": "Style",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "group": "Security",
+      "description": "Enter a list of permissions that should be associated with this component"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": [
+      "tabs"
+    ],
+    "detectedSlotKeys": [
+      "components",
+      "tabs"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "propertiesTabs/index.tsx",
+    "propertiesTabs/models.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": []
+}

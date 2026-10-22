@@ -1,0 +1,308 @@
+{
+  "type": "KeyInformationBar",
+  "name": "Key Information Bar",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "BorderLeftOutlined",
+  "version": 5,
+  "allowInherit": true,
+  "styleGroup": "common-containers",
+  "isHidden": false,
+  "customContainerNames": [
+    "columns"
+  ],
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": {
+    "defaults": {
+      "propertyName": "column 1"
+    },
+    "raw": "(model) => {\n    const tabsModel: IKeyInformationBarComponentProps = {\n      ...model,\n      propertyName: 'column 1',\n      columns: [\n        {\n          id: nanoid(),\n          width: 200,\n          textAlign: 'center',\n          flexDirection: 'column',\n          components: [],\n          padding: '0px',\n        },\n      ],\n    };\n\n    return tabsModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IKeyInformationBarComponentProps",
+    "interfaceFile": "designer-components/keyInformationBar/interfaces.ts",
+    "ownProps": [
+      "width",
+      "height",
+      "dividerHeight",
+      "dividerWidth",
+      "dividerMargin",
+      "dividerColor",
+      "dividerThickness",
+      "gap",
+      "alignItems",
+      "orientation",
+      "columns",
+      "readOnly",
+      "style",
+      "itemsStyle",
+      "stylingBox",
+      "backgroundColor"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "alignItems",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "columns",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "dividerColor",
+      "dividerHeight",
+      "dividerMargin",
+      "dividerThickness",
+      "dividerWidth",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "gap",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "itemsStyle",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "orientation",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "keyInformationBar/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Sets the margin around the divider"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "columns",
+      "label": "Columns",
+      "editorType": "keyInformationBarColumnsList"
+    },
+    {
+      "path": "orientation",
+      "label": "Orientation",
+      "editorType": "dropdown",
+      "options": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    {
+      "path": "alignItems",
+      "label": "Align Items",
+      "editorType": "dropdown",
+      "options": [
+        "flex-start",
+        "flex-end",
+        "center"
+      ]
+    },
+    {
+      "path": "gap",
+      "label": "Gap",
+      "editorType": "numberField"
+    },
+    {
+      "path": "dividerMargin",
+      "label": "Divider Margin",
+      "editorType": "textField",
+      "description": "Sets the margin around the divider",
+      "group": "Divider"
+    },
+    {
+      "path": "dividerWidth",
+      "label": "Divider Width",
+      "editorType": "numberField",
+      "description": "Sets the width of the divider",
+      "group": "Divider"
+    },
+    {
+      "path": "dividerHeight",
+      "label": "Divider Height",
+      "editorType": "textField",
+      "description": "Sets the height of the divider",
+      "group": "Divider"
+    },
+    {
+      "path": "dividerThickness",
+      "label": "Divider Thickness",
+      "editorType": "textField",
+      "description": "Sets the thickness of the divider line",
+      "group": "Divider"
+    },
+    {
+      "path": "dividerColor",
+      "label": "Divider Color",
+      "editorType": "colorPicker",
+      "group": "Divider"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "wrapperStyle",
+      "label": "Items Container Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": [
+      "columns"
+    ],
+    "detectedSlotKeys": [
+      "components",
+      "columns"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "keyInformationBar/index.tsx",
+    "keyInformationBar/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "curated",
+      "what": "divider props (orientation, dividerWidth/Margin/Height/Thickness/Color, alignItems, gap) copied into desktop/tablet/mobile"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 5,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

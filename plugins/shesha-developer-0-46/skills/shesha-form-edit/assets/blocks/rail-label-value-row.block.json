@@ -1,0 +1,326 @@
+{
+  "$block": "rail-label-value-row",
+  "$scope": "fragment",
+  "$styleOverlay": "rail-label-value-row",
+  "_note": "A single Details-card attribute row inside a rail card. Horizontal 2-cell flex row: a fixed 96px label cell + a value/control cell sized calc(100% - 106px) (96 + 10 gap). Row carries a bottom hairline and 6/0 vertical padding. Repeat this block once per attribute. Generalised from the live vdd-claude `drow` (label cell + control cell) but using the CLEAN fixed-width idiom (96px / calc) instead of the live 40%/60%, and a real bottom hairline instead of the live style:'none' borders.",
+  "$slots": {
+    "labelText": "subtree.components.0.components.0.content",
+    "labelComponent": "subtree.components.0.components.0",
+    "control": "subtree.components.1.components.0",
+    "labelCell": "subtree.components.0",
+    "valueCell": "subtree.components.1"
+  },
+  "$bindings": [
+    {
+      "path": "subtree.components.1.components.0.propertyName",
+      "fill": "the entity property this row displays/edits (e.g. \"status\", \"centralEntity\")"
+    },
+    {
+      "path": "subtree.components.0.components.0.content",
+      "fill": "the human label for the row (e.g. \"Status\", \"Central Entity\")"
+    },
+    {
+      "path": "subtree.components.1.components.0.type",
+      "fill": "(edit mode) the control component type for the value: dropdown(v11)/autocomplete(v8)/textField(v6)/numberField(v5)/dateField(v7)/refListStatus(v6). Set the matching version. Keep hideLabel:true and desktop.dimensions.width:'100%'."
+    }
+  ],
+  "$validatedAgainst": [
+    "container:dimensions.width",
+    "container:border.perSide",
+    "container:stylingBox",
+    "container:font(no-op -> font on text child)",
+    "text:fontSize/fontWeight/color/align",
+    "dropdown:bg/border/radius/width/font",
+    "textField:bg/border/radius/width/font"
+  ],
+  "subtree": {
+    "type": "container",
+    "version": 7,
+    "componentName": "rlvRow",
+    "propertyName": "rlvRow",
+    "hidden": false,
+    "editMode": "inherited",
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "flex-start",
+    "flexWrap": "nowrap",
+    "gap": "10px",
+    "components": [
+      {
+        "type": "container",
+        "version": 7,
+        "componentName": "rlvLabel",
+        "propertyName": "rlvLabel",
+        "hidden": false,
+        "editMode": "inherited",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "center",
+        "flexWrap": "nowrap",
+        "gap": "0",
+        "components": [
+          {
+            "type": "text",
+            "version": 5,
+            "componentName": "rlvLabelText",
+            "propertyName": "rlvLabelText",
+            "hidden": false,
+            "textType": "span",
+            "content": "$binding:rowLabel",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "strong": false,
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12.5,
+                "weight": "500",
+                "color": "#9BA3B8",
+                "align": "left"
+              },
+              "dimensions": {
+                "width": "100%"
+              },
+              "stylingBox": "{}"
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12.5,
+                "weight": "500",
+                "color": "#9BA3B8",
+                "align": "left"
+              },
+              "stylingBox": "{}"
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12.5,
+                "weight": "500",
+                "color": "#9BA3B8",
+                "align": "left"
+              },
+              "stylingBox": "{}"
+            }
+          }
+        ],
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "column",
+          "alignItems": "flex-start",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "dimensions": {
+            "width": "96px",
+            "minWidth": "96px",
+            "maxWidth": "96px",
+            "minHeight": "fit-content"
+          },
+          "stylingBox": "{}"
+        },
+        "tablet": {
+          "display": "flex",
+          "alignItems": "flex-start",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "stylingBox": "{}"
+        },
+        "mobile": {
+          "display": "flex",
+          "alignItems": "flex-start",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "stylingBox": "{}"
+        }
+      },
+      {
+        "type": "container",
+        "version": 7,
+        "componentName": "rlvValue",
+        "propertyName": "rlvValue",
+        "hidden": false,
+        "editMode": "inherited",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "stretch",
+        "justifyContent": "center",
+        "flexWrap": "nowrap",
+        "gap": "0",
+        "components": [
+          {
+            "type": "dropdown",
+            "version": 11,
+            "componentName": "rlvControl",
+            "propertyName": "$binding:rowProperty",
+            "hidden": false,
+            "isDynamic": false,
+            "editMode": "inherited",
+            "hideLabel": true,
+            "labelAlign": "right",
+            "dataSourceType": "referenceList",
+            "referenceListId": {
+              "module": "$binding:referenceListModule",
+              "name": "$binding:referenceListName"
+            },
+            "showItemName": true,
+            "showIcon": true,
+            "solidColor": true,
+            "displayStyle": "text",
+            "mode": "single",
+            "validate": {},
+            "enableStyleOnReadonly": false,
+            "desktop": {
+              "dimensions": {
+                "width": "100%"
+              },
+              "border": {},
+              "background": {},
+              "shadow": {}
+            },
+            "tablet": {
+              "dimensions": {
+                "width": "100%"
+              },
+              "border": {},
+              "background": {},
+              "shadow": {}
+            },
+            "mobile": {
+              "dimensions": {
+                "width": "100%"
+              },
+              "border": {},
+              "background": {},
+              "shadow": {}
+            }
+          }
+        ],
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "column",
+          "alignItems": "stretch",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "dimensions": {
+            "width": "calc(100% - 106px)",
+            "minWidth": "0px",
+            "maxWidth": "calc(100% - 106px)",
+            "minHeight": "fit-content"
+          },
+          "stylingBox": "{}"
+        },
+        "tablet": {
+          "display": "flex",
+          "alignItems": "stretch",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "stylingBox": "{}"
+        },
+        "mobile": {
+          "display": "flex",
+          "alignItems": "stretch",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "0",
+          "stylingBox": "{}"
+        }
+      }
+    ],
+    "desktop": {
+      "display": "flex",
+      "flexDirection": "row",
+      "alignItems": "center",
+      "justifyContent": "flex-start",
+      "flexWrap": "nowrap",
+      "gap": "10px",
+      "dimensions": {
+        "width": "100%",
+        "minWidth": "0px",
+        "maxWidth": "100%",
+        "minHeight": "fit-content"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {},
+          "top": {},
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          },
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 0
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"6\",\"paddingBottom\":\"6\",\"paddingLeft\":\"0\",\"paddingRight\":\"0\"}"
+    },
+    "tablet": {
+      "display": "flex",
+      "alignItems": "center",
+      "justifyContent": "flex-start",
+      "flexWrap": "nowrap",
+      "gap": "10px",
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {},
+          "top": {},
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          },
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 0
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"6\",\"paddingBottom\":\"6\",\"paddingLeft\":\"0\",\"paddingRight\":\"0\"}"
+    },
+    "mobile": {
+      "display": "flex",
+      "alignItems": "center",
+      "justifyContent": "flex-start",
+      "flexWrap": "nowrap",
+      "gap": "10px",
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "custom",
+        "border": {
+          "all": {},
+          "top": {},
+          "bottom": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#F0F2F5"
+          },
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 0
+        }
+      },
+      "stylingBox": "{\"paddingTop\":\"6\",\"paddingBottom\":\"6\",\"paddingLeft\":\"0\",\"paddingRight\":\"0\"}"
+    }
+  }
+}

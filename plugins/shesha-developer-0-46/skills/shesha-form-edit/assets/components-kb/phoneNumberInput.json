@@ -1,0 +1,376 @@
+{
+  "type": "phoneNumberInput",
+  "name": "Phone Number",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "PhoneOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({\n    ...model,\n    valueFormat: model.valueFormat || 'string',\n    stripCountryCode: model.stripCountryCode ?? false,\n    defaultCountry: model.defaultCountry || 'za',\n    enableArrow: model.enableArrow ?? true,\n    labelAlign: model.labelAlign || 'left',\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IPhoneNumberComponentProps",
+    "interfaceFile": "designer-components/phoneNumber/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "initialValue",
+      "valueFormat",
+      "stripCountryCode",
+      "country",
+      "defaultCountry",
+      "allowClear",
+      "enableArrow",
+      "distinct",
+      "disableParentheses",
+      "disableDropdown",
+      "onlyCountries",
+      "excludeCountries",
+      "preferredCountries",
+      "desktop",
+      "mobile",
+      "tablet",
+      "onChangeCustom",
+      "onBlurCustom",
+      "onFocusCustom"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowClear",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "country",
+      "customEnabled",
+      "customVisibility",
+      "defaultCountry",
+      "description",
+      "desktop",
+      "dimensions",
+      "disableDropdown",
+      "disableParentheses",
+      "disabled",
+      "distinct",
+      "editMode",
+      "editModePermissions",
+      "enableArrow",
+      "enableStyleOnReadonly",
+      "excludeCountries",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "initialValue",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "onlyCountries",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "preferredCountries",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "stripCountryCode",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "valueFormat",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "phoneNumber/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Format for the returned phone number value"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "valueFormat",
+      "label": "Value Format",
+      "editorType": "dropdown",
+      "description": "Format for the returned phone number value"
+    },
+    {
+      "path": "stripCountryCode",
+      "label": "Strip Country Code",
+      "editorType": "switch",
+      "description": "When using International format, return the national format instead (e.g., +27123456789 becomes 0123456789 for ZA). The national format varies by country."
+    },
+    {
+      "path": "defaultCountry",
+      "label": "Default Country",
+      "editorType": "textField",
+      "description": "ISO country code (e.g., za, us, gb)",
+      "group": "Country Settings"
+    },
+    {
+      "path": "preferredCountries",
+      "label": "Preferred Countries",
+      "editorType": "textField",
+      "description": "Comma-separated country codes to show at top (e.g., za,us,gb)",
+      "group": "Country Settings"
+    },
+    {
+      "path": "onlyCountries",
+      "label": "Only Countries",
+      "editorType": "textField",
+      "description": "Comma-separated country codes to include (e.g., za,us,gb). If set, only these will be shown",
+      "group": "Country Settings"
+    },
+    {
+      "path": "excludeCountries",
+      "label": "Exclude Countries",
+      "editorType": "textField",
+      "description": "Comma-separated country codes to exclude from list (e.g., us,ca)",
+      "group": "Country Settings"
+    },
+    {
+      "path": "allowClear",
+      "label": "Allow Clear",
+      "editorType": "switch",
+      "group": "Behavior"
+    },
+    {
+      "path": "enableArrow",
+      "label": "Enable Arrow",
+      "editorType": "switch",
+      "description": "Display arrow icons in the phone input",
+      "group": "Behavior"
+    },
+    {
+      "path": "distinct",
+      "label": "Show Distinct Country Codes",
+      "editorType": "switch",
+      "description": "Display only distinct country codes in the dropdown",
+      "group": "Behavior"
+    },
+    {
+      "path": "disableDropdown",
+      "label": "Disable Dropdown",
+      "editorType": "switch",
+      "description": "Prevent users from changing the country via dropdown",
+      "group": "Behavior"
+    },
+    {
+      "path": "disableParentheses",
+      "label": "Disable Parentheses",
+      "editorType": "switch",
+      "description": "Remove parentheses from phone number input mask",
+      "group": "Behavior"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "phoneNumber/phoneNumber.tsx",
+    "phoneNumber/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_PERMS",
+      "what": "hidden -> visible (inverted) and permissions -> visiblePermissions"
+    }
+  ]
+}

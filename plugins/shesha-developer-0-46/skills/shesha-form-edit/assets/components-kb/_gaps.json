@@ -1,0 +1,197 @@
+[
+  {
+    "file": "_legacyComponents/listControl/index.tsx",
+    "type": "list",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "_legacyComponents/paragraph/index.tsx",
+    "type": "paragraph",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "_legacyComponents/title/index.tsx",
+    "type": "title",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "_legacyComponents/toolbar/toolbarComponent.tsx",
+    "type": "toolbar",
+    "reason": "Settings catalog: no fields extracted (mechanism: react-factory)"
+  },
+  {
+    "file": "card/index.tsx",
+    "type": "card",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataContextSelector/index.tsx",
+    "type": "dataContextSelector",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "dataList/dataListComponent.tsx",
+    "type": "datalist",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataTable/childTable/index.tsx",
+    "type": "childTable",
+    "reason": "Settings catalog: no fields extracted (mechanism: react-factory)"
+  },
+  {
+    "file": "dataTable/selectColumnsButton/selectColumnsButtonComponent.tsx",
+    "type": "datatable.selectColumnsButton",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataTable/table/columnsEditor/index.tsx",
+    "type": "columnsEditorComponent",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataTable/table/columnsEditor/index.tsx",
+    "type": "columnsEditorComponent",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "dataTable/table/tableComponent.tsx",
+    "type": "datatable",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataTable/table/tableTemplateComponent.tsx",
+    "type": "datatable_template",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "dataContextComponent/index.tsx",
+    "type": "dataContext",
+    "reason": "Duplicate type 'dataContext' — not imported by providers/form/defaults/toolboxComponents.ts; dataTable/tableContext/tableContextComponent.tsx (registered) kept instead"
+  },
+  {
+    "file": "dataTable/tableContext/tableContextComponent.tsx",
+    "type": "dataContext",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataTable/tableContext/tableContextComponentLegacy.tsx",
+    "type": "datatableContext",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "dataTable/tableViewSelector/tableViewSelectorComponent.tsx",
+    "type": "tableViewSelector",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "drawer/index.tsx",
+    "type": "drawer",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "formAutocomplete/index.tsx",
+    "type": "formAutocomplete",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "htmlRender/index.tsx",
+    "type": "htmlRender",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "image/index.tsx",
+    "type": "image",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "markdown/index.tsx",
+    "type": "markdown",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "notificationAutocomplete/index.tsx",
+    "type": "notificationAutocomplete",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "permissions/permissionedObjectsTree/permissionedObjectsTree.tsx",
+    "type": "permissionedObjectsTree",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "permissions/permissionsTree/permissionsTree.tsx",
+    "type": "permissionsTree",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "permissions/permissionTagGroup/index.tsx",
+    "type": "permissionTagGroup",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "phoneNumber/phoneNumber.tsx",
+    "type": "phoneNumberInput",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "referenceListAutocomplete/index.tsx",
+    "type": "referenceListAutocomplete",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "scheduledJobExecutionLog/scheduledJobExecutionLog.tsx",
+    "type": "scheduledJobExecutionLog",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "settingsInput/index.tsx",
+    "type": "settingsInput",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "settingsInputRow/index.tsx",
+    "type": "settingsInputRow",
+    "reason": "Settings catalog: component declares no settings form (internal, hidden, deprecated or legacy component)"
+  },
+  {
+    "file": "sizableColumns/sizableColumns.tsx",
+    "type": "sizableColumns",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "wizard/index.tsx",
+    "type": "wizard",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "youtubeVideo/index.tsx",
+    "type": "youtubeVideo",
+    "reason": "initModel present but no statically-readable literal defaults parsed (raw snippet recorded)"
+  },
+  {
+    "file": "dataContextComponent/",
+    "reason": "No IToolboxComponent definition found in this component folder"
+  },
+  {
+    "file": "inputComponent/",
+    "reason": "No IToolboxComponent definition found in this component folder"
+  },
+  {
+    "file": "itemListConfigurator/",
+    "reason": "No IToolboxComponent definition found in this component folder"
+  },
+  {
+    "file": "multiColorInput/",
+    "reason": "No IToolboxComponent definition found in this component folder"
+  },
+  {
+    "file": "requestConfigButton/",
+    "reason": "No IToolboxComponent definition found in this component folder"
+  },
+  {
+    "file": "threeStateSwitch/index.tsx",
+    "type": "threeStateSwitch",
+    "reason": "Not listed in component-versions.json (not in the toolbox registry); entry kept for reference"
+  }
+]

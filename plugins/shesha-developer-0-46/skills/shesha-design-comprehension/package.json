@@ -1,0 +1,12 @@
+{
+  "name": "shesha-design-comprehension",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "emit-eval": "node scripts/layout-probe.js --emit-eval",
+    "setup": "npm install && npx playwright install chromium --with-deps"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}

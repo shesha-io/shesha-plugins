@@ -1,0 +1,59 @@
+{
+ "rule": "scripts",
+ "cases": [
+  {
+   "name": "optional chaining on a visibility expression",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root",
+      "visible": {
+       "_mode": "code",
+       "_code": "return data.order.status !== 1;"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "return data?.order?.status !== 1;"
+    ]
+   ],
+   "node": true,
+   "retire": false
+  },
+  {
+   "name": "assignment targets are never rewritten",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root",
+      "visible": {
+       "_mode": "code",
+       "_code": "data.order.total = 5; return data.order.total > 1;"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "data.order.total = 5; return data?.order?.total > 1;"
+    ]
+   ],
+   "node": true,
+   "retire": false
+  }
+ ]
+}

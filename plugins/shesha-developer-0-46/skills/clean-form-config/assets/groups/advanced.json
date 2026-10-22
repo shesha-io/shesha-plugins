@@ -1,0 +1,2403 @@
+{
+  "_meta": {
+    "version": 4,
+    "group": "advanced"
+  },
+  "address": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "countryRestriction",
+        "type": "array",
+        "desc": "ISO 3166-1 alpha-2 country codes to restrict suggestions (e.g. [\"ZA\",\"US\"]).",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "debounce",
+        "type": "number",
+        "desc": "Milliseconds to wait after typing before querying the geocoding API.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "googleMapsApiKey",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "API key for the Google Maps Places API."
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "latPriority",
+        "type": "number",
+        "desc": "Latitude bias for prioritising nearby results.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "lngPriority",
+        "type": "number",
+        "desc": "Longitude bias for prioritising nearby results.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "minCharactersSearch",
+        "type": "number",
+        "desc": "Minimum characters typed before the lookup fires.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "openCageApiKey",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "API key for the OpenCage geocoding API."
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "desc": "Text prepended to the stored address value.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "radiusPriority",
+        "type": "number",
+        "desc": "Radius (km) around the lat/lng priority point.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "showPriorityBounds",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Highlight the priority bounds area on the map."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "addressInput": {
+    "props": [
+      {
+        "name": "defaultZoom",
+        "type": "number",
+        "desc": "Initial zoom level for the embedded map.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "enableMapInterface",
+        "type": "boolean",
+        "desc": "Show an interactive map alongside the address input.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "googleMapsApiKey",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "API key for the Google Maps Places API."
+      },
+      {
+        "name": "latitudePropertyName",
+        "type": "string",
+        "desc": "Form property name where latitude is stored.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "longitudePropertyName",
+        "type": "string",
+        "desc": "Form property name where longitude is stored.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "mapHeight",
+        "type": "number",
+        "desc": "Height of the embedded map in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "mapWidth",
+        "type": "number",
+        "desc": "Width of the embedded map in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      }
+    ]
+  },
+  "autocomplete": {
+    "props": [
+      {
+        "name": "allowFreeText",
+        "type": "boolean",
+        "desc": "Allow the user to type a value that is not in the suggestion list.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dataSourceType",
+        "type": "string",
+        "options": [
+          "entitiesList",
+          "url"
+        ],
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Where suggestions come from: an entity list ('entitiesList') or a custom URL ('url')."
+      },
+      {
+        "name": "dataSourceUrl",
+        "type": "string",
+        "desc": "API URL to fetch autocomplete suggestions from (used when dataSourceType is 'url').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "disableSearch",
+        "type": "boolean",
+        "desc": "Disable the search input; show suggestions immediately.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "displayPropName",
+        "type": "string",
+        "desc": "Entity property to display as the suggestion label.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "displayValueFunc",
+        "type": "script",
+        "desc": "Receives the selected item object; return the string to display.",
+        "required": false,
+        "JsReturnType": "string",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "entityType",
+        "type": "string",
+        "desc": "Fully-qualified entity type (e.g. 'Shesha.Core.Person'). Used when dataSourceType is 'entitiesList'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "fields",
+        "type": "array",
+        "desc": "Entity property names to include in the query payload.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "filter",
+        "type": "object",
+        "desc": "JSON Logic filter expression appended to every autocomplete query (see jsonlogic.com).",
+        "required": false,
+        "JsReturnType": "object"
+      },
+      {
+        "name": "filterKeysFunc",
+        "type": "script",
+        "desc": "Return an array of property keys to include in the search payload.",
+        "required": false,
+        "JsReturnType": "array",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "fontWeight",
+        "source": "components-kb"
+      },
+      {
+        "name": "grouping",
+        "type": "array",
+        "desc": "Grouping configuration applied to the suggestion list.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "height",
+        "source": "components-kb"
+      },
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "desc": "Remove the border from the autocomplete input.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "keyPropName",
+        "type": "string",
+        "desc": "Entity property used as the stored key value.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "keyValueFunc",
+        "type": "script",
+        "desc": "Receives the selected item; return the key value to store.",
+        "required": false,
+        "JsReturnType": "string",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "maxWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "minWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "options": [
+          "single",
+          "multiple"
+        ],
+        "desc": "Single-select or multi-select mode.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "outcomeValueFunc",
+        "type": "script",
+        "desc": "Transform the selected item into the value stored on the form.",
+        "required": false,
+        "JsReturnType": "any",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "queryParams",
+        "type": "array",
+        "desc": "Static query parameters appended to every autocomplete request.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "quickviewDisplayPropertyName",
+        "type": "string",
+        "desc": "Entity property shown in the quickview popup header.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "quickviewEnabled",
+        "type": "boolean",
+        "desc": "Show a quickview popup when the user hovers over the selected value.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "quickviewFormPath",
+        "type": "string",
+        "desc": "Form identifier for the quickview popup (module/name).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "quickviewGetEntityUrl",
+        "type": "string",
+        "desc": "API URL to fetch the full entity record for the quickview.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "quickviewWidth",
+        "desc": "Width of the quickview popup in pixels.",
+        "required": false
+      },
+      {
+        "name": "sorting",
+        "type": "array",
+        "desc": "Default sort order applied to the suggestion list.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "valueFormat",
+        "type": "string",
+        "options": [
+          "simple",
+          "entityReference",
+          "custom"
+        ],
+        "desc": "Shape of the value stored when an item is selected.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "width",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "calendar": {
+    "props": [
+      {
+        "name": "displayPeriod",
+        "type": "array",
+        "desc": "Calendar views the user can switch between: 'month', 'week', 'work_week', 'day', 'agenda'.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "dummyEventColor",
+        "type": "string",
+        "desc": "CSS color used for placeholder/dummy calendar events.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "endDate",
+        "type": "string",
+        "desc": "ISO 8601 date string for the calendar's end boundary.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "externalEndDate",
+        "type": "string",
+        "desc": "Form property name supplying the end date dynamically.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "externalStartDate",
+        "type": "string",
+        "desc": "Form property name supplying the start date dynamically.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "desc": "Calendar layer configurations defining event data sources.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "calendar-layer"
+      },
+      {
+        "name": "maxDate",
+        "type": "string",
+        "desc": "ISO 8601 date string; no navigation beyond this date.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "minDate",
+        "type": "string",
+        "desc": "ISO 8601 date string; no navigation before this date.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "momentLocale",
+        "type": "string",
+        "desc": "Moment.js locale string for day/month name formatting (e.g. 'en-gb', 'fr').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "inferred": true,
+        "desc": "Name"
+      },
+      {
+        "name": "onSlotClick",
+        "type": "action-config",
+        "desc": "Action triggered when the user clicks an empty calendar slot.",
+        "required": false
+      },
+      {
+        "name": "onViewChange",
+        "type": "action-config",
+        "desc": "Action triggered when the user changes the view or navigates.",
+        "required": false
+      },
+      {
+        "name": "startDate",
+        "type": "string",
+        "desc": "ISO 8601 date string for the calendar's start boundary.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "styles",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "chevron": {
+    "props": [
+      {
+        "name": "activeColor",
+        "type": "string",
+        "desc": "CSS color applied to the active/selected chevron item.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "colorSource",
+        "type": "string",
+        "options": [
+          "primary",
+          "custom",
+          "reflist"
+        ],
+        "desc": "Whether to use the primary theme color, a custom color, or per-item colors from the reference list.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "height",
+        "source": "components-kb"
+      },
+      {
+        "name": "image",
+        "type": "string",
+        "desc": "URL of an image displayed inside the chevron items.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "imageSize",
+        "type": "number",
+        "desc": "Size of the image in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "imageStyle",
+        "type": "boolean",
+        "desc": "Render the image as a CSS background instead of an <img> tag.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "desc": "Static chevron items used when not driven by a reference list.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "referenceList",
+        "type": "reference-list-id",
+        "desc": "Reference list used to populate chevron items dynamically.",
+        "required": false,
+        "JsReturnType": "reference-list-id"
+      },
+      {
+        "name": "showIcons",
+        "type": "boolean",
+        "desc": "Display icons from the reference list items.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "width",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "codeEditor": {
+    "props": [
+      {
+        "name": "availableConstants"
+      },
+      {
+        "name": "environment",
+        "desc": "Environment"
+      },
+      {
+        "name": "exposedVariables"
+      },
+      {
+        "name": "fileName"
+      },
+      {
+        "name": "language",
+        "desc": "Language"
+      },
+      {
+        "name": "mode",
+        "desc": "Mode"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "resultTypeExpression",
+        "desc": "Result type"
+      },
+      {
+        "name": "templateSettings"
+      },
+      {
+        "name": "wrapInTemplate",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If true, a code will be wrapped in a standard function wrapper template"
+      }
+    ]
+  },
+  "colorPicker": {
+    "props": [
+      {
+        "name": "allowClear",
+        "type": "boolean",
+        "desc": "Show a clear button to reset the color to empty.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "disabledAlpha",
+        "type": "boolean",
+        "desc": "Hide the alpha channel slider.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showText",
+        "type": "boolean",
+        "desc": "Display the hex color code as text next to the swatch.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "desc": "Label text shown above the color swatch.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "tooltip",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "component-selector": {
+    "props": [
+      {
+        "name": "componentType",
+        "desc": "Component type"
+      },
+      {
+        "name": "noSelectionItemText",
+        "type": "string",
+        "inferred": true,
+        "desc": "No selection item text"
+      },
+      {
+        "name": "noSelectionItemValue",
+        "type": "string",
+        "inferred": true,
+        "desc": "No selection item value"
+      },
+      {
+        "name": "propertyAccessor"
+      }
+    ]
+  },
+  "configurableActionConfigurator": {
+    "props": [
+      {
+        "name": "allowedActions"
+      }
+    ]
+  },
+  "contextPropertyAutocomplete": {
+    "props": [
+      {
+        "name": "autoFillProps",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Auto `Fill Props` label"
+      },
+      {
+        "name": "dropdownStyle"
+      },
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Hide border"
+      },
+      {
+        "name": "modelType",
+        "type": "string",
+        "inferred": true,
+        "desc": "Type of model. Leave empty to use default model type available in the current MetadataProvider"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "inferred": true,
+        "desc": "Name"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "styledLabel"
+      }
+    ]
+  },
+  "dynamicItemsConfigurator": {
+    "props": []
+  },
+  "editableTagGroup": {
+    "props": [
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "expressionEditor": {
+    "props": [
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "headerAppControl": {
+    "props": []
+  },
+  "htmlRender": {
+    "props": [
+      {
+        "name": "contentType",
+        "desc": "Content Type"
+      },
+      {
+        "name": "html",
+        "desc": "Enter HTML that will render a component. To access the data, you can use the Mustache syntax."
+      },
+      {
+        "name": "renderer",
+        "type": "string",
+        "desc": "HTML string or Handlebars template rendered inside the component.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "sanitize",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Remove all scripts and styles. Switch off to allow scripts and styles. This will make it possible to create complex, stylized, and interacti"
+      }
+    ]
+  },
+  "iconPicker": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color",
+        "source": "components-kb"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "defaultIcon",
+        "type": "string",
+        "desc": "Ant Design icon name shown when no value is selected (e.g. 'QuestionOutlined').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "customColor",
+      "customIcon",
+      "textAlign"
+    ]
+  },
+  "image": {
+    "props": [
+      {
+        "name": "allowPreview",
+        "type": "boolean",
+        "desc": "Show a lightbox preview when the image is clicked.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "allowedFileTypes",
+        "type": "array",
+        "desc": "MIME types or extensions accepted when uploading (e.g. ['image/png', '.jpg']).",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "desc": "Alternative text for screen readers and broken-image fallback.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "base64",
+        "type": "string",
+        "desc": "Base64-encoded image data URI (used when dataSource is 'base64').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "blur",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "brightness",
+        "source": "components-kb"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "contrast",
+        "source": "components-kb"
+      },
+      {
+        "name": "dataSource",
+        "type": "string",
+        "desc": "Which source prop to use: url | storedFile | base64 | entityReference.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "defaultValue"
+      },
+      {
+        "name": "filter",
+        "type": "object",
+        "desc": "CSS filter effects applied to the image. Sub-properties: blur (px), brightness (1=normal), contrast (1=normal), grayscale (0–1), hueRotate (deg), invert (0–1), saturate (1=normal), sepia (0–1).",
+        "required": false,
+        "JsReturnType": "object"
+      },
+      {
+        "name": "filterIntensity",
+        "type": "number",
+        "inferred": true,
+        "desc": "Filter Intensity"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "grayscale",
+        "source": "components-kb"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "hueRotate",
+        "source": "components-kb"
+      },
+      {
+        "name": "invert",
+        "source": "components-kb"
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "objectFit",
+        "type": "string",
+        "options": [
+          "fill",
+          "contain",
+          "cover",
+          "none",
+          "scale-down"
+        ],
+        "desc": "CSS object-fit for controlling how the image fills its container.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "objectPosition",
+        "type": "string",
+        "desc": "CSS object-position (e.g. 'center', '50% 50%').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "opacity",
+        "type": "number",
+        "desc": "CSS opacity (0 = transparent, 1 = opaque).",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "ownerId",
+        "source": "components-kb"
+      },
+      {
+        "name": "ownerType",
+        "source": "components-kb"
+      },
+      {
+        "name": "saturate",
+        "source": "components-kb"
+      },
+      {
+        "name": "sepia",
+        "source": "components-kb"
+      },
+      {
+        "name": "storedFileId",
+        "type": "string",
+        "desc": "GUID of the stored file record (used when dataSource is 'storedFile').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "desc": "Image URL (used when dataSource is 'url').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "value"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "fileCategory"
+    ]
+  },
+  "kanban": {
+    "props": [
+      {
+        "name": "actionConfiguration",
+        "type": "action-config",
+        "desc": "Action triggered when a card is clicked.",
+        "required": false
+      },
+      {
+        "name": "allowDelete",
+        "type": "boolean",
+        "desc": "Show a delete option on kanban cards.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "allowEdit",
+        "type": "boolean",
+        "desc": "Show an edit option on kanban cards.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "allowNewRecord",
+        "type": "boolean",
+        "desc": "Show a button to create new cards in each column.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "collapsible",
+        "type": "boolean",
+        "desc": "Allow columns to be collapsed.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "columnStyle",
+        "type": "string",
+        "desc": "Inline CSS applied to each column container.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "columnStyles",
+        "source": "components-kb"
+      },
+      {
+        "name": "createFormId",
+        "type": "form-id",
+        "desc": "Form used when creating a new card.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "editFormId",
+        "type": "form-id",
+        "desc": "Form used when editing a card.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "entityType",
+        "type": "string",
+        "desc": "Fully-qualified entity type for the kanban cards (e.g. 'Shesha.Core.Person').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "fontColor",
+        "type": "string",
+        "desc": "CSS color applied to card text.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "fontSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "desc": "Gap between cards in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "groupingProperty",
+        "type": "string",
+        "desc": "Entity property used to determine which column a card belongs to.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "headerStyles",
+        "type": "string",
+        "desc": "Inline CSS applied to each column header.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "desc": "Column definitions for the kanban view.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "column-item"
+      },
+      {
+        "name": "kanbanReadonly",
+        "type": "boolean",
+        "desc": "Disable drag-and-drop and all edit actions.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "modalFormId",
+        "type": "form-id",
+        "desc": "Form shown in a modal when a card is clicked.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "referenceList",
+        "type": "reference-list-id",
+        "desc": "Reference list that defines the kanban columns.",
+        "required": false,
+        "JsReturnType": "reference-list-id"
+      },
+      {
+        "name": "showIcons",
+        "type": "boolean",
+        "desc": "Display icons from the reference list in column headers.",
+        "required": false,
+        "JsReturnType": "boolean"
+      }
+    ],
+    "legacy": [
+      "readonly"
+    ]
+  },
+  "labelValueEditor": {
+    "props": [
+      {
+        "name": "colorName"
+      },
+      {
+        "name": "colorTitle"
+      },
+      {
+        "name": "dropdownOptions"
+      },
+      {
+        "name": "iconName"
+      },
+      {
+        "name": "iconTitle"
+      },
+      {
+        "name": "labelName",
+        "type": "string",
+        "inferred": true,
+        "desc": "Key column name"
+      },
+      {
+        "name": "labelTitle",
+        "type": "string",
+        "inferred": true,
+        "desc": "Key column title"
+      },
+      {
+        "name": "mode",
+        "desc": "Mode"
+      },
+      {
+        "name": "valueEditor"
+      },
+      {
+        "name": "valueName",
+        "type": "string",
+        "inferred": true,
+        "desc": "Value column name"
+      },
+      {
+        "name": "valueTitle",
+        "type": "string",
+        "inferred": true,
+        "desc": "Value column title"
+      }
+    ]
+  },
+  "logViewer": {
+    "props": []
+  },
+  "mainMenuEditor": {
+    "props": [
+      {
+        "name": "height",
+        "type": "string",
+        "inferred": true,
+        "desc": "Height"
+      }
+    ]
+  },
+  "markdown": {
+    "props": [
+      {
+        "name": "backgroundColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "desc": "Markdown text to render.",
+        "required": true,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "fontColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "fontSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "desc": "Remove the container border.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "remarkPlugins",
+        "type": "array",
+        "desc": "List of remark plugin names to extend the markdown parser.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "textColor",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "metadataEditor": {
+    "props": [
+      {
+        "name": "baseProperties",
+        "desc": "Base properties"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "notificationAutocomplete": {
+    "props": []
+  },
+  "processMonitor": {
+    "props": [
+      {
+        "name": "components"
+      },
+      {
+        "name": "processId",
+        "type": "string",
+        "inferred": true,
+        "desc": "Process Id"
+      },
+      {
+        "name": "processType",
+        "type": "string",
+        "inferred": true,
+        "desc": "Process Type"
+      }
+    ]
+  },
+  "profileDropdown": {
+    "props": [
+      {
+        "name": "items",
+        "desc": "Configure Menu Buttons"
+      },
+      {
+        "name": "popOverContentStyle",
+        "desc": "A script that returns the style of the popover content as an object. This should conform to CSSProperties"
+      },
+      {
+        "name": "popOverFormId",
+        "desc": "Popover Form"
+      },
+      {
+        "name": "popOverTitle",
+        "type": "string",
+        "inferred": true,
+        "desc": "Popover Title"
+      },
+      {
+        "name": "showUserInfo",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show User Info"
+      },
+      {
+        "name": "subText",
+        "type": "string",
+        "inferred": true,
+        "desc": "Sub Text"
+      },
+      {
+        "name": "subTextColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Color"
+      },
+      {
+        "name": "subTextFontFamily"
+      },
+      {
+        "name": "subTextFontSize",
+        "type": "number",
+        "inferred": true,
+        "desc": "Size"
+      },
+      {
+        "name": "subTextFontWeight"
+      },
+      {
+        "name": "subTextStyle",
+        "desc": "A script that returns the style of the sub text as an object. This should conform to CSSProperties"
+      },
+      {
+        "name": "subTextTextAlign"
+      }
+    ]
+  },
+  "progress": {
+    "props": [
+      {
+        "name": "circleStrokeColor",
+        "type": "string",
+        "desc": "Stroke color for circle and dashboard progress types.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "format",
+        "type": "string",
+        "desc": "Display template for the progress label text (e.g. '{percent}%').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "gapDegree",
+        "type": "number",
+        "desc": "Arc gap angle in degrees for dashboard type.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "gapPosition",
+        "type": "string",
+        "options": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "desc": "Position of the arc gap for dashboard type.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "lineStrokeColor",
+        "type": "string",
+        "desc": "Stroke color for line type.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "percent",
+        "type": "number",
+        "desc": "Current progress as a plain number from 0 to 100 (no % sign).",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "progressType",
+        "type": "string",
+        "options": [
+          "line",
+          "circle",
+          "dashboard"
+        ],
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Visual style of the progress indicator: 'line', 'circle', or 'dashboard'."
+      },
+      {
+        "name": "showInfo",
+        "type": "boolean",
+        "desc": "Show the percentage text or format label.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "options": [
+          "success",
+          "exception",
+          "normal",
+          "active"
+        ],
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Current status determining the bar color and icon."
+      },
+      {
+        "name": "steps",
+        "type": "number",
+        "desc": "Number of steps for a stepped progress bar.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "desc": "Default stroke color (overridden by lineStrokeColor / circleStrokeColor).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "strokeLinecap",
+        "type": "string",
+        "options": [
+          "round",
+          "butt",
+          "square"
+        ],
+        "desc": "Shape of the progress bar ends.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "desc": "Width of the progress stroke in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "success",
+        "type": "string",
+        "desc": "JSON string configuring the success segment ({ percent, strokeColor }).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "trailColor",
+        "type": "string",
+        "desc": "Color of the unfilled portion of the progress track.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "inferred": true,
+        "desc": "The canvas width of the circular progress, unit: px"
+      }
+    ]
+  },
+  "propertyAutocomplete": {
+    "props": [
+      {
+        "name": "autoFillProps",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Auto `Fill Props` label"
+      },
+      {
+        "name": "dropdownStyle"
+      },
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Hide border"
+      },
+      {
+        "name": "mode",
+        "desc": "Mode"
+      },
+      {
+        "name": "modelType",
+        "type": "string",
+        "inferred": true,
+        "desc": "Type of model. Leave empty to use default model type available in the current MetadataProvider"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "propertyModelType"
+      }
+    ]
+  },
+  "queryBuilder": {
+    "props": [
+      {
+        "name": "fieldsUnavailableHint",
+        "type": "string",
+        "inferred": true,
+        "desc": "A hint to be displayed when fields are not available. Can be used in pair with `Entity` for cascading components."
+      },
+      {
+        "name": "jsonExpanded",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If true, the JSON content block is expanded by default"
+      },
+      {
+        "name": "modelType",
+        "desc": "Type of model that can be fetched using MetadataProvider. Leave empty to use closest metadata provider. Note: you can use mustache syntax to"
+      }
+    ]
+  },
+  "refListStatus": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "itemDisplay",
+        "desc": "Whether to show the reference list item name, its icon, or both. At least one of the two is always shown."
+      },
+      {
+        "name": "referenceListId",
+        "type": "reference-list-id",
+        "required": true,
+        "desc": "Identifier of the reference list providing the status options.",
+        "JsReturnType": "reference-list-id"
+      },
+      {
+        "name": "solidBackground",
+        "type": "boolean",
+        "desc": "Use a solid background colour instead of an outlined badge.",
+        "required": false
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "showIcon",
+      "showReflistName"
+    ]
+  },
+  "richTextEditor": {
+    "props": [
+      {
+        "name": "allowResizeX",
+        "type": "boolean",
+        "desc": "Allow horizontal resizing of the editor.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "allowResizeY",
+        "type": "boolean",
+        "desc": "Allow vertical resizing of the editor.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "askBeforePasteFromWord",
+        "type": "boolean",
+        "desc": "Prompt before pasting content copied from MS Word.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "askBeforePasteHTML",
+        "type": "boolean",
+        "desc": "Prompt before pasting raw HTML.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "autofocus",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Automatically focus the editor when the form loads."
+      },
+      {
+        "name": "defaultMode",
+        "type": "string",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "desc": "Starting editor mode: 1=WYSIWYG, 2=source, 3=split.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "direction",
+        "type": "string",
+        "options": [
+          "ltr",
+          "rtl"
+        ],
+        "desc": "Text direction inside the editor.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "disablePlugins",
+        "type": "array",
+        "desc": "List of Jodit plugin names to disable.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "enter",
+        "type": "string",
+        "options": [
+          "P",
+          "DIV",
+          "BR"
+        ],
+        "desc": "HTML element inserted when Enter is pressed.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "height",
+        "source": "components-kb"
+      },
+      {
+        "name": "iframe",
+        "type": "boolean",
+        "desc": "Render the editor content inside an iframe for CSS isolation.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "insertImageAsBase64URI",
+        "type": "boolean",
+        "desc": "Embed inserted images as base64 URIs instead of uploading.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "maxHeight",
+        "source": "components-kb"
+      },
+      {
+        "name": "maxWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "minHeight",
+        "source": "components-kb"
+      },
+      {
+        "name": "minWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Placeholder text shown when the editor is empty."
+      },
+      {
+        "name": "preset",
+        "type": "string",
+        "options": [
+          "inline"
+        ],
+        "desc": "Editor configuration preset.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "saveHeightInStorage",
+        "type": "boolean",
+        "desc": "Persist the editor height in localStorage between sessions.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "saveModeInStorage",
+        "type": "boolean",
+        "desc": "Persist the editor mode in localStorage between sessions.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showCharsCounter",
+        "type": "boolean",
+        "desc": "Show character count in the editor status bar.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showWordsCounter",
+        "type": "boolean",
+        "desc": "Show word count in the editor status bar.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showXPathInStatusbar",
+        "type": "boolean",
+        "desc": "Show the XPath of the selected element in the status bar.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "spellcheck",
+        "type": "boolean",
+        "desc": "Enable browser spell-checking inside the editor.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "textIcons",
+        "type": "boolean",
+        "desc": "Use text labels instead of icons in the toolbar buttons.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "theme",
+        "type": "string",
+        "desc": "Jodit UI theme name (e.g. 'default', 'dark').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "toolbar",
+        "type": "boolean",
+        "desc": "Show the editor toolbar.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "toolbarButtonSize",
+        "type": "string",
+        "options": [
+          "tiny",
+          "xsmall",
+          "middle",
+          "large"
+        ],
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Size preset for toolbar icon buttons."
+      },
+      {
+        "name": "toolbarSticky",
+        "type": "boolean",
+        "desc": "Keep the toolbar visible when scrolling past the editor.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "toolbarStickyOffset",
+        "type": "number",
+        "desc": "Top offset in pixels for the sticky toolbar.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "useSearch",
+        "type": "boolean",
+        "desc": "Enable the find-and-replace functionality.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "width",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "scheduledJobExecutionLog": {
+    "props": []
+  },
+  "settingsInput": {
+    "props": []
+  },
+  "settingsInputRow": {
+    "props": [
+      {
+        "name": "children"
+      },
+      {
+        "name": "inline"
+      },
+      {
+        "name": "inputs"
+      }
+    ]
+  },
+  "statusTag": {
+    "props": [
+      {
+        "name": "allowClear"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "bindingFormat"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "dataSourceType",
+        "desc": "Where the statuses come from. A reference list is the usual source; Values lets you define them inline on the form."
+      },
+      {
+        "name": "disableItemValue"
+      },
+      {
+        "name": "disabledValues"
+      },
+      {
+        "name": "displayStyle"
+      },
+      {
+        "name": "enableMultiSelect",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Enable Multi-Select"
+      },
+      {
+        "name": "events"
+      },
+      {
+        "name": "fallbackDescription"
+      },
+      {
+        "name": "filter",
+        "desc": "Filter"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "ignoredValues",
+        "type": "string",
+        "inferred": true,
+        "desc": "Pass an array of positive integers to hide specific values. For example: [1, 2, 3]."
+      },
+      {
+        "name": "incomeCustomJs"
+      },
+      {
+        "name": "labelCustomJs"
+      },
+      {
+        "name": "mode"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "outcomeCustomJs"
+      },
+      {
+        "name": "placeholder"
+      },
+      {
+        "name": "popupClassName"
+      },
+      {
+        "name": "readOnlyPlaceholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Text that gets displayed when the bound property has no value."
+      },
+      {
+        "name": "referenceListId",
+        "desc": "Reference List"
+      },
+      {
+        "name": "referenceListName"
+      },
+      {
+        "name": "referenceListNamespace"
+      },
+      {
+        "name": "selectRef"
+      },
+      {
+        "name": "showIcon",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "When checked the icon will display on the left side of the DisplayName"
+      },
+      {
+        "name": "showItemName",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "When checked the DisplayName/RefList Name will be shown."
+      },
+      {
+        "name": "styleValue"
+      },
+      {
+        "name": "tag"
+      },
+      {
+        "name": "tagStyle"
+      },
+      {
+        "name": "tagVariant",
+        "desc": "How each tag is filled when the status carries its own colour. Solid fills the tag, Outlined draws a coloured border, Filled applies a soft "
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "desc": "Manual value to display when valueSource is 'manual'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "valueFormat"
+      },
+      {
+        "name": "values",
+        "desc": "Values"
+      },
+      {
+        "name": "width"
+      }
+    ],
+    "legacy": [
+      "mappings",
+      "valueSource"
+    ]
+  },
+  "styleBox": {
+    "props": [
+      {
+        "name": "format"
+      },
+      {
+        "name": "noMargin"
+      }
+    ]
+  },
+  "themeEditor": {
+    "props": [
+      {
+        "name": "height",
+        "type": "string",
+        "inferred": true,
+        "desc": "Height"
+      }
+    ]
+  },
+  "toolbar": {
+    "props": [
+      {
+        "name": "isInline"
+      },
+      {
+        "name": "items"
+      },
+      {
+        "name": "noStyles"
+      },
+      {
+        "name": "spaceSize"
+      }
+    ]
+  }
+}

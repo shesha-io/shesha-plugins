@@ -1,0 +1,79 @@
+{
+  "$overlay": "rail-panel",
+  "$note": "Neutral channels only. card = white surface, hairline border, radius 8, soft card shadow, 16px inner padding. Title text = section heading ($role, brand colour from live theme). Count badge = muted neutral pill (surface #f0f2f5 / muted #9BA3B8). Add link colour = app-theme primary (buttonGroup link, NOT styled here). datalist gap 12. Rail stacking gap (16) is owned by the enclosing detailRail container, not this card.",
+  "targets": {
+    "railCard": {
+      "desktop": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "0px", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "auto" },
+        "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+        "enableStyleOnReadonly": false
+      },
+      "tablet": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "100%", "height": "auto" },
+        "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+        "enableStyleOnReadonly": false
+      },
+      "mobile": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "100%", "height": "auto" },
+        "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+        "enableStyleOnReadonly": false
+      }
+    },
+    "railStrip": {
+      "desktop": {
+        "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "space-between", "flexWrap": "nowrap", "gap": "8px",
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "100%" },
+        "stylingBox": "{\"marginBottom\":\"12\"}",
+        "enableStyleOnReadonly": false
+      },
+      "tablet": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "space-between", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "100%" }, "stylingBox": "{\"marginBottom\":\"12\"}" },
+      "mobile": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "space-between", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "100%" }, "stylingBox": "{\"marginBottom\":\"12\"}" }
+    },
+    "railTitleWrap": {
+      "desktop": {
+        "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-start", "flexWrap": "nowrap", "gap": "8px",
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "none" },
+        "stylingBox": "{}"
+      },
+      "tablet": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-start", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "auto" } },
+      "mobile": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-start", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "auto" } }
+    },
+    "railTitle": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 14, "weight": "600", "align": "left", "color": "$role:sectionHeading" },
+        "dimensions": { "width": "auto" },
+        "border": {}, "background": {}, "shadow": {}, "stylingBox": "{}"
+      },
+      "tablet": {}, "mobile": {}
+    },
+    "railCount": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 12, "weight": "500", "align": "center", "color": "#9BA3B8" },
+        "background": { "type": "color", "color": "#f0f2f5" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "none", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 10 } },
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "20px", "maxHeight": "auto", "minWidth": "20px", "maxWidth": "auto" },
+        "stylingBox": "{\"paddingTop\":\"0\",\"paddingRight\":\"8\",\"paddingBottom\":\"0\",\"paddingLeft\":\"8\"}",
+        "shadow": {}
+      },
+      "tablet": {}, "mobile": {}
+    },
+    "railAddWrap": {
+      "desktop": {
+        "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-end", "flexWrap": "nowrap", "gap": "8px",
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "none" },
+        "stylingBox": "{}"
+      },
+      "tablet": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-end", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "auto" } },
+      "mobile": { "display": "flex", "flexDirection": "row", "alignItems": "center", "justifyContent": "flex-end", "flexWrap": "nowrap", "gap": "8px", "dimensions": { "width": "auto" } }
+    }
+  }
+}

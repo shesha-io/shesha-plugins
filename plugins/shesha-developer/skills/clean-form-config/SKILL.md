@@ -75,6 +75,8 @@ is frequently headless, where an interactive prompt dead-ends the whole run.
 
 ---
 
+After a `shesha-upgrade-reconciler` fleet, run this skill on the reconciled forms to strip leftovers (dead properties, `console.log`, unwrapped API calls).
+
 ## Notes
 
 - **Conservative approach**: ambiguous properties go to manual review, not auto-clean.

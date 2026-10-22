@@ -1,0 +1,1854 @@
+{
+  "_meta": {
+    "version": 4,
+    "group": "data-display"
+  },
+  "alert": {
+    "props": [
+      {
+        "name": "alertType",
+        "required": false,
+        "type": "string",
+        "options": [
+          "success",
+          "info",
+          "warning",
+          "error"
+        ],
+        "desc": "Determines the alert colour and icon.",
+        "JsReturnType": "string"
+      },
+      {
+        "name": "banner",
+        "required": false,
+        "type": "boolean",
+        "JsReturnType": "boolean",
+        "desc": "When true, renders the alert as a full-width banner with no border radius."
+      },
+      {
+        "name": "closable",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a close button that dismisses the alert."
+      },
+      {
+        "name": "icon",
+        "required": false,
+        "desc": "Custom Ant Design icon name shown in the alert (overrides the default type icon)."
+      },
+      {
+        "name": "marquee",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Scroll the alert text as a marquee."
+      },
+      {
+        "name": "showIcon",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the default icon for the alert type."
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Alert message text."
+      }
+    ]
+  },
+  "barChart": {
+    "props": [
+      {
+        "name": "additionalProperties",
+        "desc": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. "
+      },
+      {
+        "name": "aggregationMethod",
+        "desc": "Aggregation Method"
+      },
+      {
+        "name": "allowFilter"
+      },
+      {
+        "name": "axisLabelFont"
+      },
+      {
+        "name": "axisProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "axisPropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the x-axis. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "chartType"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom CSS Class"
+      },
+      {
+        "name": "dataMode",
+        "desc": "The type of data source you want to use for the chart. If you select `URL`, you will have to provide a URL endpoint to the data. If you sele"
+      },
+      {
+        "name": "entityType",
+        "desc": "The entity type you want to use."
+      },
+      {
+        "name": "filterProperties"
+      },
+      {
+        "name": "filters",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "groupingProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to use on the Legend. This is the property that will be used to group the data for Pivot Charts."
+      },
+      {
+        "name": "groupingTimeSeriesFormat",
+        "desc": "Grouping Time Series Format"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "isAxisTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the x-axis is a time series, switch to true."
+      },
+      {
+        "name": "isDoughnut",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the pie chart is a doughnut chart, switch to true."
+      },
+      {
+        "name": "isGroupingTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the grouping property is a time series, switch to true."
+      },
+      {
+        "name": "legendFont"
+      },
+      {
+        "name": "legendPosition",
+        "desc": "Legend Position"
+      },
+      {
+        "name": "maxResultCount",
+        "type": "number",
+        "inferred": true,
+        "desc": "The maximum number of items to be fetched from the data source. If not provided, the data will be fetched without a limit."
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "orderBy",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+      },
+      {
+        "name": "orderDirection",
+        "desc": "Order Direction"
+      },
+      {
+        "name": "requestTimeout",
+        "type": "number",
+        "inferred": true,
+        "desc": "The timeout for the request (in milliseconds) to the data source. 10000 is the default timeout."
+      },
+      {
+        "name": "showDescription"
+      },
+      {
+        "name": "showLegend",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the legend of the chart. Legend is the area that shows the color and what it represents."
+      },
+      {
+        "name": "showName"
+      },
+      {
+        "name": "showTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the title of the chart"
+      },
+      {
+        "name": "showXAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis"
+      },
+      {
+        "name": "showXAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis Title"
+      },
+      {
+        "name": "showYAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis"
+      },
+      {
+        "name": "showYAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis Title"
+      },
+      {
+        "name": "simpleOrPivot",
+        "desc": "Simple / Pivot"
+      },
+      {
+        "name": "stacked",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the bar chart is a stacked chart, switch to true."
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "The color of the stroke / border for the elements (bars, lines, etc.) in the chart. Default is #000000"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "inferred": true,
+        "desc": "The thickness of the stroke for the elements (bars, lines, etc.) in the chart. Default is 0.0"
+      },
+      {
+        "name": "tension",
+        "type": "number",
+        "inferred": true,
+        "desc": "Tension"
+      },
+      {
+        "name": "tickFont"
+      },
+      {
+        "name": "timeSeriesFormat",
+        "desc": "Axis Property Time Series Format"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "inferred": true,
+        "desc": "The title of the chart (if any), if none then the title will be generated from the entity type."
+      },
+      {
+        "name": "titleFont"
+      },
+      {
+        "name": "url",
+        "desc": "The endpoint to use to fetch data."
+      },
+      {
+        "name": "valueProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "valuePropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the value property. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "xProperty"
+      },
+      {
+        "name": "yProperty"
+      }
+    ]
+  },
+  "imagePicker": {
+    "props": [
+      {
+        "name": "allowDelete",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Allow Delete"
+      },
+      {
+        "name": "allowReplace",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Allow Replace"
+      },
+      {
+        "name": "allowUpload",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Allow Upload"
+      },
+      {
+        "name": "allowedFileTypes",
+        "desc": "File types that can be accepted."
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "displayStyle"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "hideFileName"
+      },
+      {
+        "name": "isDragger",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Whether the uploader should show a dragger instead of button"
+      },
+      {
+        "name": "listType"
+      },
+      {
+        "name": "ownerId",
+        "type": "string",
+        "inferred": true,
+        "desc": "Owner Id"
+      },
+      {
+        "name": "ownerType",
+        "desc": "Owner Type"
+      },
+      {
+        "name": "thumbnailHeight"
+      },
+      {
+        "name": "thumbnailWidth"
+      },
+      {
+        "name": "useSync",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Synchronous upload"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "lineChart": {
+    "props": [
+      {
+        "name": "additionalProperties",
+        "desc": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. "
+      },
+      {
+        "name": "aggregationMethod",
+        "desc": "Aggregation Method"
+      },
+      {
+        "name": "allowFilter"
+      },
+      {
+        "name": "axisLabelFont"
+      },
+      {
+        "name": "axisProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "axisPropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the x-axis. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "chartType"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom CSS Class"
+      },
+      {
+        "name": "dataMode",
+        "desc": "The type of data source you want to use for the chart. If you select `URL`, you will have to provide a URL endpoint to the data. If you sele"
+      },
+      {
+        "name": "entityType",
+        "desc": "The entity type you want to use."
+      },
+      {
+        "name": "filterProperties"
+      },
+      {
+        "name": "filters",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "groupingProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to use on the Legend. This is the property that will be used to group the data for Pivot Charts."
+      },
+      {
+        "name": "groupingTimeSeriesFormat",
+        "desc": "Grouping Time Series Format"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "isAxisTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the x-axis is a time series, switch to true."
+      },
+      {
+        "name": "isDoughnut",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the pie chart is a doughnut chart, switch to true."
+      },
+      {
+        "name": "isGroupingTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the grouping property is a time series, switch to true."
+      },
+      {
+        "name": "legendFont"
+      },
+      {
+        "name": "legendPosition",
+        "desc": "Legend Position"
+      },
+      {
+        "name": "maxResultCount",
+        "type": "number",
+        "inferred": true,
+        "desc": "The maximum number of items to be fetched from the data source. If not provided, the data will be fetched without a limit."
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "orderBy",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+      },
+      {
+        "name": "orderDirection",
+        "desc": "Order Direction"
+      },
+      {
+        "name": "requestTimeout",
+        "type": "number",
+        "inferred": true,
+        "desc": "The timeout for the request (in milliseconds) to the data source. 10000 is the default timeout."
+      },
+      {
+        "name": "showDescription"
+      },
+      {
+        "name": "showLegend",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the legend of the chart. Legend is the area that shows the color and what it represents."
+      },
+      {
+        "name": "showName"
+      },
+      {
+        "name": "showTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the title of the chart"
+      },
+      {
+        "name": "showXAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis"
+      },
+      {
+        "name": "showXAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis Title"
+      },
+      {
+        "name": "showYAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis"
+      },
+      {
+        "name": "showYAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis Title"
+      },
+      {
+        "name": "simpleOrPivot",
+        "desc": "Simple / Pivot"
+      },
+      {
+        "name": "stacked",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the bar chart is a stacked chart, switch to true."
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "The color of the stroke / border for the elements (bars, lines, etc.) in the chart. Default is #000000"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "inferred": true,
+        "desc": "The thickness of the stroke for the elements (bars, lines, etc.) in the chart. Default is 0.0"
+      },
+      {
+        "name": "tension",
+        "type": "number",
+        "inferred": true,
+        "desc": "Tension"
+      },
+      {
+        "name": "tickFont"
+      },
+      {
+        "name": "timeSeriesFormat",
+        "desc": "Axis Property Time Series Format"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "inferred": true,
+        "desc": "The title of the chart (if any), if none then the title will be generated from the entity type."
+      },
+      {
+        "name": "titleFont"
+      },
+      {
+        "name": "url",
+        "desc": "The endpoint to use to fetch data."
+      },
+      {
+        "name": "valueProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "valuePropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the value property. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "xProperty"
+      },
+      {
+        "name": "yProperty"
+      }
+    ]
+  },
+  "link": {
+    "props": [
+      {
+        "name": "alignItems",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "normal",
+          "stretch",
+          "center",
+          "start",
+          "end",
+          "flex-start",
+          "flex-end",
+          "baseline",
+          "first baseline",
+          "last baseline",
+          "safe center",
+          "unsafe center",
+          "inherit",
+          "initial",
+          "revert",
+          "revert-layer",
+          "unset"
+        ],
+        "desc": "CSS align-items for the link flex container."
+      },
+      {
+        "name": "className",
+        "source": "components-kb"
+      },
+      {
+        "name": "components",
+        "source": "components-kb"
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Text content displayed as the link label."
+      },
+      {
+        "name": "direction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "horizontal",
+          "vertical"
+        ],
+        "desc": "Flex direction for child content."
+      },
+      {
+        "name": "download",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "When set, the link triggers a file download using this value as the filename."
+      },
+      {
+        "name": "hasChildren",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "When true, the link renders child components inside it."
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "URL the link navigates to."
+      },
+      {
+        "name": "icon",
+        "source": "components-kb"
+      },
+      {
+        "name": "justifyContent",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "center",
+          "start",
+          "end",
+          "flex-start",
+          "flex-end",
+          "left",
+          "right",
+          "normal",
+          "space-between",
+          "space-around",
+          "space-evenly",
+          "stretch",
+          "safe center",
+          "unsafe center",
+          "inherit",
+          "initial",
+          "revert",
+          "revert-layer",
+          "unset"
+        ],
+        "desc": "CSS justify-content for the link flex container."
+      },
+      {
+        "name": "justifyItems",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "normal",
+          "stretch",
+          "center",
+          "start",
+          "end",
+          "flex-start",
+          "flex-end",
+          "self-start",
+          "self-end",
+          "left",
+          "right",
+          "baseline",
+          "first baseline",
+          "last baseline",
+          "safe center",
+          "unsafe center",
+          "legacy right",
+          "legacy left",
+          "legacy center",
+          "inherit",
+          "initial",
+          "revert",
+          "revert-layer",
+          "unset"
+        ],
+        "desc": "CSS justify-items for the link flex container."
+      },
+      {
+        "name": "target",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "_blank",
+          "_self",
+          "_parent",
+          "_top"
+        ],
+        "desc": "Browsing context for the link."
+      }
+    ]
+  },
+  "paragraph": {
+    "props": [
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "content"
+      },
+      {
+        "name": "contentType"
+      },
+      {
+        "name": "copyable"
+      },
+      {
+        "name": "delete"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "italic"
+      },
+      {
+        "name": "level"
+      },
+      {
+        "name": "padding"
+      },
+      {
+        "name": "styles"
+      },
+      {
+        "name": "textAlign"
+      },
+      {
+        "name": "underline"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "pieChart": {
+    "props": [
+      {
+        "name": "additionalProperties",
+        "desc": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. "
+      },
+      {
+        "name": "aggregationMethod",
+        "desc": "Aggregation Method"
+      },
+      {
+        "name": "allowFilter"
+      },
+      {
+        "name": "axisLabelFont"
+      },
+      {
+        "name": "axisProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "axisPropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the x-axis. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "chartType"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom CSS Class"
+      },
+      {
+        "name": "dataMode",
+        "desc": "The type of data source you want to use for the chart. If you select `URL`, you will have to provide a URL endpoint to the data. If you sele"
+      },
+      {
+        "name": "entityType",
+        "desc": "The entity type you want to use."
+      },
+      {
+        "name": "filterProperties"
+      },
+      {
+        "name": "filters",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "groupingProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to use on the Legend. This is the property that will be used to group the data for Pivot Charts."
+      },
+      {
+        "name": "groupingTimeSeriesFormat",
+        "desc": "Grouping Time Series Format"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "isAxisTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the x-axis is a time series, switch to true."
+      },
+      {
+        "name": "isDoughnut",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the pie chart is a doughnut chart, switch to true."
+      },
+      {
+        "name": "isGroupingTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the grouping property is a time series, switch to true."
+      },
+      {
+        "name": "legendFont"
+      },
+      {
+        "name": "legendPosition",
+        "desc": "Legend Position"
+      },
+      {
+        "name": "maxResultCount",
+        "type": "number",
+        "inferred": true,
+        "desc": "The maximum number of items to be fetched from the data source. If not provided, the data will be fetched without a limit."
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "orderBy",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+      },
+      {
+        "name": "orderDirection",
+        "desc": "Order Direction"
+      },
+      {
+        "name": "requestTimeout",
+        "type": "number",
+        "inferred": true,
+        "desc": "The timeout for the request (in milliseconds) to the data source. 10000 is the default timeout."
+      },
+      {
+        "name": "showDescription"
+      },
+      {
+        "name": "showLegend",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the legend of the chart. Legend is the area that shows the color and what it represents."
+      },
+      {
+        "name": "showName"
+      },
+      {
+        "name": "showTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the title of the chart"
+      },
+      {
+        "name": "showXAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis"
+      },
+      {
+        "name": "showXAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis Title"
+      },
+      {
+        "name": "showYAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis"
+      },
+      {
+        "name": "showYAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis Title"
+      },
+      {
+        "name": "simpleOrPivot",
+        "desc": "Simple / Pivot"
+      },
+      {
+        "name": "stacked",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the bar chart is a stacked chart, switch to true."
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "The color of the stroke / border for the elements (bars, lines, etc.) in the chart. Default is #000000"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "inferred": true,
+        "desc": "The thickness of the stroke for the elements (bars, lines, etc.) in the chart. Default is 0.0"
+      },
+      {
+        "name": "tension",
+        "type": "number",
+        "inferred": true,
+        "desc": "Tension"
+      },
+      {
+        "name": "tickFont"
+      },
+      {
+        "name": "timeSeriesFormat",
+        "desc": "Axis Property Time Series Format"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "inferred": true,
+        "desc": "The title of the chart (if any), if none then the title will be generated from the entity type."
+      },
+      {
+        "name": "titleFont"
+      },
+      {
+        "name": "url",
+        "desc": "The endpoint to use to fetch data."
+      },
+      {
+        "name": "valueProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "valuePropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the value property. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "xProperty"
+      },
+      {
+        "name": "yProperty"
+      }
+    ]
+  },
+  "polarAreaChart": {
+    "props": [
+      {
+        "name": "additionalProperties",
+        "desc": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. "
+      },
+      {
+        "name": "aggregationMethod",
+        "desc": "Aggregation Method"
+      },
+      {
+        "name": "allowFilter"
+      },
+      {
+        "name": "axisLabelFont"
+      },
+      {
+        "name": "axisProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "axisPropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the x-axis. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "chartType"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom CSS Class"
+      },
+      {
+        "name": "dataMode",
+        "desc": "The type of data source you want to use for the chart. If you select `URL`, you will have to provide a URL endpoint to the data. If you sele"
+      },
+      {
+        "name": "entityType",
+        "desc": "The entity type you want to use."
+      },
+      {
+        "name": "filterProperties"
+      },
+      {
+        "name": "filters",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "groupingProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to use on the Legend. This is the property that will be used to group the data for Pivot Charts."
+      },
+      {
+        "name": "groupingTimeSeriesFormat",
+        "desc": "Grouping Time Series Format"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "isAxisTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the x-axis is a time series, switch to true."
+      },
+      {
+        "name": "isDoughnut",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the pie chart is a doughnut chart, switch to true."
+      },
+      {
+        "name": "isGroupingTimeSeries",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the grouping property is a time series, switch to true."
+      },
+      {
+        "name": "legendFont"
+      },
+      {
+        "name": "legendPosition",
+        "desc": "Legend Position"
+      },
+      {
+        "name": "maxResultCount",
+        "type": "number",
+        "inferred": true,
+        "desc": "The maximum number of items to be fetched from the data source. If not provided, the data will be fetched without a limit."
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "orderBy",
+        "type": "string",
+        "inferred": true,
+        "desc": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+      },
+      {
+        "name": "orderDirection",
+        "desc": "Order Direction"
+      },
+      {
+        "name": "requestTimeout",
+        "type": "number",
+        "inferred": true,
+        "desc": "The timeout for the request (in milliseconds) to the data source. 10000 is the default timeout."
+      },
+      {
+        "name": "showDescription"
+      },
+      {
+        "name": "showLegend",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the legend of the chart. Legend is the area that shows the color and what it represents."
+      },
+      {
+        "name": "showName"
+      },
+      {
+        "name": "showTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show the title of the chart"
+      },
+      {
+        "name": "showXAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis"
+      },
+      {
+        "name": "showXAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show X Axis Title"
+      },
+      {
+        "name": "showYAxisScale",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis"
+      },
+      {
+        "name": "showYAxisTitle",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Show Y Axis Title"
+      },
+      {
+        "name": "simpleOrPivot",
+        "desc": "Simple / Pivot"
+      },
+      {
+        "name": "stacked",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "If the bar chart is a stacked chart, switch to true."
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "The color of the stroke / border for the elements (bars, lines, etc.) in the chart. Default is #000000"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "inferred": true,
+        "desc": "The thickness of the stroke for the elements (bars, lines, etc.) in the chart. Default is 0.0"
+      },
+      {
+        "name": "tension",
+        "type": "number",
+        "inferred": true,
+        "desc": "Tension"
+      },
+      {
+        "name": "tickFont"
+      },
+      {
+        "name": "timeSeriesFormat",
+        "desc": "Axis Property Time Series Format"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "inferred": true,
+        "desc": "The title of the chart (if any), if none then the title will be generated from the entity type."
+      },
+      {
+        "name": "titleFont"
+      },
+      {
+        "name": "url",
+        "desc": "The endpoint to use to fetch data."
+      },
+      {
+        "name": "valueProperty",
+        "type": "string",
+        "inferred": true,
+        "desc": "The property to be used on the x-axis."
+      },
+      {
+        "name": "valuePropertyLabel",
+        "type": "string",
+        "inferred": true,
+        "desc": "Custom label of the value property. If not provided, the label will be generated from the entity type property."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "xProperty"
+      },
+      {
+        "name": "yProperty"
+      }
+    ]
+  },
+  "statistic": {
+    "props": [
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "onClick",
+        "source": "components-kb"
+      },
+      {
+        "name": "onDoubleClick",
+        "source": "components-kb"
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "precision",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Number of decimal places to show. Must be a non-negative integer."
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Text displayed before the value."
+      },
+      {
+        "name": "prefixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"RiseOutlined\")."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Text displayed after the value."
+      },
+      {
+        "name": "suffixIcon",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Ant Design icon name (e.g. \"RiseOutlined\")."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Label displayed above the value."
+      },
+      {
+        "name": "titleFont",
+        "type": "font-config",
+        "required": false,
+        "JsReturnType": "font-config",
+        "desc": "Font configuration. Matches font-config shape plus an optional transform (CSS text-transform)."
+      },
+      {
+        "name": "titleStyle",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Inline CSS style string applied to the title."
+      },
+      {
+        "name": "value",
+        "required": false,
+        "desc": "The value to display. Accepts a number or string."
+      },
+      {
+        "name": "valueFont",
+        "type": "font-config",
+        "required": false,
+        "JsReturnType": "font-config",
+        "desc": "Font configuration. Matches font-config shape plus an optional transform (CSS text-transform)."
+      },
+      {
+        "name": "valueStyle",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Inline CSS style string applied to the value."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "text": {
+    "props": [
+      {
+        "name": "backgroundColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "color",
+        "source": "components-kb"
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Static text content to display."
+      },
+      {
+        "name": "contentType",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "primary",
+          "secondary",
+          "success",
+          "warning",
+          "info",
+          "danger",
+          "custom"
+        ],
+        "desc": "Ant Design typography colour preset."
+      },
+      {
+        "name": "copyable",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a copy-to-clipboard button."
+      },
+      {
+        "name": "delete",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Apply strikethrough."
+      },
+      {
+        "name": "fontSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "italic",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Italicise the text."
+      },
+      {
+        "name": "level",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          "text-xxs",
+          "text-xs",
+          "text-sm",
+          "text-base",
+          "text-lg",
+          "text-xl",
+          "text-2xl",
+          "text-3xl",
+          "text-4xl",
+          "text-5xl",
+          "text-6xl",
+          "text-7xl",
+          "text-8xl",
+          "text-9xl"
+        ],
+        "desc": "Heading level (1–5) or a font-size token (e.g. \"text-lg\"). Only used when textType is \"title\"."
+      },
+      {
+        "name": "padding",
+        "source": "components-kb"
+      },
+      {
+        "name": "styles",
+        "source": "components-kb"
+      },
+      {
+        "name": "textAlign",
+        "source": "components-kb"
+      },
+      {
+        "name": "underline",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Underline the text."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Dynamic bound value — overrides content when present."
+      }
+    ],
+    "legacy": [
+      "code",
+      "contentDisplay",
+      "dataType",
+      "dateFormat",
+      "ellipsis",
+      "keyboard",
+      "mark",
+      "numberFormat",
+      "strong",
+      "textType"
+    ]
+  },
+  "title": {
+    "props": [
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "content"
+      },
+      {
+        "name": "contentType"
+      },
+      {
+        "name": "copyable"
+      },
+      {
+        "name": "delete"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "italic"
+      },
+      {
+        "name": "level"
+      },
+      {
+        "name": "padding"
+      },
+      {
+        "name": "styles"
+      },
+      {
+        "name": "textAlign"
+      },
+      {
+        "name": "underline"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "validationErrors": {
+    "props": [
+      {
+        "name": "backgroundColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderType",
+        "source": "components-kb"
+      },
+      {
+        "name": "className",
+        "source": "components-kb"
+      },
+      {
+        "name": "height",
+        "source": "components-kb"
+      },
+      {
+        "name": "hideBorder",
+        "source": "components-kb"
+      },
+      {
+        "name": "width",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "youtubeVideo": {
+    "props": [
+      {
+        "name": "autoplay",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Automatically start playing the video when the page loads"
+      },
+      {
+        "name": "ccLangPref",
+        "type": "string",
+        "inferred": true,
+        "desc": "ISO 639-1 language code for captions (e.g., en, es, fr)"
+      },
+      {
+        "name": "ccLoadPolicy",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Automatically display closed captions by default"
+      },
+      {
+        "name": "customThumbnail"
+      },
+      {
+        "name": "disableKeyboard",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Prevent keyboard shortcuts from controlling the player"
+      },
+      {
+        "name": "endTime",
+        "type": "number",
+        "inferred": true,
+        "desc": "Time in seconds where the video should stop playing"
+      },
+      {
+        "name": "fullscreen",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Display the fullscreen button in player controls"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "isRequired"
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Replay video continuously from the beginning when it ends"
+      },
+      {
+        "name": "mute",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Start video with audio muted"
+      },
+      {
+        "name": "onEnd",
+        "desc": "Action to execute when the video finishes playing"
+      },
+      {
+        "name": "onPause",
+        "desc": "Action to execute when the video is paused"
+      },
+      {
+        "name": "onPlay",
+        "desc": "Action to execute when the video starts playing"
+      },
+      {
+        "name": "onReady",
+        "desc": "Action to execute when the video player is ready"
+      },
+      {
+        "name": "playsinline",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Enable inline playback on iOS devices (instead of fullscreen)"
+      },
+      {
+        "name": "privacyMode",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Use youtube-nocookie.com"
+      },
+      {
+        "name": "responsive",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "A 16:9 aspect ratio mode. Width from Appearance tab will auto-convert to % (e.g., 500px → 500%) height is ignored."
+      },
+      {
+        "name": "showControls",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Display video player controls (play, pause, volume, etc.)"
+      },
+      {
+        "name": "startTime",
+        "type": "number",
+        "inferred": true,
+        "desc": "Time in seconds where the video should start playing"
+      },
+      {
+        "name": "thumbnailBase64",
+        "desc": "Upload Thumbnail"
+      },
+      {
+        "name": "thumbnailSource",
+        "desc": "Thumbnail Source Type"
+      },
+      {
+        "name": "thumbnailStoredFileId",
+        "type": "string",
+        "inferred": true,
+        "desc": "Stored File ID"
+      },
+      {
+        "name": "thumbnailUrl",
+        "type": "string",
+        "inferred": true,
+        "desc": "Thumbnail URL"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "inferred": true,
+        "desc": "Title"
+      },
+      {
+        "name": "titleLevel",
+        "desc": "Heading level for the title (h1-h5)"
+      },
+      {
+        "name": "videoId",
+        "type": "string",
+        "inferred": true,
+        "desc": "YouTube video ID (e.g., dQw4w9WgXcQ)"
+      },
+      {
+        "name": "watchCompletionRequired",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "When enabled, the form cannot be submitted until the user watches the entire video. The completion state is stored in the form data."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  }
+}

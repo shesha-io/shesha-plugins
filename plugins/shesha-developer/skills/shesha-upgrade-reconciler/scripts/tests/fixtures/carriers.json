@@ -1,0 +1,35 @@
+{
+ "rule": "carriers",
+ "cases": [
+  {
+   "name": "hidden carrier mounted and its renderer wrapped",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "car",
+      "type": "htmlRender",
+      "componentName": "car",
+      "parentId": "root",
+      "hidden": true,
+      "contentType": "jsx",
+      "renderer": "return '<style>.a{}</style><div>x</div>';"
+     }
+    ]
+   },
+   "changes": 2,
+   "expect": [
+    [
+     "components/0/hidden",
+     false
+    ],
+    [
+     "components/0/renderer",
+     "/*reconciler:046-carrier*/\nconst __out = (() => {\nreturn '<style>.a{}</style><div>x</div>';\n})();\nreturn '<span hidden></span><style>[data-sha-c-form-name=\"Shop/order-details\"] [data-sha-c-type=\"htmlRender\"]{width:100% !important;}</style>' + ((typeof __out === 'string') ? __out : '');"
+    ]
+   ],
+   "node": true,
+   "retire": false
+  }
+ ]
+}

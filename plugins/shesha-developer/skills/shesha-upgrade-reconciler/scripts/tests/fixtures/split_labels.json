@@ -1,0 +1,168 @@
+{
+ "rule": "split_labels",
+ "cases": [
+  {
+   "name": "a measured wrapping label is moved into its own text",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "f1",
+      "type": "textField",
+      "componentName": "f1",
+      "parentId": "root",
+      "label": "Total amount of the order"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/id",
+     "f1-row046"
+    ],
+    [
+     "components/0/components/0/id",
+     "f1-lbl046"
+    ],
+    [
+     "components/0/components/0/content",
+     "Total amount of the order"
+    ],
+    [
+     "components/0/components/0/desktop/dimensions/width",
+     "33.333%"
+    ],
+    [
+     "components/0/components/1/id",
+     "f1-hold046"
+    ],
+    [
+     "components/0/components/1/components/0/id",
+     "f1"
+    ],
+    [
+     "components/0/components/1/components/0/hideLabel",
+     true
+    ],
+    [
+     "components/0/components/1/components/0/_reconcilerLabel",
+     "Total amount of the order"
+    ],
+    [
+     "components/0/components/1/components/0/parentId",
+     "f1-hold046"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "labelSplit": [
+     "Total amount of the order"
+    ]
+   },
+   "touched": [
+    "components/0"
+   ]
+  },
+  {
+   "name": "the hosting subForm labelCol sets the label share",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "f1",
+      "type": "textField",
+      "componentName": "f1",
+      "parentId": "root",
+      "label": "Total amount of the order"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/components/0/desktop/dimensions/width",
+     "41.667%"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "labelSplit": [
+     "Total amount of the order"
+    ]
+   },
+   "forms": [
+    {
+     "module": "Shop",
+     "name": "order-host",
+     "markup": {
+      "components": [
+       {
+        "id": "sf",
+        "type": "subForm",
+        "componentName": "sf",
+        "labelCol": 10,
+        "wrapperCol": 14,
+        "formId": {
+         "module": "Shop",
+         "name": "order-details"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "touched": [
+    "components/0"
+   ]
+  },
+  {
+   "name": "a required field is skipped (its mark would be lost)",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "f1",
+      "type": "textField",
+      "componentName": "f1",
+      "parentId": "root",
+      "label": "Total amount of the order",
+      "validate": {
+       "required": true
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false,
+   "options": {
+    "labelSplit": [
+     "Total amount of the order"
+    ]
+   }
+  },
+  {
+   "name": "no measured list, no change",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "f1",
+      "type": "textField",
+      "componentName": "f1",
+      "parentId": "root",
+      "label": "Total amount of the order"
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "shesha-developer",
-  "version": "1.11.0-alpha",
-  "description": "Skills for building applications on the latest Shesha framework. Scaffolds domain entities, database migrations, application services, DTOs, configuration items, fluent validators, domain events, notifications, SMS gateways, specifications, settings, forms, custom components, custom pages, and module projects following Shesha/.NET/ABP and NHibernate conventions. Includes the design pipeline: shesha-claude-designer (orchestrator), shesha-design-comprehension (measured layout blueprints + placement verification), shesha-design-system (theming), and shesha-form-edit (structure).",
+  "version": "1.12.0-alpha",
+  "description": "Skills for building applications on the latest Shesha framework. Scaffolds domain entities, database migrations, application services, DTOs, configuration items, fluent validators, domain events, notifications, SMS gateways, specifications, settings, forms, custom components, custom pages, and module projects following Shesha/.NET/ABP and NHibernate conventions. Includes the design pipeline: shesha-claude-designer (orchestrator), shesha-design-comprehension (measured layout blueprints + placement verification), shesha-design-system (theming), and shesha-form-edit (structure). Includes shesha-upgrade-reconciler: version-aware rule packs that reconcile form configuration after a framework upgrade, with backups, restore, retirement of fixed workarounds, a committed ledger and defect register, and the reconciliation-assessor agent.",
   "author": {
     "name": "Shesha"
   }

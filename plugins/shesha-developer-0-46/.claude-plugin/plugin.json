@@ -1,0 +1,8 @@
+{
+  "name": "shesha-developer-0-46",
+  "version": "1.1.0",
+  "description": "Version-pinned design and form pipeline for the v0.46 release of the Shesha framework: shesha-claude-designer (orchestrator), shesha-design-comprehension (measured layout blueprints + placement verification), shesha-design-system (theming on Ant Design 6), shesha-form-edit (structure/CRUD against the 0.46 form API, render-migration hazards, reworked components and scripting API), clean-form-config and create-crud-form, plus the form-author, form-auditor, fleet-transformer, design-critic, fullstack-prereq-checker and reconciliation-assessor agents. Component knowledge is extracted from release-0.46.0; fleet-wide fixes for the 0.46 render hazards are packaged as rules in shesha-developer:shesha-upgrade-reconciler.",
+  "author": {
+    "name": "Shesha"
+  }
+}

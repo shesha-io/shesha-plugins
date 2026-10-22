@@ -1,0 +1,1238 @@
+{
+  "KeyInformationBar": {
+    "version": 5,
+    "name": "Key Information Bar",
+    "isInput": false,
+    "file": "KeyInformationBar.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "address": {
+    "version": 6,
+    "name": "Address",
+    "isInput": true,
+    "file": "address.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 37,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "addressInput": {
+    "version": 3,
+    "name": "Address Input",
+    "isInput": true,
+    "file": "addressInput.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 16,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "alert": {
+    "version": 3,
+    "name": "Alert",
+    "isInput": false,
+    "file": "alert.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 19,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "attachmentsEditor": {
+    "version": 22,
+    "name": "File list",
+    "isInput": true,
+    "file": "attachmentsEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 44,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "autocomplete": {
+    "version": 9,
+    "name": "Autocomplete",
+    "isInput": true,
+    "file": "autocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 49,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "autocompleteTagGroup": {
+    "version": 2,
+    "name": "Autocomplete Tags Outlined",
+    "isInput": true,
+    "file": "autocompleteTagGroup.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 9,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "barChart": {
+    "version": 10,
+    "name": "Bar Chart",
+    "isInput": false,
+    "file": "barChart.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 76,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "button": {
+    "version": 10,
+    "name": "Button",
+    "isInput": false,
+    "file": "button.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "buttonGroup": {
+    "version": 16,
+    "name": "Button Group",
+    "isInput": false,
+    "file": "buttonGroup.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 13,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "buttons": {
+    "version": null,
+    "name": "Buttons",
+    "isInput": true,
+    "file": "buttons.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 3,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "calendar": {
+    "version": 1,
+    "name": "Calendar",
+    "isInput": true,
+    "file": "calendar.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "card": {
+    "version": 5,
+    "name": "Card",
+    "isInput": false,
+    "file": "card.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 19,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "checkbox": {
+    "version": 7,
+    "name": "Checkbox",
+    "isInput": true,
+    "file": "checkbox.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 23,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "checkboxGroup": {
+    "version": 8,
+    "name": "Checkbox group",
+    "isInput": true,
+    "file": "checkboxGroup.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 29,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "chevron": {
+    "version": 2,
+    "name": "Chevron",
+    "isInput": true,
+    "file": "chevron.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 14,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "childTable": {
+    "version": 6,
+    "name": "Child Table",
+    "isInput": false,
+    "file": "childTable.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "isHidden": true
+  },
+  "codeEditor": {
+    "version": 4,
+    "name": "Code Editor",
+    "isInput": true,
+    "file": "codeEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 18,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "collapsiblePanel": {
+    "version": 11,
+    "name": "Panel",
+    "isInput": false,
+    "file": "collapsiblePanel.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 25,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "colorPicker": {
+    "version": 3,
+    "name": "Color Picker",
+    "isInput": true,
+    "file": "colorPicker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 15,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "columns": {
+    "version": 6,
+    "name": "Columns",
+    "isInput": false,
+    "file": "columns.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 18,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "columnsEditorComponent": {
+    "version": null,
+    "name": "Columns Editor Component",
+    "isInput": true,
+    "file": "columnsEditorComponent.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "component-selector": {
+    "version": 2,
+    "name": "Component selector",
+    "isInput": true,
+    "file": "component-selector.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 9,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "configurableActionConfigurator": {
+    "version": 1,
+    "name": "Configurable Action Configurator",
+    "isInput": true,
+    "file": "configurableActionConfigurator.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "configurableItemAutocomplete": {
+    "version": 0,
+    "name": "Configurable Item Autocomplete",
+    "isInput": true,
+    "file": "configurableItemAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 17,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "container": {
+    "version": 9,
+    "name": "Container",
+    "isInput": false,
+    "file": "container.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "containerChecker": {
+    "version": null,
+    "name": "Container checker",
+    "isInput": false,
+    "file": "containerChecker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 3,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "contextPropertyAutocomplete": {
+    "version": 0,
+    "name": "Context Property Autocomplete",
+    "isInput": true,
+    "file": "contextPropertyAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 14,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dataContext": {
+    "version": 5,
+    "name": "Data Context",
+    "isInput": true,
+    "file": "dataContext.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 19,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "dataContextSelector": {
+    "version": null,
+    "name": "DataContext selector",
+    "isInput": true,
+    "file": "dataContextSelector.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dataSortingEditor": {
+    "version": 1,
+    "name": "Data Sorting Editor",
+    "isInput": true,
+    "file": "dataSortingEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 9,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dataSource": {
+    "version": 3,
+    "name": "DataSource",
+    "isInput": false,
+    "file": "dataSource.json",
+    "settingsParseQuality": "partial",
+    "settingsFieldCount": 7,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "datalist": {
+    "version": 12,
+    "name": "DataList",
+    "isInput": true,
+    "file": "datalist.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 65,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "datatable": {
+    "version": 31,
+    "name": "Data Table",
+    "isInput": true,
+    "file": "datatable.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 86,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "datatable.filter": {
+    "version": 7,
+    "name": "Table Filter",
+    "isInput": false,
+    "file": "datatable.filter.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 16,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "datatable.pager": {
+    "version": 5,
+    "name": "Table Pager",
+    "isInput": false,
+    "file": "datatable.pager.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "datatable.quickSearch": {
+    "version": 4,
+    "name": "Quick Search",
+    "isInput": false,
+    "file": "datatable.quickSearch.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "datatable.selectColumnsButton": {
+    "version": 2,
+    "name": "Table Select Columns Button",
+    "isInput": false,
+    "file": "datatable.selectColumnsButton.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "isHidden": true
+  },
+  "datatableContext": {
+    "version": 8,
+    "name": "Data Context (Legacy)",
+    "isInput": true,
+    "file": "datatableContext.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true,
+    "isHidden": true
+  },
+  "datatable_template": {
+    "version": null,
+    "name": "DataTable (Full)",
+    "isInput": false,
+    "file": "datatable_template.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dateField": {
+    "version": 9,
+    "name": "Date field",
+    "isInput": true,
+    "file": "dateField.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 43,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "divider": {
+    "version": 3,
+    "name": "Divider",
+    "isInput": false,
+    "file": "divider.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "drawer": {
+    "version": 4,
+    "name": "Drawer",
+    "isInput": false,
+    "file": "drawer.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 65,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dropdown": {
+    "version": 15,
+    "name": "Dropdown",
+    "isInput": true,
+    "file": "dropdown.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 42,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "dynamicItemsConfigurator": {
+    "version": null,
+    "name": "Dynamic Items Configurator",
+    "isInput": true,
+    "file": "dynamicItemsConfigurator.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "dynamicView": {
+    "version": null,
+    "name": "Dynamic View",
+    "isInput": false,
+    "file": "dynamicView.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "editModeSelector": {
+    "version": null,
+    "name": "Edit mode Selector",
+    "isInput": true,
+    "file": "editModeSelector.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "editableTagGroup": {
+    "version": 3,
+    "name": "Tags Outlined",
+    "isInput": true,
+    "file": "editableTagGroup.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 7,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "endpointsAutocomplete": {
+    "version": 3,
+    "name": "API Endpoints Autocomplete",
+    "isInput": true,
+    "file": "endpointsAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 26,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "entityPicker": {
+    "version": 16,
+    "name": "Entity Picker",
+    "isInput": true,
+    "file": "entityPicker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 33,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "entityReference": {
+    "version": 13,
+    "name": "Entity Reference",
+    "isInput": true,
+    "file": "entityReference.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 41,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "entityTypeAutocomplete": {
+    "version": 0,
+    "name": "Entity Type Autocomplete",
+    "isInput": true,
+    "file": "entityTypeAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 17,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "expressionEditor": {
+    "version": 2,
+    "name": "Expression Editor",
+    "isInput": true,
+    "file": "expressionEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "fileUpload": {
+    "version": 9,
+    "name": "File",
+    "isInput": true,
+    "file": "fileUpload.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 31,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "formAutocomplete": {
+    "version": 3,
+    "name": "Form Autocomplete",
+    "isInput": true,
+    "file": "formAutocomplete.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "headerAppControl": {
+    "version": null,
+    "name": "Header App Control",
+    "isInput": false,
+    "file": "headerAppControl.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "htmlRender": {
+    "version": 2,
+    "name": "HTML Render",
+    "isInput": false,
+    "file": "htmlRender.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 13,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "iconPicker": {
+    "version": 7,
+    "name": "Icon",
+    "isInput": true,
+    "file": "iconPicker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 23,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "image": {
+    "version": 6,
+    "name": "Image",
+    "isInput": true,
+    "file": "image.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 34,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "imagePicker": {
+    "version": null,
+    "name": "Image Picker",
+    "isInput": true,
+    "file": "imagePicker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 17,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "kanban": {
+    "version": 8,
+    "name": "Kanban",
+    "isInput": false,
+    "file": "kanban.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 58,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "labelConfigurator": {
+    "version": null,
+    "name": "Label Configurator",
+    "isInput": true,
+    "file": "labelConfigurator.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "labelValueEditor": {
+    "version": 3,
+    "name": "Label Value editor",
+    "isInput": true,
+    "file": "labelValueEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 14,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "lineChart": {
+    "version": 10,
+    "name": "Line Chart",
+    "isInput": false,
+    "file": "lineChart.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 76,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "link": {
+    "version": 6,
+    "name": "link",
+    "isInput": false,
+    "file": "link.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 17,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "list": {
+    "version": 3,
+    "name": "List",
+    "isInput": false,
+    "file": "list.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "logViewer": {
+    "version": null,
+    "name": "Log Viewer",
+    "isInput": false,
+    "file": "logViewer.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "mainMenuEditor": {
+    "version": null,
+    "name": "Main menu editor",
+    "isInput": true,
+    "file": "mainMenuEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "markdown": {
+    "version": 3,
+    "name": "Markdown",
+    "isInput": false,
+    "file": "markdown.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "menuList": {
+    "version": 1,
+    "name": "Menu List",
+    "isInput": false,
+    "file": "menuList.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 44,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "metadataEditor": {
+    "version": null,
+    "name": "Metadata editor",
+    "isInput": true,
+    "file": "metadataEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 9,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "notes": {
+    "version": 6,
+    "name": "Notes",
+    "isInput": false,
+    "file": "notes.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 25,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "notificationAutocomplete": {
+    "version": 0,
+    "name": "Notification Autocomplete",
+    "isInput": true,
+    "file": "notificationAutocomplete.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "numberField": {
+    "version": 7,
+    "name": "Number field",
+    "isInput": true,
+    "file": "numberField.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 31,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "paragraph": {
+    "version": null,
+    "name": "Paragraph",
+    "isInput": false,
+    "file": "paragraph.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "passwordCombo": {
+    "version": 8,
+    "name": "Password combo (Legacy)",
+    "isInput": true,
+    "file": "passwordCombo.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 43,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true,
+    "isHidden": true
+  },
+  "permissionAutocomplete": {
+    "version": 0,
+    "name": "Permission Autocomplete",
+    "isInput": true,
+    "file": "permissionAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 12,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "permissionTagGroup": {
+    "version": null,
+    "name": "Permission Tag Group",
+    "isInput": null,
+    "file": "permissionTagGroup.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "permissionedObjectsTree": {
+    "version": 0,
+    "name": "Permissioned objects tree",
+    "isInput": false,
+    "file": "permissionedObjectsTree.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 6,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "permissionsTree": {
+    "version": 2,
+    "name": "Permissions tree",
+    "isInput": true,
+    "file": "permissionsTree.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "phoneNumberInput": {
+    "version": 7,
+    "name": "Phone Number",
+    "isInput": true,
+    "file": "phoneNumberInput.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 35,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "pieChart": {
+    "version": 9,
+    "name": "Pie Chart",
+    "isInput": false,
+    "file": "pieChart.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 76,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "polarAreaChart": {
+    "version": 9,
+    "name": "Polar Area Chart",
+    "isInput": false,
+    "file": "polarAreaChart.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 76,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "processMonitor": {
+    "version": null,
+    "name": "Process Monitor",
+    "isInput": false,
+    "file": "processMonitor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "profileDropdown": {
+    "version": 2,
+    "name": "Profile Dropdown",
+    "isInput": false,
+    "file": "profileDropdown.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 16,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "progress": {
+    "version": 3,
+    "name": "Progress",
+    "isInput": true,
+    "file": "progress.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "propertyAutocomplete": {
+    "version": 2,
+    "name": "Property Autocomplete",
+    "isInput": true,
+    "file": "propertyAutocomplete.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 15,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "propertyRouter": {
+    "version": null,
+    "name": "Property router",
+    "isInput": false,
+    "file": "propertyRouter.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "queryBuilder": {
+    "version": 2,
+    "name": "Query Builder",
+    "isInput": true,
+    "file": "queryBuilder.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "radio": {
+    "version": 8,
+    "name": "Radio",
+    "isInput": true,
+    "file": "radio.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 31,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "rate": {
+    "version": 4,
+    "name": "Rate",
+    "isInput": true,
+    "file": "rate.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 14,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "refListStatus": {
+    "version": 9,
+    "name": "Reference list status",
+    "isInput": true,
+    "file": "refListStatus.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 26,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "referenceListAutocomplete": {
+    "version": 3,
+    "name": "Reference List Autocomplete",
+    "isInput": true,
+    "file": "referenceListAutocomplete.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "richTextEditor": {
+    "version": 6,
+    "name": "Rich Text Editor",
+    "isInput": true,
+    "file": "richTextEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 35,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "scheduledJobExecutionLog": {
+    "version": 2,
+    "name": "ScheduledJobExecutionLog",
+    "isInput": false,
+    "file": "scheduledJobExecutionLog.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "searchableTabs": {
+    "version": null,
+    "name": "SearchableTabs",
+    "isInput": false,
+    "file": "searchableTabs.json",
+    "settingsParseQuality": "partial",
+    "settingsFieldCount": 10,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "section": {
+    "version": 0,
+    "name": "Section",
+    "isInput": false,
+    "file": "section.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 3,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "sectionSeparator": {
+    "version": 7,
+    "name": "Section Separator",
+    "isInput": false,
+    "file": "sectionSeparator.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 21,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "setting": {
+    "version": 0,
+    "name": "Setting",
+    "isInput": true,
+    "file": "setting.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 6,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "settingsInput": {
+    "version": null,
+    "name": "SettingsInput",
+    "isInput": true,
+    "file": "settingsInput.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "settingsInputRow": {
+    "version": null,
+    "name": "SettingsInputRow",
+    "isInput": true,
+    "file": "settingsInputRow.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "sizableColumns": {
+    "version": 5,
+    "name": "SizableColumns",
+    "isInput": false,
+    "file": "sizableColumns.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 27,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "slider": {
+    "version": 1,
+    "name": "Slider",
+    "isInput": true,
+    "file": "slider.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 10,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "space": {
+    "version": 1,
+    "name": "Space",
+    "isInput": false,
+    "file": "space.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "isHidden": true
+  },
+  "statistic": {
+    "version": 3,
+    "name": "Statistic",
+    "isInput": true,
+    "file": "statistic.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 47,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "statusTag": {
+    "version": 6,
+    "name": "Status Tag",
+    "isInput": true,
+    "file": "statusTag.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 21,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "styleBox": {
+    "version": 2,
+    "name": "Style Box",
+    "isInput": true,
+    "file": "styleBox.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 4,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "subForm": {
+    "version": 5,
+    "name": "Sub Form",
+    "isInput": true,
+    "file": "subForm.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 20,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "switch": {
+    "version": 8,
+    "name": "Switch",
+    "isInput": true,
+    "file": "switch.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 21,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "tableViewSelector": {
+    "version": 7,
+    "name": "Table View Selector",
+    "isInput": false,
+    "file": "tableViewSelector.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 5,
+    "hasStandardAppearance": false,
+    "reworked": true
+  },
+  "tabs": {
+    "version": 11,
+    "name": "Tabs",
+    "isInput": false,
+    "file": "tabs.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 18,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "text": {
+    "version": 7,
+    "name": "Text",
+    "isInput": false,
+    "file": "text.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 26,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "textArea": {
+    "version": 7,
+    "name": "Text Area",
+    "isInput": true,
+    "file": "textArea.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 31,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "textField": {
+    "version": 8,
+    "name": "Text field",
+    "isInput": true,
+    "file": "textField.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 39,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "themeEditor": {
+    "version": null,
+    "name": "Theme editor",
+    "isInput": true,
+    "file": "themeEditor.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "threeStateSwitch": {
+    "version": null,
+    "name": "Three State Switch",
+    "isInput": true,
+    "file": "threeStateSwitch.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 8,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "timePicker": {
+    "version": 5,
+    "name": "Time Picker",
+    "isInput": true,
+    "file": "timePicker.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 51,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "title": {
+    "version": 0,
+    "name": "Title",
+    "isInput": false,
+    "file": "title.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "deprecated": true
+  },
+  "toolbar": {
+    "version": 4,
+    "name": "Toolbar",
+    "isInput": false,
+    "file": "toolbar.json",
+    "settingsParseQuality": "none",
+    "settingsFieldCount": 0,
+    "hasStandardAppearance": false,
+    "reworked": false,
+    "isHidden": true
+  },
+  "validationErrors": {
+    "version": 1,
+    "name": "Validation Errors",
+    "isInput": false,
+    "file": "validationErrors.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 15,
+    "hasStandardAppearance": true,
+    "reworked": true
+  },
+  "wizard": {
+    "version": 9,
+    "name": "Wizard",
+    "isInput": false,
+    "file": "wizard.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 41,
+    "hasStandardAppearance": false,
+    "reworked": false
+  },
+  "youtubeVideo": {
+    "version": 2,
+    "name": "YouTube Video",
+    "isInput": true,
+    "file": "youtubeVideo.json",
+    "settingsParseQuality": "full",
+    "settingsFieldCount": 44,
+    "hasStandardAppearance": false,
+    "reworked": false
+  }
+}

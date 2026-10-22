@@ -1,0 +1,723 @@
+{
+  "type": "pieChart",
+  "name": "Pie Chart",
+  "isInput": false,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "PieChartOutlined",
+  "version": 9,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IChartProps",
+    "interfaceFile": "designer-components/charts/model.ts",
+    "ownProps": [
+      "hidden",
+      "border",
+      "shadow",
+      "background"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IChartsProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "additionalProperties",
+      "aggregationMethod",
+      "allStyles",
+      "allowFilter",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "axisLabelFont",
+      "axisProperty",
+      "axisPropertyLabel",
+      "background",
+      "border",
+      "borderWidth",
+      "chartType",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dataMode",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "filterProperties",
+      "filters",
+      "font",
+      "groupingProperty",
+      "groupingTimeSeriesFormat",
+      "height",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isAxisTimeSeries",
+      "isDoughnut",
+      "isDynamic",
+      "isGroupingTimeSeries",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "legendFont",
+      "legendPosition",
+      "maxResultCount",
+      "mobile",
+      "name",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "orderBy",
+      "orderDirection",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "requestTimeout",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showDescription",
+      "showLegend",
+      "showName",
+      "showTitle",
+      "showXAxisScale",
+      "showXAxisTitle",
+      "showYAxisScale",
+      "showYAxisTitle",
+      "simpleOrPivot",
+      "size",
+      "stacked",
+      "strokeColor",
+      "strokeWidth",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "tension",
+      "tickFont",
+      "timeSeriesFormat",
+      "title",
+      "titleFont",
+      "type",
+      "url",
+      "validate",
+      "validationDependencies",
+      "valueProperty",
+      "valuePropertyLabel",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss",
+      "xProperty",
+      "yProperty"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "charts/settingsFormIndividual.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "If the pie chart is a doughnut chart, switch to true."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "isDoughnut",
+      "label": "Is Doughnut",
+      "editorType": "switch",
+      "description": "If the pie chart is a doughnut chart, switch to true."
+    },
+    {
+      "path": "stacked",
+      "label": "Stacked",
+      "editorType": "switch",
+      "description": "If the bar chart is a stacked chart, switch to true."
+    },
+    {
+      "path": "dataMode",
+      "label": "Data Source Type",
+      "editorType": "dropdown",
+      "description": "The type of data source you want to use for the chart. If you select `URL`, you will have to provide a URL endpoint to the data. If you select `Entity Type`, you will have to select an entity type from the list.",
+      "options": [
+        "url",
+        "entityType"
+      ],
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "simpleOrPivot",
+      "label": "Simple / Pivot",
+      "editorType": "dropdown",
+      "options": [
+        "simple",
+        "pivot"
+      ],
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "url",
+      "label": "URL",
+      "editorType": "endpointsAutocomplete",
+      "description": "The endpoint to use to fetch data.",
+      "group": "Quick Settings"
+    },
+    {
+      "path": "additionalProperties",
+      "label": "Additional Properties",
+      "editorType": "labelValueEditor",
+      "description": "Additional properties you want to be passed when the form gets submitted like parentId in the case where the modal is used in a childTable. ",
+      "group": "Quick Settings"
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete",
+      "description": "The entity type you want to use.",
+      "group": "Quick Settings"
+    },
+    {
+      "path": "maxResultCount",
+      "label": "Data Size Limit",
+      "editorType": "numberField",
+      "description": "The maximum number of items to be fetched from the data source. If not provided, the data will be fetched without a limit.",
+      "group": "Quick Settings"
+    },
+    {
+      "path": "axisProperty",
+      "label": "Axis Property",
+      "editorType": "propertyAutocomplete",
+      "description": "The property to be used on the x-axis.",
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "isAxisTimeSeries",
+      "label": "Is Axis Property Time Series?",
+      "editorType": "switch",
+      "description": "If the x-axis is a time series, switch to true.",
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "timeSeriesFormat",
+      "label": "Axis Property Time Series Format",
+      "editorType": "dropdown",
+      "options": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "group": "Quick Settings"
+    },
+    {
+      "path": "valueProperty",
+      "label": "Value Property",
+      "editorType": "propertyAutocomplete",
+      "description": "The property to be used on the x-axis.",
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "groupingProperty",
+      "label": "Grouping Property",
+      "editorType": "propertyAutocomplete",
+      "description": "The properties you want to use on the Legend. This is the property that will be used to group the data for Pivot Charts.",
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "isGroupingTimeSeries",
+      "label": "Is Grouping Property Time Series?",
+      "editorType": "switch",
+      "description": "If the grouping property is a time series, switch to true.",
+      "group": "Quick Settings"
+    },
+    {
+      "path": "groupingTimeSeriesFormat",
+      "label": "Grouping Time Series Format",
+      "editorType": "dropdown",
+      "options": [
+        "day",
+        "month",
+        "year",
+        "day-month",
+        "day-month-year",
+        "month-year"
+      ],
+      "required": true,
+      "group": "Quick Settings"
+    },
+    {
+      "path": "showTitle",
+      "label": "Show Title",
+      "editorType": "switch",
+      "description": "Show the title of the chart",
+      "group": "Labels"
+    },
+    {
+      "path": "title",
+      "label": "Title",
+      "editorType": "textField",
+      "description": "The title of the chart (if any), if none then the title will be generated from the entity type.",
+      "group": "Labels"
+    },
+    {
+      "path": "showLegend",
+      "label": "Show Legend",
+      "editorType": "switch",
+      "description": "Show the legend of the chart. Legend is the area that shows the color and what it represents.",
+      "group": "Labels"
+    },
+    {
+      "path": "legendPosition",
+      "label": "Legend Position",
+      "editorType": "dropdown",
+      "options": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "required": true,
+      "group": "Labels"
+    },
+    {
+      "path": "showXAxisScale",
+      "label": "Show X Axis",
+      "editorType": "switch",
+      "group": "Labels"
+    },
+    {
+      "path": "showXAxisTitle",
+      "label": "Show X Axis Title",
+      "editorType": "switch",
+      "group": "Labels"
+    },
+    {
+      "path": "axisPropertyLabel",
+      "label": "Axis Property Label",
+      "editorType": "textField",
+      "description": "Custom label of the x-axis. If not provided, the label will be generated from the entity type property.",
+      "group": "Labels"
+    },
+    {
+      "path": "showYAxisScale",
+      "label": "Show Y Axis",
+      "editorType": "switch",
+      "group": "Labels"
+    },
+    {
+      "path": "showYAxisTitle",
+      "label": "Show Y Axis Title",
+      "editorType": "switch",
+      "group": "Labels"
+    },
+    {
+      "path": "valuePropertyLabel",
+      "label": "Value Property Label",
+      "editorType": "textField",
+      "description": "Custom label of the value property. If not provided, the label will be generated from the entity type property.",
+      "group": "Labels"
+    },
+    {
+      "path": "requestTimeout",
+      "label": "Request Timeout",
+      "editorType": "numberField",
+      "description": "The timeout for the request (in milliseconds) to the data source. 10000 is the default timeout."
+    },
+    {
+      "path": "orderBy",
+      "label": "Order By",
+      "editorType": "propertyAutocomplete",
+      "description": "The properties you want to order the data by. Use the propeties that you have selected for axis, value (and legend)."
+    },
+    {
+      "path": "orderDirection",
+      "label": "Order Direction",
+      "editorType": "dropdown",
+      "options": [
+        "asc",
+        "desc"
+      ],
+      "required": true
+    },
+    {
+      "path": "aggregationMethod",
+      "label": "Aggregation Method",
+      "editorType": "dropdown",
+      "options": [
+        "sum",
+        "count",
+        "average",
+        "min",
+        "max"
+      ],
+      "required": true
+    },
+    {
+      "path": "filters",
+      "label": "Entity Filter",
+      "editorType": "queryBuilder"
+    },
+    {
+      "path": "titleFont.family",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Title Font"
+    },
+    {
+      "path": "titleFont.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Title Font"
+    },
+    {
+      "path": "titleFont.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Title Font"
+    },
+    {
+      "path": "titleFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Title Font"
+    },
+    {
+      "path": "axisLabelFont.family",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Axis Labels Font"
+    },
+    {
+      "path": "axisLabelFont.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Axis Labels Font"
+    },
+    {
+      "path": "axisLabelFont.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Axis Labels Font"
+    },
+    {
+      "path": "axisLabelFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Axis Labels Font"
+    },
+    {
+      "path": "legendFont.family",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Legend Font"
+    },
+    {
+      "path": "legendFont.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Legend Font"
+    },
+    {
+      "path": "legendFont.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Legend Font"
+    },
+    {
+      "path": "legendFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Legend Font"
+    },
+    {
+      "path": "tickFont.family",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Grid Ticks Font"
+    },
+    {
+      "path": "tickFont.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Grid Ticks Font"
+    },
+    {
+      "path": "tickFont.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Grid Ticks Font"
+    },
+    {
+      "path": "tickFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Grid Ticks Font"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit. We recommend 100%.",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit. We recommend minimum height of 400px.",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "className",
+      "label": "Custom CSS Class",
+      "editorType": "textField",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "strokeWidth",
+      "label": "Stroke Thickness",
+      "editorType": "numberField",
+      "description": "The thickness of the stroke for the elements (bars, lines, etc.) in the chart. Default is 0.0"
+    },
+    {
+      "path": "strokeColor",
+      "label": "Stroke Color",
+      "editorType": "colorPicker",
+      "description": "The color of the stroke / border for the elements (bars, lines, etc.) in the chart. Default is #000000"
+    },
+    {
+      "path": "tension",
+      "label": "Tension",
+      "editorType": "numberField"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "charts/pie.tsx",
+    "charts/model.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => ({ chartType: 'pie', showTitle: false, showLegend: true, legendPosition: 'top', hidden: false, ...prev, })"
+    },
+    {
+      "toVersion": 1,
+      "category": "other",
+      "what": "(not auto-labelled) 1, (prev) => ({ ...prev, hideLabel: true })"
+    },
+    {
+      "toVersion": 5,
+      "category": "other",
+      "what": "(not auto-labelled) 5, (prev) => ({ ...defaultConfigFiller, ...filterNonNull(prev), type: prev.type, id: prev.id, })"
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

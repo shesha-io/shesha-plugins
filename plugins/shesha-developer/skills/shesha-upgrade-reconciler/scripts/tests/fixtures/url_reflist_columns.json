@@ -1,0 +1,87 @@
+{
+ "rule": "url_reflist_columns",
+ "cases": [
+  {
+   "name": "a [default] column on a URL table bound to a reference-list dropdown",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ctx",
+      "type": "datatableContext",
+      "componentName": "ctx",
+      "parentId": "root",
+      "sourceType": "Url",
+      "entityType": "Shop.Domain.OrderLine",
+      "components": [
+       {
+        "id": "tbl",
+        "type": "datatable",
+        "componentName": "tbl",
+        "parentId": "ctx",
+        "items": [
+         {
+          "id": "col1",
+          "columnType": "data",
+          "propertyName": "kind",
+          "caption": "Kind",
+          "displayComponent": {
+           "type": "[default]"
+          }
+         },
+         {
+          "id": "col2",
+          "columnType": "data",
+          "propertyName": "name",
+          "caption": "Name",
+          "displayComponent": {
+           "type": "[default]"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/components/0/items/0/displayComponent/type",
+     "dropdown"
+    ],
+    [
+     "components/0/components/0/items/0/displayComponent/settings/referenceListId/name",
+     "LineKind"
+    ],
+    [
+     "components/0/components/0/items/0/displayComponent/settings/referenceListId/module",
+     "Shop"
+    ],
+    [
+     "components/0/components/0/items/0/displayComponent/settings/id",
+     "9ddfb59ecfbc933da42026-rl046"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "metadata": {
+    "Shop.Domain.OrderLine": [
+     {
+      "path": "Kind",
+      "referenceListId": {
+       "name": "LineKind",
+       "module": "Shop"
+      }
+     },
+     {
+      "path": "Name"
+     }
+    ]
+   },
+   "touched": [
+    "components/0/components/0/items/0/displayComponent"
+   ]
+  }
+ ]
+}

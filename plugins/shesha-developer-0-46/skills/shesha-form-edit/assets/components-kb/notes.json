@@ -1,0 +1,338 @@
+{
+  "type": "notes",
+  "name": "Notes",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "FormOutlined",
+  "version": 6,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "ownerId": "{data.id}",
+      "hideLabel": true
+    },
+    "raw": "(model) => ({\n    ...model,\n    ownerId: '{data.id}',\n    hideLabel: true,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "INotesComponentProps",
+    "interfaceFile": "designer-components/notes/interfaces.ts",
+    "ownProps": [
+      "ownerId",
+      "ownerType",
+      "savePlacement",
+      "autoSize",
+      "allowDelete",
+      "allowEdit",
+      "category",
+      "showCharCount",
+      "minLength",
+      "maxLength",
+      "onCreateAction",
+      "onUpdateAction",
+      "onDeleteAction"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowDelete",
+      "allowEdit",
+      "autoHeight",
+      "autoSize",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "category",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "maxLength",
+      "minLength",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onCreateAction",
+      "onDeleteAction",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "onUpdateAction",
+      "overflow",
+      "ownerId",
+      "ownerType",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "savePlacement",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showCharCount",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "notes/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "stylingBoxJson"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "This is used to group notes into categories"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "ownerType",
+      "label": "Owner Type",
+      "editorType": "entityTypeAutocomplete",
+      "required": true,
+      "group": "Owner"
+    },
+    {
+      "path": "ownerId",
+      "label": "Owner ID",
+      "editorType": "textField",
+      "required": true,
+      "group": "Owner"
+    },
+    {
+      "path": "category",
+      "label": "Notes Category",
+      "editorType": "textField",
+      "description": "This is used to group notes into categories",
+      "group": "Owner"
+    },
+    {
+      "path": "allowEdit",
+      "label": "Allow Edit",
+      "editorType": "switch",
+      "description": "Allows existing notes to be edited",
+      "group": "Behaviour"
+    },
+    {
+      "path": "allowDelete",
+      "label": "Allow Delete",
+      "editorType": "switch",
+      "description": "Allows existing notes to be deleted",
+      "group": "Behaviour"
+    },
+    {
+      "path": "autoSize",
+      "label": "Auto Size",
+      "editorType": "switch",
+      "description": "Grows the editor as the note is typed",
+      "group": "Behaviour"
+    },
+    {
+      "path": "showCharCount",
+      "label": "Show Chars Count",
+      "editorType": "switch",
+      "group": "Behaviour"
+    },
+    {
+      "path": "minLength",
+      "label": "Min Length",
+      "editorType": "numberField",
+      "description": "Shortest note that can be posted, leave empty for no limit",
+      "group": "Validations"
+    },
+    {
+      "path": "maxLength",
+      "label": "Max Length",
+      "editorType": "numberField",
+      "description": "Longest note that can be posted, leave empty for no limit",
+      "group": "Validations"
+    },
+    {
+      "path": "onCreateAction",
+      "label": "On Create",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onUpdateAction",
+      "label": "On Update",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDeleteAction",
+      "label": "On Delete",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "savePlacement",
+      "label": "Buttons Layout",
+      "editorType": "dropdown",
+      "description": "This is used to place the save button (Left, Right).",
+      "options": [
+        "left",
+        "right"
+      ]
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "notes/notesComponent.tsx",
+    "notes/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

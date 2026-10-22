@@ -1,0 +1,1363 @@
+{
+  "_meta": {
+    "version": 4,
+    "group": "entity-references"
+  },
+  "attachmentsEditor": {
+    "props": [
+      {
+        "name": "allowAdd",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow uploading new attachments."
+      },
+      {
+        "name": "allowDelete",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow deleting attachments."
+      },
+      {
+        "name": "allowRename",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow renaming attachments."
+      },
+      {
+        "name": "allowReplace",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow replacing an attachment with a new file."
+      },
+      {
+        "name": "allowViewHistory",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the version history of each attachment."
+      },
+      {
+        "name": "allowedFileTypes",
+        "type": "array",
+        "desc": "MIME types or extensions accepted (e.g. ['image/png', '.pdf']).",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container",
+        "source": "components-kb"
+      },
+      {
+        "name": "customActions",
+        "type": "array",
+        "desc": "Extra action buttons shown in the toolbar.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "button-group-item"
+      },
+      {
+        "name": "customContent",
+        "type": "boolean",
+        "desc": "Render custom content inside each file item.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "displayStyle",
+        "desc": "How each file is presented: as its name, or as a tile at a preset size. Custom Thumbnail takes its size from the Thumbnail Style dimensions."
+      },
+      {
+        "name": "downloadZip",
+        "type": "boolean",
+        "desc": "Show a button to download all files as a zip archive.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "downloadedFileStyles",
+        "source": "components-kb"
+      },
+      {
+        "name": "downloadedIcon",
+        "type": "string",
+        "desc": "Ant Design icon name shown on downloaded file items.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "dropzoneText",
+        "type": "string",
+        "inferred": true,
+        "desc": "Replaces the prompt in the drop area. Left empty, it keeps the stock wording and its hint; set, it stands alone, and its line breaks are sho"
+      },
+      {
+        "name": "emptyText",
+        "type": "string",
+        "inferred": true,
+        "desc": "Shown when there are no files and none can be added — a read-only or disabled list. Left empty, such a list renders nothing at all."
+      },
+      {
+        "name": "extraFormId",
+        "type": "form-id",
+        "desc": "Form shown alongside each attachment for extra metadata.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "filesCategory",
+        "type": "string",
+        "desc": "Category tag used to filter which files are shown.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "filesLayout",
+        "type": "string",
+        "options": [
+          "vertical",
+          "horizontal",
+          "grid"
+        ],
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Layout direction of the file list."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "inferred": true,
+        "desc": "Gap"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "hideFileName",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Hide the file name beneath each attachment item."
+      },
+      {
+        "name": "isDragger",
+        "type": "boolean",
+        "desc": "Render as a drag-and-drop upload zone instead of a button.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "listType",
+        "type": "string",
+        "options": [
+          "text",
+          "thumbnail"
+        ],
+        "desc": "How file items are displayed.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "maxHeight",
+        "type": "string",
+        "desc": "Maximum height of the file list before it scrolls (e.g. '300px').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "onDelete"
+      },
+      {
+        "name": "onDownload",
+        "type": "script",
+        "desc": "Called when a file is downloaded. Return value is ignored.",
+        "required": false,
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "onFileChanged",
+        "type": "script",
+        "desc": "Called when the file list changes. Return value is ignored.",
+        "required": false,
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "onReplace"
+      },
+      {
+        "name": "onUpload"
+      },
+      {
+        "name": "ownerId",
+        "type": "string",
+        "desc": "GUID of the owning entity record.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "ownerName",
+        "type": "string",
+        "desc": "Display name of the owner (used as a folder label).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "ownerType",
+        "type": "entity-type-id",
+        "desc": "Entity class that owns the files (e.g. { name: 'Address', module: 'Shesha' }).",
+        "required": false,
+        "JsReturnType": "entity-type-id"
+      },
+      {
+        "name": "styleDownloadedFiles",
+        "type": "boolean",
+        "desc": "Apply downloadedFileStyles to items that have been downloaded.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "thumbnailHeight",
+        "type": "string",
+        "desc": "Thumbnail height (e.g. '80px'). Used when listType is 'thumbnail'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "thumbnailStyle"
+      },
+      {
+        "name": "thumbnailWidth",
+        "type": "string",
+        "desc": "Thumbnail width (e.g. '80px'). Used when listType is 'thumbnail'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "autocompleteTagGroup": {
+    "props": [
+      {
+        "name": "autocompleteUrl",
+        "desc": "Autocomplete Url"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "configurableItemAutocomplete": {
+    "props": [
+      {
+        "name": "entityType",
+        "desc": "Entity Type"
+      },
+      {
+        "name": "filter",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "mode",
+        "desc": "Selection Mode"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      }
+    ]
+  },
+  "endpointsAutocomplete": {
+    "props": [
+      {
+        "name": "availableHttpVerbs",
+        "desc": "Http Verbs"
+      },
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Hide border"
+      },
+      {
+        "name": "httpVerb",
+        "type": "string",
+        "inferred": true,
+        "desc": "Is used to filter the autocomplete by http verb"
+      },
+      {
+        "name": "mode",
+        "desc": "Mode"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "inferred": true,
+        "desc": "Prefix"
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "inferred": true,
+        "desc": "Suffix"
+      },
+      {
+        "name": "textType",
+        "desc": "Type"
+      }
+    ]
+  },
+  "entityPicker": {
+    "props": [
+      {
+        "name": "addNewCustomWidth"
+      },
+      {
+        "name": "addNewModalWidth",
+        "desc": "Width of the dialog used to create a new record. Independent of the picker `Dialog Width`."
+      },
+      {
+        "name": "addNewWidthUnits"
+      },
+      {
+        "name": "allowNewRecord",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show a button to create a new record from within the picker."
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "buttons",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "desc": "Custom toolbar buttons shown in the picker modal."
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "customWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "displayEntityKey",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Entity property used as the display label in the selected value chip."
+      },
+      {
+        "name": "dividerColor",
+        "source": "components-kb"
+      },
+      {
+        "name": "dividerStyle",
+        "source": "components-kb"
+      },
+      {
+        "name": "dividerWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "entityType",
+        "type": "string",
+        "desc": "Fully-qualified entity type to pick from (e.g. 'Shesha.Core.Person').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "filters",
+        "type": "object",
+        "desc": "JSON Logic filter expression applied to the picker's entity list (see jsonlogic.com).",
+        "required": false,
+        "JsReturnType": "object"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "footerButtons",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "desc": "Footer button definitions for the picker modal."
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder",
+        "source": "components-kb"
+      },
+      {
+        "name": "incomeCustomJs",
+        "type": "script",
+        "desc": "Transform the incoming stored value before displaying it in the picker.",
+        "required": false,
+        "JsReturnType": "any",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "desc": "Column definitions for the picker table.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "column-item"
+      },
+      {
+        "name": "modalFormId",
+        "type": "form-id",
+        "desc": "Form shown in the picker modal.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "modalTitle",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Title shown in the picker modal header."
+      },
+      {
+        "name": "modalWidth",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Picker modal width as pixels or CSS string (e.g. '80%')."
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "single",
+          "multiple"
+        ],
+        "desc": "Single-select or multi-select mode."
+      },
+      {
+        "name": "outcomeCustomJs",
+        "type": "script",
+        "desc": "Transform the picked entity before storing it on the form.",
+        "required": false,
+        "JsReturnType": "any",
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "source": "components-kb"
+      },
+      {
+        "name": "readOnlyPlaceholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Text that gets displayed when empty and in read-only mode."
+      },
+      {
+        "name": "showModalFooter",
+        "source": "components-kb"
+      },
+      {
+        "name": "title",
+        "source": "components-kb"
+      },
+      {
+        "name": "valueFormat",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "simple",
+          "entityReference",
+          "custom"
+        ],
+        "desc": "Shape of the stored value when an entity is selected."
+      },
+      {
+        "name": "width"
+      },
+      {
+        "name": "widthUnits",
+        "source": "components-kb"
+      }
+    ],
+    "legacy": [
+      "modalSettings",
+      "submitHttpVerb"
+    ]
+  },
+  "entityReference": {
+    "props": [
+      {
+        "name": "additionalProperties",
+        "type": "array",
+        "desc": "Extra key-value properties passed to the entity form ({ key, value } pairs).",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "buttons",
+        "type": "array",
+        "desc": "Custom footer buttons (used when footerButtons is 'custom').",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "button-group-item"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "displayProperty",
+        "type": "string",
+        "desc": "Entity property shown as the clickable label.",
+        "required": true,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "displayType",
+        "type": "string",
+        "options": [
+          "displayProperty",
+          "icon",
+          "textTitle"
+        ],
+        "desc": "How the reference link is rendered.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "entityReferenceType",
+        "type": "string",
+        "options": [
+          "NavigateLink",
+          "Quickview",
+          "Dialog"
+        ],
+        "desc": "Interaction mode when the user clicks the reference.",
+        "required": true,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "entityType",
+        "type": "string",
+        "desc": "Fully-qualified entity type (e.g. 'Shesha.Core.Person').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "footerButtons",
+        "type": "string",
+        "options": [
+          "default",
+          "custom",
+          "none"
+        ],
+        "desc": "Which footer buttons to render in the dialog.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "formIdentifier",
+        "type": "form-id",
+        "desc": "Form used for navigate/dialog/quickview.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "formSelectionMode",
+        "type": "string",
+        "options": [
+          "name",
+          "dynamic"
+        ],
+        "desc": "Whether the form is resolved by name or dynamically by entity type.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "formType",
+        "type": "string",
+        "desc": "Form type hint used when formSelectionMode is 'dynamic'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "getEntityUrl",
+        "type": "string",
+        "desc": "URL to fetch the entity details from.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "handleFail",
+        "type": "boolean",
+        "desc": "Enable the onFail action handler.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "handleSuccess",
+        "type": "boolean",
+        "desc": "Enable the onSuccess action handler.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "icon",
+        "source": "components-kb"
+      },
+      {
+        "name": "iconName",
+        "type": "string",
+        "desc": "Ant Design icon name shown when displayType is 'icon'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "modalClassName"
+      },
+      {
+        "name": "modalTitle",
+        "type": "string",
+        "desc": "Title shown in the dialog header.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "modalWidth",
+        "type": "string",
+        "desc": "Dialog width as pixels or CSS string (e.g. '80%').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "onFail",
+        "type": "action-config",
+        "desc": "Action executed when the form submission fails (requires handleFail: true).",
+        "required": false
+      },
+      {
+        "name": "onSuccess",
+        "type": "action-config",
+        "desc": "Action executed when the form submission succeeds (requires handleSuccess: true).",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      },
+      {
+        "name": "popupClassName"
+      },
+      {
+        "name": "quickviewWidth",
+        "type": "string",
+        "desc": "Quickview panel width as pixels or CSS string.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "showModalFooter"
+      },
+      {
+        "name": "skipFetchData",
+        "type": "boolean",
+        "desc": "Skip fetching entity data even when query parameters are available (useful for shared create/edit forms).",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "submitHttpVerb",
+        "type": "string",
+        "options": [
+          "POST",
+          "PUT"
+        ],
+        "desc": "HTTP method used when submitting the modal form.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "textTitle",
+        "type": "string",
+        "desc": "Custom text shown when displayType is 'textTitle'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "entityTypeAutocomplete": {
+    "props": [
+      {
+        "name": "baseModel"
+      },
+      {
+        "name": "entityType",
+        "desc": "Entity Type"
+      },
+      {
+        "name": "entityTypeAutocompleteType"
+      },
+      {
+        "name": "filter",
+        "desc": "Entity Filter"
+      },
+      {
+        "name": "mode",
+        "desc": "Selection Mode"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      }
+    ]
+  },
+  "fileUpload": {
+    "props": [
+      {
+        "name": "allowDelete",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow the user to delete uploaded files."
+      },
+      {
+        "name": "allowReplace",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow replacing an existing file with a new upload."
+      },
+      {
+        "name": "allowUpload",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow uploading new files."
+      },
+      {
+        "name": "allowedFileTypes",
+        "type": "array",
+        "required": false,
+        "JsReturnType": "array",
+        "desc": "MIME types or extensions accepted (e.g. ['image/png', '.pdf'])."
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius",
+        "source": "components-kb"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "displayStyle",
+        "desc": "How the selected file is presented: as its name, or as a tile at a preset size. Custom Thumbnail takes its size from the Dimensions panel."
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "hideFileName",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Hide the file name label beneath the upload button."
+      },
+      {
+        "name": "isDragger",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Render as a drag-and-drop upload zone instead of a button."
+      },
+      {
+        "name": "listType",
+        "source": "components-kb"
+      },
+      {
+        "name": "ownerId",
+        "type": "string",
+        "desc": "GUID of the owning entity record.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "ownerType",
+        "type": "entity-type-id",
+        "desc": "Entity class that owns the files (e.g. { name: 'Address', module: 'Shesha' }).",
+        "required": false,
+        "JsReturnType": "entity-type-id"
+      },
+      {
+        "name": "thumbnailHeight",
+        "source": "components-kb"
+      },
+      {
+        "name": "thumbnailWidth",
+        "source": "components-kb"
+      },
+      {
+        "name": "useSync",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Upload files synchronously rather than in the background."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "formAutocomplete": {
+    "props": []
+  },
+  "notes": {
+    "props": [
+      {
+        "name": "allowDelete",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow the user to delete notes."
+      },
+      {
+        "name": "allowEdit",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Allow the user to edit existing notes."
+      },
+      {
+        "name": "autoSize",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Automatically grow the textarea to fit the content."
+      },
+      {
+        "name": "backgroundBase64"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "backgroundCover"
+      },
+      {
+        "name": "backgroundDataSource"
+      },
+      {
+        "name": "backgroundPosition"
+      },
+      {
+        "name": "backgroundRepeat"
+      },
+      {
+        "name": "backgroundStoredFileId"
+      },
+      {
+        "name": "backgroundType"
+      },
+      {
+        "name": "backgroundUrl"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderSize"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderType"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Category tag used to group or filter notes."
+      },
+      {
+        "name": "className"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "fontColor"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "hideBorder"
+      },
+      {
+        "name": "maxLength",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Maximum character length for each note."
+      },
+      {
+        "name": "minLength",
+        "type": "number",
+        "required": false,
+        "JsReturnType": "number",
+        "desc": "Minimum character length required for each note."
+      },
+      {
+        "name": "onCreateAction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Action name dispatched when a new note is created."
+      },
+      {
+        "name": "onDeleteAction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Action name dispatched when a note is deleted."
+      },
+      {
+        "name": "onUpdateAction",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "desc": "Action name dispatched when a note is updated."
+      },
+      {
+        "name": "ownerId",
+        "type": "string",
+        "desc": "GUID of the owning entity record.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "ownerType",
+        "type": "entity-type-id",
+        "desc": "Entity class that owns the files (e.g. { name: 'Address', module: 'Shesha' }).",
+        "required": false,
+        "JsReturnType": "entity-type-id"
+      },
+      {
+        "name": "savePlacement",
+        "type": "string",
+        "required": false,
+        "JsReturnType": "string",
+        "options": [
+          "top",
+          "bottom"
+        ],
+        "desc": "Position of the save button relative to the notes list."
+      },
+      {
+        "name": "showCharCount",
+        "type": "boolean",
+        "required": false,
+        "JsReturnType": "boolean",
+        "desc": "Show the character count below the input."
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "permissionAutocomplete": {
+    "props": [
+      {
+        "name": "hideBorder",
+        "type": "boolean",
+        "inferred": true,
+        "desc": "Hide border"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "inferred": true,
+        "desc": "Placeholder"
+      }
+    ]
+  },
+  "permissionedObjectsTree": {
+    "props": [
+      {
+        "name": "defaultAccess",
+        "type": "number",
+        "inferred": true,
+        "desc": "Default access"
+      },
+      {
+        "name": "height",
+        "type": "string",
+        "inferred": true,
+        "desc": "Height"
+      },
+      {
+        "name": "objectsType",
+        "type": "string",
+        "inferred": true,
+        "desc": "Type of permissioned objects"
+      },
+      {
+        "name": "onSelectAction",
+        "desc": "On select action"
+      },
+      {
+        "name": "searchText",
+        "type": "string",
+        "inferred": true,
+        "desc": "Search text"
+      }
+    ]
+  },
+  "permissionsTree": {
+    "props": [
+      {
+        "name": "height",
+        "type": "number",
+        "inferred": true,
+        "desc": "Height"
+      },
+      {
+        "name": "mode",
+        "desc": "Mode"
+      },
+      {
+        "name": "onSelectAction",
+        "desc": "On select action"
+      }
+    ]
+  },
+  "permissionTagGroup": {
+    "props": [
+      {
+        "name": "autocompleteUrl"
+      },
+      {
+        "name": "onChange"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "referenceListAutocomplete": {
+    "props": []
+  }
+}

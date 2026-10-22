@@ -1,0 +1,435 @@
+{
+  "type": "image",
+  "name": "Image",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "FileImageOutlined",
+  "version": 6,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => {\n    const customModel: IImageProps = {\n      ...model,\n    };\n    return customModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IImageProps",
+    "interfaceFile": "designer-components/image/interfaces.ts",
+    "ownProps": [
+      "url",
+      "storedFileId",
+      "base64",
+      "dataSource",
+      "ownerType",
+      "ownerId",
+      "allowPreview",
+      "allowedFileTypes",
+      "alt",
+      "opacity",
+      "sepia",
+      "grayscale",
+      "blur",
+      "brightness",
+      "contrast",
+      "saturate",
+      "hueRotate",
+      "invert"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IFormItem",
+      "IImageStyleProps",
+      "IStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "allowPreview",
+      "allowedFileTypes",
+      "alt",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "base64",
+      "blur",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "brightness",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "contrast",
+      "customEnabled",
+      "customVisibility",
+      "dataSource",
+      "defaultValue",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "filter",
+      "filterIntensity",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "grayscale",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "hueRotate",
+      "id",
+      "initialContext",
+      "invert",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "name",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "objectFit",
+      "objectPosition",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "opacity",
+      "overflow",
+      "ownerId",
+      "ownerType",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "saturate",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "sepia",
+      "shadow",
+      "size",
+      "storedFileId",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "url",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "image/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Enter the file types that are allowed to be uploaded e.g .jpg, .png, .gif"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "alt",
+      "label": "Alt Text",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "editMode",
+      "label": "Edit Mode",
+      "editorType": "editModeSelector"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "allowPreview",
+      "label": "Allow Preview",
+      "editorType": "switch"
+    },
+    {
+      "path": "allowedFileTypes",
+      "label": "Allowed File Types",
+      "editorType": "editableTagGroupProps",
+      "description": "Enter the file types that are allowed to be uploaded e.g .jpg, .png, .gif"
+    },
+    {
+      "path": "dataSource",
+      "label": "Image Source Type",
+      "editorType": "radio",
+      "options": [
+        "storedFile",
+        "url",
+        "base64"
+      ]
+    },
+    {
+      "path": "url",
+      "label": "URL",
+      "editorType": "textField"
+    },
+    {
+      "path": "base64",
+      "label": "Upload Image",
+      "editorType": "imageUploader"
+    },
+    {
+      "path": "storedFileId",
+      "label": "File ID",
+      "editorType": "textField"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "objectFit",
+      "label": "Object Fit",
+      "editorType": "dropdown",
+      "options": [
+        "cover",
+        "contain",
+        "fill"
+      ],
+      "group": "Picture Styles"
+    },
+    {
+      "path": "objectPosition",
+      "label": "Object Position",
+      "editorType": "customDropdown",
+      "group": "Picture Styles"
+    },
+    {
+      "path": "filter",
+      "label": "Filter",
+      "editorType": "dropdown",
+      "options": [
+        "none",
+        "grayscale",
+        "sepia",
+        "blur",
+        "brightness",
+        "contrast",
+        "hue-rotate",
+        "invert",
+        "saturate"
+      ],
+      "group": "Picture Styles"
+    },
+    {
+      "path": "filterIntensity",
+      "label": "Filter Intensity",
+      "editorType": "numberField",
+      "group": "Picture Styles"
+    },
+    {
+      "path": "opacity",
+      "label": "Opacity",
+      "editorType": "numberField",
+      "group": "Picture Styles"
+    },
+    {
+      "path": "border.hideBorder",
+      "label": "Border",
+      "editorType": "button",
+      "group": "Border"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "image/index.tsx",
+    "image/interfaces.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "other",
+      "what": "(not auto-labelled) 2, (prev) => { return { ...prev, hideLabel: true, editMode: 'inherited', url: typeof (prev.url) === \"string\" && !isNullOrWhiteSpace(prev.url) ? { _mode: 'code', _code: prev.url } : undefined, storedFi"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 6,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultStyles(prev))"
+    }
+  ]
+}

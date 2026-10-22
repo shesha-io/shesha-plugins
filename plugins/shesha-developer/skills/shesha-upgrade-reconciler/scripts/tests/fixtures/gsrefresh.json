@@ -1,0 +1,55 @@
+{
+ "rule": "gsrefresh",
+ "cases": [
+  {
+   "name": "script refresh through globalState replaced by a chained Refresh table",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ctx",
+      "type": "datatableContext",
+      "componentName": "ordersTable",
+      "parentId": "root"
+     },
+     {
+      "id": "b1",
+      "type": "button",
+      "componentName": "b1",
+      "parentId": "root",
+      "actionConfiguration": {
+       "actionName": "Execute Script",
+       "actionArguments": {
+        "expression": "doIt();\nglobalState?.ordersTable?.refreshTable();"
+       }
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/1/actionConfiguration/handleSuccess",
+     true
+    ],
+    [
+     "components/1/actionConfiguration/onSuccess/actionName",
+     "Refresh table"
+    ],
+    [
+     "components/1/actionConfiguration/onSuccess/actionOwner",
+     "ctx"
+    ],
+    [
+     "components/1/actionConfiguration/actionArguments/expression",
+     "doIt();\n/*reconciler:046-refresh-chain*/ /* table refresh moved to a chained Refresh table action (H41) */"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/1/actionConfiguration"
+   ]
+  }
+ ]
+}

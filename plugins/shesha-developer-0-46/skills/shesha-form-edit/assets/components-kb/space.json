@@ -1,0 +1,183 @@
+{
+  "type": "space",
+  "name": "Space",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "ArrowsAltOutlined",
+  "version": 1,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": true,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "direction": "horizontal",
+      "size": "small",
+      "wrap": false
+    },
+    "raw": "(model) => ({\n    direction: 'horizontal',\n    size: 'small',\n    wrap: false,\n    ...model,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "ISpaceProps",
+    "interfaceFile": "designer-components/space/index.tsx",
+    "ownProps": [
+      "align",
+      "direction",
+      "size",
+      "wrap",
+      "sizeNumber",
+      "marginLeft",
+      "marginRight"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "align",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "direction",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "marginLeft",
+      "marginRight",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "sizeNumber",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrap",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "space/settingsForm.json",
+    "mechanism": "json-markup",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "size"
+  ],
+  "settingsFields": [
+    {
+      "path": "componentName",
+      "label": "Component name",
+      "editorType": "textField"
+    },
+    {
+      "path": "align",
+      "label": "Align",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "size",
+      "label": "The space size",
+      "editorType": "dropdown",
+      "shared": true
+    },
+    {
+      "path": "sizeNumber",
+      "label": "Size Number",
+      "editorType": "numberField"
+    },
+    {
+      "path": "marginLeft",
+      "label": "Margin Left",
+      "editorType": "numberField"
+    },
+    {
+      "path": "marginRight",
+      "label": "Margin Right",
+      "editorType": "numberField"
+    },
+    {
+      "path": "direction",
+      "label": "Space",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "wrap",
+      "label": "Wrap",
+      "editorType": "checkbox"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "space/index.tsx"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": []
+}

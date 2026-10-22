@@ -1,0 +1,548 @@
+{
+  "$block": "page-header-band",
+  "$scope": "region",
+  "$styleOverlay": "page-header-band",
+  "$note": "In-page detail title band (NOT the global header form). The global header form must always keep headerAppControl — that is OUT OF SCOPE here and lives in a separate form.",
+  "$slots": {
+    "breadcrumb": "subtree.components.0",
+    "breadcrumbContent": "subtree.components.0.content",
+    "titleRow": "subtree.components.1",
+    "titleLeft": "subtree.components.1.components.0",
+    "titleText": "subtree.components.1.components.0.components.0",
+    "statusChip": "subtree.components.1.components.0.components.1",
+    "actions": "subtree.components.1.components.1",
+    "actionItems": "subtree.components.1.components.1.items"
+  },
+  "$bindings": [
+    {
+      "path": "subtree.components.0.content._code",
+      "fill": "JS returning the breadcrumb string (e.g. join module / section / record name with '  /  ')"
+    },
+    {
+      "path": "subtree.components.1.components.0.components.0.content",
+      "fill": "the record title, usually \"{{data.<titleProperty>}}\" (e.g. \"{{data.name}}\")"
+    },
+    {
+      "path": "subtree.components.1.components.0.components.1.propertyName",
+      "fill": "the status reference-list property on the bound entity (e.g. \"status\")"
+    },
+    {
+      "path": "subtree.components.1.components.0.components.1.referenceListId.module",
+      "fill": "the reference list's module (e.g. \"Shesha.RequirementsStudio\")"
+    },
+    {
+      "path": "subtree.components.1.components.0.components.1.referenceListId.name",
+      "fill": "the reference list's name (e.g. \"Shesha.RequirementsStudio.RsStatus\")"
+    },
+    {
+      "path": "subtree.components.1.components.0.desktop.dimensions.width",
+      "fill": "calc(100% - <actionsPx>px) where <actionsPx> = measured pixel width of the action buttonGroup incl. its left gap (the band's titleRow gap is 16px). Default \"calc(100% - 220px)\"."
+    },
+    {
+      "path": "subtree.components.1.components.1.items",
+      "fill": "the action buttons (e.g. Edit/Save/Cancel). buttonType:'primary' takes the APP-THEME primary fill — never hardcode a button hex."
+    }
+  ],
+  "$validatedAgainst": [
+    "container:background.color",
+    "container:border.perSide",
+    "container:dimensions.width",
+    "container:stylingBox",
+    "container:font(no-op -> font on text child)",
+    "container:customStyle.flex(no-op -> use dimensions.width)",
+    "text:fontSize/fontWeight/color/align",
+    "refListStatus:pill colours (v6, proven live)",
+    "buttonGroup:buttonType colour (renders-via-app-theme, v15)"
+  ],
+  "subtree": {
+    "type": "container",
+    "version": 7,
+    "propertyName": "pageHeaderBand",
+    "componentName": "pageHeaderBand",
+    "hidden": false,
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "flex-start",
+    "alignItems": "stretch",
+    "components": [
+      {
+        "type": "text",
+        "version": 5,
+        "propertyName": "breadcrumbTrail",
+        "componentName": "breadcrumbTrail",
+        "hidden": false,
+        "textType": "span",
+        "contentDisplay": "content",
+        "content": {
+          "_mode": "code",
+          "_code": "var s = []; if (data && data.module && data.module._displayName) { s.push(data.module._displayName); } s.push('Records'); if (data && data.name) { s.push(data.name); } return s.join('  /  ');"
+        },
+        "dataType": "string",
+        "fontSize": "text-sm",
+        "fontWeight": "400",
+        "prefixIcon": "AppstoreOutlined",
+        "desktop": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 12,
+            "weight": "400",
+            "align": "left",
+            "color": "#9BA3B8"
+          },
+          "stylingBox": "{\"marginBottom\":\"6\"}"
+        },
+        "tablet": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 12,
+            "weight": "400",
+            "align": "left",
+            "color": "#9BA3B8"
+          },
+          "stylingBox": "{\"marginBottom\":\"6\"}"
+        },
+        "mobile": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 12,
+            "weight": "400",
+            "align": "left",
+            "color": "#9BA3B8"
+          },
+          "stylingBox": "{\"marginBottom\":\"6\"}"
+        }
+      },
+      {
+        "type": "container",
+        "version": 7,
+        "propertyName": "titleRow",
+        "componentName": "titleRow",
+        "hidden": false,
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "flex-start",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "components": [
+          {
+            "type": "container",
+            "version": 7,
+            "propertyName": "titleLeft",
+            "componentName": "titleLeft",
+            "hidden": false,
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "alignItems": "center",
+            "flexWrap": "wrap",
+            "gap": "12",
+            "components": [
+              {
+                "type": "text",
+                "version": 5,
+                "propertyName": "name",
+                "componentName": "titleText",
+                "label": "Name",
+                "hideLabel": true,
+                "hidden": false,
+                "isDynamic": false,
+                "textType": "paragraph",
+                "level": 1,
+                "content": "{{data.name}}",
+                "contentDisplay": "content",
+                "dataType": "string",
+                "strong": true,
+                "fontSize": "text-2xl",
+                "fontWeight": "600",
+                "enableStyleOnReadonly": false,
+                "desktop": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 24,
+                    "weight": "600",
+                    "align": "left",
+                    "color": "#181818"
+                  },
+                  "dimensions": {
+                    "width": "auto",
+                    "height": "auto",
+                    "minHeight": "fit-content",
+                    "maxWidth": "100%"
+                  },
+                  "stylingBox": "{\"marginBottom\":\"2\"}"
+                },
+                "mobile": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 20,
+                    "weight": "600",
+                    "align": "left",
+                    "color": "#181818"
+                  },
+                  "stylingBox": "{\"marginBottom\":\"2\"}"
+                },
+                "tablet": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 24,
+                    "weight": "600",
+                    "align": "left",
+                    "color": "#181818"
+                  },
+                  "stylingBox": "{\"marginBottom\":\"2\"}"
+                }
+              },
+              {
+                "type": "refListStatus",
+                "version": 6,
+                "propertyName": "status",
+                "componentName": "statusChip",
+                "label": "Status",
+                "hideLabel": true,
+                "hidden": false,
+                "isDynamic": false,
+                "referenceListId": {
+                  "module": "$binding:referenceListModule",
+                  "name": "$binding:referenceListName"
+                },
+                "solidBackground": true,
+                "showReflistName": true,
+                "enableStyleOnReadonly": false,
+                "customStyle": {
+                  "_mode": "code",
+                  "_code": "return { display: 'inline-flex', alignItems: 'center', lineHeight: '1.8', overflow: 'visible', textTransform: 'uppercase', letterSpacing: '0.04em' };"
+                },
+                "desktop": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "tablet": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "mobile": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                }
+              }
+            ],
+            "desktop": {
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "alignItems": "center",
+              "flexWrap": "nowrap",
+              "gap": "12",
+              "dimensions": {
+                "width": "calc(100% - 216px)",
+                "height": "auto",
+                "minHeight": "fit-content",
+                "minWidth": "0px",
+                "maxWidth": "auto"
+              },
+              "stylingBox": "{}"
+            },
+            "tablet": {
+              "dimensions": {
+                "width": "calc(100% - 216px)",
+                "height": "auto",
+                "minHeight": "fit-content"
+              },
+              "display": "flex",
+              "justifyContent": "flex-start",
+              "alignItems": "center",
+              "flexWrap": "nowrap",
+              "gap": "12",
+              "stylingBox": "{}"
+            },
+            "mobile": {
+              "dimensions": {
+                "width": "100%",
+                "height": "auto",
+                "minHeight": "fit-content"
+              },
+              "display": "flex",
+              "justifyContent": "flex-start",
+              "alignItems": "center",
+              "flexWrap": "nowrap",
+              "gap": "12",
+              "stylingBox": "{}"
+            }
+          },
+          {
+            "type": "buttonGroup",
+            "version": 15,
+            "propertyName": "headerActions",
+            "componentName": "headerActions",
+            "label": "Header Actions",
+            "hidden": false,
+            "isDynamic": false,
+            "isInline": true,
+            "editMode": "editable",
+            "gap": "middle",
+            "items": [
+              {
+                "itemType": "item",
+                "itemSubType": "button",
+                "editMode": "inherited",
+                "id": "$slot:actionEditId",
+                "sortOrder": 1,
+                "name": "btnEdit",
+                "label": "Edit",
+                "buttonType": "link",
+                "icon": "EditOutlined",
+                "buttonAction": "startFormEdit",
+                "actionConfiguration": {
+                  "_type": "action-config",
+                  "actionName": "Start Edit",
+                  "actionOwner": "shesha.form",
+                  "handleFail": false,
+                  "handleSuccess": false
+                },
+                "hidden": {
+                  "_mode": "code",
+                  "_code": "return !(() => { return form.formMode === 'readonly' || form.formMode === 'designer'; })();"
+                }
+              },
+              {
+                "itemType": "item",
+                "itemSubType": "button",
+                "editMode": "inherited",
+                "id": "$slot:actionSaveId",
+                "sortOrder": 2,
+                "name": "btnSave",
+                "label": "Save",
+                "buttonType": "primary",
+                "icon": "CheckOutlined",
+                "buttonAction": "submit",
+                "actionConfiguration": {
+                  "_type": "action-config",
+                  "actionName": "Submit",
+                  "actionOwner": "shesha.form",
+                  "handleFail": false,
+                  "handleSuccess": false
+                },
+                "hidden": {
+                  "_mode": "code",
+                  "_code": "return !(() => { return form.formMode === 'edit' || form.formMode === 'designer'; })();"
+                }
+              },
+              {
+                "itemType": "item",
+                "itemSubType": "button",
+                "editMode": "inherited",
+                "id": "$slot:actionCancelId",
+                "sortOrder": 0,
+                "name": "btnCancel",
+                "label": "Cancel",
+                "buttonType": "ghost",
+                "icon": "CloseOutlined",
+                "buttonAction": "cancelFormEdit",
+                "actionConfiguration": {
+                  "_type": "action-config",
+                  "actionName": "Cancel Edit",
+                  "actionOwner": "shesha.form",
+                  "handleFail": false,
+                  "handleSuccess": false
+                },
+                "hidden": {
+                  "_mode": "code",
+                  "_code": "return !(() => { return form.formMode === 'edit' || form.formMode === 'designer'; })();"
+                }
+              }
+            ],
+            "desktop": {
+              "dimensions": {
+                "width": "200px",
+                "height": "auto",
+                "minHeight": "fit-content",
+                "minWidth": "0px",
+                "maxWidth": "auto"
+              },
+              "stylingBox": "{}"
+            },
+            "tablet": {
+              "dimensions": {
+                "width": "200px",
+                "height": "auto",
+                "minHeight": "fit-content"
+              },
+              "stylingBox": "{}"
+            },
+            "mobile": {
+              "dimensions": {
+                "width": "100%",
+                "height": "auto",
+                "minHeight": "fit-content"
+              },
+              "stylingBox": "{}"
+            }
+          }
+        ],
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "auto"
+          },
+          "stylingBox": "{}"
+        },
+        "tablet": {
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content"
+          },
+          "display": "flex",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "gap": "16",
+          "stylingBox": "{}"
+        },
+        "mobile": {
+          "flexDirection": "column",
+          "alignItems": "flex-start",
+          "gap": "12",
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content"
+          },
+          "display": "flex",
+          "justifyContent": "space-between",
+          "flexWrap": "nowrap",
+          "stylingBox": "{}"
+        }
+      }
+    ],
+    "desktop": {
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "4",
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "auto"
+      },
+      "stylingBox": "{\"paddingTop\":\"4\",\"paddingBottom\":\"18\"}"
+    },
+    "tablet": {
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "auto"
+      },
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "4",
+      "stylingBox": "{\"paddingTop\":\"4\",\"paddingBottom\":\"18\"}"
+    },
+    "mobile": {
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "auto"
+      },
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "4",
+      "stylingBox": "{\"paddingTop\":\"4\",\"paddingBottom\":\"18\"}"
+    }
+  }
+}

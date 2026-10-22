@@ -1,0 +1,440 @@
+{
+  "type": "dateField",
+  "name": "Date field",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "CalendarOutlined",
+  "version": 9,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({\n    ...model,\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IDateFieldProps",
+    "interfaceFile": "designer-components/dateField/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "dateFormat",
+      "value",
+      "hideBorder",
+      "selectionType",
+      "bindingFormat",
+      "toPropertyName",
+      "minuteStep",
+      "defaultToMidnight",
+      "timeFormat",
+      "yearFormat",
+      "quarterFormat",
+      "monthFormat",
+      "weekFormat",
+      "range",
+      "resolveToUTC",
+      "onChange",
+      "dateRestriction",
+      "disabledDateMode",
+      "disabledDateTemplate",
+      "disabledDateFunc",
+      "disabledTimeMode",
+      "disabledTimeTemplate",
+      "disabledTimeFunc",
+      "additionalStyles",
+      "onFocus",
+      "onBlur",
+      "onClick",
+      "onMouseEnter",
+      "onMouseMove",
+      "onMouseLeave",
+      "onKeyDown",
+      "onKeyUp"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "additionalStyles",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "bindingFormat",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dateFormat",
+      "dateRestriction",
+      "defaultToMidnight",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "disabledDateFunc",
+      "disabledDateMode",
+      "disabledDateTemplate",
+      "disabledTimeFunc",
+      "disabledTimeMode",
+      "disabledTimeTemplate",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "minuteStep",
+      "mobile",
+      "monthFormat",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlur",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClick",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocus",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDown",
+      "onKeyDownCustom",
+      "onKeyUp",
+      "onKeyUpCustom",
+      "onMouseEnter",
+      "onMouseEnterCustom",
+      "onMouseLeave",
+      "onMouseLeaveCustom",
+      "onMouseMove",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "quarterFormat",
+      "range",
+      "readOnly",
+      "resolveToUTC",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "selectionType",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "timeFormat",
+      "toPropertyName",
+      "type",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "weekFormat",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss",
+      "yearFormat"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "dateField/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Property the end of the range binds to. Only used when Range is enabled."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "toPropertyName",
+      "label": "To Property Name",
+      "editorType": "contextPropertyAutocomplete",
+      "description": "Property the end of the range binds to. Only used when Range is enabled."
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "bindingFormat",
+      "label": "Binding Format",
+      "editorType": "dropdown",
+      "description": "Format the selected value is stored in."
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "selectionType",
+      "label": "Selection Type",
+      "editorType": "dropdown",
+      "description": "What the user picks, and at what precision."
+    },
+    {
+      "path": "range",
+      "label": "Range",
+      "editorType": "switch"
+    },
+    {
+      "path": "dateFormat",
+      "label": "Date Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "timeFormat",
+      "label": "Time Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "weekFormat",
+      "label": "Week Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "monthFormat",
+      "label": "Month Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "quarterFormat",
+      "label": "Quarter Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "yearFormat",
+      "label": "Year Format",
+      "editorType": "textField"
+    },
+    {
+      "path": "minuteStep",
+      "label": "Minute steps",
+      "editorType": "dropdown",
+      "description": "Granularity of the minute column in the time picker."
+    },
+    {
+      "path": "resolveToUTC",
+      "label": "Convert to/from UTC",
+      "editorType": "switch"
+    },
+    {
+      "path": "defaultToMidnight",
+      "label": "Default time to midnight",
+      "editorType": "switch"
+    },
+    {
+      "path": "dateRestriction",
+      "label": "Date Restriction",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "disabledTimeMode",
+      "label": "Time Restrictions",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "disabledTimeTemplate",
+      "label": "Time Restriction Template",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "disabledTimeFunc",
+      "label": "Time Restriction Func",
+      "editorType": "codeEditor"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validation",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "label": "On Change",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "dateField/dateField.tsx",
+    "dateField/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 6,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 8,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "picker+showTime -> selectionType, resolveToUTC -> bindingFormat, disabledDateMode -> dateRestriction; hidden->visible etc."
+    }
+  ]
+}

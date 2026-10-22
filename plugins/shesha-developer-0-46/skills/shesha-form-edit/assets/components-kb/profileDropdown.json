@@ -1,0 +1,234 @@
+{
+  "type": "profileDropdown",
+  "name": "Profile Dropdown",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": false,
+  "icon": "UserOutlined",
+  "version": 2,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IProfileDropdown",
+    "interfaceFile": "designer-components/profileDropdown/index.tsx",
+    "ownProps": [
+      "items",
+      "subText",
+      "subTextColor",
+      "subTextFontSize",
+      "subTextFontWeight",
+      "subTextFontFamily",
+      "subTextTextAlign",
+      "subTextStyle",
+      "showUserInfo",
+      "popOverTitle",
+      "popOverFormId",
+      "popOverContentStyle"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "popOverContentStyle",
+      "popOverFormId",
+      "popOverTitle",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showUserInfo",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subText",
+      "subTextColor",
+      "subTextFontFamily",
+      "subTextFontSize",
+      "subTextFontWeight",
+      "subTextStyle",
+      "subTextTextAlign",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "profileDropdown/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Controls text thickness (light, normal, bold, etc.)"
+    },
+    {
+      "path": "propertyName",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "subText",
+      "label": "Sub Text",
+      "editorType": "textField"
+    },
+    {
+      "path": "items",
+      "label": "Configure Menu Buttons",
+      "editorType": "buttonGroupConfigurator"
+    },
+    {
+      "path": "popOverTitle",
+      "label": "Popover Title",
+      "editorType": "textField"
+    },
+    {
+      "path": "showUserInfo",
+      "label": "Show User Info",
+      "editorType": "switch"
+    },
+    {
+      "path": "popOverFormId",
+      "label": "Popover Form",
+      "editorType": "formAutocomplete"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "subTextFontSize",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Font"
+    },
+    {
+      "path": "subTextColor",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Font"
+    },
+    {
+      "path": "font.align",
+      "label": "Align",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "subTextStyle",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the sub text as an object. This should conform to CSSProperties",
+      "group": "Sub Text Style"
+    },
+    {
+      "path": "popOverContentStyle",
+      "label": "Content Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the popover content as an object. This should conform to CSSProperties",
+      "group": "Popover Style"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "profileDropdown/index.tsx"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": []
+}

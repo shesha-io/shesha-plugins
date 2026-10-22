@@ -1,0 +1,60 @@
+{
+ "rule": "labelcol",
+ "cases": [
+  {
+   "name": "subForm spans rewritten when the option is set",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "sf",
+      "type": "subForm",
+      "componentName": "sf",
+      "parentId": "root",
+      "labelCol": 8,
+      "wrapperCol": 16
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/labelCol",
+     10
+    ],
+    [
+     "components/0/wrapperCol",
+     14
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "subformLabelCol": [
+     10,
+     14
+    ]
+   }
+  },
+  {
+   "name": "no option, no change",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "sf",
+      "type": "subForm",
+      "componentName": "sf",
+      "parentId": "root",
+      "labelCol": 8,
+      "wrapperCol": 16
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

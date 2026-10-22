@@ -1,0 +1,139 @@
+{
+ "rule": "status",
+ "cases": [
+  {
+   "name": "status button condition (pattern set), separator gap, lone status-button container",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "box",
+      "type": "container",
+      "componentName": "box",
+      "parentId": "root",
+      "components": [
+       {
+        "id": "btn",
+        "type": "button",
+        "componentName": "btn",
+        "parentId": "box",
+        "label": {
+         "_mode": "code",
+         "_code": "const status = data?.order?.status;\nreturn status;"
+        }
+       }
+      ]
+     },
+     {
+      "id": "sep",
+      "type": "sectionSeparator",
+      "componentName": "sep",
+      "parentId": "root"
+     }
+    ]
+   },
+   "changes": 3,
+   "expect": [
+    [
+     "components/0/components/0/visible/_code",
+     "/*reconciler:046-status-button*/\nreturn data?.order?.status != null;"
+    ],
+    [
+     "components/0/visible/_code",
+     "/*reconciler:046-status-button*/\nreturn data?.order?.status != null;"
+    ],
+    [
+     "components/1/wrapperStyle",
+     "/*reconciler:046-separator-gap*/\nreturn { marginBottom: '8px' };"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "statusLabelPattern": "const\\s+status\\s*=\\s*data\\??\\.(\\w+)\\??\\.status"
+   },
+   "touched": [
+    "components/0/components/0/visible",
+    "components/0/visible",
+    "components/1/wrapperStyle"
+   ]
+  },
+  {
+   "name": "a custom status label pattern is honoured",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "btn",
+      "type": "button",
+      "componentName": "btn",
+      "parentId": "root",
+      "label": {
+       "_mode": "code",
+       "_code": "const s = data?.invoice?.state;"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/visible/_code",
+     "/*reconciler:046-status-button*/\nreturn data?.invoice?.state != null;"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "statusLabelPattern": "const\\s+s\\s*=\\s*data\\??\\.(\\w+)\\??\\.(?P<prop>\\w+)"
+   },
+   "touched": [
+    "components/0/visible"
+   ]
+  },
+  {
+   "name": "without statusLabelPattern the status-button part is a no-op (the separator gap is still applied)",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "box",
+      "type": "container",
+      "componentName": "box",
+      "parentId": "root",
+      "components": [
+       {
+        "id": "btn",
+        "type": "button",
+        "componentName": "btn",
+        "parentId": "box",
+        "label": {
+         "_mode": "code",
+         "_code": "const status = data?.order?.status;\nreturn status;"
+        }
+       }
+      ]
+     },
+     {
+      "id": "sep",
+      "type": "sectionSeparator",
+      "componentName": "sep",
+      "parentId": "root"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/1/wrapperStyle",
+     "/*reconciler:046-separator-gap*/\nreturn { marginBottom: '8px' };"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components/1/wrapperStyle"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,650 @@
+{
+  "$block": "rail-panel",
+  "$scope": "region",
+  "$styleOverlay": "rail-panel",
+  "$description": "A count-badged rail card for a linked-item collection (e.g. Required End-points / Roles). card v3 (header-strip styling) with hideHeading:true so the title lives in a styled strip row INSIDE content: left = title text + count badge; right = inline '+' add link (buttonGroup link button -> Show Dialog -> Refresh table). Body = a datalist (row form per item) bound to its own dataContext, OR the datalist's built-in empty-state. Stacks in the rail with gap 16 (set by the enclosing detailRail container, not this block).",
+  "$slots": {
+    "title.text": "content.components[0].components[0].components[0].components[0].content",
+    "count.badge.text": "content.components[0].components[0].components[0].components[1].content",
+    "add.button.label": "content.components[0].components[0].components[1].components[0].items[0].label",
+    "datalist": "content.components[0].components[1]"
+  },
+  "$bindings": [
+    {
+      "name": "dataContext.entityType",
+      "path": "content.components[0].entityType",
+      "note": "{name,module} of the link/junction entity the rail lists (e.g. ViewDefinitionRequiredApi)"
+    },
+    {
+      "name": "dataContext.endpoint",
+      "path": "content.components[0].endpoint",
+      "note": "code-mode GetAll URL filtered to the owner record + &properties projection"
+    },
+    {
+      "name": "count.binding",
+      "path": "content.components[0].components[0].components[0].components[1].content",
+      "note": "{{...}} expression resolving the linked-item count (or a static placeholder)"
+    },
+    {
+      "name": "datalist.formId",
+      "path": "content.components[0].components[1].formId",
+      "note": "{name,module} of the per-row list-item form (e.g. view-endpoint-row)"
+    },
+    {
+      "name": "add.formId",
+      "path": "content.components[0].components[0].components[1].components[0].items[0].actionConfiguration.actionArguments.formId",
+      "note": "{name,module} of the add/link dialog form"
+    },
+    {
+      "name": "add.onSuccess.actionOwner",
+      "path": "content.components[0].components[0].components[1].components[0].items[0].actionConfiguration.onSuccess.actionOwner",
+      "note": "MUST equal the dataContext id so the add dialog refreshes this rail's datalist"
+    }
+  ],
+  "$validatedAgainst": [
+    "card:bg/border/shadow/radius",
+    "container:dimensions.width",
+    "container:stylingBox",
+    "container:font(no-op->text child)",
+    "text:fontSize/fontWeight/color/align",
+    "buttonGroup:buttonType colour(app-theme)",
+    "datatable/datalist:header/row/card styling",
+    "dataContext"
+  ],
+  "subtree": {
+    "id": "rail-panel-card",
+    "type": "card",
+    "version": 3,
+    "propertyName": "railCard",
+    "componentName": "railCard",
+    "label": "Rail Panel",
+    "hideHeading": true,
+    "enableStyleOnReadonly": false,
+    "header": {
+      "id": "rail-panel-header",
+      "components": []
+    },
+    "content": {
+      "id": "rail-panel-content",
+      "components": [
+        {
+          "id": "rail-dc",
+          "type": "dataContext",
+          "version": 7,
+          "propertyName": "railDc",
+          "componentName": "railDc",
+          "label": "Rail Data",
+          "entityType": {
+            "name": "$binding:entityType.name",
+            "module": "$binding:entityType.module"
+          },
+          "sourceType": "Url",
+          "endpoint": {
+            "_mode": "code",
+            "_code": "return '/api/dynamic/$MODULE/$ENTITY/Crud/GetAll?filter=' + encodeURIComponent(JSON.stringify({and:[{\"==\":[{var:\"$OWNERFK.id\"},data.id]}]})) + '&properties=' + encodeURIComponent('$PROJECTION');"
+          },
+          "dataFetchingMode": "paging",
+          "defaultPageSize": 50,
+          "sortMode": "standard",
+          "strictSortOrder": "asc",
+          "allowReordering": "no",
+          "components": [
+            {
+              "id": "rail-strip",
+              "type": "container",
+              "version": 7,
+              "propertyName": "railStrip",
+              "componentName": "railStrip",
+              "label": "railStrip",
+              "editMode": "inherited",
+              "display": "flex",
+              "flexDirection": "row",
+              "alignItems": "center",
+              "justifyContent": "space-between",
+              "flexWrap": "nowrap",
+              "gap": "8px",
+              "components": [
+                {
+                  "id": "rail-title-wrap",
+                  "type": "container",
+                  "version": 7,
+                  "propertyName": "railTitleWrap",
+                  "componentName": "railTitleWrap",
+                  "label": "railTitleWrap",
+                  "editMode": "inherited",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "alignItems": "center",
+                  "justifyContent": "flex-start",
+                  "flexWrap": "nowrap",
+                  "gap": "8px",
+                  "components": [
+                    {
+                      "id": "rail-title",
+                      "type": "text",
+                      "version": 5,
+                      "propertyName": "railTitle",
+                      "componentName": "railTitle",
+                      "label": "Title",
+                      "textType": "span",
+                      "content": "Required End-points",
+                      "contentDisplay": "content",
+                      "strong": false,
+                      "enableStyleOnReadonly": false,
+                      "desktop": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 14,
+                          "weight": "600",
+                          "align": "left",
+                          "color": "#181818"
+                        },
+                        "dimensions": {
+                          "width": "auto"
+                        },
+                        "border": {},
+                        "background": {},
+                        "shadow": {},
+                        "stylingBox": "{}"
+                      },
+                      "tablet": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 14,
+                          "weight": "600",
+                          "align": "left",
+                          "color": "#181818"
+                        },
+                        "border": {},
+                        "background": {},
+                        "shadow": {},
+                        "stylingBox": "{}"
+                      },
+                      "mobile": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 14,
+                          "weight": "600",
+                          "align": "left",
+                          "color": "#181818"
+                        },
+                        "border": {},
+                        "background": {},
+                        "shadow": {},
+                        "stylingBox": "{}"
+                      }
+                    },
+                    {
+                      "id": "rail-count",
+                      "type": "text",
+                      "version": 5,
+                      "propertyName": "railCount",
+                      "componentName": "railCount",
+                      "label": "Count",
+                      "textType": "span",
+                      "content": "0",
+                      "contentDisplay": "content",
+                      "strong": false,
+                      "enableStyleOnReadonly": false,
+                      "desktop": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 12,
+                          "weight": "500",
+                          "align": "center",
+                          "color": "#9BA3B8"
+                        },
+                        "background": {
+                          "type": "color",
+                          "color": "#f0f2f5"
+                        },
+                        "border": {
+                          "hideBorder": false,
+                          "radiusType": "all",
+                          "borderType": "all",
+                          "border": {
+                            "all": {
+                              "width": "1px",
+                              "style": "none",
+                              "color": "#E8EAF0"
+                            },
+                            "top": {},
+                            "bottom": {},
+                            "left": {},
+                            "right": {}
+                          },
+                          "radius": {
+                            "all": 10
+                          }
+                        },
+                        "dimensions": {
+                          "width": "auto",
+                          "height": "auto",
+                          "minHeight": "20px",
+                          "maxHeight": "auto",
+                          "minWidth": "20px",
+                          "maxWidth": "auto"
+                        },
+                        "stylingBox": "{\"paddingTop\":\"0\",\"paddingRight\":\"8\",\"paddingBottom\":\"0\",\"paddingLeft\":\"8\"}",
+                        "shadow": {}
+                      },
+                      "tablet": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 12,
+                          "weight": "500",
+                          "align": "center",
+                          "color": "#9BA3B8"
+                        },
+                        "background": {
+                          "type": "color",
+                          "color": "#f0f2f5"
+                        },
+                        "border": {
+                          "hideBorder": false,
+                          "radiusType": "all",
+                          "borderType": "all",
+                          "border": {
+                            "all": {
+                              "width": "1px",
+                              "style": "none",
+                              "color": "#E8EAF0"
+                            },
+                            "top": {},
+                            "bottom": {},
+                            "left": {},
+                            "right": {}
+                          },
+                          "radius": {
+                            "all": 10
+                          }
+                        },
+                        "stylingBox": "{\"paddingTop\":\"0\",\"paddingRight\":\"8\",\"paddingBottom\":\"0\",\"paddingLeft\":\"8\"}",
+                        "shadow": {}
+                      },
+                      "mobile": {
+                        "font": {
+                          "type": "Segoe UI",
+                          "size": 12,
+                          "weight": "500",
+                          "align": "center",
+                          "color": "#9BA3B8"
+                        },
+                        "background": {
+                          "type": "color",
+                          "color": "#f0f2f5"
+                        },
+                        "border": {
+                          "hideBorder": false,
+                          "radiusType": "all",
+                          "borderType": "all",
+                          "border": {
+                            "all": {
+                              "width": "1px",
+                              "style": "none",
+                              "color": "#E8EAF0"
+                            },
+                            "top": {},
+                            "bottom": {},
+                            "left": {},
+                            "right": {}
+                          },
+                          "radius": {
+                            "all": 10
+                          }
+                        },
+                        "stylingBox": "{\"paddingTop\":\"0\",\"paddingRight\":\"8\",\"paddingBottom\":\"0\",\"paddingLeft\":\"8\"}",
+                        "shadow": {}
+                      }
+                    }
+                  ],
+                  "desktop": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-start",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto",
+                      "height": "auto",
+                      "minHeight": "fit-content",
+                      "maxHeight": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none"
+                    },
+                    "stylingBox": "{}"
+                  },
+                  "tablet": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-start",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto"
+                    },
+                    "stylingBox": "{}"
+                  },
+                  "mobile": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-start",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto"
+                    },
+                    "stylingBox": "{}"
+                  }
+                },
+                {
+                  "id": "rail-add-wrap",
+                  "type": "container",
+                  "version": 7,
+                  "propertyName": "railAddWrap",
+                  "componentName": "railAddWrap",
+                  "label": "railAddWrap",
+                  "editMode": "inherited",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "alignItems": "center",
+                  "justifyContent": "flex-end",
+                  "flexWrap": "nowrap",
+                  "gap": "8px",
+                  "components": [
+                    {
+                      "id": "rail-add-bg",
+                      "type": "buttonGroup",
+                      "version": 15,
+                      "propertyName": "railAddBg",
+                      "componentName": "railAddBg",
+                      "label": "Actions",
+                      "hideLabel": true,
+                      "editMode": "editable",
+                      "size": "small",
+                      "spaceSize": "small",
+                      "isInline": true,
+                      "gap": "small",
+                      "enableStyleOnReadonly": false,
+                      "items": [
+                        {
+                          "id": "rail-add-item",
+                          "itemType": "item",
+                          "sortOrder": 0,
+                          "itemSubType": "button",
+                          "buttonType": "link",
+                          "label": "Add",
+                          "icon": "PlusOutlined",
+                          "iconPosition": "left",
+                          "size": "small",
+                          "editMode": "editable",
+                          "actionConfiguration": {
+                            "_type": "action-config",
+                            "actionName": "Show Dialog",
+                            "actionOwner": "shesha.common",
+                            "handleFail": false,
+                            "handleSuccess": true,
+                            "onSuccess": {
+                              "_type": "action-config",
+                              "actionName": "Refresh table",
+                              "actionOwner": "rail-dc",
+                              "handleFail": false,
+                              "handleSuccess": false
+                            },
+                            "actionArguments": {
+                              "modalTitle": "Add",
+                              "footerButtons": "default",
+                              "formMode": "edit",
+                              "formArguments": "return { $OWNERFK: { id: data.id, _displayName: data.name, _className: '$OWNERCLASSNAME' } };",
+                              "modalWidth": "60%",
+                              "formId": {
+                                "name": "$binding:add.formId.name",
+                                "module": "$binding:add.formId.module"
+                              },
+                              "version": 1,
+                              "showCloseIcon": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "desktop": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-end",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto",
+                      "height": "auto",
+                      "minHeight": "fit-content",
+                      "maxHeight": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none"
+                    },
+                    "stylingBox": "{}"
+                  },
+                  "tablet": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-end",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto"
+                    },
+                    "stylingBox": "{}"
+                  },
+                  "mobile": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "justifyContent": "flex-end",
+                    "flexWrap": "nowrap",
+                    "gap": "8px",
+                    "dimensions": {
+                      "width": "auto"
+                    },
+                    "stylingBox": "{}"
+                  }
+                }
+              ],
+              "desktop": {
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "justifyContent": "space-between",
+                "flexWrap": "nowrap",
+                "gap": "8px",
+                "dimensions": {
+                  "width": "100%",
+                  "height": "auto",
+                  "minHeight": "fit-content",
+                  "maxHeight": "auto",
+                  "minWidth": "0px",
+                  "maxWidth": "100%"
+                },
+                "stylingBox": "{\"marginBottom\":\"12\"}",
+                "enableStyleOnReadonly": false
+              },
+              "tablet": {
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "justifyContent": "space-between",
+                "flexWrap": "nowrap",
+                "gap": "8px",
+                "dimensions": {
+                  "width": "100%"
+                },
+                "stylingBox": "{\"marginBottom\":\"12\"}",
+                "enableStyleOnReadonly": false
+              },
+              "mobile": {
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "justifyContent": "space-between",
+                "flexWrap": "nowrap",
+                "gap": "8px",
+                "dimensions": {
+                  "width": "100%"
+                },
+                "stylingBox": "{\"marginBottom\":\"12\"}",
+                "enableStyleOnReadonly": false
+              }
+            },
+            {
+              "id": "rail-datalist",
+              "type": "datalist",
+              "version": 11,
+              "propertyName": "railDatalist",
+              "componentName": "railDatalist",
+              "parentId": "rail-dc",
+              "formSelectionMode": "name",
+              "formId": {
+                "module": "$binding:datalist.formId.module",
+                "name": "$binding:datalist.formId.name"
+              },
+              "formType": "Table",
+              "selectionMode": "none",
+              "orientation": "vertical",
+              "listItemWidth": 1,
+              "showBorder": false,
+              "gap": 12,
+              "hidden": false,
+              "customListItemWidth": null,
+              "cardHeight": null,
+              "cardMinWidth": null,
+              "cardMaxWidth": null
+            }
+          ]
+        }
+      ]
+    },
+    "desktop": {
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "0px",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "auto"
+      },
+      "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    },
+    "tablet": {
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "dimensions": {
+        "width": "100%",
+        "height": "auto"
+      },
+      "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    },
+    "mobile": {
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "dimensions": {
+        "width": "100%",
+        "height": "auto"
+      },
+      "stylingBox": "{\"paddingTop\":\"16\",\"paddingRight\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    }
+  }
+}

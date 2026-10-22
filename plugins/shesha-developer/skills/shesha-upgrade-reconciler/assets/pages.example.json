@@ -1,0 +1,4 @@
+[
+  {"module": "<Configuration.Module>", "form": "<entity>-table", "id": "-"},
+  {"module": "<Configuration.Module>", "form": "<entity>-details", "id": "<record guid that exists in BOTH databases>"}
+]

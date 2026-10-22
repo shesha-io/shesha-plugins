@@ -1,0 +1,58 @@
+{
+ "rule": "types",
+ "cases": [
+  {
+   "name": "framework entity type renamed",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ac",
+      "type": "autocomplete",
+      "componentName": "ac",
+      "parentId": "root",
+      "entityType": "Shesha.Domain.ConfigurationItems.Module"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/entityType",
+     "Shesha.Domain.Module"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  },
+  {
+   "name": "project entries extend the map",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "ac",
+      "type": "autocomplete",
+      "componentName": "ac",
+      "parentId": "root",
+      "entityType": "Shop.Old.Item"
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/entityType",
+     "Shop.Domain.Item"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "options": {
+    "typeMapExtra": {
+     "Shop.Old.Item": "Shop.Domain.Item"
+    }
+   }
+  }
+ ]
+}

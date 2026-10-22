@@ -1,0 +1,176 @@
+{
+ "components": [
+  {
+   "id": "c8ce45b7-1328-45f4-9891-f401daca6523",
+   "type": "container",
+   "version": 7,
+   "propertyName": "listContainer",
+   "componentName": "listContainer",
+   "parentId": "root",
+   "display": "flex",
+   "flexDirection": "column",
+   "direction": "vertical",
+   "alignItems": "stretch",
+   "justifyContent": "flex-start",
+   "flexWrap": "nowrap",
+   "gap": "8",
+   "overflow": true,
+   "hidden": false,
+   "desktop": {
+    "stylingBox": "{\"paddingTop\":\"24\",\"paddingBottom\":\"24\",\"paddingLeft\":\"24\",\"paddingRight\":\"24\"}"
+   },
+   "tablet": {
+    "stylingBox": "{\"paddingTop\":\"24\",\"paddingBottom\":\"24\",\"paddingLeft\":\"24\",\"paddingRight\":\"24\"}"
+   },
+   "mobile": {
+    "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+   },
+   "components": [
+    {
+     "id": "3455a351-4e21-4dc0-ab68-d5808de7cdc3",
+     "type": "text",
+     "version": 5,
+     "propertyName": "listTitle",
+     "componentName": "listTitle",
+     "parentId": "c8ce45b7-1328-45f4-9891-f401daca6523",
+     "content": "Customer Testimonials",
+     "contentDisplay": "content",
+     "fontSize": "22px",
+     "fontWeight": "600",
+     "hidden": false,
+     "desktop": {
+      "font": {
+       "color": "#111827",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 22,
+       "weight": "600"
+      }
+     },
+     "tablet": {
+      "font": {
+       "color": "#111827",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 22,
+       "weight": "600"
+      }
+     },
+     "mobile": {
+      "font": {
+       "color": "#111827",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 22,
+       "weight": "600"
+      }
+     }
+    },
+    {
+     "id": "def114ba-bf4d-48d1-bac5-3658611f9584",
+     "type": "text",
+     "version": 5,
+     "propertyName": "listSubtitle",
+     "componentName": "listSubtitle",
+     "parentId": "c8ce45b7-1328-45f4-9891-f401daca6523",
+     "content": "What our customers say about us",
+     "contentDisplay": "content",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "hidden": false,
+     "desktop": {
+      "font": {
+       "color": "#6b7280",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 14,
+       "weight": "400"
+      }
+     },
+     "tablet": {
+      "font": {
+       "color": "#6b7280",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 14,
+       "weight": "400"
+      }
+     },
+     "mobile": {
+      "font": {
+       "color": "#6b7280",
+       "type": "Segoe UI",
+       "align": "left",
+       "size": 14,
+       "weight": "400"
+      }
+     }
+    },
+    {
+     "id": "32e12ea5-6ca1-4433-94e4-990ab10af416",
+     "type": "dataContext",
+     "version": 8,
+     "propertyName": "testimonialsCtx",
+     "componentName": "testimonialsCtx",
+     "parentId": "c8ce45b7-1328-45f4-9891-f401daca6523",
+     "uniqueStateId": "testimonialsCtx",
+     "sourceType": "Entity",
+     "entityType": "boxfusion.test.Domain.Domain.Testimonials.Testimonial",
+     "dataFetchingMode": "paging",
+     "defaultPageSize": 12,
+     "sortMode": "standard",
+     "allowReordering": "no",
+     "hidden": false,
+     "components": [
+      {
+       "id": "abbcda38-5fd6-4acd-8134-4fd89d0b8af3",
+       "type": "datalist",
+       "version": 11,
+       "propertyName": "testimonialsList",
+       "componentName": "testimonialsList",
+       "parentId": "32e12ea5-6ca1-4433-94e4-990ab10af416",
+       "formSelectionMode": "name",
+       "formId": {
+        "module": "boxfusion.test",
+        "name": "entity-card"
+       },
+       "formType": "Table",
+       "selectionMode": "none",
+       "orientation": "wrap",
+       "listItemWidth": 0.33,
+       "showBorder": false,
+       "gap": 16,
+       "hidden": false
+      },
+      {
+       "id": "f5d1fe95-6ccb-44cf-a05a-ef1ea3c2704b",
+       "type": "datatable.pager",
+       "version": 4,
+       "propertyName": "testimonialsPager",
+       "componentName": "testimonialsPager",
+       "parentId": "32e12ea5-6ca1-4433-94e4-990ab10af416",
+       "showSizeChanger": true,
+       "showTotalItems": true,
+       "hidden": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "formSettings": {
+  "layout": "horizontal",
+  "colon": false,
+  "labelCol": {
+   "span": 8
+  },
+  "wrapperCol": {
+   "span": 16
+  },
+  "modelType": "boxfusion.test.Domain.Domain.Testimonials.Testimonial",
+  "access": 3,
+  "version": 1,
+  "dataLoaderType": "none",
+  "dataSubmitterType": "none"
+ }
+}

@@ -1,0 +1,290 @@
+{
+  "$brand": "shesha",
+  "$source": "Shesha Design System reference (A. Slavchov, Senior UI/UX) — Ant Design 6.x, light-mode. The framework's out-of-the-box brand; the DEFAULT theme when no app-specific brand is named.",
+  "$description": "Cobalt (#003BB2) anchors every interactive affordance (buttons, links, focus rings, active states); Athens Grey (#F8F8F9) is the dominant surface (~30% of every page, not white); Navy (#000E8E) gives sidebar and top-header chrome depth; all type is Nero (#181818), never pure black. Structure is communicated by hairline borders, not shadows. The secondary palette is operational status signalling only — never decorative.",
+  "$weightPolicy": "Shesha uses a 400/600 weight binary for body and headings (no 700 hierarchy). 500 is permitted ONLY for status-chip / micro-label text. `type.weights` carries all four so existing recipes still resolve, but prefer 400 (body/values) and 600 (labels/headings).",
+  "palette": {
+    "brand": {
+      "primary": "#003BB2",
+      "primaryHover": "#002E9A",
+      "primaryActive": "#002280",
+      "tint": "#EEF2FF",
+      "tintSoft": "#F4F8FF",
+      "focusRing": "rgba(0,59,178,0.2)"
+    },
+    "accent": {
+      "navy": "#000E8E",
+      "$use": "sidebar + top-header chrome depth and the data-viz primary series only — never a general CTA colour (that is brand.primary). Never place Cobalt text on a Navy fill (insufficient contrast)."
+    },
+    "surfaces": {
+      "canvas": "#F8F8F9",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F8F8F9",
+      "surfaceMuted": "#F8F8F9",
+      "surfaceInset": "#F0F2F5",
+      "surfaceHover": "#ECEDF5",
+      "surfaceStriped": "#FAFBFC"
+    },
+    "lines": {
+      "border": "#E8EAF0",
+      "borderStrong": "#D0D5E0",
+      "divider": "#F0F2F5"
+    },
+    "ink": {
+      "primary": "#181818",
+      "muted": "#333333",
+      "soft": "#9BA3B8",
+      "faint": "#C0C5D0"
+    },
+    "semantic": {
+      "success": "#007E00",
+      "successIcon": "#23B414",
+      "successBg": "#E8F5E9",
+      "successBorder": "#23B414",
+      "warning": "#FF6600",
+      "warningIcon": "#FEBA00",
+      "warningBg": "#FFF8E1",
+      "warningBorder": "#FEBA00",
+      "danger": "#D61111",
+      "dangerHover": "#B50E0E",
+      "dangerBg": "#FFEBEE",
+      "dangerBorder": "#D61111",
+      "info": "#003BB2",
+      "infoBg": "#EEF2FF",
+      "infoBorder": "#003BB2"
+    }
+  },
+  "type": {
+    "family": "'Inter Variable', sans-serif",
+    "familyMono": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace",
+    "$fontPolicy": "0.46: the framework bundles and self-hosts 'Inter Variable' (providers/theme/interFont.generated.css) and ThemeProvider FORCES token.fontFamily to it, plus a body{font-family} baseline. It is not settable from Shesha.ThemeSettings. Component defaults still hard-code font.type 'Segoe UI' (text, textField, tabs), so write font.type 'Inter Variable' explicitly in per-component style blocks; a stored font.type always wins over the app font.",
+    "scale": { "micro": 12, "dense": 13, "body": 14, "cardHeader": 16, "subtitle": 20, "title": 24, "titleLg": 24 },
+    "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700 },
+    "lineHeights": { "tight": 1.25, "snug": 1.375, "base": 1.571 }
+  },
+  "spacing": { "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64, "20": 80 },
+  "radius": { "xs": 2, "sm": 4, "md": 6, "lg": 8, "pill": 9999 },
+  "shadow": {
+    "none": "none",
+    "card": "0 1px 4px rgba(0,0,0,0.08)",
+    "overlay": "0 4px 16px rgba(0,0,0,0.10)",
+    "rowHover": "0 1px 2px rgba(0,0,0,0.06)",
+    "$philosophy": "Shesha is border-forward: structure is communicated by hairline borders, and cards render essentially flat per the design system (Box-shadow: none on cards). `card` here is the whisper elevation AntD applies to raised surfaces — keep it barely-perceptible or omit it; reserve `overlay` for genuinely floating surfaces (modals, popovers, dropdown menus). Never add heavy/decorative drop shadows."
+  },
+  "chrome": {
+    "sidebarWidth": 240,
+    "sidebarCollapsed": 64,
+    "headerHeight": 52,
+    "pagePaddingX": 24,
+    "pagePaddingY": 24,
+    "contentMaxWidth": 1280,
+    "formColMax": 800,
+    "formColWide": 1100
+  },
+  "statusLifecycle": {
+    "$reflist": "brand-generic — the Shesha default defines no fixed lifecycle. A specific app maps its status reference-list items onto these five operational tones (see shesha-design-standards.md → status badges). Status is never colour-alone: always pair the tone with the status name/icon.",
+    "order": ["draft", "success", "warning", "error", "info"],
+    "badges": {
+      "draft":   { "bg": "#F0F2F5", "fg": "#333333", "border": "#D0D5E0" },
+      "success": { "bg": "#E8F5E9", "fg": "#007E00", "border": "#23B414" },
+      "warning": { "bg": "#FFF8E1", "fg": "#E65100", "border": "#FEBA00" },
+      "error":   { "bg": "#FFEBEE", "fg": "#B71C1C", "border": "#D61111" },
+      "info":    { "bg": "#EEF2FF", "fg": "#003BB2", "border": "#003BB2" }
+    }
+  },
+  "roles": {
+    "appPrimary": "palette.brand.primary",
+    "appPrimaryHover": "palette.brand.primaryHover",
+    "appPrimaryActive": "palette.brand.primaryActive",
+    "pageBg": "palette.surfaces.canvas",
+    "cardBg": "palette.surfaces.surface",
+    "cardHeaderBg": "palette.surfaces.surfaceAlt",
+    "readOnlyFieldBg": "palette.surfaces.surfaceMuted",
+    "inputBorder": "palette.lines.borderStrong",
+    "hairline": "palette.lines.border",
+    "divider": "palette.lines.divider",
+    "sectionHeading": "palette.ink.primary",
+    "bodyText": "palette.ink.primary",
+    "bodyInk": "palette.ink.primary",
+    "secondaryText": "palette.ink.muted",
+    "helperText": "palette.ink.muted",
+    "placeholderText": "palette.ink.soft",
+    "mutedText": "palette.ink.soft",
+    "navBg": "palette.accent.navy",
+    "headerBandBg": "palette.brand.primary",
+    "progressAccent": "palette.brand.primary",
+    "addButtonText": "palette.brand.primary",
+    "selectedBg": "palette.brand.tint",
+    "hoverBg": "palette.brand.tintSoft",
+    "baseRadius": "radius.md",
+    "cardRadius": "radius.lg",
+    "$note": "sectionHeading resolves to Nero ink (not brand) — Shesha reserves Cobalt for interactive affordances, so card/section headings are near-black, not coloured. This differs from brands that colour their headings."
+  },
+  "$themeSettings": {
+    "$use": "The value for the Shesha.ThemeSettings setting (client-specific; send header sha-frontend-application: default-app; value is an OBJECT). Shape = IConfigurableTheme (reactjs providers/theme/contexts.ts) / ThemeSettings.cs. Only application.* colours reach antd; layoutBackground and sidebar drive the main layout shell; text.* is read by a few components; components.<type> holds per-component-type DEFAULT style blocks (deep-merged under each component's own desktop block). sidebarBackground is stored but not consumed by the 0.46 core shell - verify live before relying on it.",
+    "application": {
+      "primaryColor": "#003BB2",
+      "infoColor": "#003BB2",
+      "successColor": "#007E00",
+      "warningColor": "#FF6600",
+      "errorColor": "#D61111"
+    },
+    "sidebar": "dark",
+    "sidebarBackground": "#000E8E",
+    "layoutBackground": "#F8F8F9",
+    "text": { "default": "#181818", "secondary": "#333333" },
+    "labelSpan": 6,
+    "componentSpan": 18,
+    "components": {}
+  },
+  "$antdTheme": {
+    "$use": "REFERENCE ONLY for Shesha form apps. The resolved Ant Design 6.x ConfigProvider theme for this brand, valid token names verified against antd 6.6.4. Shesha.ThemeSettings does NOT take this object: ThemeProvider (reactjs 0.46) builds its own ConfigProvider theme from $themeSettings below and passes only colorPrimary/colorLink/colorInfo/colorSuccess/colorError/colorWarning, a forced fontFamily, Menu.itemHeight and Tabs.zIndexPopup. Use this block only where an app owns its own ConfigProvider (custom React pages, a nested ConfigProvider, or a frontend-source change) - see references/app-theme.md.",
+    "token": {
+      "colorPrimary": "#003BB2",
+      "colorPrimaryHover": "#002E9A",
+      "colorPrimaryActive": "#002280",
+      "colorPrimaryBg": "#EEF2FF",
+      "colorPrimaryBgHover": "#E4EAFF",
+      "colorPrimaryBorder": "#7B9EE0",
+      "colorPrimaryBorderHover": "#4D79D6",
+      "colorPrimaryText": "#003BB2",
+      "colorPrimaryTextHover": "#002E9A",
+      "colorSuccess": "#007E00",
+      "colorSuccessBg": "#E8F5E9",
+      "colorSuccessBorder": "#23B414",
+      "colorWarning": "#FF6600",
+      "colorWarningBg": "#FFF8E1",
+      "colorWarningBorder": "#FEBA00",
+      "colorError": "#D61111",
+      "colorErrorBg": "#FFEBEE",
+      "colorErrorBorder": "#D61111",
+      "colorInfo": "#003BB2",
+      "colorInfoBg": "#EEF2FF",
+      "colorInfoBorder": "#003BB2",
+      "colorTextBase": "#181818",
+      "colorText": "#181818",
+      "colorTextSecondary": "#333333",
+      "colorTextTertiary": "#9BA3B8",
+      "colorTextQuaternary": "#C0C5D0",
+      "colorBgBase": "#FFFFFF",
+      "colorBgContainer": "#FFFFFF",
+      "colorBgLayout": "#F8F8F9",
+      "colorBgElevated": "#FFFFFF",
+      "colorBgSpotlight": "#003BB2",
+      "colorBorder": "#D0D5E0",
+      "colorBorderSecondary": "#E8EAF0",
+      "colorFill": "#F0F2F5",
+      "colorFillSecondary": "#F8F8F9",
+      "colorFillTertiary": "#FAFBFC",
+      "colorFillQuaternary": "#FFFFFF",
+      "fontFamily": "'Inter Variable', sans-serif",
+      "fontFamilyCode": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace",
+      "fontSize": 14,
+      "fontSizeSM": 12,
+      "fontSizeLG": 16,
+      "fontSizeXL": 20,
+      "fontSizeHeading1": 24,
+      "fontSizeHeading2": 20,
+      "fontSizeHeading3": 16,
+      "fontSizeHeading4": 14,
+      "fontWeightStrong": 600,
+      "lineHeight": 1.571,
+      "lineHeightSM": 1.5,
+      "lineHeightLG": 1.5,
+      "lineHeightHeading1": 1.25,
+      "lineHeightHeading2": 1.3,
+      "lineHeightHeading3": 1.375,
+      "borderRadius": 6,
+      "borderRadiusSM": 4,
+      "borderRadiusLG": 8,
+      "borderRadiusXS": 2,
+      "controlHeight": 32,
+      "controlHeightSM": 24,
+      "controlHeightLG": 40,
+      "padding": 16,
+      "paddingSM": 12,
+      "paddingXS": 8,
+      "paddingXXS": 4,
+      "paddingLG": 24,
+      "paddingXL": 32,
+      "margin": 16,
+      "marginSM": 12,
+      "marginXS": 8,
+      "marginXXS": 4,
+      "marginLG": 24,
+      "marginXL": 32,
+      "motionDurationFast": "0.1s",
+      "motionDurationMid": "0.15s",
+      "motionDurationSlow": "0.2s",
+      "motionEaseInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "motionEaseOut": "ease-out",
+      "boxShadow": "0 1px 4px rgba(0,0,0,0.08)",
+      "boxShadowSecondary": "0 4px 16px rgba(0,0,0,0.10)",
+      "boxShadowTertiary": "0 1px 2px rgba(0,0,0,0.06)"
+    },
+    "components": {
+      "Button": {
+        "borderRadius": 6,
+        "fontWeight": 600,
+        "primaryColor": "#FFFFFF",
+        "defaultBorderColor": "#D0D5E0",
+        "defaultColor": "#181818"
+      },
+      "Input": {
+        "borderRadius": 6,
+        "paddingInline": 12,
+        "hoverBorderColor": "#003BB2",
+        "activeBorderColor": "#003BB2",
+        "activeShadow": "0 0 0 4px rgba(0,59,178,0.2)",
+        "errorActiveShadow": "0 0 0 4px rgba(214,17,17,0.15)"
+      },
+      "Select": {
+        "borderRadius": 6,
+        "optionSelectedBg": "#EEF2FF",
+        "optionSelectedColor": "#003BB2",
+        "optionSelectedFontWeight": 600,
+        "optionActiveBg": "#F4F8FF"
+      },
+      "Table": {
+        "headerBg": "#F8F8F9",
+        "headerColor": "#181818",
+        "headerSortActiveBg": "#ECEDF5",
+        "rowHoverBg": "#F4F8FF",
+        "rowSelectedBg": "#EEF2FF",
+        "rowSelectedHoverBg": "#E4EAFF",
+        "borderColor": "#F0F2F5"
+      },
+      "Card": {
+        "headerBg": "#F8F8F9",
+        "borderRadius": 8
+      },
+      "Tabs": {
+        "itemActiveColor": "#003BB2",
+        "itemHoverColor": "#003BB2",
+        "inkBarColor": "#003BB2",
+        "itemSelectedColor": "#003BB2"
+      },
+      "Menu": {
+        "itemBg": "transparent",
+        "itemColor": "rgba(255,255,255,0.85)",
+        "itemHoverBg": "rgba(255,255,255,0.08)",
+        "itemHoverColor": "#FFFFFF",
+        "itemSelectedBg": "rgba(255,255,255,0.15)",
+        "itemSelectedColor": "#FFFFFF",
+        "darkItemBg": "#000E8E",
+        "darkItemColor": "rgba(255,255,255,0.85)",
+        "darkItemHoverBg": "rgba(255,255,255,0.08)",
+        "darkItemSelectedBg": "rgba(255,255,255,0.15)"
+      },
+      "Badge": {
+        "colorBgContainer": "#D61111"
+      },
+      "Alert": {
+        "borderRadius": 6
+      },
+      "Steps": {
+        "colorPrimary": "#003BB2"
+      }
+    }
+  }
+}

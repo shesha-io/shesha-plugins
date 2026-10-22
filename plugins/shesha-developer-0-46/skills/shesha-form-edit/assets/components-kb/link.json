@@ -1,0 +1,267 @@
+{
+  "type": "link",
+  "name": "link",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "LinkOutlined",
+  "version": 6,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": {
+    "defaults": {
+      "direction": "vertical",
+      "target": "_self",
+      "justifyContent": "left",
+      "hideLabel": true
+    },
+    "raw": "(model: ILinkComponentProps) => {\n    const customProps: ILinkComponentProps = {\n      ...model,\n      direction: 'vertical',\n      target: '_self',\n      justifyContent: 'left',\n      hideLabel: true,\n    };\n\n    return customProps;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ILinkComponentProps",
+    "interfaceFile": "designer-components/link/interfaces.ts",
+    "ownProps": [
+      "href",
+      "content",
+      "propertyName",
+      "target",
+      "download",
+      "direction",
+      "hasChildren",
+      "justifyContent",
+      "alignItems",
+      "justifyItems",
+      "className",
+      "icon",
+      "font",
+      "components"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "alignItems",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "className",
+      "componentName",
+      "components",
+      "content",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "direction",
+      "disabled",
+      "download",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hasChildren",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "href",
+      "icon",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "justifyContent",
+      "justifyItems",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "target",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "link/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "stylingBoxJson"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "hasChildren",
+      "label": "Custom Link",
+      "editorType": "switch"
+    },
+    {
+      "path": "content",
+      "label": "Content",
+      "editorType": "textArea"
+    },
+    {
+      "path": "href",
+      "label": "URL",
+      "editorType": "textField"
+    },
+    {
+      "path": "target",
+      "label": "Target",
+      "editorType": "dropdown",
+      "options": [
+        "_blank",
+        "_parent",
+        "_self",
+        "_top"
+      ],
+      "required": true
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "direction",
+      "label": "Direction",
+      "editorType": "dropdown",
+      "options": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    {
+      "path": "justifyContent",
+      "label": "Justify Content",
+      "editorType": "dropdown",
+      "group": "Layout"
+    },
+    {
+      "path": "alignItems",
+      "label": "Align Items",
+      "editorType": "dropdown",
+      "group": "Layout"
+    },
+    {
+      "path": "justifyItems",
+      "label": "Justify Items",
+      "editorType": "dropdown",
+      "group": "Layout"
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "className",
+      "label": "Custom CSS Class",
+      "editorType": "textField",
+      "group": "Layout"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "components",
+      "content"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "link/index.tsx",
+    "link/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 4,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "type": "collapsiblePanel",
+  "name": "Panel",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "GroupOutlined",
+  "version": 11,
+  "allowInherit": true,
+  "styleGroup": "common-containers",
+  "isHidden": false,
+  "customContainerNames": [
+    "header",
+    "content"
+  ],
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => { const defaultStyles = getDefaultStyles({} as ICollapsiblePanelComponentProps); const defaultHeaderStyles = getDe",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "ICollapsiblePanelComponentProps",
+    "interfaceFile": "designer-components/collapsiblePanel/interfaces.ts",
+    "ownProps": [
+      "label",
+      "collapsedByDefault",
+      "expandIconPosition",
+      "header",
+      "content",
+      "collapsible",
+      "ghost",
+      "accentStyle",
+      "hideWhenEmpty",
+      "className",
+      "marginBottom",
+      "marginTop",
+      "headerColor",
+      "bodyColor",
+      "isSimpleDesign",
+      "hideCollapseContent",
+      "borderRadius",
+      "noMargin",
+      "hasCustomHeader",
+      "customHeader",
+      "headerStyles",
+      "headerEvents"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "accentStyle",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "bodyColor",
+      "border",
+      "borderRadius",
+      "className",
+      "collapsedByDefault",
+      "collapsible",
+      "componentName",
+      "content",
+      "context",
+      "customEnabled",
+      "customHeader",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "expandIconPosition",
+      "font",
+      "ghost",
+      "hasCustomHeader",
+      "header",
+      "headerColor",
+      "headerEvents",
+      "headerStyles",
+      "hidden",
+      "hideCollapseContent",
+      "hideLabel",
+      "hideScrollBar",
+      "hideWhenEmpty",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "isSimpleDesign",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "marginBottom",
+      "marginTop",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "noMargin",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "collapsiblePanel/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "dimensions",
+    "stylingBoxJson",
+    "font",
+    "border",
+    "background",
+    "shadow",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Allows to hide the panel when all components are hidden due to some conditions"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "expandIconPosition",
+      "label": "Icon Position",
+      "editorType": "dropdown",
+      "options": [
+        "hide",
+        "start",
+        "end"
+      ]
+    },
+    {
+      "path": "collapsible",
+      "label": "Collapsible",
+      "editorType": "dropdown",
+      "options": [
+        "header",
+        "icon",
+        "disabled"
+      ]
+    },
+    {
+      "path": "collapsedByDefault",
+      "label": "Collapsed By Default",
+      "editorType": "switch"
+    },
+    {
+      "path": "hideWhenEmpty",
+      "label": "Hide When Empty",
+      "editorType": "switch",
+      "description": "Allows to hide the panel when all components are hidden due to some conditions"
+    },
+    {
+      "path": "onChangeCustom",
+      "label": "On Collapse/Expand",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "ghost",
+      "label": "Ghost",
+      "editorType": "switch"
+    },
+    {
+      "path": "isSimpleDesign",
+      "label": "Simple Design",
+      "editorType": "switch"
+    },
+    {
+      "path": "accentStyle",
+      "label": "Accent",
+      "editorType": "switch",
+      "description": "Applies accent styling to panel borders using the primary color"
+    },
+    {
+      "path": "hideCollapseContent",
+      "label": "Hide Top Bar",
+      "editorType": "switch",
+      "description": "Hides the collapsible panel"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": [
+      "header",
+      "content"
+    ],
+    "detectedSlotKeys": [
+      "components",
+      "header",
+      "content"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "collapsiblePanel/collapsiblePanelComponent.tsx",
+    "collapsiblePanel/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 8,
+      "category": "other",
+      "what": "(not auto-labelled) 8, (prev, ctx) => { if (ctx.isNew === true) return prev; const accentStyle = prev.overflow === undefined; return { ...prev, accentStyle, desktop: { styleCss: {}, ...prev.desktop, accentStyle }, tablet"
+    },
+    {
+      "toVersion": 9,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles + overflow ?? \"auto\" + new headerStyles defaults"
+    },
+    {
+      "toVersion": 10,
+      "category": "curated",
+      "what": "header model rebuilt: label/extra/custom header become a container \"headerLayout\" (display flex, nowrap, row, align center, gap 8, justify space-between) inside header; customHeader/hasCustomHeader removed (migrations/mi"
+    },
+    {
+      "toVersion": 11,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden->visible, stylingBox->stylingBoxJson, permissions->visiblePermissions"
+    }
+  ]
+}

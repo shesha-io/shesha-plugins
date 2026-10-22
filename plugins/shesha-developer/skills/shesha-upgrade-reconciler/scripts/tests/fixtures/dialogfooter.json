@@ -1,0 +1,152 @@
+{
+ "rule": "dialogfooter",
+ "cases": [
+  {
+   "name": "a dialog form opened by several dialogs gets a guard in the button action",
+   "form": "Shop/order-host",
+   "markup": {
+    "components": [
+     {
+      "id": "b",
+      "type": "button",
+      "componentName": "b",
+      "actionConfiguration": {
+       "actionName": "Show Dialog",
+       "actionOwner": "shesha.common",
+       "actionArguments": {
+        "formId": {
+         "module": "Shop",
+         "name": "order-dialog"
+        },
+        "modalTitle": "Edit order",
+        "footerButtons": "custom",
+        "buttons": [
+         {
+          "id": "i1",
+          "itemType": "item",
+          "label": "Save",
+          "editMode": {
+           "_mode": "code",
+           "_code": "return !!data?.ready;"
+          },
+          "actionConfiguration": {
+           "actionOwner": "shesha.common",
+           "actionName": "Execute Script",
+           "actionArguments": {
+            "expression": "return http.post(\"/api/x\", data);"
+           }
+          }
+         }
+        ]
+       }
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/actionConfiguration/actionArguments/buttons/0/actionConfiguration/actionArguments/expression",
+     "/*reconciler:046-footer-guard*/\nlet __footerMode;\ntry { __footerMode = (() => {\nreturn !!data?.ready;\n})(); } catch (__e) { __footerMode = 'editable'; }  // fail open\nif (__footerMode === false || __footerMode === 'readOnly' || __footerMode === 'readonly' || __footerMode === 'disabled') {\n    message.warning('Complete the required details before continuing.');\n    throw new Error('Action blocked: Complete the required details before continuing.');\n}\nreturn http.post(\"/api/x\", data);"
+    ]
+   ],
+   "node": false,
+   "retire": true,
+   "forms": [
+    {
+     "module": "Shop",
+     "name": "order-host",
+     "markup": {
+      "components": [
+       {
+        "id": "b",
+        "type": "button",
+        "componentName": "b",
+        "actionConfiguration": {
+         "actionName": "Show Dialog",
+         "actionOwner": "shesha.common",
+         "actionArguments": {
+          "formId": {
+           "module": "Shop",
+           "name": "order-dialog"
+          },
+          "modalTitle": "Edit order",
+          "footerButtons": "custom",
+          "buttons": [
+           {
+            "id": "i1",
+            "itemType": "item",
+            "label": "Save",
+            "editMode": {
+             "_mode": "code",
+             "_code": "return !!data?.ready;"
+            },
+            "actionConfiguration": {
+             "actionOwner": "shesha.common",
+             "actionName": "Execute Script",
+             "actionArguments": {
+              "expression": "return http.post(\"/api/x\", data);"
+             }
+            }
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    },
+    {
+     "module": "Shop",
+     "name": "order-other",
+     "markup": {
+      "components": [
+       {
+        "id": "b",
+        "type": "button",
+        "componentName": "b",
+        "actionConfiguration": {
+         "actionName": "Show Dialog",
+         "actionOwner": "shesha.common",
+         "actionArguments": {
+          "formId": {
+           "module": "Shop",
+           "name": "order-dialog"
+          },
+          "modalTitle": "Other",
+          "footerButtons": "custom",
+          "buttons": [
+           {
+            "id": "i2",
+            "itemType": "item",
+            "label": "Other",
+            "editMode": {
+             "_mode": "code",
+             "_code": "return true;"
+            }
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    },
+    {
+     "module": "Shop",
+     "name": "order-dialog",
+     "markup": {
+      "components": [
+       {
+        "id": "root1",
+        "type": "container",
+        "componentName": "root1",
+        "components": []
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

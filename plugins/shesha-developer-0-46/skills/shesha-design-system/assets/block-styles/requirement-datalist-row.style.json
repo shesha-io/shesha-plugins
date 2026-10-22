@@ -1,0 +1,75 @@
+{
+  "$overlay": "requirement-datalist-row",
+  "$note": "Brand visuals for the datalist row CARD (paired with the requirement-datalist-row block). Neutral channels only. rowCard = white surface, hairline border, radius 8, soft card shadow, 14x16 inner padding, minHeight fit-content (grows to content). rowBody = 14px ink paragraph. rowMeta text = 12px muted. CRITICAL: this overlay sets visuals ONLY — the collapse/scroll-arrow fix lives in the block subtree as `style` overflow values + the body minHeight reserve and must NOT be overwritten here. refListStatus pill colours come from the reference list (per-item), not this overlay. The datalist row gap (16) is owned by the host datalist, not the card.",
+  "targets": {
+    "rowCard": {
+      "desktop": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "100%" },
+        "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}",
+        "enableStyleOnReadonly": false
+      },
+      "tablet": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxWidth": "100%" },
+        "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}"
+      },
+      "mobile": {
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 8 } },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxWidth": "100%" },
+        "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}"
+      }
+    },
+    "rowHeader": {
+      "desktop": { "dimensions": { "width": "100%", "minWidth": "100%", "maxWidth": "100%", "minHeight": "fit-content" }, "stylingBox": "{}" },
+      "tablet": { "dimensions": { "width": "100%" } },
+      "mobile": { "dimensions": { "width": "100%" } }
+    },
+    "rowHeaderLeft": {
+      "desktop": { "dimensions": { "width": "fit-content", "minWidth": "0px", "maxWidth": "calc(100% - 80px)" } },
+      "tablet": { "dimensions": { "width": "fit-content", "maxWidth": "calc(100% - 80px)" } },
+      "mobile": { "dimensions": { "width": "fit-content", "maxWidth": "calc(100% - 72px)" } }
+    },
+    "rowNumberBadge": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 12, "weight": "700", "align": "left", "color": "#9BA3B8" }, "border": {}, "background": {}, "shadow": {}, "stylingBox": "{}" },
+      "tablet": {}, "mobile": {}
+    },
+    "rowBody": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 14, "weight": "500", "align": "left", "color": "$role:bodyText" }, "dimensions": { "width": "auto", "height": "auto", "minHeight": "24px", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "100%" }, "border": {}, "background": {}, "shadow": {}, "stylingBox": "{\"marginTop\":\"2\",\"marginBottom\":\"2\"}" },
+      "tablet": { "font": { "type": "Inter Variable", "size": 14, "weight": "500", "align": "left", "color": "$role:bodyText" } },
+      "mobile": { "font": { "type": "Inter Variable", "size": 14, "weight": "500", "align": "left", "color": "$role:bodyText" } }
+    },
+    "rowMeta": {
+      "desktop": { "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }, "stylingBox": "{}" },
+      "tablet": {}, "mobile": {}
+    },
+    "rowMetaText": {
+      "$note": "Apply to each meta text component the form adds inside rowMeta (e.g. 'Release · …'). Muted 12px.",
+      "desktop": { "font": { "type": "Inter Variable", "size": 12, "weight": "400", "align": "left", "color": "#9BA3B8" }, "border": {}, "background": {}, "shadow": {}, "stylingBox": "{}" },
+      "tablet": {}, "mobile": {}
+    },
+    "requirementsListWrap": {
+      "$note": "Recovered 2026-08-12 from a divergent copy in the unregistered plugins/shesha-design-system/ folder. These four targets existed only there, so the nodes rendered unstyled in every build.",
+      "desktop": { "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }, "stylingBox": "{}", "border": {}, "background": {}, "shadow": {} },
+      "tablet": {}, "mobile": {}
+    },
+    "requirementsToolbar": {
+      "desktop": { "dimensions": { "width": "100%" }, "stylingBox": "{\"marginBottom\":\"8\"}", "border": {}, "background": {}, "shadow": {} },
+      "tablet": {}, "mobile": {}
+    },
+    "rowTypeBadge": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 11, "weight": "600", "align": "center" }, "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": 0, "style": "none" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 12 } }, "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}" },
+      "tablet": {}, "mobile": {}
+    },
+    "rowStatusPill": {
+      "desktop": { "font": { "type": "Inter Variable", "size": 11, "weight": "600", "align": "center" }, "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": 0, "style": "none" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 12 } }, "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}" },
+      "tablet": {}, "mobile": {}
+    }
+  }
+}

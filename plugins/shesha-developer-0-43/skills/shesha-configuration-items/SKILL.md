@@ -160,7 +160,7 @@ If either endpoint returns `success: false` with a SQL error mentioning "Invalid
 - **Origin on subsequent versions** — set `Origin = item.Origin` in `CreateNewVersionAsync`.
 - **Virtual properties** — every entity property must be `virtual` for NHibernate.
 - **FK to ConfigurationItems** — the joined table MUST have a FK from `Id` to `Frwk_ConfigurationItems.Id`.
-- **FK column prefix** — ALL columns in `[JoinedProperty]` tables MUST use the `{Prefix}_` prefix, including FK columns. NHibernate's convention prefixes every column with the table prefix. Example: table `LB_MyConfigs` → FK column must be `LB_RelatedEntityId`, NOT `RelatedEntityId`.
+- **FK column prefix** — ALL columns in `[JoinedProperty]` tables MUST use the `{Prefix}_` prefix, including FK columns. NHibernate's convention prefixes every column with the table prefix. Example: table `MOD_MyConfigs` → FK column must be `MOD_RelatedEntityId`, NOT `RelatedEntityId`.
 - **ITransientDependency** — exporters and importers must implement `ITransientDependency`.
 - **Match by Name + Module** — importers identify existing items by `Name` + `Module.Name` + `IsLast`.
 - **Cross-config-item references use Name + Module, NOT Guid** — when a config item references another `ConfigurationItemBase` entity, the distribution DTO MUST use `string {Related}Name` + `string {Related}Module` pairs. The exporter maps from navigation properties (`entity.Related?.Name`, `entity.Related?.Module?.Name`), and the importer resolves back via `Name + Module + IsLast` query. GUIDs are environment-specific and make packages non-portable. Only internal versioning fields (`OriginId`, `BaseItem`, `ParentVersionId`) use GUIDs. See [reference/distribution.md](reference/distribution.md) §Cross-Config-Item References.

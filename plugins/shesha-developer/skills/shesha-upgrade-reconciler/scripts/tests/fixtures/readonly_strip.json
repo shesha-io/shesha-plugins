@@ -1,0 +1,96 @@
+{
+ "rule": "readonly_strip",
+ "cases": [
+  {
+   "name": "read-only properties stripped before submit, nested cascade included",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root"
+     }
+    ],
+    "formSettings": {
+     "modelType": "Shop.Domain.Order"
+    }
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "formSettings/onPrepareSubmitData",
+     "/*reconciler:046-readonly-strip*/\n// 0.46 CRUD rejects read-only (calculated) properties that 0.43 ignored - strip them before submit (H42).\nfor (const __k of [\"total\"]) { if (data && __k in data) delete data[__k]; }\nif (data && data.lines && typeof data.lines === \"object\") { for (const __k of [\"lineTotal\"]) { delete data.lines[__k]; } }\n/*end:046-readonly-strip*/\nreturn data;"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "metadata": {
+    "Shop.Domain.Order": [
+     {
+      "path": "Total",
+      "readonly": true
+     },
+     {
+      "path": "Name"
+     },
+     {
+      "path": "Lines",
+      "dataType": "entity",
+      "cascadeUpdate": true,
+      "entityType": "OrderLine",
+      "entityModule": "Shop"
+     }
+    ],
+    "Shop.Domain.OrderLine": [
+     {
+      "path": "LineTotal",
+      "readonly": true
+     }
+    ]
+   },
+   "touched": [
+    "formSettings/onPrepareSubmitData"
+   ]
+  },
+  {
+   "name": "an existing handler gets the block before its final return",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "t1",
+      "type": "textField",
+      "componentName": "t1",
+      "parentId": "root"
+     }
+    ],
+    "formSettings": {
+     "modelType": "Shop.Domain.Order",
+     "onPrepareSubmitData": "data.x = 1;\nreturn data;"
+    }
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "formSettings/onPrepareSubmitData",
+     "data.x = 1;\n/*reconciler:046-readonly-strip*/\n// 0.46 CRUD rejects read-only (calculated) properties that 0.43 ignored - strip them before submit (H42).\nfor (const __k of [\"total\"]) { if (data && __k in data) delete data[__k]; }\n/*end:046-readonly-strip*/\nreturn data;"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "metadata": {
+    "Shop.Domain.Order": [
+     {
+      "path": "Total",
+      "readonly": true
+     }
+    ]
+   },
+   "touched": [
+    "formSettings/onPrepareSubmitData"
+   ]
+  }
+ ]
+}

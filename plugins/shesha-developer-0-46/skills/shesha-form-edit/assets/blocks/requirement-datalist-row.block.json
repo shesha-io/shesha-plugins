@@ -1,0 +1,740 @@
+{
+  "$block": "requirement-datalist-row",
+  "$scope": "region",
+  "$styleOverlay": "requirement-datalist-row",
+  "$note": "A bound child/junction collection renders as a datalist of CARDS, never static containers. The HOST (dataContext v7 -> datalist v11) lives in the parent detail form; the ROW card template lives in a SEPARATE Table-type form referenced by datalist.formId.name (described here as $rowTemplate). CANONICAL LIVE EXAMPLES: view-requirement-card, view-endpoint-row, view-role-row (rows of view-definition-details-claude).  *** DATALIST ROW-TEMPLATE COLLAPSE/SCROLL FIX (read this) ***  In a row template every form component sits in an Ant form-item chain the framework forces to min-height:0, so multi-line text paints via overflow:visible OUT of a collapsed wrapper -> cards overlap, and the container's hard-coded inner overflow:auto shows scroll arrows. The fix is MARKUP-ONLY (no global CSS, no htmlRender) and is baked into this subtree: (1) the LEGACY `style` JS-string overflow on EVERY container -- 'return {overflow:\\'visible\\'}' on inner rows, 'hidden' on the card root -- the only channel that reaches & overrides the inner .sha-components-container-inner overflow:auto; (2) dimensions.minHeight '24px' + style whiteSpace:normal/wordBreak on the body text so it wraps to full height; (3) dimensions.minHeight:'fit-content' on containers; (4) refListStatus pills styled inline-flex height 26px; (5) header is a flex row with justifyContent:'space-between' (badges left, actions right). Do NOT use `customStyle` or the `overflow` boolean prop for this -- only the `style` channel works (verified live 2026-06-30). See capability-matrix 'datalist-row-template:multi-element card overflow/collapse'.",
+  "$slots": {
+    "host.toolbar": "subtree.components[0].components[0]  (quickSearch + pager strip; optional, omit for a bare list)",
+    "host.datalist": "subtree.components[0].components[1]  (the datalist itself)",
+    "row.header.left": "$rowTemplate.components[0].components[0]  (leftBadges container: number + type + status)",
+    "row.header.badges": "$rowTemplate.components[0].components[0].components  (number badge + type badge + status pill)",
+    "row.header.actions": "$rowTemplate.components[0].components[1]  (action icon buttonGroup, right-aligned by space-between)",
+    "row.body": "$rowTemplate.components[1]  (body text line)",
+    "row.meta": "$rowTemplate.components[2]  (optional meta row; omit if no meta)"
+  },
+  "$bindings": [
+    "host.dataContext.entityType        -> {name, module} of the row entity (e.g. ViewRequirement / Shesha.RequirementsStudio)",
+    "host.dataContext.endpoint._code    -> GetAll filtered by the parent FK (e.g. parentView.id == data.id) + &properties= the row propertyNames",
+    "host.datalist.formId               -> {module, name} of the published row-template form (e.g. view-requirement-card)",
+    "row.numberBadge.content            -> sequence/refNo propertyName (e.g. {{data.refNo}}) — OMIT the badge if there is no stable per-row number (a datalist row template has no reliable index)",
+    "row.typeBadge.propertyName         -> the type reflist field (e.g. type)",
+    "row.typeBadge.referenceListId      -> the type reference list (e.g. RsRequirementType)",
+    "row.statusPill.propertyName        -> the status reflist field (e.g. status)",
+    "row.statusPill.referenceListId     -> the status reference list (e.g. RsStatus)",
+    "row.body.content                   -> the long-text propertyName (e.g. {{data.requirement}}); cap very long text in the content code if a denser card is wanted"
+  ],
+  "$validatedAgainst": [
+    "datatable/datalist:header/row/card styling",
+    "container:dimensions.width",
+    "container:dimensions.minHeight",
+    "container:stylingBox",
+    "container:border.radius",
+    "container:background.color",
+    "container:shadow",
+    "container:style overflow",
+    "text:style whiteSpace/wordBreak/overflow",
+    "text:fontSize/fontWeight/color/align",
+    "refListStatus:pill colours",
+    "refListStatus:style inline-flex pill",
+    "datalist-row-template:multi-element card overflow/collapse",
+    "buttonGroup:buttonType colour",
+    "container:font(no-op -> font on text child)",
+    "container:customStyle.flex(no-op for sizing -> width via dimensions; the space-between header + leftBadges maxWidth does the split, not flex)"
+  ],
+  "subtree": {
+    "type": "container",
+    "componentName": "requirementsListWrap",
+    "version": 7,
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "12",
+    "components": [
+      {
+        "type": "dataContext",
+        "componentName": "dc_requirements",
+        "propertyName": "dc_requirements",
+        "version": 7,
+        "entityType": {
+          "name": "$binding:rowEntityName",
+          "module": "$binding:rowEntityModule"
+        },
+        "sourceType": "Url",
+        "endpoint": {
+          "_mode": "code",
+          "_code": "$binding:rowGetAllEndpoint  // return '/api/dynamic/<Module>/<Entity>/Crud/GetAll?filter=' + encodeURIComponent(JSON.stringify({and:[{\"==\":[{var:\"<parentFk>.id\"},data.id]}]})) + '&properties=' + encodeURIComponent('id,<rowPropertyNames>');"
+        },
+        "dataFetchingMode": "paging",
+        "defaultPageSize": 10,
+        "sortMode": "standard",
+        "strictSortOrder": "asc",
+        "allowReordering": "no",
+        "components": [
+          {
+            "type": "container",
+            "componentName": "requirementsToolbar",
+            "version": 7,
+            "display": "flex",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "flex-start",
+            "flexWrap": "nowrap",
+            "gap": "8px",
+            "components": [
+              {
+                "type": "datatable.quickSearch",
+                "componentName": "qs_requirements",
+                "propertyName": "qs_requirements",
+                "version": 3,
+                "desktop": {},
+                "tablet": {},
+                "mobile": {}
+              },
+              {
+                "type": "datatable.pager",
+                "componentName": "pager_requirements",
+                "version": 4,
+                "desktop": {},
+                "tablet": {},
+                "mobile": {}
+              }
+            ],
+            "desktop": {
+              "dimensions": {
+                "width": "100%"
+              },
+              "stylingBox": "{\"marginBottom\":\"8\"}",
+              "border": {},
+              "background": {},
+              "shadow": {}
+            },
+            "tablet": {
+              "stylingBox": "{\"marginBottom\":\"8\"}",
+              "border": {},
+              "background": {},
+              "shadow": {}
+            },
+            "mobile": {
+              "stylingBox": "{\"marginBottom\":\"8\"}",
+              "border": {},
+              "background": {},
+              "shadow": {}
+            }
+          },
+          {
+            "type": "datalist",
+            "version": 11,
+            "componentName": "dl_requirements",
+            "propertyName": "dl_requirements",
+            "formSelectionMode": "name",
+            "formId": {
+              "module": "$binding:rowTemplateModule",
+              "name": "$binding:rowTemplateFormName"
+            },
+            "formType": "Table",
+            "selectionMode": "none",
+            "orientation": "vertical",
+            "listItemWidth": 1,
+            "showBorder": false,
+            "gap": 16,
+            "customListItemWidth": null,
+            "cardHeight": null,
+            "cardMinWidth": null,
+            "cardMaxWidth": null
+          }
+        ]
+      }
+    ],
+    "desktop": {
+      "dimensions": {
+        "width": "100%",
+        "height": "auto",
+        "minHeight": "fit-content"
+      },
+      "stylingBox": "{}",
+      "border": {},
+      "background": {},
+      "shadow": {}
+    },
+    "tablet": {
+      "stylingBox": "{}",
+      "border": {},
+      "background": {},
+      "shadow": {}
+    },
+    "mobile": {
+      "stylingBox": "{}",
+      "border": {},
+      "background": {},
+      "shadow": {}
+    }
+  },
+  "$rowTemplate": {
+    "$publishAs": {
+      "formType": "Table",
+      "module": "$binding:rowTemplateModule",
+      "name": "$binding:rowTemplateFormName"
+    },
+    "$note": "Published as its own Table-type form; the datalist stamps one instance per record. Root is the CARD surface (a styled container, NOT a 'card' component — the whole row is one flex column). The `style` overflow values and the body minHeight reserve are the row-template COLLAPSE/SCROLL fix (see block $note) and must NOT be stripped; brand visuals (bg/border/radius/shadow/padding/fonts) come from the requirement-datalist-row overlay.",
+    "type": "container",
+    "componentName": "rowCard",
+    "version": 7,
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "stretch",
+    "justifyContent": "flex-start",
+    "flexWrap": "nowrap",
+    "gap": "8",
+    "style": "return { overflow: 'hidden', boxSizing: 'border-box' };",
+    "desktop": {
+      "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+      },
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    },
+    "components": [
+      {
+        "type": "container",
+        "componentName": "rowHeader",
+        "version": 7,
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "space-between",
+        "flexWrap": "nowrap",
+        "gap": "8",
+        "style": "return { overflow: 'visible' };",
+        "desktop": {
+          "dimensions": {
+            "width": "100%",
+            "minWidth": "100%",
+            "maxWidth": "100%",
+            "minHeight": "fit-content"
+          },
+          "stylingBox": "{}"
+        },
+        "components": [
+          {
+            "type": "container",
+            "componentName": "rowHeaderLeft",
+            "version": 7,
+            "display": "flex",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "flex-start",
+            "flexWrap": "wrap",
+            "gap": "8",
+            "style": "return { overflow: 'visible' };",
+            "desktop": {
+              "dimensions": {
+                "width": "fit-content",
+                "minWidth": "0px",
+                "maxWidth": "calc(100% - 80px)"
+              }
+            },
+            "components": [
+              {
+                "type": "text",
+                "componentName": "rowNumberBadge",
+                "propertyName": "rowNumberBadge",
+                "version": 5,
+                "textType": "span",
+                "contentDisplay": "content",
+                "content": {
+                  "_mode": "code",
+                  "_code": "$binding:rowNumberContent  // return data.refNo;  // OMIT this component if there is no stable per-row number"
+                },
+                "strong": true,
+                "desktop": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 12,
+                    "weight": "700",
+                    "align": "left",
+                    "color": "#9BA3B8"
+                  },
+                  "border": {},
+                  "background": {},
+                  "shadow": {},
+                  "stylingBox": "{}"
+                },
+                "tablet": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 12,
+                    "weight": "700",
+                    "align": "left",
+                    "color": "#9BA3B8"
+                  },
+                  "border": {},
+                  "background": {},
+                  "shadow": {},
+                  "stylingBox": "{}"
+                },
+                "mobile": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 12,
+                    "weight": "700",
+                    "align": "left",
+                    "color": "#9BA3B8"
+                  },
+                  "border": {},
+                  "background": {},
+                  "shadow": {},
+                  "stylingBox": "{}"
+                }
+              },
+              {
+                "type": "refListStatus",
+                "componentName": "rowTypeBadge",
+                "propertyName": "$binding:rowTypeProperty",
+                "version": 6,
+                "hideLabel": true,
+                "editMode": "readOnly",
+                "showIcon": false,
+                "referenceListId": {
+                  "name": "$binding:rowTypeReflistName",
+                  "module": "$binding:rowTypeReflistModule"
+                },
+                "solidBackground": true,
+                "style": "return { display: 'inline-flex', alignItems: 'center', height: '26px', overflow: 'visible', whiteSpace: 'nowrap' };",
+                "desktop": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "tablet": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "mobile": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                }
+              },
+              {
+                "type": "refListStatus",
+                "componentName": "rowStatusPill",
+                "propertyName": "$binding:rowStatusProperty",
+                "version": 6,
+                "hideLabel": true,
+                "editMode": "readOnly",
+                "showIcon": false,
+                "referenceListId": {
+                  "name": "$binding:rowStatusReflistName",
+                  "module": "$binding:rowStatusReflistModule"
+                },
+                "solidBackground": true,
+                "style": "return { display: 'inline-flex', alignItems: 'center', height: '26px', overflow: 'visible', whiteSpace: 'nowrap' };",
+                "desktop": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "tablet": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                },
+                "mobile": {
+                  "font": {
+                    "type": "Segoe UI",
+                    "size": 11,
+                    "weight": "600",
+                    "align": "center"
+                  },
+                  "border": {
+                    "hideBorder": false,
+                    "radiusType": "all",
+                    "borderType": "all",
+                    "border": {
+                      "all": {
+                        "width": 0,
+                        "style": "none"
+                      },
+                      "top": {},
+                      "bottom": {},
+                      "left": {},
+                      "right": {}
+                    },
+                    "radius": {
+                      "all": 12
+                    }
+                  },
+                  "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+                }
+              }
+            ],
+            "tablet": {
+              "dimensions": {
+                "width": "fit-content",
+                "maxWidth": "calc(100% - 80px)"
+              }
+            },
+            "mobile": {
+              "dimensions": {
+                "width": "fit-content",
+                "maxWidth": "calc(100% - 72px)"
+              }
+            }
+          },
+          {
+            "type": "buttonGroup",
+            "componentName": "rowActions",
+            "propertyName": "rowActions",
+            "version": 15,
+            "isInline": true,
+            "editMode": "editable",
+            "spaceSize": "small",
+            "style": "return { overflow: 'visible' };",
+            "desktop": {
+              "dimensions": {
+                "width": "fit-content",
+                "height": "auto",
+                "minHeight": "auto",
+                "maxHeight": "auto"
+              }
+            },
+            "items": []
+          }
+        ],
+        "tablet": {
+          "dimensions": {
+            "width": "100%"
+          },
+          "stylingBox": "{}"
+        },
+        "mobile": {
+          "dimensions": {
+            "width": "100%"
+          },
+          "stylingBox": "{}"
+        }
+      },
+      {
+        "type": "text",
+        "componentName": "rowBody",
+        "propertyName": "$binding:rowBodyProperty",
+        "version": 5,
+        "textType": "paragraph",
+        "contentDisplay": "content",
+        "content": {
+          "_mode": "code",
+          "_code": "$binding:rowBodyContent  // return data.requirement;"
+        },
+        "ellipsis": false,
+        "dimensions": {
+          "width": "auto",
+          "height": "auto",
+          "minHeight": "24px",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+        },
+        "style": "return { whiteSpace: 'normal', wordBreak: 'break-word', overflow: 'hidden', display: 'block', maxWidth: '100%' };",
+        "desktop": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 14,
+            "weight": "500",
+            "align": "left",
+            "color": "#181818"
+          },
+          "dimensions": {
+            "width": "auto",
+            "height": "auto",
+            "minHeight": "24px",
+            "maxHeight": "auto",
+            "minWidth": "0px",
+            "maxWidth": "100%"
+          },
+          "border": {},
+          "background": {},
+          "shadow": {},
+          "stylingBox": "{\"marginTop\":\"2\",\"marginBottom\":\"2\"}"
+        },
+        "tablet": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 14,
+            "weight": "500",
+            "align": "left",
+            "color": "#181818"
+          },
+          "border": {},
+          "background": {},
+          "shadow": {},
+          "stylingBox": "{\"marginTop\":\"2\",\"marginBottom\":\"2\"}"
+        },
+        "mobile": {
+          "font": {
+            "type": "Segoe UI",
+            "size": 14,
+            "weight": "500",
+            "align": "left",
+            "color": "#181818"
+          },
+          "border": {},
+          "background": {},
+          "shadow": {},
+          "stylingBox": "{\"marginTop\":\"2\",\"marginBottom\":\"2\"}"
+        }
+      },
+      {
+        "type": "container",
+        "componentName": "rowMeta",
+        "version": 7,
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "flexWrap": "wrap",
+        "gap": "16",
+        "style": "return { overflow: 'visible' };",
+        "components": [],
+        "desktop": {
+          "dimensions": {
+            "width": "100%",
+            "height": "auto",
+            "minHeight": "fit-content"
+          },
+          "stylingBox": "{}"
+        },
+        "tablet": {
+          "stylingBox": "{}"
+        },
+        "mobile": {
+          "stylingBox": "{}"
+        }
+      }
+    ],
+    "tablet": {
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxWidth": "100%"
+      },
+      "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    },
+    "mobile": {
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxWidth": "100%"
+      },
+      "stylingBox": "{\"paddingTop\":\"14\",\"paddingRight\":\"16\",\"paddingBottom\":\"14\",\"paddingLeft\":\"16\"}",
+      "enableStyleOnReadonly": false
+    }
+  }
+}

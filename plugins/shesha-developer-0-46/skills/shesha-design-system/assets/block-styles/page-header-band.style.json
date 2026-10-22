@@ -1,0 +1,103 @@
+{
+  "$overlay": "page-header-band",
+  "$note": "0.46: the calc() widths here are applied to both the wrapper and the container inside it - verify with the layout probe (doubleShrinkSuspect) and switch the fill cell to width 100% + minWidth 0 if it comes out narrow. Brand visuals for the detail-page title band (paired with the page-header-band block). This file did not exist until 2026-08-12 — the block declared it and every node shipped with NO style at all, so the title band of every detail page rendered as raw AntD defaults. Values match the approved bookings-table reference title band: 24/600 #181818 title, 14/400 #9BA3B8 muted, Inter Variable throughout (the 0.46 default; the 0.45 value was Segoe UI) — the same literals the brand tokens resolve to (ink.primary / ink.soft). The band sits INSIDE the page-shell card, so it carries no surface of its own — no background, no border, no shadow.",
+  "targets": {
+    "pageHeaderBand": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "4",
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "auto" },
+        "stylingBox": "{\"paddingTop\":\"4\",\"paddingBottom\":\"18\"}"
+      },
+      "tablet": {
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "auto" }
+      },
+      "mobile": {
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "auto" }
+      }
+    },
+    "breadcrumbTrail": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 12, "weight": "400", "align": "left", "color": "#9BA3B8" },
+        "stylingBox": "{\"marginBottom\":\"6\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "titleRow": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "flexWrap": "nowrap",
+        "gap": "16",
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content", "maxHeight": "auto", "minWidth": "0px", "maxWidth": "auto" },
+        "stylingBox": "{}"
+      },
+      "tablet": {
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }
+      },
+      "mobile": {
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "gap": "12",
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }
+      }
+    },
+    "titleLeft": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "alignItems": "center",
+        "flexWrap": "nowrap",
+        "gap": "12",
+        "dimensions": { "width": "calc(100% - 216px)", "height": "auto", "minHeight": "fit-content", "minWidth": "0px", "maxWidth": "auto" },
+        "stylingBox": "{}"
+      },
+      "tablet": {
+        "dimensions": { "width": "calc(100% - 216px)", "height": "auto", "minHeight": "fit-content" }
+      },
+      "mobile": {
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }
+      }
+    },
+    "titleText": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 24, "weight": "600", "align": "left", "color": "#181818" },
+        "dimensions": { "width": "auto", "height": "auto", "minHeight": "fit-content", "maxWidth": "100%" },
+        "stylingBox": "{\"marginBottom\":\"2\"}"
+      },
+      "tablet": {},
+      "mobile": {
+        "font": { "type": "Inter Variable", "size": 20, "weight": "600", "align": "left", "color": "#181818" }
+      }
+    },
+    "statusChip": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 11, "weight": "600", "align": "center" },
+        "border": { "hideBorder": false, "radiusType": "all", "borderType": "all", "border": { "all": { "width": 0, "style": "none" }, "top": {}, "bottom": {}, "left": {}, "right": {} }, "radius": { "all": 12 } },
+        "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "headerActions": {
+      "desktop": {
+        "dimensions": { "width": "200px", "height": "auto", "minHeight": "fit-content", "minWidth": "0px", "maxWidth": "auto" },
+        "stylingBox": "{}"
+      },
+      "tablet": {
+        "dimensions": { "width": "200px", "height": "auto", "minHeight": "fit-content" }
+      },
+      "mobile": {
+        "dimensions": { "width": "100%", "height": "auto", "minHeight": "fit-content" }
+      }
+    }
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "type": "sectionSeparator",
+  "name": "Section Separator",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "LineOutlined",
+  "version": 7,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultStyles",
+  "initModel": {
+    "defaults": {
+      "label": "Section",
+      "lineThickness": 2,
+      "labelAlign": "left",
+      "orientation": "horizontal"
+    },
+    "raw": "(model) => {\n    return {\n      ...model,\n      label: 'Section',\n      lineThickness: 2,\n      labelAlign: 'left',\n      orientation: 'horizontal',\n    };\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ISectionSeparatorComponentProps",
+    "interfaceFile": "designer-components/sectionSeprator/interfaces.ts",
+    "ownProps": [
+      "lineFont",
+      "font",
+      "titleStylingBoxJson",
+      "containerStylingBoxJson",
+      "dashed",
+      "lineWidth",
+      "lineHeight",
+      "lineType",
+      "titleMargin"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "containerStylingBoxJson",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dashed",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "lineFont",
+      "lineHeight",
+      "lineType",
+      "lineWidth",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "titleMargin",
+      "titleStylingBoxJson",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "sectionSeprator/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "orientation",
+      "label": "Orientation",
+      "editorType": "dropdown",
+      "options": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    {
+      "path": "inline",
+      "label": "Inline",
+      "editorType": "switch"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "lineFont.size",
+      "label": "Thickness",
+      "editorType": "numberField",
+      "group": "Line Style"
+    },
+    {
+      "path": "lineFont.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Line Style"
+    },
+    {
+      "path": "lineType",
+      "label": "Type",
+      "editorType": "dropdown",
+      "options": [
+        "solid",
+        "dashed",
+        "dotted"
+      ],
+      "group": "Line Style"
+    },
+    {
+      "path": "lineWidth",
+      "label": "Width",
+      "editorType": "dimensionField",
+      "group": "Line Style"
+    },
+    {
+      "path": "lineHeight",
+      "label": "Height",
+      "editorType": "dimensionField",
+      "group": "Line Style"
+    },
+    {
+      "path": "containerStylingBoxJson",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Container Style"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onDoubleClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Title Style"
+    },
+    {
+      "path": "wrapperStyle",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Container Style"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "sectionSeprator/index.tsx",
+    "sectionSeprator/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 4,
+      "category": "curated",
+      "what": "containerStyle/titleStyle/lineFont/font/title+containerStylingBox/lineType (dashed) copied into device blocks"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 6,
+      "category": "curated",
+      "what": "titleStyle/containerStyle (JS) moved to style/wrapperStyle; title/container stylingBox -> titleStylingBoxJson/containerStylingBoxJson"
+    },
+    {
+      "toVersion": 7,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

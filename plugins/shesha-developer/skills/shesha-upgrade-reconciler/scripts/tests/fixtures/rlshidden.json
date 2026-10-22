@@ -1,0 +1,97 @@
+{
+ "rule": "rlshidden",
+ "cases": [
+  {
+   "name": "hidden refListStatus in a hosted form becomes a hidden textField",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "rl",
+      "type": "refListStatus",
+      "componentName": "rl",
+      "parentId": "root",
+      "propertyName": "status",
+      "hidden": true,
+      "referenceListId": {
+       "module": "Shop",
+       "name": "Status"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/type",
+     "textField"
+    ],
+    [
+     "components/0/version",
+     8
+    ],
+    [
+     "components/0/editMode",
+     "readOnly"
+    ],
+    [
+     "components/0/_reconcilerOriginal/type",
+     "refListStatus"
+    ],
+    [
+     "components/0/propertyName",
+     "status"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "forms": [
+    {
+     "module": "Shop",
+     "name": "order-host",
+     "markup": {
+      "components": [
+       {
+        "id": "sf",
+        "type": "subForm",
+        "componentName": "sf",
+        "formId": {
+         "module": "Shop",
+         "name": "order-details"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "touched": [
+    "components/0"
+   ]
+  },
+  {
+   "name": "the same component in a form nothing hosts is left alone",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "rl",
+      "type": "refListStatus",
+      "componentName": "rl",
+      "parentId": "root",
+      "propertyName": "status",
+      "hidden": true,
+      "referenceListId": {
+       "module": "Shop",
+       "name": "Status"
+      }
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": false,
+   "retire": false,
+   "forms": []
+  }
+ ]
+}

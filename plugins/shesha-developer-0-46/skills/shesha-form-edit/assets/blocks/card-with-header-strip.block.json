@@ -1,0 +1,488 @@
+{
+  "$block": "card-with-header-strip",
+  "$scope": "region",
+  "$styleOverlay": "card-with-header-strip",
+  "$slots": {
+    "header": "subtree.components.0.components",
+    "body": "subtree.components.1.components"
+  },
+  "$bindings": [
+    {
+      "path": "subtree.components.0.components.0.content",
+      "fill": "the card's heading text (e.g. \"View Requirements\", \"End-points\", \"Roles\"). Static string."
+    },
+    {
+      "path": "subtree.components.0.components.1.content",
+      "fill": "OPTIONAL count badge value. Bind to a count expression e.g. \"{{data.viewRequirements?.length}}\", or set hidden:true on cardCountBadge to drop the badge."
+    }
+  ],
+  "$validatedAgainst": [
+    "card:bg/border/shadow/radius (built from a styled container, not the native card component — header strip needs surfaceAlt bg + bottom hairline)",
+    "container:background.color",
+    "container:border.all",
+    "container:border.perSide (borderType:'custom' + bottom only — the header-strip divider)",
+    "container:border.radius",
+    "container:shadow",
+    "container:stylingBox",
+    "container:dimensions.width",
+    "container:font(no-op -> font on text child)",
+    "text:fontSize/fontWeight/color/align"
+  ],
+  "subtree": {
+    "type": "container",
+    "version": 7,
+    "propertyName": "cardWithHeaderStrip",
+    "componentName": "cardWithHeaderStrip",
+    "label": "Card",
+    "hidden": false,
+    "isDynamic": false,
+    "editMode": "inherited",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "flex-start",
+    "alignItems": "stretch",
+    "flexWrap": "nowrap",
+    "gap": "0",
+    "stylingBox": "{}",
+    "desktop": {
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "0",
+      "dimensions": {
+        "width": "100%",
+        "minHeight": "fit-content"
+      },
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "stylingBox": "{}"
+    },
+    "tablet": {
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "0",
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "stylingBox": "{}"
+    },
+    "mobile": {
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "alignItems": "stretch",
+      "flexWrap": "nowrap",
+      "gap": "0",
+      "background": {
+        "type": "color",
+        "color": "#ffffff"
+      },
+      "border": {
+        "hideBorder": false,
+        "radiusType": "all",
+        "borderType": "all",
+        "border": {
+          "all": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#E8EAF0"
+          },
+          "top": {},
+          "bottom": {},
+          "left": {},
+          "right": {}
+        },
+        "radius": {
+          "all": 8
+        }
+      },
+      "shadow": {
+        "offsetX": 0,
+        "offsetY": 1,
+        "blurRadius": 4,
+        "spreadRadius": 0,
+        "color": "rgba(0,0,0,0.06)"
+      },
+      "stylingBox": "{}"
+    },
+    "components": [
+      {
+        "type": "container",
+        "version": 7,
+        "propertyName": "cardHeaderStrip",
+        "componentName": "cardHeaderStrip",
+        "label": "Header strip",
+        "hidden": false,
+        "isDynamic": false,
+        "editMode": "inherited",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "flexWrap": "nowrap",
+        "gap": "8",
+        "stylingBox": "{\"paddingTop\":\"12\",\"paddingBottom\":\"12\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}",
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "gap": "8",
+          "dimensions": {
+            "width": "100%",
+            "minHeight": "fit-content"
+          },
+          "background": {
+            "type": "color",
+            "color": "#F8F8F9"
+          },
+          "border": {
+            "hideBorder": false,
+            "radiusType": "all",
+            "borderType": "custom",
+            "border": {
+              "all": {},
+              "top": {},
+              "bottom": {
+                "width": "1px",
+                "style": "solid",
+                "color": "#F0F2F5"
+              },
+              "left": {},
+              "right": {}
+            },
+            "radius": {
+              "all": 0
+            }
+          },
+          "stylingBox": "{\"paddingTop\":\"12\",\"paddingBottom\":\"12\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "tablet": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "gap": "8",
+          "background": {
+            "type": "color",
+            "color": "#F8F8F9"
+          },
+          "border": {
+            "hideBorder": false,
+            "radiusType": "all",
+            "borderType": "custom",
+            "border": {
+              "all": {},
+              "top": {},
+              "bottom": {
+                "width": "1px",
+                "style": "solid",
+                "color": "#F0F2F5"
+              },
+              "left": {},
+              "right": {}
+            },
+            "radius": {
+              "all": 0
+            }
+          },
+          "stylingBox": "{\"paddingTop\":\"12\",\"paddingBottom\":\"12\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "mobile": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "gap": "8",
+          "background": {
+            "type": "color",
+            "color": "#F8F8F9"
+          },
+          "border": {
+            "hideBorder": false,
+            "radiusType": "all",
+            "borderType": "custom",
+            "border": {
+              "all": {},
+              "top": {},
+              "bottom": {
+                "width": "1px",
+                "style": "solid",
+                "color": "#F0F2F5"
+              },
+              "left": {},
+              "right": {}
+            },
+            "radius": {
+              "all": 0
+            }
+          },
+          "stylingBox": "{\"paddingTop\":\"12\",\"paddingBottom\":\"12\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "components": [
+          {
+            "type": "text",
+            "version": 5,
+            "propertyName": "cardHeaderText",
+            "componentName": "cardHeaderText",
+            "label": "Heading",
+            "hideLabel": true,
+            "hidden": false,
+            "isDynamic": false,
+            "textType": "span",
+            "content": "Section",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "fontSize": "text-base",
+            "fontWeight": "600",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 16,
+                "weight": "600",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 16,
+                "weight": "600",
+                "color": "#181818",
+                "align": "left"
+              }
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 16,
+                "weight": "600",
+                "color": "#181818",
+                "align": "left"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "version": 5,
+            "propertyName": "cardCountBadge",
+            "componentName": "cardCountBadge",
+            "label": "Count",
+            "hideLabel": true,
+            "hidden": false,
+            "isDynamic": false,
+            "textType": "span",
+            "content": "0",
+            "contentDisplay": "content",
+            "dataType": "string",
+            "fontSize": "text-xs",
+            "fontWeight": "600",
+            "desktop": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12,
+                "weight": "600",
+                "color": "#181818",
+                "align": "center"
+              },
+              "background": {
+                "type": "color",
+                "color": "#f0f2f5"
+              },
+              "border": {
+                "hideBorder": false,
+                "radiusType": "all",
+                "borderType": "all",
+                "border": {
+                  "all": {
+                    "width": 0,
+                    "style": "none"
+                  },
+                  "top": {},
+                  "bottom": {},
+                  "left": {},
+                  "right": {}
+                },
+                "radius": {
+                  "all": 10
+                }
+              },
+              "stylingBox": "{\"paddingTop\":\"1\",\"paddingBottom\":\"1\",\"paddingLeft\":\"8\",\"paddingRight\":\"8\"}"
+            },
+            "tablet": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12,
+                "weight": "600",
+                "color": "#181818",
+                "align": "center"
+              },
+              "background": {
+                "type": "color",
+                "color": "#f0f2f5"
+              },
+              "border": {
+                "hideBorder": false,
+                "radiusType": "all",
+                "borderType": "all",
+                "border": {
+                  "all": {
+                    "width": 0,
+                    "style": "none"
+                  },
+                  "top": {},
+                  "bottom": {},
+                  "left": {},
+                  "right": {}
+                },
+                "radius": {
+                  "all": 10
+                }
+              },
+              "stylingBox": "{\"paddingTop\":\"1\",\"paddingBottom\":\"1\",\"paddingLeft\":\"8\",\"paddingRight\":\"8\"}"
+            },
+            "mobile": {
+              "font": {
+                "type": "Segoe UI",
+                "size": 12,
+                "weight": "600",
+                "color": "#181818",
+                "align": "center"
+              },
+              "background": {
+                "type": "color",
+                "color": "#f0f2f5"
+              },
+              "border": {
+                "hideBorder": false,
+                "radiusType": "all",
+                "borderType": "all",
+                "border": {
+                  "all": {
+                    "width": 0,
+                    "style": "none"
+                  },
+                  "top": {},
+                  "bottom": {},
+                  "left": {},
+                  "right": {}
+                },
+                "radius": {
+                  "all": 10
+                }
+              },
+              "stylingBox": "{\"paddingTop\":\"1\",\"paddingBottom\":\"1\",\"paddingLeft\":\"8\",\"paddingRight\":\"8\"}"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "version": 7,
+        "propertyName": "cardBody",
+        "componentName": "cardBody",
+        "label": "Body",
+        "hidden": false,
+        "isDynamic": false,
+        "editMode": "inherited",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "12",
+        "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}",
+        "desktop": {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "12",
+          "dimensions": {
+            "width": "100%",
+            "minHeight": "fit-content"
+          },
+          "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "tablet": {
+          "display": "flex",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "12",
+          "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "mobile": {
+          "display": "flex",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "flexWrap": "nowrap",
+          "gap": "12",
+          "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+        },
+        "components": []
+      }
+    ]
+  }
+}

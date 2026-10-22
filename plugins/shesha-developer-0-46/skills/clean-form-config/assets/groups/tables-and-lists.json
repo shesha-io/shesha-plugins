@@ -1,0 +1,1345 @@
+{
+  "_meta": {
+    "version": 4,
+    "group": "tables-and-lists"
+  },
+  "childTable": {
+    "props": [
+      {
+        "name": "className",
+        "source": "components-kb"
+      },
+      {
+        "name": "collapsedByDefault",
+        "source": "components-kb"
+      },
+      {
+        "name": "collapsible",
+        "source": "components-kb"
+      },
+      {
+        "name": "content",
+        "source": "components-kb"
+      },
+      {
+        "name": "expandIconPosition",
+        "source": "components-kb"
+      },
+      {
+        "name": "ghost",
+        "source": "components-kb"
+      },
+      {
+        "name": "header",
+        "source": "components-kb"
+      },
+      {
+        "name": "hideWhenEmpty",
+        "source": "components-kb"
+      }
+    ]
+  },
+  "columnsEditorComponent": {
+    "props": [
+      {
+        "name": "modelType"
+      }
+    ]
+  },
+  "dataContext": {
+    "props": [
+      {
+        "name": "allowReordering",
+        "type": "string",
+        "options": [
+          "yes",
+          "no",
+          "inherit"
+        ],
+        "desc": "Whether rows can be manually reordered by drag-and-drop.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "components",
+        "source": "components-kb"
+      },
+      {
+        "name": "customReorderEndpoint",
+        "type": "string",
+        "desc": "API URL called to persist row reorder operations.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "dataFetchingMode",
+        "type": "string",
+        "options": [
+          "paging",
+          "lazy"
+        ],
+        "desc": "How data is loaded: paged (server-side pagination) or lazy (load-on-scroll).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "defaultPageSize",
+        "type": "number",
+        "desc": "Number of rows shown per page by default.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "disableRefresh",
+        "type": "boolean",
+        "desc": "Prevent automatic data refresh when context dependencies change.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "endpoint",
+        "type": "string",
+        "desc": "API URL used to fetch data (used when sourceType is 'Url').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "entityType",
+        "type": "string",
+        "desc": "Fully-qualified entity type (e.g. 'Shesha.Core.Person'). Used when sourceType is 'Entity'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "grouping",
+        "type": "array",
+        "desc": "Grouping configuration applied to the data.",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "onAfterRowReorder",
+        "type": "action-config",
+        "desc": "Action triggered after a row has been successfully reordered.",
+        "required": false
+      },
+      {
+        "name": "onBeforeRowReorder",
+        "type": "action-config",
+        "desc": "Action triggered before a row reorder is committed. Can cancel the operation.",
+        "required": false
+      },
+      {
+        "name": "permanentFilter",
+        "type": "object",
+        "desc": "JSON Logic filter expression always applied to data queries (see jsonlogic.com).",
+        "required": false,
+        "JsReturnType": "object"
+      },
+      {
+        "name": "sortMode",
+        "type": "string",
+        "options": [
+          "standard",
+          "strict"
+        ],
+        "desc": "'standard' uses column header clicks; 'strict' uses a fixed sort defined by strictSortBy/Order.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "sourceType",
+        "type": "string",
+        "options": [
+          "Form",
+          "Entity",
+          "Url"
+        ],
+        "desc": "Where the table data comes from.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "standardSorting",
+        "type": "array",
+        "desc": "Default sort configuration (array of { propertyName, sort } objects).",
+        "required": false,
+        "JsReturnType": "array"
+      },
+      {
+        "name": "strictSortBy",
+        "type": "string",
+        "desc": "Property name to sort by when sortMode is 'strict'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "strictSortOrder",
+        "type": "number",
+        "options": [
+          0,
+          1
+        ],
+        "desc": "Sort direction when sortMode is 'strict': 0 = ascending, 1 = descending.",
+        "required": false,
+        "JsReturnType": "number"
+      }
+    ]
+  },
+  "dataContextSelector": {
+    "props": []
+  },
+  "datalist": {
+    "props": [
+      {
+        "name": "canAddInline",
+        "type": "string",
+        "options": [
+          "yes",
+          "no",
+          "inherit"
+        ],
+        "desc": "Allow adding new items directly in the list.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "canDeleteInline",
+        "type": "string",
+        "options": [
+          "yes",
+          "no",
+          "inherit"
+        ],
+        "desc": "Allow deleting items directly in the list.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "canEditInline",
+        "type": "string",
+        "options": [
+          "yes",
+          "no",
+          "inherit"
+        ],
+        "desc": "Allow editing items directly in the list.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "cardHeight",
+        "type": "string",
+        "desc": "Fixed height for each card (e.g. '120px').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "cardMaxWidth",
+        "type": "string",
+        "desc": "Maximum card width (e.g. '400px').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "cardMinWidth",
+        "type": "string",
+        "desc": "Minimum card width (e.g. '200px').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "cardSpacing"
+      },
+      {
+        "name": "collapseByDefault",
+        "type": "boolean",
+        "desc": "Collapse grouped sections by default.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "collapsible",
+        "type": "boolean",
+        "desc": "Allow grouped sections to be collapsed.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "createFormId",
+        "type": "form-id",
+        "desc": "Form used when creating a new list item inline.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "createFormType",
+        "type": "string",
+        "desc": "Form type hint for the create form (used with dynamic form selection).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "customCreateUrl",
+        "type": "string",
+        "desc": "API URL for creating new items (overrides default).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "customDeleteUrl",
+        "type": "string",
+        "desc": "API URL for deleting items (overrides default).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "customListItemWidth",
+        "type": "number",
+        "desc": "Card width in pixels when listItemWidth is 'custom'.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "customUpdateUrl",
+        "type": "string",
+        "desc": "API URL for updating items (overrides default).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "customWidth"
+      },
+      {
+        "name": "dataSource"
+      },
+      {
+        "name": "dblClickActionConfiguration",
+        "type": "action-config",
+        "desc": "Action to execute on item double-click.",
+        "required": false
+      },
+      {
+        "name": "entityType"
+      },
+      {
+        "name": "formId",
+        "type": "form-id",
+        "desc": "Form used to render each list item.",
+        "required": false,
+        "JsReturnType": "form-id"
+      },
+      {
+        "name": "formIdExpression",
+        "type": "script",
+        "desc": "Script that returns a form identifier for each item dynamically.",
+        "required": false,
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "formSelectionMode",
+        "type": "string",
+        "options": [
+          "name",
+          "view",
+          "expression"
+        ],
+        "desc": "How the item form is resolved.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "formType",
+        "type": "string",
+        "desc": "Form type hint used when formSelectionMode is 'view'.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "desc": "Gap between cards in pixels.",
+        "required": false,
+        "JsReturnType": "number"
+      },
+      {
+        "name": "groupStyle",
+        "type": "string",
+        "desc": "Inline CSS applied to each group header.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "grouping"
+      },
+      {
+        "name": "inlineEditMode",
+        "type": "string",
+        "options": [
+          "one-by-one",
+          "all-at-once"
+        ],
+        "desc": "Whether one or all items can be edited simultaneously.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "inlineSaveMode",
+        "type": "string",
+        "options": [
+          "auto",
+          "manual"
+        ],
+        "desc": "Whether inline edits are saved automatically or require a manual save action.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "listItemWidth",
+        "type": "string",
+        "desc": "Card width: a number (columns) or 'custom' (uses customListItemWidth).",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "modalWidth",
+        "type": "string",
+        "desc": "Width of the inline edit modal (e.g. '600px' or '80%').",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "onListItemClick",
+        "type": "action-config",
+        "desc": "Action triggered when a list item is clicked.",
+        "required": false
+      },
+      {
+        "name": "onListItemHover",
+        "type": "action-config",
+        "desc": "Action triggered when the mouse enters a list item.",
+        "required": false
+      },
+      {
+        "name": "onListItemSave",
+        "type": "script",
+        "desc": "Script called before saving an inline-edited item. Return the modified item data.",
+        "required": false,
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "onListItemSaveSuccessAction",
+        "type": "action-config",
+        "desc": "Action to execute after a list item is saved successfully.",
+        "required": false
+      },
+      {
+        "name": "onListItemSelect",
+        "type": "action-config",
+        "desc": "Action triggered when a list item is selected.",
+        "required": false
+      },
+      {
+        "name": "onNewListItemInitialize",
+        "type": "script",
+        "desc": "Script called to initialise a new item's default values. Return the initial data object.",
+        "required": false,
+        "async": false,
+        "context": [
+          "data",
+          "form",
+          "user",
+          "actions",
+          "utils",
+          "page",
+          "application",
+          "contexts",
+          "storage",
+          "query",
+          "initialValues",
+          "parentFormValues",
+          "moment",
+          "http",
+          "message",
+          "modal",
+          "globalState",
+          "setGlobalState",
+          "selectedRow"
+        ]
+      },
+      {
+        "name": "onRowDeleteSuccessAction",
+        "type": "action-config",
+        "desc": "Action to execute after an item is deleted successfully.",
+        "required": false
+      },
+      {
+        "name": "onSelectionChange",
+        "type": "action-config",
+        "desc": "Action triggered when the selection changes.",
+        "required": false
+      },
+      {
+        "name": "orientation",
+        "type": "string",
+        "options": [
+          "vertical",
+          "horizontal",
+          "wrap"
+        ],
+        "desc": "Direction cards are laid out.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "selectionMode",
+        "type": "string",
+        "options": [
+          "none",
+          "single",
+          "multiple"
+        ],
+        "desc": "Whether items can be selected, and how many.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "showBorder",
+        "type": "boolean",
+        "desc": "Show a border around each card.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showEditIcons",
+        "type": "boolean",
+        "desc": "Show edit/delete action icons on each card.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "widthUnits"
+      }
+    ],
+    "legacy": [
+      "datalistEmptyState",
+      "onRowSave"
+    ]
+  },
+  "dataSortingEditor": {
+    "props": [
+      {
+        "name": "maxItemsCount"
+      },
+      {
+        "name": "modelType",
+        "type": "string",
+        "inferred": true,
+        "desc": "Entity type"
+      }
+    ]
+  },
+  "dataSource": {
+    "props": [
+      {
+        "name": "endpoint",
+        "desc": "Endpoint"
+      },
+      {
+        "name": "entityType",
+        "desc": "Entity Type"
+      },
+      {
+        "name": "filters"
+      },
+      {
+        "name": "maxResultCount",
+        "desc": "Leave empty to get all records"
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "sourceType",
+        "desc": "Source Type"
+      }
+    ]
+  },
+  "datatable": {
+    "props": [
+      {
+        "name": "actionIconColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Color of action column icons"
+      },
+      {
+        "name": "actionIconSize",
+        "type": "string",
+        "inferred": true,
+        "desc": "Size of action column icons (e.g., 16px, 1.2em). Inherits from table font size if not specified."
+      },
+      {
+        "name": "alignItems"
+      },
+      {
+        "name": "alignSelf"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "boxShadow"
+      },
+      {
+        "name": "canAddInline",
+        "desc": "Can Add Inline"
+      },
+      {
+        "name": "canAddInlineExpression",
+        "desc": "Return true to enable inline creation of new rows and false to disable."
+      },
+      {
+        "name": "canDeleteInline",
+        "desc": "Can Delete Inline"
+      },
+      {
+        "name": "canDeleteInlineExpression",
+        "desc": "Return true to enable inline deletion and false to disable."
+      },
+      {
+        "name": "canEditInline",
+        "desc": "Can Edit Inline"
+      },
+      {
+        "name": "canEditInlineExpression",
+        "desc": "Return true to enable inline editing and false to disable."
+      },
+      {
+        "name": "cellBackgroundColor"
+      },
+      {
+        "name": "cellBorder"
+      },
+      {
+        "name": "cellBorderColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Border color for table cells"
+      },
+      {
+        "name": "cellBorders",
+        "type": "boolean",
+        "desc": "Show borders between cells.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "cellPadding"
+      },
+      {
+        "name": "cellTextColor"
+      },
+      {
+        "name": "containerStyle",
+        "desc": "Custom CSS styles for the table container/wrapper"
+      },
+      {
+        "name": "crud"
+      },
+      {
+        "name": "customCreateUrl",
+        "desc": "Custom Create URL"
+      },
+      {
+        "name": "customDeleteUrl",
+        "desc": "Custom Delete URL"
+      },
+      {
+        "name": "customUpdateUrl",
+        "desc": "Custom Update URL"
+      },
+      {
+        "name": "dblClickActionConfiguration"
+      },
+      {
+        "name": "direction"
+      },
+      {
+        "name": "display"
+      },
+      {
+        "name": "flexDirection"
+      },
+      {
+        "name": "flexWrap"
+      },
+      {
+        "name": "flexibleHeight"
+      },
+      {
+        "name": "footerBackgroundColor"
+      },
+      {
+        "name": "footerBorder"
+      },
+      {
+        "name": "footerTextColor"
+      },
+      {
+        "name": "freezeHeaders",
+        "type": "boolean",
+        "desc": "Keep column headers visible when scrolling vertically.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "gap"
+      },
+      {
+        "name": "gridColumnsCount"
+      },
+      {
+        "name": "gridColumnsWidth"
+      },
+      {
+        "name": "gridRowsCount"
+      },
+      {
+        "name": "gridRowsHeight"
+      },
+      {
+        "name": "headerBackgroundColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Background color for table headers. Default: #fafafa"
+      },
+      {
+        "name": "headerBorder"
+      },
+      {
+        "name": "headerFont"
+      },
+      {
+        "name": "headerFontFamily"
+      },
+      {
+        "name": "headerFontSize"
+      },
+      {
+        "name": "headerFontWeight"
+      },
+      {
+        "name": "headerShadow"
+      },
+      {
+        "name": "headerTextColor"
+      },
+      {
+        "name": "hoverHighlight",
+        "type": "boolean",
+        "desc": "Highlight the row under the mouse cursor.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "inlineEditMode",
+        "desc": "Row Edit Mode"
+      },
+      {
+        "name": "inlineSaveMode",
+        "desc": "Save Mode"
+      },
+      {
+        "name": "items",
+        "type": "array",
+        "desc": "Column definitions for the table.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "column-item"
+      },
+      {
+        "name": "justifyContent"
+      },
+      {
+        "name": "justifyItems"
+      },
+      {
+        "name": "justifySelf"
+      },
+      {
+        "name": "maxHeight"
+      },
+      {
+        "name": "minHeight"
+      },
+      {
+        "name": "newRowCapturePosition",
+        "desc": "New Row Capture Position"
+      },
+      {
+        "name": "newRowInsertPosition",
+        "desc": "New Row Insert Position"
+      },
+      {
+        "name": "noDefaultStyling"
+      },
+      {
+        "name": "onDblClick"
+      },
+      {
+        "name": "onNewRowInitialize",
+        "desc": "Allows configurators to specify logic to initialise the object bound to a new row."
+      },
+      {
+        "name": "onRowClick",
+        "type": "action-config",
+        "desc": "Action triggered when a row is clicked.",
+        "required": false
+      },
+      {
+        "name": "onRowDeleteSuccessAction",
+        "desc": "Custom business logic to be executed after successfull deletion of a row."
+      },
+      {
+        "name": "onRowDoubleClick",
+        "type": "action-config",
+        "desc": "Action triggered when a row is double-clicked.",
+        "required": false
+      },
+      {
+        "name": "onRowHover",
+        "type": "action-config",
+        "desc": "Action triggered when the mouse enters a row.",
+        "required": false
+      },
+      {
+        "name": "onRowSave",
+        "desc": "Custom business logic to be executed on saving of new/updated row (e.g. custom validation / calculations). This handler should return an obj"
+      },
+      {
+        "name": "onRowSaveSuccessAction",
+        "desc": "Custom business logic to be executed after successfull saving of new/updated row."
+      },
+      {
+        "name": "onRowSelect",
+        "type": "action-config",
+        "desc": "Action triggered when a row is selected via checkbox.",
+        "required": false
+      },
+      {
+        "name": "onSelectionChange",
+        "type": "action-config",
+        "desc": "Action triggered when the row selection changes.",
+        "required": false
+      },
+      {
+        "name": "responsiveMode",
+        "type": "string",
+        "options": [
+          "scroll",
+          "stack",
+          "collapse"
+        ],
+        "desc": "How the table adapts on small screens.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "rowAlternateBackgroundColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Background color for alternate rows (when striped is enabled). Default: #f5f5f5"
+      },
+      {
+        "name": "rowBackgroundColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Default background color for table rows"
+      },
+      {
+        "name": "rowBorder"
+      },
+      {
+        "name": "rowBorderStyle"
+      },
+      {
+        "name": "rowDimensions"
+      },
+      {
+        "name": "rowDividers",
+        "type": "boolean",
+        "desc": "Show horizontal dividers between rows.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "rowHeight"
+      },
+      {
+        "name": "rowHoverBackgroundColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Background color when hovering over rows"
+      },
+      {
+        "name": "rowPadding"
+      },
+      {
+        "name": "rowPaddingBottom",
+        "type": "string",
+        "inferred": true,
+        "desc": "Bottom padding for table rows (e.g., 8px, 1rem, 0.5em)"
+      },
+      {
+        "name": "rowPaddingLeft",
+        "type": "string",
+        "inferred": true,
+        "desc": "Left padding for table rows (e.g., 12px, 1rem, 0.5em)"
+      },
+      {
+        "name": "rowPaddingRight",
+        "type": "string",
+        "inferred": true,
+        "desc": "Right padding for table rows (e.g., 12px, 1rem, 0.5em)"
+      },
+      {
+        "name": "rowPaddingTop",
+        "type": "string",
+        "inferred": true,
+        "desc": "Top padding for table rows (e.g., 8px, 1rem, 0.5em)"
+      },
+      {
+        "name": "rowSelectedBackgroundColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Background color for selected rows"
+      },
+      {
+        "name": "rowShadow"
+      },
+      {
+        "name": "rowStylingBox"
+      },
+      {
+        "name": "selectionMode",
+        "type": "string",
+        "options": [
+          "none",
+          "single",
+          "multiple"
+        ],
+        "desc": "Whether rows can be selected, and how many.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "showExpandedView",
+        "type": "boolean",
+        "desc": "Show an expanded detail view when a row is clicked.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "sortableIndicatorColor",
+        "type": "string",
+        "inferred": true,
+        "desc": "Color for sortable column indicators"
+      },
+      {
+        "name": "striped",
+        "type": "boolean",
+        "desc": "Apply alternating row background colours.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "tableSettings"
+      },
+      {
+        "name": "tableStyle",
+        "desc": "Custom CSS styles for the table element"
+      },
+      {
+        "name": "textJustify"
+      },
+      {
+        "name": "useMultiselect"
+      }
+    ]
+  },
+  "datatable_template": {
+    "props": []
+  },
+  "datatable.filter": {
+    "props": [
+      {
+        "name": "actionConfiguration"
+      },
+      {
+        "name": "backgroundColor"
+      },
+      {
+        "name": "block"
+      },
+      {
+        "name": "borderColor"
+      },
+      {
+        "name": "borderRadius"
+      },
+      {
+        "name": "borderStyle"
+      },
+      {
+        "name": "borderWidth"
+      },
+      {
+        "name": "buttonType",
+        "type": "string",
+        "options": [
+          "primary",
+          "default",
+          "dashed",
+          "text",
+          "ghost",
+          "link"
+        ],
+        "desc": "Visual style of the filter button.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "childItems"
+      },
+      {
+        "name": "color"
+      },
+      {
+        "name": "danger"
+      },
+      {
+        "name": "dividerColor"
+      },
+      {
+        "name": "dividerWidth"
+      },
+      {
+        "name": "downIcon"
+      },
+      {
+        "name": "dynamicItem"
+      },
+      {
+        "name": "fontSize"
+      },
+      {
+        "name": "fontWeight"
+      },
+      {
+        "name": "ghost"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "desc": "Ant Design icon name shown on the filter button.",
+        "required": false,
+        "JsReturnType": "string"
+      },
+      {
+        "name": "iconPosition",
+        "desc": "Icon Position"
+      },
+      {
+        "name": "itemSubType"
+      },
+      {
+        "name": "itemType"
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "sortOrder"
+      },
+      {
+        "name": "styles"
+      },
+      {
+        "name": "tooltip",
+        "type": "string",
+        "inferred": true,
+        "desc": "Tooltip"
+      },
+      {
+        "name": "width"
+      }
+    ]
+  },
+  "datatable.pager": {
+    "props": [
+      {
+        "name": "showSizeChanger",
+        "type": "boolean",
+        "desc": "Show a dropdown to change the page size.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showTotalItems",
+        "type": "boolean",
+        "desc": "Show the total record count next to the pager.",
+        "required": false,
+        "JsReturnType": "boolean"
+      }
+    ]
+  },
+  "datatable.quickSearch": {
+    "props": [],
+    "legacy": [
+      "block",
+      "separatorDisplay"
+    ]
+  },
+  "datatable.selectColumnsButton": {
+    "props": []
+  },
+  "datatableContext": {
+    "props": [
+      {
+        "name": "allowReordering"
+      },
+      {
+        "name": "components"
+      },
+      {
+        "name": "customReorderEndpoint"
+      },
+      {
+        "name": "dataFetchingMode"
+      },
+      {
+        "name": "defaultPageSize"
+      },
+      {
+        "name": "disableRefresh"
+      },
+      {
+        "name": "endpoint"
+      },
+      {
+        "name": "entityType"
+      },
+      {
+        "name": "grouping"
+      },
+      {
+        "name": "onAfterRowReorder"
+      },
+      {
+        "name": "onBeforeRowReorder"
+      },
+      {
+        "name": "permanentFilter"
+      },
+      {
+        "name": "sortMode"
+      },
+      {
+        "name": "sourceType"
+      },
+      {
+        "name": "standardSorting"
+      },
+      {
+        "name": "strictSortBy"
+      },
+      {
+        "name": "strictSortOrder"
+      }
+    ]
+  },
+  "list": {
+    "props": [
+      {
+        "name": "allowDeleteItems"
+      },
+      {
+        "name": "allowRemoteDelete"
+      },
+      {
+        "name": "apiSource"
+      },
+      {
+        "name": "buttons"
+      },
+      {
+        "name": "customApiUrl"
+      },
+      {
+        "name": "customListItemWidth"
+      },
+      {
+        "name": "dataSource"
+      },
+      {
+        "name": "deleteConfirmMessage"
+      },
+      {
+        "name": "deleteUrl"
+      },
+      {
+        "name": "entityType"
+      },
+      {
+        "name": "filters"
+      },
+      {
+        "name": "footer"
+      },
+      {
+        "name": "formId"
+      },
+      {
+        "name": "isButtonInline"
+      },
+      {
+        "name": "labelCol"
+      },
+      {
+        "name": "listItemWidth"
+      },
+      {
+        "name": "maxHeight"
+      },
+      {
+        "name": "name"
+      },
+      {
+        "name": "onSubmit"
+      },
+      {
+        "name": "orientation"
+      },
+      {
+        "name": "paginationDefaultPageSize"
+      },
+      {
+        "name": "placeholder"
+      },
+      {
+        "name": "properties"
+      },
+      {
+        "name": "queryParamsExpression"
+      },
+      {
+        "name": "renderStrategy"
+      },
+      {
+        "name": "selectionMode"
+      },
+      {
+        "name": "showPagination"
+      },
+      {
+        "name": "showQuickSearch"
+      },
+      {
+        "name": "submitHttpVerb"
+      },
+      {
+        "name": "submitUrl"
+      },
+      {
+        "name": "title"
+      },
+      {
+        "name": "totalRecords"
+      },
+      {
+        "name": "uniqueStateId"
+      },
+      {
+        "name": "wrapperCol"
+      }
+    ]
+  },
+  "tableViewSelector": {
+    "props": [
+      {
+        "name": "filters",
+        "type": "array",
+        "desc": "Named saved filters shown as tabs or buttons in the selector.",
+        "required": false,
+        "JsReturnType": "array",
+        "arrayItemType": "stored-filter"
+      },
+      {
+        "name": "persistSelectedFilters",
+        "type": "boolean",
+        "desc": "Remember the selected filter across page reloads.",
+        "required": false,
+        "JsReturnType": "boolean"
+      },
+      {
+        "name": "showIcon",
+        "type": "boolean",
+        "desc": "Show an icon next to each filter label.",
+        "required": false,
+        "JsReturnType": "boolean"
+      }
+    ]
+  }
+}

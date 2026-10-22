@@ -1589,7 +1589,7 @@
   },
   "_meta": {
     "generatedAt": "2026-07-22T10:48:24.784Z",
-    "sourceDir": "C:/Users/Hashim/Documents/Git Repos/shesha-framework/shesha-reactjs/src/designer-components",
+    "sourceDir": "<shesha-framework checkout>/shesha-reactjs/src/designer-components",
     "resolvedFields": 60,
     "unresolvedFields": 1,
     "unresolved": [

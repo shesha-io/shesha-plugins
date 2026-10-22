@@ -1,0 +1,450 @@
+{
+  "type": "wizard",
+  "name": "Wizard",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "DoubleRightOutlined",
+  "version": 9,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": [
+    "steps"
+  ],
+  "hasGetContainers": true,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => ({\n    ...model,\n    steps: isDefined(model.steps)\n      ? model.steps.map((step) => ({\n        ...step,\n        showBackButton: step.showBackButton ?? true,\n        showDoneButton: step.showDoneButton ?? true,\n        hasCustomFooter: step.hasCustomFooter ?? false,\n        stepFooter: step.stepFooter ?? {\n          id: `${step.id}_footer`,\n          components: [],\n        },\n      }))\n      : [],\n  })"
+  },
+  "settingsProps": {
+    "interfaceName": "IWizardComponentProps",
+    "interfaceFile": "designer-components/wizard/models.ts",
+    "ownProps": [
+      "status",
+      "steps",
+      "wizardType",
+      "form",
+      "hidden",
+      "customVisibility",
+      "defaultActiveStep",
+      "defaultActiveValue",
+      "direction",
+      "labelPlacement",
+      "buttonsLayout",
+      "showStepStatus",
+      "sequence",
+      "primaryTextColor",
+      "primaryBgColor",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "stepWidth"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "buttonsLayout",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "defaultActiveStep",
+      "defaultActiveValue",
+      "description",
+      "desktop",
+      "dimensions",
+      "direction",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "form",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "labelPlacement",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "sequence",
+      "shadow",
+      "showStepStatus",
+      "size",
+      "status",
+      "stepWidth",
+      "steps",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wizardType",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "wizard/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "To specify the direction of the step bar"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "wizardType",
+      "label": "Wizard Type",
+      "editorType": "dropdown",
+      "options": [
+        "default",
+        "navigation"
+      ]
+    },
+    {
+      "path": "direction",
+      "label": "Direction",
+      "editorType": "dropdown",
+      "description": "To specify the direction of the step bar",
+      "options": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    {
+      "path": "labelPlacement",
+      "label": "Label Placement",
+      "editorType": "dropdown",
+      "description": "To specify the label placement",
+      "options": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    {
+      "path": "defaultActiveStep",
+      "label": "Default Active Step",
+      "editorType": "dropdown",
+      "description": "This will be the default step that is active"
+    },
+    {
+      "path": "steps",
+      "label": "Configure Steps",
+      "editorType": "itemListConfiguratorModal"
+    },
+    {
+      "path": "hidden",
+      "label": "Hide",
+      "editorType": "switch"
+    },
+    {
+      "path": "font.type",
+      "label": "Family",
+      "editorType": "dropdown",
+      "group": "Font"
+    },
+    {
+      "path": "font.size",
+      "label": "Size",
+      "editorType": "numberField",
+      "group": "Font"
+    },
+    {
+      "path": "font.weight",
+      "label": "Weight",
+      "editorType": "dropdown",
+      "description": "Controls text thickness (light, normal, bold, etc.)",
+      "group": "Font"
+    },
+    {
+      "path": "font.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Font"
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "This is the height of the body of the wizard. You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "description": "Offset X",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "description": "Offset Y",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "description": "Blur Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "description": "Spread Radius",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "stepWidth",
+      "label": "Step Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Additional Styles"
+    },
+    {
+      "path": "buttonsLayout",
+      "label": "Buttons Layout",
+      "editorType": "dropdown",
+      "description": "How you want the steps buttons to be aligned",
+      "options": [
+        "left",
+        "right",
+        "spaceBetween"
+      ],
+      "group": "Additional Styles"
+    },
+    {
+      "path": "primaryBgColor",
+      "label": "Primary Color",
+      "editorType": "colorPicker",
+      "group": "Additional Styles"
+    },
+    {
+      "path": "primaryTextColor",
+      "label": "Primary Text Color",
+      "editorType": "colorPicker",
+      "group": "Additional Styles"
+    },
+    {
+      "path": "secondaryBgColor",
+      "label": "Secondary Color",
+      "editorType": "colorPicker",
+      "group": "Additional Styles"
+    },
+    {
+      "path": "secondaryTextColor",
+      "label": "Secondary Text Color",
+      "editorType": "colorPicker",
+      "group": "Additional Styles"
+    },
+    {
+      "path": "permissions",
+      "label": "Permissions",
+      "editorType": "permissions",
+      "description": "Enter a list of permissions that should be associated with this component"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": [
+      "steps"
+    ],
+    "detectedSlotKeys": [
+      "components",
+      "tabs",
+      "steps"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "wizard/index.tsx",
+    "wizard/models.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "other",
+      "what": "(not auto-labelled) 2, (prev) => { return { ...prev, steps: prev.steps.map((step) => { return { ...step, beforeBackActionConfiguration: step.backButtonActionConfiguration, beforeNextActionConfiguration: step.nextButtonAc"
+    },
+    {
+      "toVersion": 7,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    }
+  ]
+}

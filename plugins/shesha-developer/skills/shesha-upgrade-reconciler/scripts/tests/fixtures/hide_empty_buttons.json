@@ -1,0 +1,85 @@
+{
+ "rule": "hide_empty_buttons",
+ "cases": [
+  {
+   "name": "empty-label button container moved into a hidden row",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "cols",
+      "type": "columns",
+      "componentName": "cols",
+      "parentId": "root",
+      "columns": [
+       {
+        "id": "cell",
+        "components": [
+         {
+          "id": "keep",
+          "type": "textField",
+          "componentName": "keep",
+          "parentId": "cell"
+         },
+         {
+          "id": "bx",
+          "type": "container",
+          "componentName": "bx",
+          "parentId": "cell",
+          "components": [
+           {
+            "id": "bb",
+            "type": "button",
+            "componentName": "bb",
+            "parentId": "bx",
+            "label": {
+             "_mode": "code",
+             "_code": null
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/1/id",
+     "cols-emptybuttons046"
+    ],
+    [
+     "components/1/visible",
+     false
+    ],
+    [
+     "components/1/components/0/id",
+     "bx"
+    ],
+    [
+     "components/1/components/0/parentId",
+     "cols-emptybuttons046"
+    ],
+    [
+     "components/0/columns/0/components",
+     [
+      {
+       "id": "keep",
+       "type": "textField",
+       "componentName": "keep",
+       "parentId": "cell"
+      }
+     ]
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "touched": [
+    "components"
+   ]
+  }
+ ]
+}

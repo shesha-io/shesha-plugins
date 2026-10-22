@@ -4,3 +4,17 @@
 
 # Shesha design-pipeline run scratch (shesha-claude-designer)
 .claude/shesha/runs/
+
+# Dependencies
+node_modules/
+
+# Local build/verify state and run scratch
+.build/
+runs/
+
+# Local Claude Code hook log and worktrees
+.claude/hooks.jsonl
+.claude/worktrees/
+
+# Local working docs (rebuild brief, corpus intake)
+docs/

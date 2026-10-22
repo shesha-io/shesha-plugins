@@ -1,0 +1,295 @@
+{
+  "type": "subForm",
+  "name": "Sub Form",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": null,
+  "icon": "FormOutlined",
+  "version": 5,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": {
+      "dataSource": "form",
+      "apiMode": "entityName",
+      "labelCol": 8,
+      "wrapperCol": 16
+    },
+    "raw": "(model) => {\n    const customProps: ISubFormComponentProps = {\n      ...model,\n      dataSource: 'form',\n      apiMode: 'entityName',\n      labelCol: 8,\n      wrapperCol: 16,\n    };\n    return customProps;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "ISubFormComponentProps",
+    "interfaceFile": "designer-components/subForm/index.tsx",
+    "ownProps": [
+      "labelCol",
+      "wrapperCol",
+      "queryParams"
+    ],
+    "extends": [
+      "ISubFormProviderProps",
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "apiMode",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "dataSource",
+      "dataSourceUrl",
+      "defaultValue",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "entityType",
+      "font",
+      "formId",
+      "formSelectionMode",
+      "formType",
+      "getUrl",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "labelCol",
+      "layout",
+      "markup",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChange",
+      "onChangeCustom",
+      "onClickCustom",
+      "onCreated",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "onUpdated",
+      "overflow",
+      "parentId",
+      "permissions",
+      "postUrl",
+      "primaryBgColor",
+      "primaryTextColor",
+      "properties",
+      "propertyName",
+      "putUrl",
+      "queryParams",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "value",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperCol",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "subForm/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Determines how form data is selected and processed"
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "formSelectionMode",
+      "label": "Form Selection Mode",
+      "editorType": "dropdown",
+      "description": "Determines how form data is selected and processed",
+      "options": [
+        "name",
+        "dynamic"
+      ]
+    },
+    {
+      "path": "formType",
+      "label": "Form Type",
+      "editorType": "formTypeAutocomplete"
+    },
+    {
+      "path": "formId",
+      "label": "Form",
+      "editorType": "formAutocomplete"
+    },
+    {
+      "path": "dataSource",
+      "label": "Data Source",
+      "editorType": "dropdown",
+      "description": "The list data to be used can be the data that comes with the form of can be fetched from the API",
+      "options": [
+        "form",
+        "api"
+      ]
+    },
+    {
+      "path": "apiMode",
+      "label": "API Mode",
+      "editorType": "dropdown",
+      "description": "The API mode to use to fetch data",
+      "options": [
+        "entityName",
+        "url"
+      ]
+    },
+    {
+      "path": "entityType",
+      "label": "Entity Type",
+      "editorType": "entityTypeAutocomplete"
+    },
+    {
+      "path": "properties",
+      "label": "Properties",
+      "editorType": "codeEditor",
+      "description": "Properties in GraphQL-like syntax"
+    },
+    {
+      "path": "queryParams",
+      "label": "Query Params",
+      "editorType": "codeEditor",
+      "description": "The code that returns the query parameters to be used to fetch the data. Ideally this should be a function that returns an object with the entity id"
+    },
+    {
+      "path": "getUrl",
+      "label": "GET URL",
+      "editorType": "codeEditor",
+      "description": "The API URL that will be used to fetch the data. Write the code that returns the string"
+    },
+    {
+      "path": "postUrl",
+      "label": "POST URL",
+      "editorType": "codeEditor",
+      "description": "The API URL that will be used to create new data. Write a function that returns this URL as a string."
+    },
+    {
+      "path": "putUrl",
+      "label": "PUT URL",
+      "editorType": "codeEditor",
+      "description": "The API URL that will be used to update data. Write the code that returns the string"
+    },
+    {
+      "path": "onCreated",
+      "label": "On Post Data",
+      "editorType": "codeEditor",
+      "description": "Triggered after successfully creating a new sub-form object in the back-end"
+    },
+    {
+      "path": "onUpdated",
+      "label": "On Put Data",
+      "editorType": "codeEditor",
+      "description": "Triggered after successfully updating the sub-form object in the back-end"
+    },
+    {
+      "path": "wrapperCol",
+      "label": "Wrapper Col",
+      "editorType": "numberField",
+      "group": "Custom Styles"
+    },
+    {
+      "path": "labelCol",
+      "label": "Label Col",
+      "editorType": "numberField",
+      "group": "Custom Styles"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "subForm/index.tsx"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 2,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 4,
+      "category": "curated",
+      "what": "hideLabel forced to true"
+    },
+    {
+      "toVersion": 5,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

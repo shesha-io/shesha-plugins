@@ -1,0 +1,388 @@
+{
+  "type": "textField",
+  "name": "Text field",
+  "isInput": true,
+  "isOutput": true,
+  "canBeJsSetting": true,
+  "icon": "CodeOutlined",
+  "version": 8,
+  "allowInherit": true,
+  "styleGroup": "inputs",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles()",
+  "initModel": {
+    "defaults": {
+      "textType": "text"
+    },
+    "raw": "(model) => ({ ...model, textType: 'text' })"
+  },
+  "settingsProps": {
+    "interfaceName": "ITextFieldComponentProps",
+    "interfaceFile": "designer-components/textField/interfaces.ts",
+    "ownProps": [
+      "placeholder",
+      "prefix",
+      "suffix",
+      "suffixIcon",
+      "prefixIcon",
+      "initialValue",
+      "textType",
+      "desktop",
+      "mobile",
+      "tablet",
+      "spellCheck",
+      "regExp",
+      "useStandardPasswordValidation",
+      "enableFormatting",
+      "formatGroups",
+      "formatSeparator"
+    ],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IInputStyles"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundBase64",
+      "backgroundColor",
+      "backgroundCover",
+      "backgroundDataSource",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundStoredFileId",
+      "backgroundType",
+      "backgroundUrl",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "borderStyle",
+      "borderType",
+      "borderWidth",
+      "className",
+      "color",
+      "componentName",
+      "container",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableFormatting",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "fontWeight",
+      "formatGroups",
+      "formatSeparator",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "initialValue",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placeholder",
+      "prefix",
+      "prefixIcon",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "regExp",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "spellCheck",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "suffix",
+      "suffixIcon",
+      "tablet",
+      "textType",
+      "type",
+      "useStandardPasswordValidation",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "textField/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "border",
+    "background",
+    "shadow",
+    "stylingBoxJson",
+    "style"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "Displays a separator between groups of characters as the user types, e.g. groups \"3,4\" with separator \"-\" displays 1234567 as 123-4567. Display only — the stored value and payload never include the separator. Works on a normal text input (no per-character boxes)."
+    },
+    {
+      "path": "propertyName",
+      "label": "Property Name",
+      "editorType": "contextPropertyAutocomplete"
+    },
+    {
+      "path": "hideLabel",
+      "label": "Label",
+      "editorType": "labelConfigurator"
+    },
+    {
+      "path": "placeholder",
+      "label": "Placeholder",
+      "editorType": "textField"
+    },
+    {
+      "path": "description",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "textType",
+      "label": "Type",
+      "editorType": "dropdown"
+    },
+    {
+      "path": "prefix",
+      "label": "Prefix",
+      "editorType": "textField"
+    },
+    {
+      "path": "prefixIcon",
+      "label": "Prefix Icon",
+      "editorType": "iconPicker"
+    },
+    {
+      "path": "suffix",
+      "label": "Suffix",
+      "editorType": "textField"
+    },
+    {
+      "path": "suffixIcon",
+      "label": "Suffix Icon",
+      "editorType": "iconPicker"
+    },
+    {
+      "path": "spellCheck",
+      "label": "Spell Check",
+      "editorType": "switch"
+    },
+    {
+      "path": "enableFormatting",
+      "label": "Enable auto-format",
+      "editorType": "switch",
+      "description": "Displays a separator between groups of characters as the user types, e.g. groups \"3,4\" with separator \"-\" displays 1234567 as 123-4567. Display only — the stored value and payload never include the separator. Works on a normal text input (no per-character boxes).",
+      "group": "Auto-format"
+    },
+    {
+      "path": "formatGroups",
+      "label": "Group lengths",
+      "editorType": "textField",
+      "description": "Comma-separated lengths of each group, e.g. 3,4",
+      "group": "Auto-format"
+    },
+    {
+      "path": "formatSeparator",
+      "label": "Separator",
+      "editorType": "textField",
+      "description": "Character(s) displayed between groups, e.g. -. Visual only, not included in the stored value.",
+      "group": "Auto-format"
+    },
+    {
+      "path": "validate.required",
+      "label": "Required",
+      "editorType": "switch",
+      "group": "Validations"
+    },
+    {
+      "path": "useStandardPasswordValidation",
+      "label": "Use standard password validation",
+      "editorType": "switch",
+      "description": "When enabled, the password validation follows the rules defined in the corresponding authentication configuration. When disabled, no global complexity validation is applied.",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.minLength",
+      "label": "Min Length",
+      "editorType": "numberField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.maxLength",
+      "label": "Max Length",
+      "editorType": "numberField",
+      "group": "Validations"
+    },
+    {
+      "path": "regExp",
+      "label": "Regular expression",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.message",
+      "label": "Message",
+      "editorType": "textField",
+      "group": "Validations"
+    },
+    {
+      "path": "validate.validator",
+      "label": "Custom Validator",
+      "editorType": "codeEditor",
+      "description": "Enter custom validator logic for form.item rules. Returns a Promise",
+      "group": "Validations"
+    },
+    {
+      "path": "onChangeCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onFocusCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onBlurCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onClickCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyDownCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onKeyUpCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "textField/textField.tsx",
+    "textField/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 5,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 6,
+      "category": "STYLE_BLOCKS",
+      "what": "Legacy flat style props (size/width/height/border*/font*/backgroundColor/stylingBox/style) converted to the structured desktop/tablet/mobile style blocks (border/background/font/dimensions/shadow) via migratePrevStyles, "
+    },
+    {
+      "toVersion": 7,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

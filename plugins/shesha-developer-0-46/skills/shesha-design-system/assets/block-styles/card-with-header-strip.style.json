@@ -1,0 +1,96 @@
+{
+  "$overlay": "card-with-header-strip",
+  "_note": "Generic card surface = white container + hairline border + radius 8 + a whisper card shadow (Shesha default is border-forward). Header strip = surfaceAlt (#F8F8F9) bg with a bottom hairline only (borderType:'custom' bottom-side — per-side border renders; an 'all' border with a 0 radius would box the rounded card). Body = 16 padding. COLOUR IS OUT OF SCOPE: surfaces/hairlines/shadow are structural neutrals; the heading + count-badge TEXT colour is a $role:sectionHeading placeholder the live app theme resolves. font on a container is a no-op so the heading size/weight/colour live on the text child, not the strip.",
+  "targets": {
+    "cardWithHeaderStrip": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "0",
+        "dimensions": { "width": "100%", "minHeight": "fit-content" },
+        "background": { "type": "color", "color": "#ffffff" },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "all",
+          "border": {
+            "all": { "width": "1px", "style": "solid", "color": "#E8EAF0" },
+            "top": {}, "bottom": {}, "left": {}, "right": {}
+          },
+          "radius": { "all": 8 }
+        },
+        "shadow": { "offsetX": 0, "offsetY": 1, "blurRadius": 4, "spreadRadius": 0, "color": "rgba(0,0,0,0.06)" },
+        "stylingBox": "{}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "cardHeaderStrip": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "flexWrap": "nowrap",
+        "gap": "8",
+        "dimensions": { "width": "100%", "minHeight": "fit-content" },
+        "background": { "type": "color", "color": "#F8F8F9" },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "custom",
+          "border": {
+            "all": {},
+            "top": {},
+            "bottom": { "width": "1px", "style": "solid", "color": "#F0F2F5" },
+            "left": {}, "right": {}
+          },
+          "radius": { "all": 0 }
+        },
+        "stylingBox": "{\"paddingTop\":\"12\",\"paddingBottom\":\"12\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "cardHeaderText": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 16, "weight": "600", "color": "$role:sectionHeading", "align": "left" }
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "cardCountBadge": {
+      "desktop": {
+        "font": { "type": "Inter Variable", "size": 12, "weight": "600", "color": "$role:sectionHeading", "align": "center" },
+        "background": { "type": "color", "color": "#f0f2f5" },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "all",
+          "border": { "all": { "width": 0, "style": "none" }, "top": {}, "bottom": {}, "left": {}, "right": {} },
+          "radius": { "all": 10 }
+        },
+        "stylingBox": "{\"paddingTop\":\"1\",\"paddingBottom\":\"1\",\"paddingLeft\":\"8\",\"paddingRight\":\"8\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "cardBody": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "flexWrap": "nowrap",
+        "gap": "12",
+        "dimensions": { "width": "100%", "minHeight": "fit-content" },
+        "stylingBox": "{\"paddingTop\":\"16\",\"paddingBottom\":\"16\",\"paddingLeft\":\"16\",\"paddingRight\":\"16\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    }
+  }
+}

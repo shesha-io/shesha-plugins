@@ -1,0 +1,77 @@
+{
+ "rule": "layout",
+ "cases": [
+  {
+   "name": "container min height, columns left margin and field bottom margin",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "c1",
+      "type": "container",
+      "componentName": "c1",
+      "parentId": "root"
+     },
+     {
+      "id": "c2",
+      "type": "container",
+      "componentName": "c2",
+      "parentId": "root"
+     },
+     {
+      "id": "cols",
+      "type": "columns",
+      "componentName": "cols",
+      "parentId": "root",
+      "gutterX": 12,
+      "columns": []
+     },
+     {
+      "id": "f1",
+      "type": "textField",
+      "componentName": "f1",
+      "parentId": "root"
+     }
+    ]
+   },
+   "changes": 3,
+   "expect": [
+    [
+     "components/0/dimensions/minHeight",
+     "0px"
+    ],
+    [
+     "components/2/stylingBox",
+     "{\"marginLeft\": \"-6\"}"
+    ],
+    [
+     "components/3/stylingBox",
+     "{\"marginBottom\": \"-3\"}"
+    ]
+   ],
+   "node": false,
+   "retire": false,
+   "reference": [
+    {
+     "components": [
+      {
+       "id": "c2",
+       "type": "container",
+       "componentName": "c2",
+       "desktop": {
+        "dimensions": {
+         "minHeight": "120px"
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "touched": [
+    "components/0/dimensions",
+    "components/2/stylingBox",
+    "components/3/stylingBox"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+  "description": "Standard 0.46 appearance model. Components with hasStandardAppearance:true list the panels they expose in appearanceFieldPaths (layout, dimensions, border, background, shadow, font, stylingBoxJson, style). When appearanceScope is \"per-device\" the panels edit the desktop / tablet / mobile blocks: write paths as desktop.dimensions.width, tablet.font.size etc. Source: form-factory/implementation.ts std*Panel helpers. The 0.43 flat style model (size, height, borderSize, ...) no longer applies.",
+  "stylingBoxJsonShape": {
+    "note": "stylingBoxJson is an OBJECT (not a string); the legacy stylingBox string is migrated into it by the VISIBLE_STYLINGJSON migration.",
+    "example": {
+      "_type": "styleBox",
+      "marginBottom": 5,
+      "paddingLeft": 16
+    }
+  },
+  "panels": {
+    "layout": [
+      "display",
+      "flexDirection",
+      "flexWrap",
+      "justifyContent",
+      "alignItems",
+      "alignSelf",
+      "justifyItems",
+      "justifySelf",
+      "gap",
+      "gridColumnsCount",
+      "gridRowsCount",
+      "gridColumnsWidth",
+      "gridRowsHeight",
+      "showAdvanced"
+    ],
+    "dimensions": [
+      "dimensions.width",
+      "dimensions.minWidth",
+      "dimensions.maxWidth",
+      "dimensions.height",
+      "dimensions.minHeight",
+      "dimensions.maxHeight",
+      "dimensions.gridColumn",
+      "dimensions.gridRow"
+    ],
+    "border": [
+      "border.border.{all|top|right|bottom|left}.{width|style|color}",
+      "border.radius.{all|topLeft|topRight|bottomLeft|bottomRight}"
+    ],
+    "background": [
+      "background.type",
+      "background.color",
+      "background.gradient.colors",
+      "background.gradient.direction",
+      "background.url",
+      "background.uploadFile",
+      "background.storedFile.id",
+      "background.size",
+      "background.position",
+      "background.repeat"
+    ],
+    "shadow": [
+      "shadow.offsetX",
+      "shadow.offsetY",
+      "shadow.blurRadius",
+      "shadow.spreadRadius",
+      "shadow.color"
+    ],
+    "font": [
+      "font.type",
+      "font.size",
+      "font.weight",
+      "font.color",
+      "font.align"
+    ],
+    "stylingBoxJson": [
+      "stylingBoxJson"
+    ],
+    "style": [
+      "style"
+    ]
+  }
+}

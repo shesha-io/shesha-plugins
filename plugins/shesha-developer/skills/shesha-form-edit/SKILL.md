@@ -373,6 +373,10 @@ those were hard blockers no agent could satisfy. `harden-permissions` lives in
 `shesha-developer-0-43`. If you add a row for an external skill, declare the dependency in
 `.claude-plugin/plugin.json` first, and never mark it MUST.
 
+## Upgrade reconciliation
+
+When many forms break the same way after a framework upgrade, or a branch authored for the old version has to land on forms that were already reconciled, do not hand-edit each form: use `shesha-upgrade-reconciler` (rule packs, pilot-first fleets, backups, a verification bar and a ledger-based report).
+
 ## Doc fallback
 
 When you hit an unfamiliar API / component / action, fetch docs first via `WebFetch` instead of guessing — `https://shesha-grads.vercel.app/docs/` for practical how-to ("how do I X"), `https://docs.shesha.io/` for canonical contracts ("what is the contract for X"). Quote field names and gotchas verbatim; cache distillates in `.claude/cache/shesha-form-edit/docs/<topic>.summary.md`. If the token expires (24h default), re-run Step 2.

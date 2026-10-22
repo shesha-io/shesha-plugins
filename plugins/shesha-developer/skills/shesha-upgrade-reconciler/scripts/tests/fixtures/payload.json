@@ -1,0 +1,34 @@
+{
+ "rule": "payload",
+ "cases": [
+  {
+   "name": "delete then spread uses a local copy",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "b1",
+      "type": "button",
+      "componentName": "b1",
+      "parentId": "root",
+      "actionConfiguration": {
+       "actionName": "Execute Script",
+       "actionArguments": {
+        "expression": "delete data.helper;\nreturn http.post('/api/x', { ...data });"
+       }
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/actionConfiguration/actionArguments/expression",
+     "/*reconciler:046-payload-copy*/\nconst __payload046 = { ...data };\ndelete __payload046.helper;\nreturn http.post('/api/x', { ...__payload046 });"
+    ]
+   ],
+   "node": false,
+   "retire": false
+  }
+ ]
+}

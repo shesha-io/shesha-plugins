@@ -15,6 +15,8 @@ Every failure in this file is an instance of that. The shape is always: *a migra
 
 ## §2. Diagnose the database before the code
 
+To list every `[Migration(n)]` in the tree that is not applied on the target database and flag references to the old schema, use `shrec.py migration-check` from `shesha-upgrade-reconciler`.
+
 ### Is `VersionInfo` real, or backfilled?
 
 ```sql

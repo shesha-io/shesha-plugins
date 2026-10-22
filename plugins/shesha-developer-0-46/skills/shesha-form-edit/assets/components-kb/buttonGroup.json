@@ -1,0 +1,211 @@
+{
+  "type": "buttonGroup",
+  "name": "Button Group",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "GroupOutlined",
+  "version": 16,
+  "allowInherit": true,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "defaultContainerStyles",
+  "initModel": null,
+  "settingsProps": {
+    "interfaceName": "IButtonGroupComponentProps",
+    "interfaceFile": "designer-components/button/buttonGroup/models.ts",
+    "ownProps": [],
+    "extends": [
+      "IConfigurableFormComponent",
+      "IBaseButtonGroupProps"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "border",
+      "buttonGroupStyle",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "gap",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "isInline",
+      "items",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "noStyles",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "spaceSize",
+      "style",
+      "styleCss",
+      "styles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "button/buttonGroup/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The size of space between items"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "items",
+      "label": "Button group",
+      "editorType": "buttonGroupConfigurator"
+    },
+    {
+      "path": "buttonGroupStyle",
+      "label": "Style",
+      "editorType": "dropdown",
+      "options": [
+        "horizontal",
+        "menu"
+      ]
+    },
+    {
+      "path": "gap",
+      "label": "Gap",
+      "editorType": "dropdown",
+      "description": "The size of space between items",
+      "options": [
+        "small",
+        "middle",
+        "large"
+      ]
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "button/buttonGroup/buttonGroupComponent.tsx",
+    "button/buttonGroup/models.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 8,
+      "category": "other",
+      "what": "(not auto-labelled) 8, (prev) => { const newModel = { ...prev, editMode: 'inherited' } as IButtonGroupComponentProps; const updateItems = (item: ButtonGroupItemProps): ButtonGroupItemProps => { const newItem = migrateRea"
+    },
+    {
+      "toVersion": 11,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultContainerStyles())"
+    },
+    {
+      "toVersion": 12,
+      "category": "STYLE_BLOCKS",
+      "what": "each item gets migrateStyles(...) with item defaults; gap = spaceSize ?? \"middle\""
+    },
+    {
+      "toVersion": 16,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "non-inline groups get desktop.buttonGroupStyle \"menu\"; hidden->visible (default true) on every item"
+    }
+  ]
+}

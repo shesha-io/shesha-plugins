@@ -1,0 +1,272 @@
+{
+  "type": "button",
+  "name": "Button",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "BorderOutlined",
+  "version": 10,
+  "allowInherit": true,
+  "styleGroup": "common",
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": "() => defaultStyles({} as IButtonComponentProps)",
+  "initModel": {
+    "defaults": {
+      "label": "Submit",
+      "buttonType": "default"
+    },
+    "raw": "(model) => {\n    const buttonModel: IButtonComponentProps = {\n      ...model,\n      label: 'Submit',\n      actionConfiguration: makeDefaultActionConfiguration({ actionName: 'Submit', actionOwner: 'Form' }),\n      buttonType: 'default',\n    };\n    return buttonModel;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IButtonComponentProps",
+    "interfaceFile": "designer-components/button/interfaces.ts",
+    "ownProps": [],
+    "extends": [
+      "IButtonItem",
+      "IConfigurableFormComponent",
+      "IButtonStyleValue"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "actionConfiguration",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "block",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderStyle",
+      "borderWidth",
+      "buttonType",
+      "childItems",
+      "color",
+      "componentName",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "danger",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "dividerColor",
+      "dividerWidth",
+      "downIcon",
+      "dynamicItem",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontSize",
+      "fontWeight",
+      "ghost",
+      "height",
+      "hidden",
+      "hideLabel",
+      "hideScrollBar",
+      "icon",
+      "iconPosition",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "itemSubType",
+      "itemType",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "name",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "onBlurCustom",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "size",
+      "sortOrder",
+      "style",
+      "styleCss",
+      "styles",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "tooltip",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "button/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": true,
+  "appearanceFieldPaths": [
+    "font",
+    "dimensions",
+    "stylingBoxJson",
+    "border",
+    "background",
+    "shadow"
+  ],
+  "appearanceScope": "per-device",
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField",
+      "required": true
+    },
+    {
+      "path": "label",
+      "label": "Caption",
+      "editorType": "textField"
+    },
+    {
+      "path": "buttonType",
+      "label": "Style",
+      "editorType": "dropdown",
+      "required": true
+    },
+    {
+      "path": "icon",
+      "label": "Icon",
+      "editorType": "iconPicker"
+    },
+    {
+      "path": "iconPosition",
+      "label": "Icon Position",
+      "editorType": "radio",
+      "options": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "path": "tooltip",
+      "label": "Tooltip",
+      "editorType": "textArea"
+    },
+    {
+      "path": "visible",
+      "label": "Visible",
+      "editorType": "switch",
+      "permissionSettings": true
+    },
+    {
+      "path": "editMode",
+      "label": "Interaction Mode",
+      "editorType": "editModeSelector",
+      "permissionSettings": true
+    },
+    {
+      "path": "actionConfiguration",
+      "label": "On Click",
+      "editorType": "configurableActionConfigurator"
+    },
+    {
+      "path": "onMouseEnterCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseMoveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "onMouseLeaveCustom",
+      "editorType": "codeEditor",
+      "group": "Events"
+    },
+    {
+      "path": "style",
+      "label": "Custom Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties"
+    }
+  ],
+  "slots": {
+    "hostsChildren": false,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "childItems"
+    ],
+    "usesComponentsContainer": false
+  },
+  "sourceFiles": [
+    "button/button.tsx",
+    "button/interfaces.ts"
+  ],
+  "reworked": true,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 0,
+      "category": "other",
+      "what": "(not auto-labelled) 0, (prev) => { const buttonModel: IButtonGroupItemBaseV0 = { ...prev, size: prev.size as IButtonGroupItemBaseV0['size'], hidden: prev.hidden ?? false, label: prev.label ?? 'Submit', sortOrder: 0, item"
+    },
+    {
+      "toVersion": 6,
+      "category": "READONLY",
+      "what": "readOnly/disabled -> editMode (Interaction Mode)"
+    },
+    {
+      "toVersion": 8,
+      "category": "curated",
+      "what": "buttonType copied into desktop/tablet/mobile (\"default\" if unset)"
+    },
+    {
+      "toVersion": 9,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles(prev, defaultStyles(prev)) - size small/large -> height 24/40px and font 14/16"
+    },
+    {
+      "toVersion": 10,
+      "category": "VISIBLE_STYLINGJSON",
+      "what": "hidden -> visible (inverted), stylingBox -> stylingBoxJson, permissions -> visiblePermissions"
+    }
+  ]
+}

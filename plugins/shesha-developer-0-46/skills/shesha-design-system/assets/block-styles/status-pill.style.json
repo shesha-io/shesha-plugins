@@ -1,0 +1,32 @@
+{
+  "$overlay": "status-pill",
+  "_note": "Colour is OUT OF SCOPE for this overlay. The pill's per-item background / foreground / border come from the reference list (solidBackground:true + showReflistName:true on the refListStatus). This overlay carries ONLY the structural-neutral pill shape: tiny centred uppercase type, fully-rounded radius, and the 2/12 inline padding. Do NOT add a brand/accent hex here.",
+  "targets": {
+    "statusChip": {
+      "desktop": {
+        "font": {
+          "type": "Inter Variable",
+          "size": 11,
+          "weight": "600",
+          "align": "center"
+        },
+        "border": {
+          "hideBorder": false,
+          "radiusType": "all",
+          "borderType": "all",
+          "border": {
+            "all": { "width": 0, "style": "none" },
+            "top": {},
+            "bottom": {},
+            "left": {},
+            "right": {}
+          },
+          "radius": { "all": 12 }
+        },
+        "stylingBox": "{\"paddingTop\":\"2\",\"paddingBottom\":\"2\",\"paddingLeft\":\"12\",\"paddingRight\":\"12\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    }
+  }
+}

@@ -1,0 +1,613 @@
+{
+  "type": "drawer",
+  "name": "Drawer",
+  "isInput": false,
+  "isOutput": null,
+  "canBeJsSetting": null,
+  "icon": "SwapOutlined",
+  "version": 4,
+  "allowInherit": false,
+  "styleGroup": null,
+  "isHidden": false,
+  "customContainerNames": null,
+  "hasGetContainers": false,
+  "defaultStylesFrom": null,
+  "initModel": {
+    "defaults": null,
+    "raw": "(model) => {\n    const customProps: IDrawerProps = {\n      ...model,\n    };\n    return customProps;\n  }"
+  },
+  "settingsProps": {
+    "interfaceName": "IDrawerProps",
+    "interfaceFile": "designer-components/drawer/models.ts",
+    "ownProps": [
+      "showFooter",
+      "showHeader",
+      "showOkayBtn",
+      "onOkAction",
+      "okText",
+      "okButtonCustomEnabled",
+      "showCancelBtn",
+      "onCancelAction",
+      "cancelText",
+      "cancelButtonCustomEnabled",
+      "placement",
+      "height",
+      "width",
+      "hideBorder",
+      "stylingBox",
+      "borderSize",
+      "borderRadius",
+      "borderColor",
+      "fontColor",
+      "backgroundColor",
+      "fontSize",
+      "headerStyles",
+      "footerStyles",
+      "background",
+      "desktop",
+      "tablet",
+      "mobile",
+      "components"
+    ],
+    "extends": [
+      "IConfigurableFormComponent"
+    ],
+    "resolvedProps": [
+      "_formFields",
+      "allStyles",
+      "autoHeight",
+      "autoWidth",
+      "availableConstantsExpression",
+      "background",
+      "backgroundColor",
+      "border",
+      "borderColor",
+      "borderRadius",
+      "borderSize",
+      "cancelButtonCustomEnabled",
+      "cancelText",
+      "componentName",
+      "components",
+      "context",
+      "customEnabled",
+      "customVisibility",
+      "description",
+      "desktop",
+      "dimensions",
+      "disabled",
+      "editMode",
+      "editModePermissions",
+      "enableStyleOnReadonly",
+      "font",
+      "fontColor",
+      "fontSize",
+      "footerStyles",
+      "headerStyles",
+      "height",
+      "hidden",
+      "hideBorder",
+      "hideLabel",
+      "hideScrollBar",
+      "id",
+      "initialContext",
+      "isDynamic",
+      "jsSetting",
+      "jsStyle",
+      "label",
+      "labelAlign",
+      "layout",
+      "mobile",
+      "noDataIcon",
+      "noDataSecondaryText",
+      "noDataText",
+      "okButtonCustomEnabled",
+      "okText",
+      "onBlurCustom",
+      "onCancelAction",
+      "onChangeCustom",
+      "onClickCustom",
+      "onDoubleClickCustom",
+      "onFocusCustom",
+      "onInputCustom",
+      "onKeyDownCustom",
+      "onKeyUpCustom",
+      "onMouseEnterCustom",
+      "onMouseLeaveCustom",
+      "onMouseMoveCustom",
+      "onOkAction",
+      "onSelectCustom",
+      "overflow",
+      "parentId",
+      "permissions",
+      "placement",
+      "primaryBgColor",
+      "primaryTextColor",
+      "propertyName",
+      "readOnly",
+      "secondaryBgColor",
+      "secondaryTextColor",
+      "shadow",
+      "showCancelBtn",
+      "showFooter",
+      "showHeader",
+      "showOkayBtn",
+      "size",
+      "style",
+      "styleCss",
+      "stylingBox",
+      "stylingBoxJson",
+      "subscribedEventNames",
+      "tablet",
+      "type",
+      "validate",
+      "validationDependencies",
+      "version",
+      "visible",
+      "visiblePermissions",
+      "width",
+      "wrapperStyle",
+      "wrapperStyleCss"
+    ],
+    "unresolvedExtends": []
+  },
+  "settingsForm": {
+    "source": "drawer/settingsForm.ts",
+    "mechanism": "fluent-builder",
+    "parseQuality": "full"
+  },
+  "hasStandardAppearance": false,
+  "appearanceFieldPaths": [
+    "stylingBox",
+    "style"
+  ],
+  "settingsFields": [
+    {
+      "path": "settingsTabs",
+      "label": "Settings",
+      "editorType": "searchableTabs",
+      "description": "The text that will be displayed on the Ok button"
+    },
+    {
+      "path": "componentName",
+      "label": "Component Name",
+      "editorType": "textField"
+    },
+    {
+      "path": "label",
+      "label": "Header Title",
+      "editorType": "textField"
+    },
+    {
+      "path": "showHeader",
+      "label": "Show Header",
+      "editorType": "switch",
+      "group": "Actions"
+    },
+    {
+      "path": "showFooter",
+      "label": "Show Action Buttons",
+      "editorType": "switch",
+      "group": "Actions"
+    },
+    {
+      "path": "onOkAction",
+      "label": "Ok Action",
+      "editorType": "configurableActionConfigurator",
+      "group": "Ok Button"
+    },
+    {
+      "path": "okText",
+      "label": "Ok Text",
+      "editorType": "textField",
+      "description": "The text that will be displayed on the Ok button",
+      "group": "Ok Button"
+    },
+    {
+      "path": "okButtonCustomEnabled",
+      "label": "Custom Enabled",
+      "editorType": "codeEditor",
+      "description": "Enter custom enabled of the Ok button",
+      "group": "Ok Button"
+    },
+    {
+      "path": "onCancelAction",
+      "label": "Ok Cancel",
+      "editorType": "configurableActionConfigurator",
+      "group": "Cancel Button"
+    },
+    {
+      "path": "cancelText",
+      "label": "Cancel Text",
+      "editorType": "textField",
+      "description": "The text that will be displayed on the Cancel button",
+      "group": "Cancel Button"
+    },
+    {
+      "path": "cancelButtonCustomEnabled",
+      "label": "Custom Enabled",
+      "editorType": "codeEditor",
+      "description": "Enter custom enabled of the Cancel button",
+      "group": "Cancel Button"
+    },
+    {
+      "path": "placement",
+      "label": "Slide Direction",
+      "editorType": "dropdown",
+      "options": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "required": true
+    },
+    {
+      "path": "dimensions.width",
+      "label": "Width",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minWidth",
+      "label": "Min Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxWidth",
+      "label": "Max Width",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.height",
+      "label": "Height",
+      "editorType": "textField",
+      "description": "You can use any unit (%, px, em, etc). px by default if without unit",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.minHeight",
+      "label": "Min Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "dimensions.maxHeight",
+      "label": "Max Height",
+      "editorType": "textField",
+      "group": "Dimensions"
+    },
+    {
+      "path": "background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "group": "Background"
+    },
+    {
+      "path": "background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "border.hideBorder",
+      "label": "Border",
+      "editorType": "button",
+      "group": "Border"
+    },
+    {
+      "path": "shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "stylingBox",
+      "label": "Margin Padding",
+      "editorType": "styleBox",
+      "group": "Margin & Padding",
+      "shared": true
+    },
+    {
+      "path": "style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Custom Styles",
+      "shared": true
+    },
+    {
+      "path": "headerStyles.background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "options": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "headerStyles.shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles.shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles.shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles.shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles.shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "headerStyles.style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Header Styles"
+    },
+    {
+      "path": "footerStyles.background.type",
+      "label": "Type",
+      "editorType": "radio",
+      "description": "Select a type of background",
+      "options": [
+        "color",
+        "gradient",
+        "image",
+        "url",
+        "storedFile"
+      ],
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.gradient.colors",
+      "label": "Colors",
+      "editorType": "multiColorPicker",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.url",
+      "label": "URL",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.uploadFile",
+      "label": "Image",
+      "editorType": "imageUploader",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.storedFile.id",
+      "label": "File ID",
+      "editorType": "textField",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.size",
+      "label": "Size",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.position",
+      "label": "Position",
+      "editorType": "customDropdown",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.background.repeat",
+      "label": "Repeat",
+      "editorType": "radio",
+      "group": "Background"
+    },
+    {
+      "path": "footerStyles.shadow.offsetX",
+      "label": "Offset X",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "footerStyles.shadow.offsetY",
+      "label": "Offset Y",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "footerStyles.shadow.blurRadius",
+      "label": "Blur",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "footerStyles.shadow.spreadRadius",
+      "label": "Spread",
+      "editorType": "numberField",
+      "group": "Shadow"
+    },
+    {
+      "path": "footerStyles.shadow.color",
+      "label": "Color",
+      "editorType": "colorPicker",
+      "group": "Shadow"
+    },
+    {
+      "path": "footerStyles.style",
+      "label": "Style",
+      "editorType": "codeEditor",
+      "description": "A script that returns the style of the element as an object. This should conform to CSSProperties",
+      "group": "Footer Styles"
+    }
+  ],
+  "slots": {
+    "hostsChildren": true,
+    "customContainerNames": null,
+    "detectedSlotKeys": [
+      "components"
+    ],
+    "usesComponentsContainer": true
+  },
+  "sourceFiles": [
+    "drawer/index.tsx",
+    "drawer/models.ts"
+  ],
+  "reworked": false,
+  "registeredInToolbox": true,
+  "renderImpact": [
+    {
+      "toVersion": 3,
+      "category": "STYLE_COPY",
+      "what": "Root-level legacy style props copied into desktop/tablet/mobile blocks (precursor of migratePrevStyles)"
+    },
+    {
+      "toVersion": 4,
+      "category": "STYLE_BLOCKS",
+      "what": "migratePrevStyles + headerStyles/footerStyles defaults"
+    }
+  ]
+}

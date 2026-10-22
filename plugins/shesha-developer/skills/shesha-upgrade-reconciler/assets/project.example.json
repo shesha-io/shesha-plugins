@@ -1,0 +1,22 @@
+{
+  "_comment": "Copied to <project>/.shesha-reconcile/project.json by `shrec.py init`. Committed in the project repo. Hosts and versions per role; no credentials here.",
+  "name": "<project name>",
+  "modules": ["<Configuration.Module>"],
+  "appKey": "default-app",
+  "environments": {
+    "reference": {"api": "https://<pre-upgrade-api-host>", "portal": "https://<pre-upgrade-portal-host>", "version": "0.43.38"},
+    "local": {"api": "http://localhost:21021", "portal": "http://localhost:3000", "version": "0.46.0"},
+    "deployed": {"api": "https://<upgraded-api-host>", "portal": "https://<upgraded-portal-host>", "version": "0.46.0"}
+  },
+  "pages": "pages.json",
+  "rules": {"enable": [], "disable": []},
+  "options": {},
+  "noise": [
+    "data differences between the two databases",
+    "environment badges (e.g. the reference shows LIVE / version badges)",
+    "the upgraded default font",
+    "offsets under 6px"
+  ],
+  "login": {"userPlaceholder": "^user", "passPlaceholder": "^pass", "submitText": "Sign In"},
+  "e2e": {"editText": "Edit", "saveText": "Save"}
+}

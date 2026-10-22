@@ -1,0 +1,392 @@
+{
+ "components": [
+  {
+   "id": "b6f491cc-58d1-4e5a-827e-02354964e10c",
+   "type": "container",
+   "version": 7,
+   "parentId": "root",
+   "propertyName": "cardBody",
+   "componentName": "cardBody",
+   "hidden": false,
+   "display": "flex",
+   "flexDirection": "column",
+   "justifyContent": "flex-start",
+   "alignItems": "stretch",
+   "flexWrap": "wrap",
+   "gap": "12",
+   "overflow": false,
+   "style": "return { whiteSpace: 'normal', wordBreak: 'break-word', overflow: 'hidden', padding: '20px 22px', boxSizing: 'border-box' }",
+   "dimensions": {
+    "width": "100%",
+    "height": "auto",
+    "minHeight": "0px",
+    "maxHeight": "auto",
+    "minWidth": "0px",
+    "maxWidth": "100%"
+   },
+   "border": {
+    "hideBorder": false,
+    "radiusType": "all",
+    "borderType": "all",
+    "border": {
+     "all": {
+      "width": 1,
+      "color": "#eef0f2",
+      "style": "solid"
+     },
+     "top": {},
+     "bottom": {},
+     "left": {},
+     "right": {}
+    },
+    "radius": {
+     "all": 14
+    }
+   },
+   "background": {
+    "type": "color",
+    "color": "#ffffff"
+   },
+   "shadow": {
+    "offsetX": 0,
+    "offsetY": 6,
+    "color": "rgba(0,0,0,0.07)",
+    "blurRadius": 18,
+    "spreadRadius": 0
+   },
+   "stylingBox": "{\"paddingTop\":\"20\",\"paddingBottom\":\"20\",\"paddingLeft\":\"22\",\"paddingRight\":\"22\"}",
+   "components": [
+    {
+     "id": "5cef115c-a641-45b0-ac22-5c02a4e216df",
+     "type": "container",
+     "version": 7,
+     "parentId": "b6f491cc-58d1-4e5a-827e-02354964e10c",
+     "propertyName": "quoteWrap",
+     "componentName": "quoteWrap",
+     "hidden": false,
+     "display": "flex",
+     "flexWrap": "wrap",
+     "flexDirection": "column",
+     "justifyContent": "flex-start",
+     "alignItems": "stretch",
+     "gap": "0",
+     "style": "return { overflow: 'hidden', maxWidth: '100%' }",
+     "components": [
+      {
+       "id": "cd5e55d5-f870-42d0-b23b-71e814f2b841",
+       "type": "text",
+       "version": 5,
+       "parentId": "5cef115c-a641-45b0-ac22-5c02a4e216df",
+       "propertyName": "quote",
+       "componentName": "quote",
+       "contentDisplay": "name",
+       "content": "{{data.quote}}",
+       "dataType": "string",
+       "textType": "paragraph",
+       "ellipsis": true,
+       "fontSize": "14px",
+       "fontWeight": "400",
+       "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+       },
+       "style": "return { whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%', display: 'block', fontStyle: 'italic' }",
+       "hidden": false,
+       "desktop": {
+        "font": {
+         "color": "#374151",
+         "type": "Segoe UI",
+         "align": "left",
+         "weight": "400"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+     "type": "container",
+     "version": 7,
+     "parentId": "b6f491cc-58d1-4e5a-827e-02354964e10c",
+     "propertyName": "cardFooter",
+     "componentName": "cardFooter",
+     "hidden": false,
+     "display": "flex",
+     "flexWrap": "wrap",
+     "flexDirection": "column",
+     "justifyContent": "flex-start",
+     "alignItems": "stretch",
+     "gap": "4",
+     "components": [
+      {
+       "id": "69593647-663e-4041-b6fd-9a4f39efe2fa",
+       "type": "text",
+       "version": 5,
+       "parentId": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+       "propertyName": "customerName",
+       "componentName": "customerName",
+       "contentDisplay": "name",
+       "content": "{{data.customerName}}",
+       "dataType": "string",
+       "textType": "paragraph",
+       "fontSize": "15px",
+       "fontWeight": "600",
+       "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+       },
+       "hidden": false,
+       "desktop": {
+        "font": {
+         "color": "#111827",
+         "type": "Segoe UI",
+         "align": "left",
+         "weight": "600"
+        }
+       }
+      },
+      {
+       "id": "b689d56c-f9e0-4281-b496-f9c7402f0fd7",
+       "type": "text",
+       "version": 5,
+       "parentId": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+       "propertyName": "jobTitle",
+       "componentName": "jobTitle",
+       "contentDisplay": "name",
+       "content": "{{data.jobTitle}}",
+       "dataType": "string",
+       "textType": "paragraph",
+       "fontSize": "13px",
+       "fontWeight": "400",
+       "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+       },
+       "hidden": false,
+       "desktop": {
+        "font": {
+         "color": "#6b7280",
+         "type": "Segoe UI",
+         "align": "left",
+         "weight": "400"
+        }
+       }
+      },
+      {
+       "id": "fac32724-6a15-4c27-a00e-34cf02e309d8",
+       "type": "text",
+       "version": 5,
+       "parentId": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+       "propertyName": "company",
+       "componentName": "company",
+       "contentDisplay": "name",
+       "content": "{{data.company}}",
+       "dataType": "string",
+       "textType": "paragraph",
+       "fontSize": "13px",
+       "fontWeight": "400",
+       "dimensions": {
+        "width": "auto",
+        "height": "auto",
+        "minHeight": "fit-content",
+        "maxHeight": "auto",
+        "minWidth": "0px",
+        "maxWidth": "100%"
+       },
+       "hidden": false,
+       "desktop": {
+        "font": {
+         "color": "#6b7280",
+         "type": "Segoe UI",
+         "align": "left",
+         "weight": "400"
+        }
+       }
+      },
+      {
+       "id": "1762db0d-e329-433d-94c6-ae21733a3edd",
+       "type": "container",
+       "version": 7,
+       "parentId": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+       "propertyName": "ratingInner",
+       "componentName": "ratingInner",
+       "hidden": false,
+       "display": "flex",
+       "flexWrap": "wrap",
+       "flexDirection": "row",
+       "justifyContent": "flex-start",
+       "alignItems": "center",
+       "gap": "4",
+       "components": [
+        {
+         "id": "f5ee0379-3594-44ee-a95c-ed2863d73c76",
+         "type": "text",
+         "version": 5,
+         "parentId": "1762db0d-e329-433d-94c6-ae21733a3edd",
+         "propertyName": "star",
+         "componentName": "star",
+         "contentDisplay": "content",
+         "content": "★",
+         "dataType": "string",
+         "textType": "paragraph",
+         "fontSize": "14px",
+         "fontWeight": "600",
+         "dimensions": {
+          "width": "auto",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+         },
+         "hidden": false,
+         "desktop": {
+          "font": {
+           "color": "#fa8c16",
+           "type": "Segoe UI",
+           "align": "left",
+           "weight": "600"
+          }
+         }
+        },
+        {
+         "id": "41d5ba91-f3bb-49f1-af69-ba6d5b666d3e",
+         "type": "text",
+         "version": 5,
+         "parentId": "1762db0d-e329-433d-94c6-ae21733a3edd",
+         "propertyName": "rating",
+         "componentName": "rating",
+         "contentDisplay": "name",
+         "content": "{{data.rating}}",
+         "dataType": "string",
+         "textType": "paragraph",
+         "fontSize": "14px",
+         "fontWeight": "600",
+         "dimensions": {
+          "width": "auto",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+         },
+         "hidden": false,
+         "desktop": {
+          "font": {
+           "color": "#fa8c16",
+           "type": "Segoe UI",
+           "align": "left",
+           "weight": "600"
+          }
+         }
+        },
+        {
+         "id": "861b97eb-2d53-414a-8697-3210e560dfa3",
+         "type": "text",
+         "version": 5,
+         "parentId": "1762db0d-e329-433d-94c6-ae21733a3edd",
+         "propertyName": "slash",
+         "componentName": "slash",
+         "contentDisplay": "content",
+         "content": "/ 5",
+         "dataType": "string",
+         "textType": "paragraph",
+         "fontSize": "13px",
+         "fontWeight": "400",
+         "dimensions": {
+          "width": "auto",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+         },
+         "hidden": false,
+         "desktop": {
+          "font": {
+           "color": "#9ca3af",
+           "type": "Segoe UI",
+           "align": "left",
+           "weight": "400"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "id": "ddfee364-be49-4aa3-b694-577634c84c39",
+       "type": "container",
+       "version": 7,
+       "parentId": "e95750e0-26a2-412f-9f56-3815bbbf8001",
+       "propertyName": "statusRow",
+       "componentName": "statusRow",
+       "hidden": false,
+       "display": "flex",
+       "flexWrap": "wrap",
+       "flexDirection": "row",
+       "justifyContent": "flex-start",
+       "alignItems": "center",
+       "gap": "0",
+       "components": [
+        {
+         "id": "9bde28ee-321a-465a-b9fc-a2a6690040d2",
+         "type": "refListStatus",
+         "version": 3,
+         "parentId": "ddfee364-be49-4aa3-b694-577634c84c39",
+         "propertyName": "status",
+         "componentName": "status",
+         "label": "Status",
+         "hideLabel": true,
+         "editMode": "inherited",
+         "showIcon": false,
+         "solidBackground": true,
+         "referenceListId": {
+          "module": "boxfusion.test",
+          "name": "TestimonialStatus"
+         },
+         "dimensions": {
+          "width": "auto",
+          "height": "auto",
+          "minHeight": "fit-content",
+          "maxHeight": "auto",
+          "minWidth": "0px",
+          "maxWidth": "100%"
+         },
+         "style": "return { display: 'inline-flex', minHeight: '22px', whiteSpace: 'nowrap' }",
+         "hidden": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "formSettings": {
+  "access": 3,
+  "permissions": [],
+  "version": 8,
+  "dataLoaderType": "none",
+  "dataSubmitterType": "none",
+  "modelType": "boxfusion.test.Domain.Domain.Testimonials.Testimonial",
+  "layout": "vertical",
+  "labelCol": {
+   "span": 24
+  },
+  "wrapperCol": {
+   "span": 24
+  }
+ }
+}

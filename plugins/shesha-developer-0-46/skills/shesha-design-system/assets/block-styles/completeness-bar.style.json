@@ -1,0 +1,42 @@
+{
+  "$overlay": "completeness-bar",
+  "targets": {
+    "kcell_completeness": {
+      "desktop": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "alignItems": "stretch",
+        "gap": "2",
+        "dimensions": {
+          "width": "100%"
+        },
+        "stylingBox": "{}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "mlbl_completeness": {
+      "desktop": {
+        "font": {
+          "type": "Inter Variable",
+          "size": 11,
+          "weight": "600",
+          "color": "#9BA3B8"
+        },
+        "stylingBox": "{\"marginBottom\":\"4\"}"
+      },
+      "tablet": {},
+      "mobile": {}
+    },
+    "completenessProgress": {
+      "desktop": {
+        "dimensions": {
+          "width": "100%"
+        }
+      },
+      "tablet": {},
+      "mobile": {}
+    }
+  }
+}

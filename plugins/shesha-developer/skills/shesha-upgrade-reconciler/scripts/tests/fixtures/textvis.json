@@ -1,0 +1,50 @@
+{
+ "rule": "textvis",
+ "cases": [
+  {
+   "name": "conditional text gets display:none through its style",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "txt",
+      "type": "text",
+      "componentName": "txt",
+      "parentId": "root",
+      "visible": {
+       "_mode": "code",
+       "_code": "return data?.show;"
+      }
+     }
+    ]
+   },
+   "changes": 1,
+   "expect": [
+    [
+     "components/0/style",
+     "/*reconciler:046-visibility-style*/\nconst __vis = (() => {\nreturn data?.show;\n})();\nconst __base = (() => {\nreturn {};\n})() || {};\nreturn __vis === false ? Object.assign({}, __base, { display: 'none' }) : __base;"
+    ]
+   ],
+   "node": true,
+   "retire": true
+  },
+  {
+   "name": "a text without a visibility condition is left alone",
+   "form": "Shop/order-details",
+   "markup": {
+    "components": [
+     {
+      "id": "txt",
+      "type": "text",
+      "componentName": "txt",
+      "parentId": "root"
+     }
+    ]
+   },
+   "changes": 0,
+   "expect": [],
+   "node": true,
+   "retire": false
+  }
+ ]
+}
